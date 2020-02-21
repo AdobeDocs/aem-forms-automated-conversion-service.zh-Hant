@@ -71,7 +71,7 @@ AEM Forms Automated Conversion服務使用人工智慧和機器學習演算法�
 | 圖樣 | 解析度 |
 |--- |--- |
 | **包含表**<br><br><br>****<br>單欄位的模式清單將合併或不轉換為相應的自適應表單元件解析度使用具有清晰邊界的表單欄位，或使用「查看」和「更正」編輯器來修復此類問題。 | ![清單包含選擇組](assets/best-practice-lists-containing-form-fields.png) |
-| **Pattern** <br>Service可讓數個巢狀清單保留未識別的「解析度 <br><br>**」(Resolution **<br>)「使用檢閱」(Use Review)和「更正」(Correct)編輯器來修正此類問題。 | ![清單包含選擇組](assets/best-practice-nested-lists.png) |
+| **Pattern** <br>Service可讓數個巢狀清單保留未識別的「解析度」( <br><br>**Resolution **)「使用檢閱<br>」(Use Review)和「更正」(Correct)編輯器來修正此類問題。 | ![清單包含選擇組](assets/best-practice-nested-lists.png) |
 | **Pattern**<br> Service會合併某些包含選擇群組的清單，以相互 <br><br>**解析&#x200B;**<br>「使用檢閱和更正」編輯器來修正此類問題。 | ![清單包含選擇組](assets/best-practice-check-box-in-table-cells.png) |
 
 <!--
