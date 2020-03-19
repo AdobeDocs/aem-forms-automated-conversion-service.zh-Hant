@@ -5,7 +5,7 @@ uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 translation-type: tm+mt
-source-git-commit: 040b0ddb489b5bdfd640a93b22cd7bc512a39aea
+source-git-commit: c552f4073ac88ca9016a746116a27a5898df7f7d
 
 ---
 
@@ -26,10 +26,11 @@ source-git-commit: 040b0ddb489b5bdfd640a93b22cd7bc512a39aea
 
 ## 先決條件 {#pre-requisites}
 
-* AEM 6.5作者實例與最新的AEM 6.5 Service Pack
+* 設定AEM 6.4或6.5作者實例
+* 為您 [的AEM實例安裝](https://helpx.adobe.com/experience-manager/aem-releases-updates.html) 最新的Service Pack
 * AEM Forms附加元件套件的最新版本
-* [自動化表單轉換服務](configure-service.md)
-* 要與整合的資料庫。 示例實施中使用的資料庫是MySQL 5.6.24。不過，您可將Forms Portal與您選擇的任何資料庫整合。
+* Configure [Automated Forms Conversion service](configure-service.md)
+* 設定資料庫。 示例實施中使用的資料庫是MySQL 5.6.24。不過，您可以將轉換的最適化表單與您選擇的任何資料庫整合。
 
 ## 設定AEM實例與資料庫之間的連線 {#set-up-connection-aem-instance-database}
 
