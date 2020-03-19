@@ -1,19 +1,19 @@
 ---
-title: 配置自動表單轉換服務
+title: 設定自動表單轉換服務
 description: 讓您的AEM實例準備好使用Automated Forms Conversion服務
 translation-type: tm+mt
-source-git-commit: ef5789dabccc65dcf988b9424b435aa036017691
+source-git-commit: c552f4073ac88ca9016a746116a27a5898df7f7d
 
 ---
 
 
-# 配置自動表單轉換服務 {#about-this-help}
+# 設定自動表單轉換服務 {#about-this-help}
 
-此說明說明AEM管理員如何設定「自動化表單轉換」服務，將其PDF表單自動轉換為最適化表單。 本說明適用於貴組織的IT和AEM管理員。 提供的資訊基於以下假設：閱讀本「說明」的人熟悉下列技術：
+此說明說明AEM管理員如何設定「自動表單轉換」服務，以自動將其PDF表單轉換為最適化表單。 本說明適用於貴組織的IT和AEM管理員。 提供的資訊基於以下假設：閱讀本「說明」的人熟悉下列技術：
 
-* 安裝、設定和管理Adobe Experience manager和AEM套件、
+* 安裝、設定和管理Adobe Experience Manager和AEM套件、
 
-* 使用Linux和Microsoft windows作業系統，
+* 使用Linux和Microsoft Windows作業系統，
 
 * 配置SMTP郵件伺服器
 
@@ -23,9 +23,9 @@ source-git-commit: ef5789dabccc65dcf988b9424b435aa036017691
 
 ## 入門{#onboarding}
 
-此服務可免費提供給AEM 6.5 Forms和AEM 6.4 Forms On-Premise客戶和Adobe Managed Service企業客戶。 您可以聯絡Adobe銷售團隊或您的Adobe代表以要求存取服務。
+此服務可免費提供給AEM 6.4 Forms和AEM 6.5 Forms On-Premise客戶和Adobe Managed Service企業客戶。 您可以聯絡 Adobe Sales 團隊或您的 Adobe 代表，請求存取該服務。
 
-Adobe可讓您的組織存取權，並為組織中指定為管理員的人員提供必要的權限。 管理員可以授與您組織的AEM Forms開發人員（使用者）的存取權，以連線至服務。
+Adobe 為您的組織啟用存取權限，並向您指定的組織管理員提供所需的特權。 管理員可以授予組織的 AEM Forms 開發人員（使用者）存取權限以連接到該服務。 
 
 ## 必備條件 {#prerequisites}
 
@@ -33,32 +33,32 @@ Adobe可讓您的組織存取權，並為組織中指定為管理員的人員提
 
 * 您的組織已啟用自動化表單轉換服務
 * 具有轉換服務之管理員權限的Adobe ID帳戶
-* 使用最新AEM Service pack啟動並執行AEM 6.5或AEM 6.4作者實例
+* 使用最新AEM Service Pack啟動並執行AEM 6.4或AEM 6.5作者實例
 * AEM使用者（在您的AEM例項上）是表單使用者群組的成員
 
 ## 設定環境 {#setuptheservice}
 
-在使用服務之前，請準備您的AEM作者實例以連線至在Adobe cloud上執行的服務。 在列出的序列中執行以下步驟，為服務準備實例：
+在使用服務之前，請準備您的AEM作者實例以連線至在Adobe Cloud上執行的服務。 在列出的序列中執行以下步驟，為服務準備實例：
 
-1. [下載並安裝AEM 6.5或AEM 6.4](#aemquickstart)
+1. [下載並安裝AEM 6.4或AEM 6.5](#aemquickstart)
 1. [下載並安裝最新的AEM Service Pack](#servicepack)
 1. [下載並安裝最新的AEM Forms附加元件套件](#downloadaemformsaddon)
 1. [建立自訂主題和範本](#referencepackage)
 
-### 下載並安裝AEM 6.5或AEM 6.4 {#aemquickstart}
+### 下載並安裝AEM 6.4或AEM 6.5 {#aemquickstart}
 
 
-自動化表單轉換服務會在AEM作者實例上執行。 您需要AEM 6.5或AEM 6.4才能設定AEM作者例項。 如果您沒有啟動並執行AEM，請從下列位置下載：
+自動化表單轉換服務會在AEM作者實例上執行。 您需要AEM 6.4或AEM 6.5才能設定AEM作者例項。 如果您沒有啟動並執行AEM，請從下列位置下載：
 
-* 如果您是現有的AEM客戶，請從 [Adobe授權網站下載AEM 6.5或AEM 6.4](http://licensing.adobe.com)。
+* 如果您是現有的AEM客戶，請從 [Adobe授權網站下載AEM 6.4或AEM 6.5](http://licensing.adobe.com)。
 
-* 如果您是Adobe合作夥伴，請使用 [Adobe合作夥伴培訓計畫](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q) ，申請AEM 6.5或AEM 6.4。
+* 如果您是Adobe合作夥伴，請使用 [Adobe合作夥伴培訓計畫](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q) ，申請AEM 6.4或AEM 6.5。
 
 下載AEM後，如需設定AEM作者例項的指示，請參閱「部署 [與維護」](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#defaultlocalinstall)。
 
 ### 下載並安裝AEM最新Service Pack {#servicepack}
 
-下載並安裝最新的AEM Service Pack。 如需詳細指示，請參 [閱「AEM 6.5 Service Pack發行說明」](https://helpx.adobe.com/experience-manager/6-5/release-notes/sp-release-notes.html)[或「AEM 6.4 Service Pack發行說明」](https://helpx.adobe.com/experience-manager/6-4/release-notes/sp-release-notes.html)。
+下載並安裝最新的AEM Service Pack。 如需詳細指示，請參 [閱或AEM 6.4 Service Pack發行說明](https://helpx.adobe.com/experience-manager/6-4/release-notes/sp-release-notes.html)[或AEM 6.5 Service Pack發行說明](https://helpx.adobe.com/experience-manager/6-5/release-notes/sp-release-notes.html)。
 
 ### 下載並安裝AEM Forms附加元件套件 {#downloadaemformsaddon}
 
@@ -75,19 +75,19 @@ AEM例項包含基本表單功能。 轉換服務需要AEM Forms的完整功能�
 
 ## 配置服務 {#configure-the-service}
 
-在您繼續設定服務並連線您的本機實例與Adobe cloud上執行的服務之前，請先瞭解連線至服務所需的角色和權限。 本服務使用兩種不同的角色類型：管理員和開發人員：
+在您繼續設定服務並連線您的本機實例與Adobe Cloud上執行的服務之前，請先瞭解連線至服務所需的角色和權限。 本服務使用兩種不同的角色類型：管理員和開發人員：
 
-* **管理員**:管理員負責管理組織的Adobe軟體和服務。 管理員授與組織內開發人員的存取權，以便連線至在Adobe cloud上執行的自動化表單轉換服務。 當為組織布建管理員時，管理員會收到一封有標題的電子郵件 **[!UICONTROL 'You now have administrator rights to manage Adobe software and services for your organization']**。 如果您是管理員，請檢查郵箱中是否有前述標題的電子郵件，並繼 [續授予您組織開發人員的存取權](#adduseranddevs)。
+* **管理員**:管理員負責管理組織的Adobe軟體和服務。 管理員授與組織內開發人員的存取權，以便連線至在Adobe Cloud上執行的自動化表單轉換服務。 當為組織布建管理員時，管理員會收到一封有標題的電子郵件 **[!UICONTROL 'You now have administrator rights to manage Adobe software and services for your organization']**。 如果您是管理員，請檢查郵箱中是否有前述標題的電子郵件，並繼 [續授予您組織開發人員的存取權](#adduseranddevs)。
 
 ![管理員存取權授予電子郵件](assets/admin-console-adobe-io-access-grantedx75.png)
 
-* **開發人員**:開發人員會將本機AEM Forms作者例項連結至Adobe cloud上執行的Automated Forms Conversion服務。 當管理員授與開發人員連線至自動表單轉換服務的權限時，您現在可以存取標題為「您」的電子郵件會傳送給開發人員，以管理您組織的Adobe API整合。 如果您是開發人員，請檢查郵箱中是否有前述標題的電子郵件，然後繼續 [Connect your local AEM instance to Automated Forms Conversion service on Adobe Cloud。](#connectafcadobeio)
+* **開發人員**:開發人員會將本機AEM Forms作者例項連結至Adobe Cloud上執行的Automated Forms Conversion服務。 當管理員授與開發人員連線至自動表單轉換服務的權限時，您現在可以存取標題為「您」的電子郵件會傳送給開發人員，以管理您組織的Adobe API整合。 如果您是開發人員，請檢查郵箱中是否有前述標題的電子郵件，然後繼續 [Connect your local AEM instance to Automated Forms Conversion service on Adobe Cloud。](#connectafcadobeio)
 
 ![開發人員存取授權電子郵件](assets/email-developer-accessx94.png)
 
 ### （僅限管理員）授與貴組織開發人員的存取權 {#adduseranddevs}
 
-在Adobe啟用您組織的存取權並提供管理員必要的權限後，管理員可以登入Admin Console（詳細說明如下）、建立描述檔，以及將開發人員新增至描述檔。 開發人員可將AEM Forms的本機執行個體連接至Adobe cloud上的Automated Forms Conversion服務。
+在Adobe啟用您組織的存取權並提供管理員必要的權限後，管理員可以登入Admin Console（詳細說明如下）、建立描述檔，以及將開發人員新增至描述檔。 開發人員可將AEM Forms的本機執行個體連接至Adobe Cloud上的Automated Forms Conversion服務。
 
 開發人員是指定用來執行轉換服務的組織成員。 只有新增至Adobe Automated Forms Conversion服務設定檔的開發人員才有權使用Automated Forms Conversion服務。 請執行下列步驟以建立描述檔並新增開發人員至描述檔：
 
@@ -106,11 +106,11 @@ AEM例項包含基本表單功能。 轉換服務需要AEM Forms的完整功能�
 
 對所有使用者重複上述步驟。  如需新增開發人員的詳細資訊，請參閱「管 [理開發人員](https://helpx.adobe.com/enterprise/using/manage-developers.html)」。
 
-一旦管理員將開發人員新增至Adobe I/O設定檔，開發人員就會收到電子郵件通知。 在收到電子郵件後，開發人員可以繼 [續在Adobe cloud上連接本機AEM Forms例項與Automated Forms Conversion服務](#connectafcadobeio)。
+一旦管理員將開發人員新增至Adobe I/O設定檔，開發人員就會收到電子郵件通知。 在收到電子郵件後，開發人員可以繼 [續在Adobe Cloud上連接本機AEM Forms例項與Automated Forms Conversion服務](#connectafcadobeio)。
 
-### （僅限開發人員）將您本機的AEM Forms例項連接至Adobe cloud上的Automated Forms Conversion服務 {#connectafcadobeio}
+### （僅限開發人員）將您本機的AEM Forms例項連接至Adobe Cloud上的Automated Forms Conversion服務 {#connectafcadobeio}
 
-在管理員提供您開發人員存取權後，您可以將本機AEM Forms例項連接至Adobe cloud上執行的Automated Forms轉換服務。 在所列順序中執行下列步驟，將您的AEM Forms例項連接至服務：
+在管理員提供您開發人員存取權後，您可以將本機AEM Forms例項連接至Adobe Cloud上執行的Automated Forms轉換服務。 在所列順序中執行下列步驟，將您的AEM Forms例項連接至服務：
 
 * [設定電子郵件通知](configure-service.md#configureemailnotification)
 * [新增使用者至表單使用者群組](#adduserstousergroup)
@@ -120,7 +120,7 @@ AEM例項包含基本表單功能。 轉換服務需要AEM Forms的完整功能�
 
 #### 設定電子郵件通知 {#configureemailnotification}
 
-Automated Forms Conversion服務使用Day CQ郵件服務來傳送電子郵件通知。 這些電子郵件通知包含有關成功或失敗轉換的資訊。 如果您選擇不接收通知，請跳過這些步驟。 執行以下步驟來配置Day CQ mail服務：
+Automated Forms Conversion服務使用Day CQ郵件服務來傳送電子郵件通知。 這些電子郵件通知包含有關成功或失敗轉換的資訊。 如果您選擇不接收通知，請跳過這些步驟。 執行以下步驟來配置Day CQ Mail服務：
 
 1. 前往AEM設定管理員，網址為 `http://localhost:4502/system/console/configMgr`
 1. 開啟Day CQ Mail Service設定。 指定、和 **[!UICONTROL SMTP server host name]**&#x200B;欄 **[!UICONTROL SMTP server port]**&#x200B;位的 **[!UICONTROL From address]** 值。 按一下 **[!UICONTROL Save]**.
@@ -223,7 +223,7 @@ Automated Forms Conversion服務使用Day CQ郵件服務來傳送電子郵件通
    | 標題 | 設定的唯一標題。 標題會顯示在用於開始轉換的UI中。 |
    | 名稱 | 配置的唯一名稱。 配置將以指定的名稱保存在CRX-Repository中。 名稱可以與標題相同。 |
    | 縮圖位置 | 配置的縮略圖位置。 |
-   | 服務 URL | Adobe cloud上自動化表單轉換服務的URL。 使用 `https://aemformsconversion.adobe.io/` URL。 |
+   | 服務 URL | Adobe Cloud上自動化表單轉換服務的URL。 使用 `https://aemformsconversion.adobe.io/` URL。 |
    | 範本 | 要套用至轉換表單的預設範本。 開始轉換前，您隨時可以指定不同的範本。 範本包含最適化表單的基本結構和初始內容。 您可以從現成可用的範本中選擇範本。 您也可以建立自訂範本。 |
    | 主題 | 套用至轉換表單的預設主題。 開始轉換之前，您隨時可以指定不同的主題。  您可以按一下圖示，選擇現成可用的主題。 您也可以建立自訂主題。 |
    | 現有片段 | 現有片段的位置（如果有）。 |
@@ -253,7 +253,7 @@ Automated Forms Conversion服務使用Day CQ郵件服務來傳送電子郵件通
    </table>
 
    * 當來源是副檔名為。XDP的XFA型表格時，輸出DOR會保留XFA版面配置，否則轉換服務會使用現成可用的範本，為其他XFA型表格產生DOR。
-   * 提交XFA表單時，表單的提交資料會儲存為XML元素或屬性。 例如， `<Amount currency="USD"> 10.00 </Amount>`。 貨幣會儲存為屬性和貨幣金額，而10.00會儲存為元素。 自適應表單的提交資料沒有屬性，只有元素。 因此，當基於XFA的表單被轉換為自適應表單時，自適應表單提交資料包含每個此類屬性的元素。 例如，
+   * 提交XFA表單時，表單的提交資料會儲存為XML元素或屬性。 For example, `<Amount currency="USD"> 10.00 </Amount>`. 貨幣會儲存為屬性和貨幣金額，而10.00會儲存為元素。 自適應表單的提交資料沒有屬性，只有元素。 因此，當基於XFA的表單被轉換為自適應表單時，自適應表單提交資料包含每個此類屬性的元素。 例如，
 
    ```css
       {
