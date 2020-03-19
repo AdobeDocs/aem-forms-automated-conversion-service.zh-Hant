@@ -5,12 +5,12 @@ uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 translation-type: tm+mt
-source-git-commit: b879a0ddecd5370c754dfe9e1bf33121dd5ecc97
+source-git-commit: c552f4073ac88ca9016a746116a27a5898df7f7d
 
 ---
 
 
-# 使用AEM工作流程將最適化表單與資料庫整合 {#submit-forms-to-database-using-forms-portal}
+# 使用 AEM 工作流程整合最適化表單與資料庫 {#submit-forms-to-database-using-forms-portal}
 
 「自動表單轉換」服務可讓您將非互動式PDF表單、Acro表單或以XFA為基礎的PDF表單轉換為最適化表單。 在開始轉換程式時，您可以選擇是否使用資料系結產生最適化表單。
 
@@ -24,10 +24,11 @@ source-git-commit: b879a0ddecd5370c754dfe9e1bf33121dd5ecc97
 
 ## 先決條件 {#pre-requisites}
 
-* AEM 6.5作者實例與最新的AEM 6.5 Service Pack
+* 設定AEM 6.4或6.5作者實例
+* 為您 [的AEM實例安裝](https://helpx.adobe.com/experience-manager/aem-releases-updates.html) 最新的Service Pack
 * AEM Forms附加元件套件的最新版本
-* [自動化表單轉換服務](configure-service.md)
-* 要與整合的資料庫。 示例實施中使用的資料庫是MySQL 5.6.24。不過，您可以將轉換的最適化表單與您選擇的任何資料庫整合。
+* Configure [Automated Forms Conversion service](configure-service.md)
+* 設定資料庫。 示例實施中使用的資料庫是MySQL 5.6.24。不過，您可以將轉換的最適化表單與您選擇的任何資料庫整合。
 
 ## 範例自適應表單 {#sample-adaptive-form}
 
@@ -265,7 +266,7 @@ CREATE TABLE `contactus` (
 
    ![設定電子郵件預填設定](assets/email_prefill_settings.png)
 
-   因此，根據MYSQL資料庫中現有的E-mail條目，可以在自適應表單模式中預填充其餘三個字 **[!UICONTROL Preview]** 段的值。 例如，如果您在 **E-mail** field(根據本文的「 [Prepare form model](#prepare-data-for-form-model) 」部分中的現有欄位指定aya.tan@xyz.com，並跳出欄位，則其餘三個欄位、 **Name**、Phone Number **、****** Calloping自動在最適化表單中顯示Cadapting Data。
+   因此，根據MYSQL資料庫中現有的E-mail條目，可以在自適應表單模式中預填充其餘三個字 **[!UICONTROL Preview]** 段的值。 例如，如果在 **E-mail** field(根據本文「 [Prepare form model](#prepare-data-for-form-model) 」一節的現有欄位中指定aya.tan@xyz.com **，並跳出欄位，則其餘三個欄位、** Name **、Phone NumberTacklist、****** Callusion Issue Description自動在最適化表單中顯示資料。
 
 您可以使用下列方式下載範例轉換的最適化表單：
 
