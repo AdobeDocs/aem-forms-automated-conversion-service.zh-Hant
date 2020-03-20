@@ -2,7 +2,7 @@
 title: 新功能? 發行說明——自動化表單轉換服務
 description: '瞭解Automated Forms Conversion Service的最新功能和修正的錯誤 '
 translation-type: tm+mt
-source-git-commit: 6d658dbb181c09e42073e328e0232e40d4fb6b58
+source-git-commit: ec3a85ccd4c5d535ebc31c55702adab9aa92cf4e
 
 ---
 
@@ -24,7 +24,7 @@ Automated Forms Conversion Service不斷獲得改進。 若要隨時掌握最新
 
 **自動檢測表單中的邏輯部分**
 
-依預設，服務會針對PDF表單的每一頁建立個別的頂層面板。 現在，您可以使用選 **[!UICONTROL Auto-detect logical sections]** 項來放置頁面層級面板（以頁碼為基礎的面板），並僅建立邏輯面板。  它還會將不屬於任何具有前置邏輯部分的欄位限定為俱樂部。 它還將跨兩個相鄰頁的邏輯部分的欄位限定為單個邏輯部分。 例如，如果某個邏輯部分的某些欄位位於第1頁的末尾，而某些欄位位於第2頁的開頭，則所有這些欄位都會被拖入單個邏輯部分。
+依預設，服務會針對PDF表單的每一頁建立個別的頂層面板。 現在，您可以使用選 **[!UICONTROL Auto-detect logical sections]** 項來放置頁面層級面板（以頁碼為基礎的面板），並僅建立邏輯面板。  它還會將不屬於任何具有前置邏輯部分的欄位和跨兩個相鄰頁面的邏輯部分的欄位限定為單個邏輯部分。 例如，如果某個邏輯部分的某些欄位位於第1頁的末尾，而某些欄位位於第2頁的開頭，則所有這些欄位都會被拖入單個邏輯部分。
 
 ### 改進功能
 
