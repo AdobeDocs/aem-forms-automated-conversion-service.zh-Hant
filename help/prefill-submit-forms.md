@@ -1,20 +1,20 @@
 ---
-title: 針對最適化表單，建議使用以資料來源為基礎的預填和提交工作流程
+title: 基於資料來源的建議預填及提交最適化表單的工作流程
 seo-title: 最適化表單的預先填寫和提交選項
-description: 針對使用Automated Forms Conversion service產生的最適化表單，以資料來源為基礎的預填和提交工作流程。
-seo-description: 針對使用Automated Forms Conversion service產生的最適化表單，以資料來源為基礎的預填和提交工作流程。
+description: 針對使用Automated Forms Conversion Service產生的最適化表單，以資料來源為基礎的預填和提交工作流程。
+seo-description: 針對使用Automated Forms Conversion Service產生的最適化表單，以資料來源為基礎的預填和提交工作流程。
 uuid: 91409a82-141c-4233-82b1-1539a0b250f8
 contentOwner: khsingh
 topic-tags: forms
 discoiquuid: cad34fff-7f9f-4a27-8b5c-d0a523903eec
 privatebeta: true
 translation-type: tm+mt
-source-git-commit: f598871fd41c402f98d94d7b2174ab8b2e487075
+source-git-commit: caccb547a5741eb0e70ddf75630a661f8fe75cb3
 
 ---
 
 
-# 針對最適化表單，建議使用以資料來源為基礎的預填和提交工作流程 {#recommended-data-source-btased-prefill-and-submit-workflows-for-adaptive-forms}
+# 基於資料來源的建議預填及提交最適化表單的工作流程 {#recommended-data-source-btased-prefill-and-submit-workflows-for-adaptive-forms}
 
 您可以使用下列任何資料來源搭配使用自動表單轉換服務轉換的最適化表單：
 
@@ -91,10 +91,10 @@ source-git-commit: f598871fd41c402f98d94d7b2174ab8b2e487075
 
 如需Automated Forms Conversion服務的詳細資訊，請參閱下列文章：
 
-* [自動化表單轉換服務簡介](introduction.md)
-* [配置自動表單轉換服務](configure-service.md)
+* [自動表單轉換服務簡介](introduction.md)
+* [設定自動表單轉換服務](configure-service.md)
 * [將列印表單轉換為最適化表單](convert-existing-forms-to-adaptive-forms.md)
-* [審閱並更正轉換的表單](review-correct-ui-edited.md)
+* [檢閱並修正轉換後的表格](review-correct-ui-edited.md)
 
 本文提供的資訊基於以下假設：任何閱讀該資訊的人都具有適應性表單概念的基本知識。
 
@@ -246,7 +246,7 @@ CREATE TABLE `applicant` (
 * [將MySQL資料庫配置為資料源](https://helpx.adobe.com/experience-manager/6-5/forms/using/configure-data-sources.html#configurerelationaldatabase)
 * [建立表單資料模型](https://helpx.adobe.com/experience-manager/6-5/forms/using/work-with-form-data-model.html)
 
-根據使用案例，建立 **loanapplication** form data model，並將讀取服務引數系結至 **[!UICONTROL Literal]** 值。 電話號碼常值必須是在MySQL資料庫的申請人模式中 **配置的** 其中一條記錄。 服務使用值作為參數，從資料源中獲取詳細資訊。 您也可以從下 [拉式清單中選取「使用者描述檔屬性」或「請](https://helpx.adobe.com/experience-manager/6-5/forms/using/work-with-form-data-model.html#bindargument)**[!UICONTROL Binding To]** 求屬性」
+根據使用案例，建立 **loanapplication** form data model，並將讀取服務引數系結至 **[!UICONTROL Literal]** 值。 電話號碼常值必須是在MySQL資料庫的申請人模式中 **配置的** 其中一條記錄。 服務使用值作為參數，從資料源中獲取詳細資訊。 您也可以從下 [拉式清單中選取「使用者描述檔屬性」或](https://helpx.adobe.com/experience-manager/6-5/forms/using/work-with-form-data-model.html#bindargument)**[!UICONTROL Binding To]** 「請求屬性」
 
 ![設定表單資料模型](assets/configure_model_object.png)
 
@@ -268,17 +268,17 @@ CREATE TABLE `applicant` (
    1. 在區段 **[!UICONTROL Submission]** 中，從下 **[!UICONTROL Submit using Form Data Model]** 拉式清 **[!UICONTROL Submit Action]** 單中選取。
 
    1. 使用欄位選擇資料 **[!UICONTROL Data Model to submit]** 模型。
-   1. 點選 ![完成圖示](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) ，以儲存屬性。
+   1. 點選 ![完成圖示](assets/save_icon.svg) ，以儲存屬性。
 
-1. 點選「申請人名稱」文字方塊，並選取「 ![設定」圖示](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/configure_icon.png) （「設定」）。
+1. 點選「申請人名稱」文字方塊，並選取「 ![設定」圖示](assets/configure_icon.svg) （「設定」）。
 
-   1. 在「系結參考」欄位中，選 **取「申請人** >名稱 **」，然後點選**&#x200B;完成圖示 ![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) ，以儲存屬性。 同樣地，請為地址 **、**&#x200B;電話號碼 **、**&#x200B;電子郵件、 **Adpriation Salary(美************元)、Allige Laray(Addression Joun)和No建立資料系結。 表單資料模型圖元的** 「從屬族成員」(Dependent Family Members)欄位的值。
+   1. 在「系結參考」欄位中，選 **取「申請人** >名稱 **」，然後點選**&#x200B;完成圖示 ![](assets/save_icon.svg) ，以儲存屬性。 同樣地，請為地址 **、**&#x200B;電話號碼 **、**&#x200B;電子郵件、 **Adpriation Salary(美************元)、Allige Laray(Addression Joun)和No建立資料系結。 表單資料模型圖元的** 「從屬族成員」(Dependent Family Members)欄位的值。
    ![系結參照](assets/bind_references.png)
 
 1. 點選 **[!UICONTROL Preview]** 以檢視預先填入的最適化表單欄位值。
 1. 視需要修改欄位值，並提交最適化表單。 欄位值將提交到MySQL資料庫。 您可以刷新數 **據庫中** 的申請人表，以查看表中的更新值。
 
-**** 使用案例：使用Automated Forms Conversion服務生成沒有資料綁定的自適應表單，並將MYSQL資料庫配置為資料源。 您可使用規則編輯器來系結最適化表單欄位，以預先填入欄位值。 如有必要，請修改欄位值，並將資料送出至crx-repository。
+**使用案例：** 使用Automated Forms Conversion服務生成沒有資料綁定的自適應表單，並將MYSQL資料庫配置為資料源。 您可使用規則編輯器來系結最適化表單欄位，以預先填入欄位值。 如有必要，請修改欄位值，並將資料送出至crx-repository。
 
 執行下列步驟，以使 [用規則編輯器](https://helpx.adobe.com/experience-manager/6-5/forms/using/rule-editor.html) ，叫用表單資料模型服務，以在最適化表單中系結欄位和預先填寫值：
 
@@ -319,7 +319,7 @@ CREATE TABLE `applicant` (
 
 ### 使用JSON結構描述做為資料來源 {#jsondatasource}
 
-**** 使用案例：您可使用「自動表單轉換」服務產生沒有資料系結的最適化表單，並將JSON結構描述設定為資料來源。 您可以手動將最適化表單欄位系結至JSON結構描述，並使用「 **預覽及資料** 」選項來預先填入欄位值。 如有必要，請修改欄位值，並將資料送出至crx-repository。
+**使用案例：** 您可使用「自動表單轉換」服務產生沒有資料系結的最適化表單，並將JSON結構描述設定為資料來源。 您可以手動將最適化表單欄位系結至JSON結構描述，並使用「 **預覽及資料** 」選項來預先填入欄位值。 如有必要，請修改欄位值，並將資料送出至crx-repository。
 
 在執行使用案例之前，請確定您有：
 
@@ -331,9 +331,9 @@ CREATE TABLE `applicant` (
 1. 選擇輸出資 **料夾中可用的已轉換貸** 款申請表 **,** 然後點選 **[!UICONTROL Properties]**。
 1. 點選標 **[!UICONTROL Form Model]** 簽、從下拉 **[!UICONTROL Schema]** 式清單中 **[!UICONTROL Select From]** 選取，然後點選以上傳儲存在本機檔案系統上的 **[!UICONTROL Select Schema]** demo.schema JSON **** 結構描述。 點選 **[!UICONTROL Save & Close]** 以儲存表格。
 1. 選取貸款 **申請表範例** ，並點選 **[!UICONTROL Edit]**。
-1. 點選「申請人名稱」文字方塊，並選取「 ![設定」圖示](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/configure_icon.png) （「設定」）。
+1. 點選「申請人名稱」文字方塊，並選取「 ![設定」圖示](assets/configure_icon.svg) （「設定」）。
 
-   在「系結參考」欄位中，選 **取「申請人** >名稱 **」，然後點選**&#x200B;完成圖示 ![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) ，以儲存屬性。 同樣地，請為地址 **、**&#x200B;電話號碼 **、**&#x200B;電子郵件、 **Adpriation Salary(美************元)、Allige Laray(Addression Joun)和No建立資料系結。 具有JSON結構描述實體** 的相依族成員欄位。
+   在「系結參考」欄位中，選 **取「申請人** >名稱 **」，然後點選**&#x200B;完成圖示 ![](assets/save_icon.svg) ，以儲存屬性。 同樣地，請為地址 **、**&#x200B;電話號碼 **、**&#x200B;電子郵件、 **Adpriation Salary(美************元)、Allige Laray(Addression Joun)和No建立資料系結。 具有JSON結構描述實體** 的相依族成員欄位。
 
 1. 再次選擇 **資料夾中可用的已轉換貸款申請表** 單，然後選擇 **[!UICONTROL output]** > **[!UICONTROL Preview]****[!UICONTROL Preview with Data]**。</br>
 
@@ -347,7 +347,7 @@ CREATE TABLE `applicant` (
 
 ### 使用XSD架構作為資料來源 {#xsddatasource}
 
-**** 使用案例：您可使用「自動表單轉換」服務產生沒有資料系結的最適化表單，並將XSD架構設為資料來源。 您可以手動將最適化表單欄位系結至XSD架構，並使用「預覽 **與資料** 」來預先填入欄位值。 如有必要，請修改欄位值，並將資料送出至crx-repository。
+**使用案例：** 您可使用「自動表單轉換」服務產生沒有資料系結的最適化表單，並將XSD架構設為資料來源。 您可以手動將最適化表單欄位系結至XSD架構，並使用「預覽 **與資料** 」來預先填入欄位值。 如有必要，請修改欄位值，並將資料送出至crx-repository。
 
 在執行使用案例之前，請確定您有：
 
@@ -359,8 +359,8 @@ CREATE TABLE `applicant` (
 1. 在資料夾中選 **取已轉換的貸款申請表** ，然後 **[!UICONTROL output]** 點選一下 **[!UICONTROL Properties]**。
 1. 點選標 **[!UICONTROL Form Model]** 簽、從下拉 **[!UICONTROL Schema]** 式清單中 **[!UICONTROL Select From]** 選取，並點選以上傳儲存在本機檔案系統上的 **[!UICONTROL Select Schema]** loanapplication **** XSD架構。 選擇XSD架構的根元素，並點選 **[!UICONTROL Save & Close]** 以儲存表單。
 1. 選取貸款 **申請表範例** ，並點選 **[!UICONTROL Edit]**。
-1. 點選「申請人名稱」文字方塊，並選取「 ![設定」圖示](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/configure_icon.png) （「設定」）。
-在「系結參考」欄位中，選 **取「申請人** >名稱 **」，然後點選「**&#x200B;完成圖示 ![](https://helpx.adobe.com/content/dam/help/en/experience-manager/6-4/forms/using/chart-component/Done_Icon.png) 」以儲存屬性。 同樣地，請為地址 **、**&#x200B;電話號碼 **、**&#x200B;電子郵件、 **Adpriation Salary(美************元)、Allige Laray(Addression Joun)和No建立資料系結。 包含XSD架構實體的相依族成員** (Dependent Family Members)欄位。
+1. 點選「申請人名稱」文字方塊，並選取「 ![設定」圖示](assets/configure_icon.svg) （「設定」）。
+在「系結參考」欄位中，選 **取「申請人** >名稱 **」，然後點選「**&#x200B;完成圖示 ![](assets/save_icon.svg) 」以儲存屬性。 同樣地，請為地址 **、**&#x200B;電話號碼 **、**&#x200B;電子郵件、 **Adpriation Salary(美************元)、Allige Laray(Addression Joun)和No建立資料系結。 包含XSD架構實體的相依族成員** (Dependent Family Members)欄位。
 
 1. 再次選擇輸出 **資料夾中可用的已轉換貸** 款申請表 **，然後選擇** > **[!UICONTROL Preview]****[!UICONTROL Preview with Data]**。</br>
 
@@ -381,7 +381,7 @@ CREATE TABLE `applicant` (
 
 ### 使用JSON結構描述做為資料來源 {#jsonwithdatabinding}
 
-**** 使用案例：您可使用「自動表單轉換」服務，產生具有JSON資料系結的最適化表單。 預填服務和表單提交功能十分順暢。 您不需要任何設定步驟。
+**使用案例：** 您可使用「自動表單轉換」服務，產生具有JSON資料系結的最適化表單。 預填服務和表單提交功能十分順暢。 您不需要任何設定步驟。
 
 在執行使用案例之前，請確定您有具 [備資料系結的最適化表單](#generate-adaptive-forms-with-json-binding)。
 
