@@ -2,7 +2,7 @@
 title: 設定自動表單轉換服務
 description: 讓您的AEM實例準備好使用Automated Forms Conversion服務
 translation-type: tm+mt
-source-git-commit: 5f27fcbf756350a03b7143af489f737e01a7f0e3
+source-git-commit: 01dfd20951314017d47713bfb1a2a5f2d563f434
 
 ---
 
@@ -79,7 +79,7 @@ AEM例項包含基本表單功能。 轉換服務需要AEM Forms的完整功能�
 | Linux | https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/fd/AEM-Forms-6.5.4.0-WIN |
 
 >[!NOTE]
-> 如果您已安裝並執行Automated Forms Conversion服務環境，若要使用轉換服務的最新功能，請依照上述順序安裝最新的服務套件、最新的AEM Forms附加套件和最新的連接器套件。
+> 如果您已安裝並執行Automated Forms Conversion服務環境，若要使用轉換服務的最新功能，請依上述順序安裝最新的服務套件、最新的AEM Forms附加套件和最新的連接器套件。
 
 
 ### 建立自訂主題和範本 {#referencepackage}
