@@ -2,7 +2,7 @@
 title: 新功能? 發行說明——自動化表單轉換服務
 description: '瞭解Automated Forms Conversion Service的最新功能和修正的錯誤 '
 translation-type: tm+mt
-source-git-commit: ec3a85ccd4c5d535ebc31c55702adab9aa92cf4e
+source-git-commit: e01334d9a22ab95749e9b9b459da8886ae1ccd78
 
 ---
 
@@ -36,6 +36,6 @@ Automated Forms Conversion Service不斷獲得改進。 若要隨時掌握最新
 
 **安裝Automated Forms Conversion Service Connector套件**
 
-您需要使用1.1.38或更高版本的連接器封裝，才能使用AFC-2020.03.1版中提供的最新功能和改進。您可以從 [AEM Package Share下載連接器套件](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/servicepack/fd/AEM-Forms-6.5.4.0-WIN)。
+您需要使用1.1.38或更高版本的連接器封裝，才能使用AFC-2020.03.1版中提供的最新功能和改進。您可以從 [AEM Package Share下載連接器套件](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1)。
 
 如果您已安裝並執行Automated Forms Conversion服務環境，若要使用轉換服務的最新功能，請依上述順序安裝最新的服務套件、最新的AEM Forms附加套件和最新的連接器套件。 如需詳細指示，請參 [閱設定自動表單轉換服務](configure-service.md) 。
