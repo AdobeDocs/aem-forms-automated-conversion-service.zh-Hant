@@ -1,6 +1,6 @@
 ---
-title: '將PDF表單轉換為可調整的表單 '
-seo-title: '將PDF表單轉換為可調整的表單 '
+title: '將 PDF 表單轉換為最適化表單 '
+seo-title: '將 PDF 表單轉換為最適化表單 '
 description: 執行自動表單轉換服務，將PDF表單轉換為最適化表單
 seo-description: 執行自動表單轉換服務，將PDF表單轉換為最適化表單
 uuid: 49fcd5c0-0e72-496d-9831-00f79d582f57
@@ -8,12 +8,12 @@ contentOwner: khsingh
 topic-tags: forms
 discoiquuid: 9358219c-6079-4552-92b9-b427a23811af
 translation-type: tm+mt
-source-git-commit: bbf39e3bae55654f92a50f52a22cee5da938236d
+source-git-commit: bcd55fa59f37b71b95b7cbfd80fcda368eaba408
 
 ---
 
 
-# 將PDF表單轉換為可調整的表單 {#convert-print-forms-to-adaptive-forms}
+# 將 PDF 表單轉換為最適化表單 {#convert-print-forms-to-adaptive-forms}
 
 AEM Forms Automated Forms Conversion服務（採用Adobe Sensei）會自動將PDF表單轉換為裝置友好且回應速度快的調適性表單。 無論您是使用非互動式PDF表單、Acro Forms或XFA型PDF表單，Automated Forms Conversion服務都可輕鬆將這些表單轉換為最適化表單。 如需功能、轉換工作流程和入門資訊的詳細資訊，請參 [閱自動表單轉換服務](introduction.md) 。
 
@@ -21,13 +21,13 @@ AEM Forms Automated Forms Conversion服務（採用Adobe Sensei）會自動將PD
 
 * [**設定轉換服務&#x200B;**](configure-service.md)
 
-* **[準備要](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html)套用至** 已轉換表單的範本：使用範本可讓您在所有最適化表單中套用一致的品牌。 此外，Automated Forms Conversion服務不會擷取並使用來源PDF檔案的頁首和頁尾。 您可以使用最適化表單範本來指定頁首和頁尾。 在轉換期間，範本中指定的頁首和頁尾會套用至最適化表單。
+* **準備要[套用至](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html)已轉換表單的範本：** 使用範本可讓您在所有最適化表單中套用一致的品牌。 此外，Automated Forms Conversion服務不會擷取並使用來源PDF檔案的頁首和頁尾。 您可以使用最適化表單範本來指定頁首和頁尾。 在轉換期間，範本中指定的頁首和頁尾會套用至最適化表單。
 
-* **[準備要](https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html)套用至** 已轉換表單的主題：使用主題可讓您將一致的樣式套用至組織的所有調適性表單。
+* **準備要[套用至](https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html)已轉換表單的主題：** 使用主題可讓您將一致的樣式套用至組織的所有調適性表單。
 
 ## 開始轉換程式 {#start-the-conversion-process}
 
-在您將AEM實例與AEM Forms Conversion service連接後，您就可以將PDF表單轉換為最適化表單。 請依所列順序執行下列步驟以轉換表單：
+在您將AEM實例與AEM Forms Conversion Service連接後，您就可以將PDF表單轉換為最適化表單。 請依所列順序執行下列步驟以轉換表單：
 
 * [將PDF表格上傳至AEM Forms伺服器](convert-existing-forms-to-adaptive-forms.md#upload-pdf-forms-to-your-aem-forms-server)
 * [執行轉換](convert-existing-forms-to-adaptive-forms.md#run-the-conversion)
@@ -35,14 +35,14 @@ AEM Forms Automated Forms Conversion服務（採用Adobe Sensei）會自動將PD
 
 ### 將PDF表格上傳至AEM Forms伺服器 {#upload-pdf-forms-to-your-aem-forms-server}
 
-轉換服務會將AEM Forms例項上可用的PDF表單轉換為最適化表單。 您可以視需要一次或分階段上傳所有PDF表格。 在上傳表單之前，請考慮下列事項：
+轉換服務會將AEM Forms例項上可用的PDF表單轉換為最適化表單。 您可以視需要一次或分階段上傳所有PDF表格。 在上傳表單前，請參閱以下提醒：
 
 * 將資料夾中的表單數保持在小於15，並將資料夾中的頁數總數保持在小於50。
 * 將檔案夾大小保持在10 MB以下。 請勿將表單保留在子資料夾中。
 * 將頁數保持在小於15的形式中。
 * 請勿上傳受保護的表單。 該服務不會轉換受密碼保護和安全的表單。
 * 請勿上傳檔案名稱中含空格的來源表單。 在上傳表單之前，先從檔案名稱中移除空格。
-* 請勿上傳 [PDF資料夾](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html)。 本服務不會將PDF資料夾轉換為最適化表單。
+* 請勿上傳 [PDF Portfolio](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html)。 此服務無法將 PDF Portfolio 轉換為最適化表單。
 * 閱讀「已 [知問題](known-issues.md) 」和「最 [](styles-and-pattern-considerations-and-best-practices.md) 佳實務與考量事項」一節，並對表單進行建議的變更。
 
 請執行下列步驟，將要轉換為AEM Forms例項資料夾的表單上傳：
@@ -81,7 +81,7 @@ AEM Forms Automated Forms Conversion服務（採用Adobe Sensei）會自動將PD
 
 1. 在「轉換 **[!UICONTROL Additional]** 設定」對話方塊的標籤中，
    * 選取 **[!UICONTROL Extract fragment from adaptive forms]** 允許轉換服務識別、擷取和下載轉換表單片段的選項。 當您選擇該選 **[!UICONTROL Extract fragment from adaptive forms]** 項時，將啟用指定用於保存提取的表單片段和相應表單片段結構描述的路徑的選項。
-   * 如果您現有的JSON **[!UICONTROL existing adaptive form fragments]**&#x200B;結構描述和結構描述不太適應的表單片段，而且您打算在自動產生的最適化表單中使用這些片段，請指定其位置。 轉換服務會將可用的JSON架構型和架構較不適應的表單片段與輸入的PDF表單相符（僅限非互動PDF表單），如果有相符，則相符的最適化表單片段會用於對應的最適化表單。
+   * 如果您現有的JSON **[!UICONTROL existing adaptive form fragments]**&#x200B;結構描述式和結構描述不太適應的表單片段，而且您打算在自動產生的最適化表單中使用這些片段，請指定其位置。 轉換服務會將可用的JSON架構型和架構較不適應的表單片段與輸入的PDF表單相符（僅限非互動PDF表單），如果有相符，則相符的最適化表單片段會用於對應的最適化表單。
    >[!NOTE]
    >
    >
@@ -91,6 +91,10 @@ AEM Forms Automated Forms Conversion服務（採用Adobe Sensei）會自動將PD
 
 
    * 選取選 **[!UICONTROL Auto-detect multi-column layout of input forms]** 項，以保留大型螢幕（例如桌上型電腦和筆記型電腦）的來源表格版面配置。 此選項有助於保留來源表單的多欄版面配置。 例如，當來源PDF有雙欄版面時，服務會針對大螢幕顯示產生雙欄版面的輸出最適化表單，而針對行動電話等小螢幕裝置則產生單欄版面。 此功能與資料來源架構結構有一些已知問題。 如需詳細資訊，請參 [閱已知問題文章](known-issues.md) 。
+   * 依預設，服務會針對PDF表單的每一頁建立個別的頂層面板。 現在，您可以使用選 **[!UICONTROL Auto-detect logical sections]** 項來放置頁面層級面板（以頁碼為基礎的面板），並僅建立邏輯面板。 它還會將不屬於任何具有前置邏輯部分的欄位和跨兩個相鄰頁面的邏輯部分的欄位限定為單個邏輯部分。 例如，如果某個邏輯部分的某些欄位位於第1頁的末尾，而某些欄位位於第2頁的開頭，則所有這些欄位都會被拖入單個邏輯部分。
+
+      >[!NOTE]
+      > 您需要連接器封裝1.1.38或更新版本才能使用此 **[!UICONTROL Auto-detect logical sections]** 功能。
 
 
 
@@ -127,6 +131,6 @@ AEM Forms Automated Forms Conversion服務（採用Adobe Sensei）會自動將PD
    >
    >如果轉換程式需要60分鐘以上，而PDF表格仍未轉換為最適化表格，請在AEM Forms例項上建立新資料夾、將PDF表格上傳至新建立的資料夾，然後重新開始轉換。
 
-## 檢閱並修正轉換的表單 {#review-and-correct-the-converted-forms}
+## Review and correct the converted forms {#review-and-correct-the-converted-forms}
 
-現實世界的表單有複雜的資料擷取需求。 自動轉換完成後，客戶可以檢閱表單的轉換品質，並對表單進行必要的更新。 AEM Forms提供審核 [和正確編輯器](review-correct-ui-edited.md) ，以進行必要的變更。 它可讓您改善表單欄位的自動識別，並將識別的欄位從一種類型轉換為另一種類型。 例如，您可以協助識別表單的雙欄版面配置，並將自動識別為選項按鈕的欄位變更為多個選項欄位。
+現實世界的表單有複雜的資料擷取需求。 自動轉換完成後，客戶可以檢閱表單的轉換品質，並對表單進行必要的更新。 AEM Forms提供審核 [和正確的編輯器](review-correct-ui-edited.md) ，以進行必要的變更。 它可讓您改善表單欄位的自動識別，並將識別的欄位從一種類型轉換為另一種類型。 例如，您可以協助識別表單的雙欄版面配置，並將自動識別為選項按鈕的欄位變更為多個選項欄位。
