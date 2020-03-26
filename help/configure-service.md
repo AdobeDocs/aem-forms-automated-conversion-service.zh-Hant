@@ -2,7 +2,7 @@
 title: 設定自動表單轉換服務
 description: 讓您的AEM實例準備好使用Automated Forms Conversion服務
 translation-type: tm+mt
-source-git-commit: e01334d9a22ab95749e9b9b459da8886ae1ccd78
+source-git-commit: 68824c2f398d00141d67996121f7b758af16d2e4
 
 ---
 
@@ -43,7 +43,7 @@ Adobe 為您的組織啟用存取權限，並向您指定的組織管理員提�
 1. [下載並安裝AEM 6.4或AEM 6.5](#aemquickstart)
 1. [下載並安裝最新的AEM Service Pack](#servicepack)
 1. [下載並安裝最新的AEM Forms附加元件套件](#downloadaemformsaddon)
-1. [下載並安裝最新的連接器套件](#installConnectorPackage)
+1. （可選）下 [載並安裝最新的連接器套件](#installConnectorPackage)
 1. [建立自訂主題和範本](#referencepackage)
 
 ### 下載並安裝AEM 6.4或AEM 6.5 {#aemquickstart}
@@ -69,9 +69,9 @@ AEM例項包含基本表單功能。 轉換服務需要AEM Forms的完整功能�
 > 確保在安裝附加軟體包後執行強制安裝後配置。
 
 
-### 下載和安裝連接器套件 {#installConnectorPackage}
+### （可選）下載和安裝連接器套件 {#installConnectorPackage}
 
-您需要使用1.1.38或更高版本的連接器封裝，才能使用AFC-2020.03.1版中提供的最新功能和改進。您可以 [從AEM Package Share下載連接器套件](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1)。
+安裝連接器套件1.1.38或更新版本，以使用AFC-2020.03.1版中提供的 [Auto-detect logical sections](convert-existing-forms-to-adaptive-forms.md#run-the-conversion) （自動偵測邏輯區段）功能和改進。您可以 [從AEM Package Share下載連接器套件](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1)。
 
 >[!NOTE]
 > 如果您已安裝並執行Automated Forms Conversion服務環境，若要使用轉換服務的最新功能，請依上述順序安裝最新的服務套件、最新的AEM Forms附加套件和最新的連接器套件。
