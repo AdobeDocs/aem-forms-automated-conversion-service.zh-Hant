@@ -7,7 +7,7 @@ uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 translation-type: tm+mt
-source-git-commit: 5d4dba8fea7439b991a7a15872e6f4ed48156ac9
+source-git-commit: ffab4d916cbd545078f4b72b8de5c9968f23b0da
 
 ---
 
@@ -189,9 +189,9 @@ Automated Forms Conversion服務會在轉換期間對來源表單執行關鍵字
    <th><strong>說明</strong></th> 
   </tr> 
   <tr> 
-   <td><p>多行</p></td> 
+   <td><p>multiLine</p></td> 
    <td> 
-    <p>多行屬性在轉換後將源表單欄位轉換為自適應表單中的多行欄位。 如需詳細資訊，請 <strong>參閱自訂中繼模型範例中的「將字串欄位轉換為多行欄位</strong><a href="#custommetamodelexamples">」(Convert a string field to a multi-line field)。</a></p> </td> 
+    <p>multiLine屬性在轉換後，會將來源表單欄位轉換為自適應表單中的多行欄位。 如需詳細資訊，請 <strong>參閱自訂中繼模型範例中的「將字串欄位轉換為多行欄位</strong><a href="#custommetamodelexamples">」(Convert a string field to a multi-line field)。</a></p> </td> 
   </tr>
   <td><p>強制</p></td> 
    <td> 
@@ -252,7 +252,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 
 #### 修改表單欄位的標籤 {#modify-the-label-of-a-form-field}
 
-**** 範例：在轉換後，將表單中的銀行帳號標籤修改為最適化表單中的自訂帳號。
+**範例：** 在轉換後，將表單中的銀行帳號標籤修改為最適化表單中的自訂帳號。
 
 在此自訂元模型中，轉換服務會使用 **title** 屬性作為搜尋關鍵字。 在擷取表單中的 **Bank帳號** ，轉換服務會以在 **aem:PropertiesSection中提及的** jcr:title ******** 屬性的Customer帳號字串取代文字。
 
@@ -351,9 +351,9 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 
 #### 新增驗證至最適化表單欄位 {#add-validations-to-adaptive-form-fields}
 
-**** 範例1:新增驗證至最適化 **表單的「郵遞區號** 」欄位。
+**範例1:** 新增驗證至最適化 **表單的「郵遞區號** 」欄位。
 
-在此自訂中繼模型中，轉換服務會使用 **aem:affKeyword中的文字作為搜尋關鍵字** 。 在擷取表單中 **的「郵遞區號** 」文字後，轉換服務會使用aem:afProperties區段中定義的 **validatePictureClause** 屬性，將驗證新增至 **** 欄位。 根據驗證，您在轉換後在最適化表單中為「郵遞區號 **** 」欄位指定的輸入必須包含6個字元。
+在此自訂中繼模型中，轉換服務會使用 **aem:affKeyword中的文字作為搜尋關鍵字** 。 在擷取表單中 **的「郵遞區號** 」文字後，轉換服務會使用aem:afProperties區段中定義的 **validatePictureClause** 屬性，將驗證新增至 **** 欄位。 根據驗證，您在轉換後以最適化表單為「郵遞區號 **** 」欄位所指定的輸入必須包含6個字元。
 
 ```
 {
@@ -367,7 +367,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 }
 ```
 
-**** 範例2:將驗證新增至最適 **化表單的** 「銀行帳號」欄位。
+**範例2:** 將驗證新增至最適 **化表單的** 「銀行帳號」欄位。
 
 在此自訂中繼模型中，轉換服務會使用 **aem:affKeyword中的文字作為搜尋關鍵字** 。 在擷取表單中 **的Bank帳號** ( **Bank account number** )文字後，轉換服務會使用aem:afProperties區段中定義的強制屬性，將驗證新增至欄位 **** 。 根據驗證，您必須先為「銀行帳號」欄位指定值， **然後才能在轉換後** 提交表格。
 
@@ -419,7 +419,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 
 #### 新增其他選項至下拉式清單 {#add-additional-options-to-the-drop-down-list}
 
-**** 範例：使用 **自訂中繼模型** ，將斯里蘭卡新增為現有下拉式清單的額外選項。
+**範例：** 使用 **自訂中繼模型** ，將斯里蘭卡新增為現有下拉式清單的額外選項。
 
 若要新增額外選項，請使用新 **選項** ，更新enum屬性。 在此範例中，以 **Sri Lanka** 為額外選 **項更新enum屬性** 。 列於列舉 **屬性中** 的值會顯示在下拉式清單中。
 
@@ -447,19 +447,19 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 
 #### 將字串欄位轉換為多行欄位 {#convert-a-string-field-to-a-multi-line-field}
 
-**** 範例：轉換 **後** ，將字串類型的「位址」欄位轉換為表單中的多行欄位。
+**範例：** 轉換 **後** ，將字串類型的「位址」欄位轉換為表單中的多行欄位。
 
 在此自訂中繼模型中，轉換服務會使用 **aem:affKeyword中的文字作為搜尋關鍵字** 。 在擷取表單中 **的Address** 文字後，服務會使用aem:afProperties區段中定義的多行屬性，將文字欄位轉換為多行欄位 ******** 。
 
 ```
 {
- "multiline" : {
+ "multiLine" : {
    "aem:affKeyword": [
       "Address"
     ],
     "type" : "string",
     "aem:afProperties": {
-      "multiline": "true"
+      "multiLine": "true"
     }
   }
 }
