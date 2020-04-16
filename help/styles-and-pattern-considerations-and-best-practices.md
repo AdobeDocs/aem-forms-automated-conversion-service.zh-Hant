@@ -7,7 +7,7 @@ uuid: e24773a2-be14-4184-a168-48aa976d459a
 topic-tags: introduction
 discoiquuid: 79f2026e-73a5-4bd1-b041-d1399b4ad23e
 translation-type: tm+mt
-source-git-commit: cab926fc408a1a680853ee557e36354938f7424a
+source-git-commit: a5d663c2a59895eb71eb5287586bc6b3862927fc
 
 ---
 
@@ -39,7 +39,7 @@ source-git-commit: cab926fc408a1a680853ee557e36354938f7424a
 * [開始轉換前，先將系結新增至XDP](http://www.adobe.com/go/learn_aemforms_designer_65) 表單。 當源XDP表單中有綁定可用時，服務會在轉換期間自動將綁定應用到相應的自適應表單域。 它可為您節省手動套用系結所需的時間。
 * [將Adobe Sign標籤新增至](https://helpx.adobe.com/sign/using/text-tag.html) XDP檔案。 服務會自動將Adobe Sign標籤轉換為對應的最適化表單欄位。 Adaptive Forms支援有限數目的Adobe Sign欄位。 如需支援欄位的完整清單，請參 [閱在最適化表單檔案中使用Adobe Sign](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/working-with-adobe-sign.html) 。
 * 在XDP檔案中使用子表單，以最適化表單建立面板。 服務在轉換期間將每個子表單轉換為自適應表單面板。
-* 盡可能將XDP檔案中的複雜表轉換為簡單表。
+* 盡可能將XDP檔案中的複雜表轉換為簡單表。 表格單元格中包含表格欄位、大小不均勻的單元格、行或列跨越的單元格、合併的單元格、部分邊框或沒有可見邊框的表格被視為複雜表格。 具有上述任一項的表被視為複雜表。
 
 ### 開始轉換前
 
