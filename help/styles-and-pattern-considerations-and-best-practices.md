@@ -7,7 +7,7 @@ uuid: e24773a2-be14-4184-a168-48aa976d459a
 topic-tags: introduction
 discoiquuid: 79f2026e-73a5-4bd1-b041-d1399b4ad23e
 translation-type: tm+mt
-source-git-commit: 83e35b3cf21c1348c09dcddbae3edf77990457d0
+source-git-commit: 43b9b30e7e912081756050aa002a9e398d1d74fc
 
 ---
 
@@ -25,7 +25,7 @@ source-git-commit: 83e35b3cf21c1348c09dcddbae3edf77990457d0
 您可以視需要一次或分階段上傳所有PDF表格。 在上傳表單前，請參閱以下提醒：
 
 * 將資料夾中的表單數保持在小於15，並將資料夾中的頁數總數保持在小於50。
-* 將檔案夾大小保持在10 MB以下。 請勿將表單保留在子資料夾中。
+* 將資料夾的大小保持在10 MB以下。 請勿將表單保留在子資料夾中。
 * 將頁數保持在小於15的形式中。
 * 將來源檔案整理成8-15份檔案。 在單一批次中使用通用的最適化表單片段來保留來源表單。
 * 請勿上傳受保護的表單。 該服務不會轉換受密碼保護和安全的表單。
@@ -35,16 +35,16 @@ source-git-commit: 83e35b3cf21c1348c09dcddbae3edf77990457d0
 
 當您使用XDP表單進行轉換時，請先執行下列步驟，再上傳來源XPD表單：
 
-* 分析XDP表單並修正視覺問題。 確保來源檔案使用預期的控制項和結構。 例如，源表單中可以有複選框，而不是單選選項的單選按鈕。 將核取方塊變更為選項按鈕，以產生具有預期元件的最適化表單。
+* 分析XDP表單並修正視覺問題。 確保源文檔使用預期的控制項和結構。 例如，源表單中可以有複選框，而不是單選選項的單選按鈕。 將核取方塊變更為選項按鈕，以產生具有預期元件的最適化表單。
 * [開始轉換前，先將系結新增至XDP](http://www.adobe.com/go/learn_aemforms_designer_65) 表單。 當源XDP表單中有綁定可用時，服務會在轉換期間自動將綁定應用到相應的自適應表單域。 它可為您節省手動套用系結所需的時間。
 * [將Adobe Sign標籤新增至](https://helpx.adobe.com/sign/using/text-tag.html) XDP檔案。 服務會自動將Adobe Sign標籤轉換為對應的最適化表單欄位。 Adaptive Forms支援有限數目的Adobe Sign欄位。 如需支援欄位的完整清單，請參 [閱在最適化表單檔案中使用Adobe Sign](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/working-with-adobe-sign.html) 。
-* 盡可能將XDP檔案中的複雜表轉換為簡單表。 表格單元格中包含表格欄位、大小不均勻的單元格、行或列跨越的單元格、合併的單元格、部分邊框或沒有可見邊框的表格被視為複雜表格。 具有上述任一項的表被視為複雜表。
+* 盡可能將XDP檔案中的複雜表轉換為簡單表。 表格單元格中包含表格欄位、大小不均勻的單元格、行或列跨越的單元格、合併的單元格、部分邊框或沒有可見邊框的表格被視為複雜表格。 含有上述任一項目的表被視為複雜表。
 <!-- * Use sub-forms in XDP documents to create panels in adaptive forms. Service converts each sub-form to one or more adaptive form panels during conversion. -->
 
 ### 開始轉換前
 
 * 建立最適化表單範本。 範本可協助您為組織或部門的表單指定統一的結構。
-* 在最適化表單範本中指定頁首和頁尾。 服務忽略源文檔的頁眉——頁腳，並使用在自適應表單模板中指定的頁眉——頁腳。
+* 在最適化表單範本中指定頁首和頁尾。 服務會忽略源文檔的頁首——頁尾，並使用在自適應表單模板中指定的頁首——頁尾。
 * 建立最適化表單主題。 主題可協助您為組織或部門的表單提供統一的外觀和感覺。
 * 設定表單資料模型以儲存並擷取資料來源。 為表單資料模型建立和設定讀取和寫入服務。
 * 建立最適化表單片段並設定服務以使用您的最適化表單片段。
@@ -54,7 +54,7 @@ source-git-commit: 83e35b3cf21c1348c09dcddbae3edf77990457d0
 
 ## 瞭解複雜圖樣
 
-AEM Forms Automated Conversion服務使用人工智慧和機器學習演算法來瞭解來源表單的版面配置和欄位。 每項機器學習服務都會持續從來源資料中學習，並在每次流失時產生改善的輸出。 這些服務從人類的體驗中學習。
+AEM Forms Automated Conversion服務使用人工智慧和機器學習演算法來瞭解來源表單的版面配置和欄位。 每項機器學習服務都會持續從來源資料中學習，並在每次流失時產生改善的輸出。 這些服務借鑒了人類的經驗。
 
 自動化表單轉換服務是針對大量表單進行培訓的。 它可輕鬆識別來源表單中的欄位，並產生最適化表單。 不過，PDF表格中有些欄位和樣式很容易讓人看得到，但是卻很難為服務瞭解。 服務可指派不同於適用欄位類型或面板給某些欄位或樣式。 以下列出所有此類欄位和樣式模式。
 
@@ -70,11 +70,11 @@ AEM Forms Automated Conversion服務使用人工智慧和機器學習演算法�
 | **Pattern** <br>Service不支援掃描的表單。 <br><br>**解析度&#x200B;**<br>請勿使用掃描的表單。 | ![掃描的表單](assets/scanned-forms.png) |
 | **Pattern** <br>Service不會擷取影像和影像中的文字。 <br><br>**解析度&#x200B;**<br>：手動將影像或文字新增至轉換的表單。 | ![包含文字表單的影像](assets/best-practice-image-with-text.png) |
 | **具有**<br>點狀或非清除邊界和邊界的陣清單不進行轉換。 <br><br>**解析度&#x200B;**(<br>Resolution)使用具有明確邊界和邊界的表。 支援。 | ![非清除表格表單](assets/best-practice-table-dotted-non-clear.png) |
-| **「圖樣**<br> 」最適化表單不支援立即可用的垂直文字。 因此，服務不會將垂直文字轉換為對應的Adaptive Forms文字。 <br><br>**解析度&#x200B;**(<br>Resolution)視需要使用最適化表單編輯器來新增垂直文字。 | ![非清除表格表單](assets/vertical-text.png) |
+| **模式** (Pattern <br> )最適化表單不支援立即可用的垂直文字。 因此，服務不會將垂直文字轉換為對應的Adaptive Forms文字。 <br><br>**解析度&#x200B;**(<br>Resolution)視需要使用最適化表單編輯器來新增垂直文字。 | ![非清除表格表單](assets/vertical-text.png) |
 
 
 
-### Choice Group {#choice-group}
+### Choice群組 {#choice-group}
 
 | 圖樣 | 解析度 |
 |--- |--- |
