@@ -7,7 +7,7 @@ uuid: e24773a2-be14-4184-a168-48aa976d459a
 topic-tags: introduction
 discoiquuid: 79f2026e-73a5-4bd1-b041-d1399b4ad23e
 translation-type: tm+mt
-source-git-commit: a5d663c2a59895eb71eb5287586bc6b3862927fc
+source-git-commit: 83e35b3cf21c1348c09dcddbae3edf77990457d0
 
 ---
 
@@ -38,8 +38,8 @@ source-git-commit: a5d663c2a59895eb71eb5287586bc6b3862927fc
 * 分析XDP表單並修正視覺問題。 確保來源檔案使用預期的控制項和結構。 例如，源表單中可以有複選框，而不是單選選項的單選按鈕。 將核取方塊變更為選項按鈕，以產生具有預期元件的最適化表單。
 * [開始轉換前，先將系結新增至XDP](http://www.adobe.com/go/learn_aemforms_designer_65) 表單。 當源XDP表單中有綁定可用時，服務會在轉換期間自動將綁定應用到相應的自適應表單域。 它可為您節省手動套用系結所需的時間。
 * [將Adobe Sign標籤新增至](https://helpx.adobe.com/sign/using/text-tag.html) XDP檔案。 服務會自動將Adobe Sign標籤轉換為對應的最適化表單欄位。 Adaptive Forms支援有限數目的Adobe Sign欄位。 如需支援欄位的完整清單，請參 [閱在最適化表單檔案中使用Adobe Sign](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/working-with-adobe-sign.html) 。
-* 在XDP檔案中使用子表單，以最適化表單建立面板。 服務在轉換期間將每個子表單轉換為自適應表單面板。
 * 盡可能將XDP檔案中的複雜表轉換為簡單表。 表格單元格中包含表格欄位、大小不均勻的單元格、行或列跨越的單元格、合併的單元格、部分邊框或沒有可見邊框的表格被視為複雜表格。 具有上述任一項的表被視為複雜表。
+<!-- * Use sub-forms in XDP documents to create panels in adaptive forms. Service converts each sub-form to one or more adaptive form panels during conversion. -->
 
 ### 開始轉換前
 
@@ -95,7 +95,7 @@ AEM Forms Automated Conversion服務使用人工智慧和機器學習演算法�
 |--- |--- |
 | **包含表**<br><br><br>****<br>單欄位的模式清單將合併或不轉換為相應的自適應表單元件解析度使用具有清晰邊界的表單欄位，或使用「查看」和「更正」編輯器來修復此類問題。 | ![清單包含選擇組](assets/best-practice-lists-containing-form-fields.png) |
 | **Pattern** <br>Service可讓數個巢狀清單保留未識別的「解析度」( <br><br>**Resolution **)「使用檢閱<br>」(Use Review)和「更正」(Correct)編輯器來修正此類問題。 | ![清單包含選擇組](assets/best-practice-nested-lists.png) |
-| **Pattern**<br> Service會合併某些包含選擇群組的清單，以相互 <br><br>**解析&#x200B;**<br>「使用檢閱和更正」編輯器來修正此類問題。 | ![清單包含選擇組](assets/best-practice-check-box-in-table-cells.png) |
+| **Pattern**<br> Service會合併某些包含選擇群組的清單，以相互 <br><br>**解析&#x200B;**<br>「使用檢視和更正」編輯器來修正此類問題。 | ![清單包含選擇組](assets/best-practice-check-box-in-table-cells.png) |
 
 <!--
 Comment Type: draft
