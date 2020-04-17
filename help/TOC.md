@@ -5,12 +5,13 @@ sub-product: 表單轉換服務
 audience: end-user
 user-guide-title: Adobe Experience Manager Forms Automated Conversion Service
 translation-type: tm+mt
-source-git-commit: 90f577a3bc75afdb596ad1dea27cd833e1c996ce
+source-git-commit: 56e4696c0372223e0b27f1c313382a2a637b6db1
 
 ---
 
 
 # 目錄 {#using}
+
 + [發行說明](release-notes.md)
 + [簡介](introduction.md)
 + [配置服務](configure-service.md)
@@ -24,4 +25,3 @@ source-git-commit: 90f577a3bc75afdb596ad1dea27cd833e1c996ce
 + [最佳實務和考量](styles-and-pattern-considerations-and-best-practices.md)
 + [已知問題](known-issues.md)
 + [疑難排解](troubleshoot-afcs.md)
-
