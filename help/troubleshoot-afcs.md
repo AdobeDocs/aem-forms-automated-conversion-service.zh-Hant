@@ -6,15 +6,16 @@ seo-description: 常見的AFCS問題及解決方案
 contentOwner: khsingh
 topic-tags: forms
 translation-type: tm+mt
-source-git-commit: 3a82102feffa7fc618dc37c9a745c254a46a0700
+source-git-commit: c413c5dc2da3a3e7e116b3355c63620f9dab17f8
 
 ---
 
 
 # 疑難排解自動化表單轉換服務
 
+本檔案提供常見錯誤的基本疑難排解步驟。
 
-<!--The article provides information on installation, configuration and administration issues that may arise in an Automated Forms Conversion Service production environment. --> The document  provides basic troubleshooting steps for common errors.
+<!--The article provides information on installation, configuration and administration issues that may arise in an Automated Forms Conversion Service production environment. -->
 
 ## 常見錯誤 {#commonerrors}
 
