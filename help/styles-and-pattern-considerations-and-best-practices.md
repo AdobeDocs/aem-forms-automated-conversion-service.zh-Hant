@@ -7,18 +7,18 @@ uuid: e24773a2-be14-4184-a168-48aa976d459a
 topic-tags: introduction
 discoiquuid: 79f2026e-73a5-4bd1-b041-d1399b4ad23e
 translation-type: tm+mt
-source-git-commit: 43b9b30e7e912081756050aa002a9e398d1d74fc
+source-git-commit: fa3b365b9762a044fddb3820ad3c091d211e0ae6
 
 ---
 
 
 # 最佳實踐和已知的複雜模式 {#Best-practices-and-considerations2}
 
-本檔案提供管理員、作者和開發人員在使用自動表單轉換服務時可從中獲益的准則和建議。 它討論從準備來源表單到修正複雜模式（需要額外努力以自動化轉換）的最佳實務。 這些最佳實務可共同協助自動化表單轉換服務的整體效能與輸出。
+本檔案提供管理員、作者和開發人員在使用表單時可從中獲益的准則和建議 [!DNL Automated Forms Conversion service]。 它討論從準備來源表單到修正複雜模式（需要額外努力以自動化轉換）的最佳實務。 這些最佳實務可共同貢獻整體效能與輸出 [!DNL Automated Forms Conversion service]。
 
 ## 最佳實務
 
-轉換服務會將AEM Forms例項上可用的PDF表單轉換為最適化表單。 下列最佳實務可協助您提高轉換速度和準確性。 此外，這些最佳實務可協助您節省轉換活動後花費的時間。
+轉換服務會將AEM例項上可用的PDF表格轉換 [!DNL Forms] 為最適化表格。 下列最佳實務可協助您提高轉換速度和準確性。 此外，這些最佳實務可協助您節省轉換活動後花費的時間。
 
 ### 上傳來源之前
 
@@ -54,9 +54,9 @@ source-git-commit: 43b9b30e7e912081756050aa002a9e398d1d74fc
 
 ## 瞭解複雜圖樣
 
-AEM Forms Automated Conversion服務使用人工智慧和機器學習演算法來瞭解來源表單的版面配置和欄位。 每項機器學習服務都會持續從來源資料中學習，並在每次流失時產生改善的輸出。 這些服務借鑒了人類的經驗。
+AEM [!DNL Forms Automated Conversion service] 使用人工智慧和機器學習演算法來瞭解來源表單的版面配置和欄位。 每項機器學習服務都會持續從來源資料中學習，並在每次流失時產生改善的輸出。 這些服務借鑒了人類的經驗。
 
-自動化表單轉換服務是針對大量表單進行培訓的。 它可輕鬆識別來源表單中的欄位，並產生最適化表單。 不過，PDF表格中有些欄位和樣式很容易讓人看得到，但是卻很難為服務瞭解。 服務可指派不同於適用欄位類型或面板給某些欄位或樣式。 以下列出所有此類欄位和樣式模式。
+[!DNL Automated Forms Conversion service] 接受過大量形式訓練。 它可輕鬆識別來源表單中的欄位，並產生最適化表單。 不過，PDF表格中有些欄位和樣式很容易讓人看得到，但是卻很難為服務瞭解。 服務可指派不同於適用欄位類型或面板給某些欄位或樣式。 以下列出所有此類欄位和樣式模式。
 
 服務會開始識別並指派正確的欄位或面板給這些模式，因為它會不斷從來源資料中學習。 目前，您可以使用「檢閱」 [和「更正」編輯器](review-correct-ui-edited.md) ，來修正此類問題。 在開始修正問題或進一步閱讀之前，請先熟悉最適 [化表單元件](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html)。
 
