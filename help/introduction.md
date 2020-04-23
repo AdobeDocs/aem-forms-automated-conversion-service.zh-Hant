@@ -1,7 +1,7 @@
 ---
 title: 簡介
 description: '將列印表單加速轉換為最適化表單 '
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: ceff5cb56aa9896a28004628c5e26c262b7918bd
 
 ---
@@ -21,7 +21,7 @@ source-git-commit: ceff5cb56aa9896a28004628c5e26c262b7918bd
 
 ## 入門 {#onboarding}
 
-此服務可免費提供給AEM 6.4 Forms和AEM 6.5 Forms On-Premise客戶和Adobe Managed Service企業客戶。 您可以聯絡 Adobe Sales 團隊或您的 Adobe 代表，請求存取該服務。
+AEM 6.4 Forms 與 AEM 6.5 Forms 內部部署定期客戶和 Adobe Managed Service 企業客戶可以免費使用該服務。您可以聯絡 Adobe Sales 團隊或您的 Adobe 代表，請求存取該服務。
 
 Adobe 為您的組織啟用存取權限，並向您指定的組織管理員提供所需的特權。 管理員可以授予組織的 AEM Forms 開發人員（使用者）存取權限以連接到該服務。 欲知詳情，請參閱[設定自動表單轉換服務](configure-service.md)。
 
