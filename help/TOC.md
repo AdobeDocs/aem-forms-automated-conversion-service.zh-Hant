@@ -3,8 +3,8 @@ cloud: experience-cloud
 product: experience manager
 sub-product: 表單轉換服務
 audience: end-user
-user-guide-title: Adobe Experience Manager Forms Automated Conversion Service
-translation-type: tm+mt
+user-guide-title: Adobe Experience Manager 表單自動轉換服務
+translation-type: ht
 source-git-commit: 56e4696c0372223e0b27f1c313382a2a637b6db1
 
 ---
@@ -14,7 +14,7 @@ source-git-commit: 56e4696c0372223e0b27f1c313382a2a637b6db1
 
 + [發行說明](release-notes.md)
 + [簡介](introduction.md)
-+ [配置服務](configure-service.md)
++ [設定服務](configure-service.md)
 + [將列印表單轉換為最適化表單](convert-existing-forms-to-adaptive-forms.md)
 + [檢閱並修正轉換後的表格](review-correct-ui-edited.md)
 + [擴展預設元模型](extending-the-default-meta-model.md)
