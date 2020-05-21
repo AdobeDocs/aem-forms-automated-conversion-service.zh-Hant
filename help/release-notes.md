@@ -1,13 +1,16 @@
 ---
 title: 新增功能 發行說明——自動表單轉換服務
 description: '瞭解自動表單轉換服務的最新功能及錯誤修正 '
-translation-type: ht
-source-git-commit: c0ca850a0a1e82e34364766601011d6367b218ac
+translation-type: tm+mt
+source-git-commit: 5031050795a558795c151e9f3c26a16736566adf
+workflow-type: tm+mt
+source-wordcount: '305'
+ht-degree: 100%
 
 ---
 
 
-# 自動表單轉換服務：發行說明
+# 發行說明
 
 自動表單轉換服務不斷改善。 如欲瞭解最新發展，請定期造訪此頁面。 此頁面內含下列資訊：
 
