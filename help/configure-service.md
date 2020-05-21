@@ -2,7 +2,10 @@
 title: 設定自動表單轉換服務
 description: 讓您的AEM實例準備好使用Automated Forms Conversion服務
 translation-type: tm+mt
-source-git-commit: 68824c2f398d00141d67996121f7b758af16d2e4
+source-git-commit: e1ef5be14fd3f1ec7e6ccf569c8d76518dfc5c6b
+workflow-type: tm+mt
+source-wordcount: '2519'
+ht-degree: 8%
 
 ---
 
@@ -17,13 +20,13 @@ source-git-commit: 68824c2f398d00141d67996121f7b758af16d2e4
 
 * 配置SMTP郵件伺服器
 
->[!VIDEO](https://video.tv.adobe.com/v/29267/)
+<!--- >[!VIDEO](https://video.tv.adobe.com/v/29267/) 
 
-**觀看影片或閱讀文章以設定自動表單轉換服務**
+**Watch the video or read the article to configure Automated Forms Conversion service** -->
 
 ## 入門{#onboarding}
 
-此服務可免費提供給AEM 6.4 Forms和AEM 6.5 Forms On-Premise客戶和Adobe Managed Service企業客戶。 您可以聯絡 Adobe Sales 團隊或您的 Adobe 代表，請求存取該服務。
+AEM 6.4 Forms 與 AEM 6.5 Forms 內部部署定期客戶和 Adobe Managed Service 企業客戶可以免費使用該服務。您可以聯絡 Adobe Sales 團隊或您的 Adobe 代表，請求存取該服務。
 
 Adobe 為您的組織啟用存取權限，並向您指定的組織管理員提供所需的特權。 管理員可以授予組織的 AEM Forms 開發人員（使用者）存取權限以連接到該服務。 
 
@@ -59,9 +62,9 @@ Adobe 為您的組織啟用存取權限，並向您指定的組織管理員提�
 
 ### 下載並安裝AEM最新Service Pack {#servicepack}
 
-下載並安裝最新的AEM Service Pack。 如需詳細指示，請參 [閱或AEM 6.4 Service Pack發行說明](https://helpx.adobe.com/experience-manager/6-4/release-notes/sp-release-notes.html)[或AEM 6.5 Service Pack發行說明](https://helpx.adobe.com/experience-manager/6-5/release-notes/sp-release-notes.html)。
+下載並安裝最新的AEM Service Pack。 如需詳細指示，請參 [閱或AEM 6.4 Service Pack發行說明](https://helpx.adobe.com/tw/experience-manager/6-4/release-notes/sp-release-notes.html)[或AEM 6.5 Service Pack發行說明](https://helpx.adobe.com/tw/experience-manager/6-5/release-notes/sp-release-notes.html)。
 
-### 下載並安裝AEM Forms附加元件套件 {#downloadaemformsaddon}
+### 下載並安裝AEM Forms附加元件套件  {#downloadaemformsaddon}
 
 AEM例項包含基本表單功能。 轉換服務需要AEM Forms的完整功能。 下載並安裝AEM Forms附加套件，以運用AEM Forms的所有功能。 需要軟體包才能設定並運行轉換服務。 如需詳細指示，請參 [閱安裝和設定資料擷取功能。](https://helpx.adobe.com/experience-manager/6-5/forms/using/installing-configuring-aem-forms-osgi.html)
 
@@ -69,27 +72,24 @@ AEM例項包含基本表單功能。 轉換服務需要AEM Forms的完整功能�
 > 確保在安裝附加軟體包後執行強制安裝後配置。
 
 
-### （可選）下載和安裝連接器套件 {#installConnectorPackage}
+### （可選）下載和安裝連接器套件  {#installConnectorPackage}
 
-安裝連接器套件1.1.38或更新版本，以使用AFC-2020.03.1版中提供的 [Auto-detect logical sections](convert-existing-forms-to-adaptive-forms.md#run-the-conversion) （自動偵測邏輯區段）功能和改進。您可以 [從AEM Package Share下載連接器套件](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1)。
-
->[!NOTE]
-> 如果您已安裝並執行Automated Forms Conversion服務環境，若要使用轉換服務的最新功能，請依上述順序安裝最新的服務套件、最新的AEM Forms附加套件和最新的連接器套件。
+此連接器套件可讓您提早存取 [Auto-detect邏輯區段功能](convert-existing-forms-to-adaptive-forms.md#run-the-conversion) ，以及AFC-2020.03.1版中提供的增強功能。 如果您不需要AFC-2020.03.1中提供的功能和改進，請勿安裝軟體包。  您可以 [從AEM Package Share下載連接器套件](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1)。
 
 
 ### 建立自訂主題和範本 {#referencepackage}
 
 如果您在生產模 [式](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/production-ready.html) (nosamplecontent runmode)中啟動AEM，則不會安裝參考套件。 參考套件包含範例主題和範本。 自動化表單轉換服務至少需要一個主題和一個範本，才能將PDF表單轉換為最適化表單。 建立您自己的自訂主題和範本，並指向 [服務設定](#configure-the-cloud-service) ，以便在使用服務前使用自訂範本和主題。
 
-## 配置服務 {#configure-the-service}
+## 設定服務 {#configure-the-service}
 
 在您繼續設定服務並連線您的本機實例與Adobe Cloud上執行的服務之前，請先瞭解連線至服務所需的角色和權限。 本服務使用兩種不同的角色類型：管理員和開發人員：
 
-* **管理員**:管理員負責管理組織的Adobe軟體和服務。 管理員授與組織內開發人員的存取權，以便連線至在Adobe Cloud上執行的自動化表單轉換服務。 當為組織布建管理員時，管理員會收到一封有標題的電子郵件 **[!UICONTROL 'You now have administrator rights to manage Adobe software and services for your organization']**。 如果您是管理員，請檢查郵箱中是否有前述標題的電子郵件，並繼 [續授予您組織開發人員的存取權](#adduseranddevs)。
+* **管理員**: 管理員負責管理組織的Adobe軟體和服務。 管理員授與組織內開發人員的存取權，以便連線至在Adobe Cloud上執行的自動化表單轉換服務。 當為組織布建管理員時，管理員會收到一封有標題的電子郵件 **[!UICONTROL 'You now have administrator rights to manage Adobe software and services for your organization']**。 如果您是管理員，請檢查郵箱中是否有前述標題的電子郵件，並繼 [續授予您組織開發人員的存取權](#adduseranddevs)。
 
 ![管理員存取權授予電子郵件](assets/admin-console-adobe-io-access-grantedx75.png)
 
-* **開發人員**:開發人員會將本機AEM Forms作者例項連結至Adobe Cloud上執行的Automated Forms Conversion服務。 當管理員授與開發人員連線至自動表單轉換服務的權限時，您現在可以存取標題為「您」的電子郵件會傳送給開發人員，以管理您組織的Adobe API整合。 如果您是開發人員，請檢查郵箱中是否有前述標題的電子郵件，然後繼續 [Connect your local AEM instance to Automated Forms Conversion service on Adobe Cloud。](#connectafcadobeio)
+* **開發人員**: 開發人員會將本機AEM Forms作者例項連結至Adobe Cloud上執行的Automated Forms Conversion服務。 當管理員授與開發人員連線至自動表單轉換服務的權限時，您現在可以存取標題為「您」的電子郵件會傳送給開發人員，以管理您組織的Adobe API整合。 如果您是開發人員，請檢查郵箱中是否有前述標題的電子郵件，然後繼續 [Connect your local AEM instance to Automated Forms Conversion service on Adobe Cloud。](#connectafcadobeio)
 
 ![開發人員存取授權電子郵件](assets/email-developer-accessx94.png)
 
@@ -123,7 +123,7 @@ AEM例項包含基本表單功能。 轉換服務需要AEM Forms的完整功能�
 * [設定電子郵件通知](configure-service.md#configureemailnotification)
 * [新增使用者至表單使用者群組](#adduserstousergroup)
 * [取得公開憑證](#obtainpubliccertificates)
-* [建立Adobe I/O整合](#createintegration)
+* [建立 Adobe I/O 整合項目](#createintegration)
 * [設定雲端服務](configure-service.md#configure-the-cloud-service)
 
 #### 設定電子郵件通知 {#configureemailnotification}
@@ -157,13 +157,13 @@ Automated Forms Conversion服務使用Day CQ郵件服務來傳送電子郵件通
 
 1. 在雲 **[!UICONTROL Automated Forms Conversion Service]** 端解決方案中選擇。
 
-1. 選中該 **[!UICONTROL Create new certificate]** 複選框並指定別名。 別名用作對話框的名稱。 點選 **[!UICONTROL Create certificate]**。 將出現對話框。 按一下 **[!UICONTROL OK]**. 將建立證書。
+1. 選中該 **[!UICONTROL Create new certificate]** 複選框並指定別名。 別名的作用是對話方塊的名稱。點選 **[!UICONTROL Create certificate]**。 對話方塊隨即顯示。按一下 **[!UICONTROL OK]**. 將建立證書。
 
-1. 點選 **[!UICONTROL Download Public Key]** 並將 ** AEM-Adobe-IMS.crt憑證檔案儲存在您的電腦上。 憑證檔案用來 [建立Adobe I/O Console的整合](#createintegration)。 點選 **[!UICONTROL Next]**。
+1. 點選 **[!UICONTROL Download Public Key]** 並將 ** AEM-Adobe-IMS.crt憑證檔案儲存在您的電腦上。 The certificate file is used to [create integration on Adobe I/O Console](#createintegration). 點選 **[!UICONTROL Next]**。
 
 1. 指定下列項目：
 
-   * 標題：指定標題。
+   * 標題： 指定標題。
    * 授權伺服器： [https://ims-na1.adobelogin.com](https://ims-na1.adobelogin.com)
    現在將其他欄位留空（稍後將提供）。 保持頁面開啟。
 
@@ -179,31 +179,30 @@ Automated Forms Conversion服務使用Day CQ郵件服務來傳送電子郵件通
    <li>Step text</li>
    -->
 
-#### 建立Adobe I/O整合 {#createintegration}
+#### 建立 Adobe I/O 整合項目 {#createintegration}
 
-若要使用自動化表單轉換服務，請在Adobe I/O中建立整合。整合會產生API金鑰、用戶端密碼、裝載(JWT)。
+若要使用自動化表單轉換服務，請在Adobe I/O中建立整合。 整合會產生API金鑰、用戶端密碼、裝載(JWT)。
 
-1. 登入 [https://console.adobe.io/](https://console.adobe.io/)。 使用您的Adobe ID，即您的管理員已布建用來登入Adobe I/O主控台以登入的開發人員帳戶。
+1. 登入https://console.adobe.io/。 使用您的Adobe ID，即您的管理員已布建用來登入Adobe I/O主控台以登入的開發人員帳戶。
+1. 從右上角選擇您的組織。 如果您不清楚自己的組織為何，請聯絡您的管理員。
+1. 點選 **[!UICONTROL Create new project]**。 此時會出現一個畫面，讓您開始使用新專案。 點選 **[!UICONTROL Add API]**。 此時會出現一個畫面，其中列出您帳戶所有已啟用的API。
+1. 選取 **[!UICONTROL Automated Forms Conversion service]** 並點選 **[!UICONTROL Next]**。 此時會出現用於設定API的畫面。
+1. 選取 [!UICONTROL Upload your public key] 選項，上傳「取得公用憑證」區段中下載的AEM-Adobe-IMS.crt檔案， [然後點選](#obtainpubliccertificates)**[!UICONTROL Next]**。 此時將顯示「建立新服務帳戶(JWT)」憑據選項。 點選 **[!UICONTROL Next]**。
+1. 選取產品設定檔並點選 **[!UICONTROL Save configured API]**。 選取在授予您組織開發 [人員存取權時建立的描述檔](#adduseranddevs)。 如果您不知道要選擇的配置式，請與管理員聯繫。
+1. 點選 **[!UICONTROL Service Account (JWT)]** 以檢視API金鑰、用戶端密碼和其他必要資訊，以將您的本機AEM例項連接至Automated Forms Conversion服務。 頁面上的資訊可用來在本機電腦上建立IMS設定。
 
-1. 點選 **[!UICONTROL View Integrations]**。 此時會顯示包含所有可用整合的畫面。
-1. 從下方的下拉式清單中選取您的組織 **[!UICONTROL Integrations]**。 點選 **[!UICONTROL New Integration]**、選 **[!UICONTROL Access an API]**&#x200B;取並點選 **[!UICONTROL Continue]**。
-1. 選取 **[!UICONTROL Experience Cloud]** > **[!UICONTROL Automated Forms Conversion]** 並點選 **[!UICONTROL Continue]**。 如果已為您停用「自動表單轉換」選項，請確定您已從選項上方的下拉式方塊中選取正確的 **[!UICONTROL Adobe Services]** 組織。 如果您不瞭解您的組織，請聯絡您的管理員。
-
-   ![選擇自動化表單轉換](assets/create-new-integration.png)
-
-1. 指定整合的名稱和說明。 點選 **[!UICONTROL Select a File from your computer]** 並上傳「取得公用憑證」區段中下載的AEM-Adobe-IMS.crt [檔案](#obtainpubliccertificates) 。
-1. 選取授與貴組織開發人員 [存取權時建立的設定檔](#adduseranddevs) ，並點選 **[!UICONTROL Create Integration]**。 會建立整合。
-1. 點選 **[!UICONTROL Continue to integration details]** 以檢視整合資訊。 該頁面包含API金鑰、用戶端密碼，以及將本機AEM例項連接至Automated Forms Conversion服務所需的其他資訊。 頁面上的資訊可用來在本機電腦上建立IMS設定。
-
-   ![整合的API金鑰、用戶端密碼和裝載資訊](assets/integration-details.png)
-
-1. 在您的本機例項上開啟「IMS設定」頁面。 您在「取得公開的憑證」一節的結尾處保 [持頁面開啟](#obtainpubliccertificates)。
+1. 在您的本機例項上開啟「IMS設定」頁面。 在[取得公開憑證](#obtainpubliccertificates)這一節的結尾，您已保持此頁面開啟。
 
    ![指定標題、API金鑰、用戶端密碼和裝載 ](assets/ims-configuration-details.png)
 
-1. 在「Adobe IMS技術」頁面上，指定「API金鑰」和「用戶端密碼」。 使用在整合頁面上指定的值。
+1. 在「Adobe IMS技術」頁面上，指定「API金鑰」和「用戶端密碼」。 使用Adobe Developer主控台頁面的「服務帳戶」(JWT)上指定的值。
 
-   **對於裝載，請使用整合頁面的JWT標籤中提供的代碼。** 點選 **[!UICONTROL Save]**。 建立IMS設定。 關閉整合頁面。
+   >[!NOTE]
+   >
+   >
+   >對於裝載，請使用Adobe Developer Console「服務帳戶(JWT)」頁面的「產生JWT」標籤中提供的程式碼。
+
+1. 點選 **[!UICONTROL Save]**。 建立IMS設定。
 
    ![將JWT欄位的值用於有效載荷欄位](assets/jwt.png)
 
@@ -211,13 +210,13 @@ Automated Forms Conversion服務使用Day CQ郵件服務來傳送電子郵件通
    >
    >僅建立一個IMS設定。 請勿建立多個IMS組態。
 
-1. 選取IMS設定並點選 **[!UICONTROL Check Health]**。 將出現一個對話框。 點選 **[!UICONTROL Check]**。 在成功連線時，會出 *現成功擷取的Token* 訊息。
+1. 選取IMS設定並點選 **[!UICONTROL Check Health]**。 對話方塊隨即顯示。點選 **[!UICONTROL Check]**。 成功連線時，*已成功擷取 Token* 訊息就會顯示。
 
    ![在成功連線時，會顯示成功擷取的Token訊息。 ](assets/health-check.png)
 
    <br/> <br/>
 
-#### 設定雲端服務 {#configure-the-cloud-service}
+#### Configure the cloud service {#configure-the-cloud-service}
 
 建立雲端服務設定，將您的AEM例項連接至轉換服務。 它也可讓您指定轉換的範本、主題和表單片段。 您可以針對每組表單分別建立多個雲端服務組態。 例如，您可以為銷售部門表單設定個別設定，並為客戶支援表單設定個別設定。 執行下列步驟以建立雲端服務設定：
 
@@ -273,4 +272,4 @@ Automated Forms Conversion服務使用Day CQ郵件服務來傳送電子郵件通
       }
    ```
 
-1. 點選 **[!UICONTROL Create]**。 雲端設定已建立。 您的AEM Forms實例已準備好開始將舊式表單轉換為最適化表單。
+1. 點選 **[!UICONTROL Create]**。 雲端設定此時已建立。您的AEM Forms實例已準備好開始將舊式表單轉換為最適化表單。
