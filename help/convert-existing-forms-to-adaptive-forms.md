@@ -8,7 +8,10 @@ contentOwner: khsingh
 topic-tags: forms
 discoiquuid: 9358219c-6079-4552-92b9-b427a23811af
 translation-type: tm+mt
-source-git-commit: c0ca850a0a1e82e34364766601011d6367b218ac
+source-git-commit: 5031050795a558795c151e9f3c26a16736566adf
+workflow-type: tm+mt
+source-wordcount: '1464'
+ht-degree: 8%
 
 ---
 
@@ -91,7 +94,7 @@ AEM Forms Automated Forms Conversion服務（採用Adobe Sensei）會自動將PD
 
 
    * 選取選 **[!UICONTROL Auto-detect multi-column layout of input forms]** 項，以保留大型螢幕（例如桌上型電腦和筆記型電腦）的來源表格版面配置。 此選項有助於保留來源表單的多欄版面配置。 例如，當來源PDF有雙欄版面時，服務會針對大螢幕顯示產生雙欄版面的輸出最適化表單，而針對行動電話等小螢幕裝置則產生單欄版面。 此功能與資料來源架構結構有一些已知問題。 如需詳細資訊，請參 [閱已知問題文章](known-issues.md) 。
-   * 依預設，服務會針對PDF表單的每一頁建立個別的頂層面板。 現在，您可以使用選 **[!UICONTROL Auto-detect logical sections]** 項來不建立頁面層級面板（以頁碼為基礎的面板），而只建立邏輯面板。 它還將不屬於前邏輯部分的欄位和跨兩個相鄰頁的邏輯部分的欄位限定為單個邏輯部分。 例如，如果某個邏輯部分的某些欄位位於第1頁的末尾，而某些欄位位於第2頁的開頭，則所有這些欄位都會被拖入單個邏輯部分。
+   * 在預設狀態中，此服務會為 PDF 表單的每一頁分別建立頂層面板。 Now, you can use the **[!UICONTROL Auto-detect logical sections]** option to not create page level panels (page number-based panels) and create only logical panels. 這個選項還可將不屬於任何具有前置邏輯區段之區段的欄位，與橫跨至兩個相鄰頁面的邏輯區段的欄位合併成一個邏輯區段。 例如，如果邏輯區段中有些欄位位於第一頁底部，有些位於第二頁頂部，則所有該欄位都會合併成一個邏輯區段。
 
       >[!NOTE]
       > 您需要連接器封裝1.1.38或更新版本才能使用此 **[!UICONTROL Auto-detect logical sections]** 功能。
@@ -133,4 +136,4 @@ AEM Forms Automated Forms Conversion服務（採用Adobe Sensei）會自動將PD
 
 ## Review and correct the converted forms {#review-and-correct-the-converted-forms}
 
-現實世界的表單有複雜的資料擷取需求。 自動轉換完成後，客戶可以檢閱表單的轉換品質，並對表單進行必要的更新。 AEM Forms提供審核 [和正確的編輯器](review-correct-ui-edited.md) ，以進行必要的變更。 它可讓您改善表單欄位的自動識別，並將識別的欄位從一種類型轉換為另一種類型。 例如，您可以協助識別表單的雙欄版面配置，並將自動識別為選項按鈕的欄位變更為多個選項欄位。
+現實世界的表單有複雜的資料擷取需求。 自動轉換完成後，客戶可以檢閱表單的轉換品質，並對表單進行必要的更新。 AEM Forms提供審核 [和正確編輯器](review-correct-ui-edited.md) ，以進行必要的變更。 它可讓您改善表單欄位的自動識別，並將識別的欄位從一種類型轉換為另一種類型。 例如，您可以協助識別表單的雙欄版面配置，並將自動識別為選項按鈕的欄位變更為多個選項欄位。
