@@ -2,10 +2,10 @@
 title: 設定自動表單轉換服務
 description: 讓您的AEM實例準備好使用Automated Forms Conversion服務
 translation-type: tm+mt
-source-git-commit: e1ef5be14fd3f1ec7e6ccf569c8d76518dfc5c6b
+source-git-commit: 7e94acb29f30603d9b22fbee9dc8052fafa5704b
 workflow-type: tm+mt
-source-wordcount: '2519'
-ht-degree: 8%
+source-wordcount: '2528'
+ht-degree: 7%
 
 ---
 
@@ -123,7 +123,7 @@ AEM例項包含基本表單功能。 轉換服務需要AEM Forms的完整功能�
 * [設定電子郵件通知](configure-service.md#configureemailnotification)
 * [新增使用者至表單使用者群組](#adduserstousergroup)
 * [取得公開憑證](#obtainpubliccertificates)
-* [建立 Adobe I/O 整合項目](#createintegration)
+* [在Adobe Developer Console上設定服務API](#createintegration)
 * [設定雲端服務](configure-service.md#configure-the-cloud-service)
 
 #### 設定電子郵件通知 {#configureemailnotification}
@@ -159,12 +159,12 @@ Automated Forms Conversion服務使用Day CQ郵件服務來傳送電子郵件通
 
 1. 選中該 **[!UICONTROL Create new certificate]** 複選框並指定別名。 別名的作用是對話方塊的名稱。點選 **[!UICONTROL Create certificate]**。 對話方塊隨即顯示。按一下 **[!UICONTROL OK]**. 將建立證書。
 
-1. 點選 **[!UICONTROL Download Public Key]** 並將 ** AEM-Adobe-IMS.crt憑證檔案儲存在您的電腦上。 The certificate file is used to [create integration on Adobe I/O Console](#createintegration). 點選 **[!UICONTROL Next]**。
+1. 點選 **[!UICONTROL Download Public Key]** 並將 ** AEM-Adobe-IMS.crt憑證檔案儲存在您的電腦上。 憑證檔案用於在Adobe [Devloper Console上設定服務API](#createintegration)。 點選 **[!UICONTROL Next]**。
 
 1. 指定下列項目：
 
    * 標題： 指定標題。
-   * 授權伺服器： [https://ims-na1.adobelogin.com](https://ims-na1.adobelogin.com)
+   * 授權伺服器： [https://ims-na1.adobelogin.com](https://ims-na1.adobelogin.com)\
    現在將其他欄位留空（稍後將提供）。 保持頁面開啟。
 
    <!--
@@ -179,9 +179,9 @@ Automated Forms Conversion服務使用Day CQ郵件服務來傳送電子郵件通
    <li>Step text</li>
    -->
 
-#### 建立 Adobe I/O 整合項目 {#createintegration}
+#### 在Adobe Devloper Console上設定服務API {#createintegration}
 
-若要使用自動化表單轉換服務，請在Adobe I/O中建立整合。 整合會產生API金鑰、用戶端密碼、裝載(JWT)。
+若要使用Automated Forms Conversion服務，請建立專案，並在Adobe Developer Console上將Automated Forms Configuration Service API新增至專案。 整合會產生API金鑰、用戶端密碼、裝載(JWT)。
 
 1. 登入https://console.adobe.io/。 使用您的Adobe ID，即您的管理員已布建用來登入Adobe I/O主控台以登入的開發人員帳戶。
 1. 從右上角選擇您的組織。 如果您不清楚自己的組織為何，請聯絡您的管理員。
@@ -203,8 +203,6 @@ Automated Forms Conversion服務使用Day CQ郵件服務來傳送電子郵件通
    >對於裝載，請使用Adobe Developer Console「服務帳戶(JWT)」頁面的「產生JWT」標籤中提供的程式碼。
 
 1. 點選 **[!UICONTROL Save]**。 建立IMS設定。
-
-   ![將JWT欄位的值用於有效載荷欄位](assets/jwt.png)
 
    >[!CAUTION]
    >
