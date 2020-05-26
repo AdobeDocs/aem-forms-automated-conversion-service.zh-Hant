@@ -2,9 +2,9 @@
 title: 設定自動表單轉換服務
 description: 讓您的AEM實例準備好使用Automated Forms Conversion服務
 translation-type: tm+mt
-source-git-commit: 7e94acb29f30603d9b22fbee9dc8052fafa5704b
+source-git-commit: 117280695bfddad627e5f7bcb54ff019bbf2026a
 workflow-type: tm+mt
-source-wordcount: '2528'
+source-wordcount: '2531'
 ht-degree: 7%
 
 ---
@@ -139,7 +139,7 @@ Automated Forms Conversion服務使用Day CQ郵件服務來傳送電子郵件通
 
 #### 新增使用者至表單使用者群組 {#adduserstousergroup}
 
-在指定用來執行服務的AEM使用者設定檔中指定電子郵件地址。 請確定使用者是表單使用者群 [組的成員](https://helpx.adobe.com/experience-manager/6-4/forms/using/forms-groups-privileges-tasks.html) 。 電子郵件會傳送至執行轉換之使用者的電子郵件地址。 要指定用戶的電子郵件地址並將用戶添加到表單用戶組：
+在指定用來執行服務的AEM使用者設定檔中指定電子郵件地址。 請確定使用者是表單使用者群 [組的成員](https://helpx.adobe.com/experience-manager/6-4/forms/using/forms-groups-privileges-tasks.html) 。 電子郵件會傳送至執行轉換之使用者的電子郵件地址。 要指定用戶的電子郵件地址並將用戶添加到表單用戶組，請執行以下操作：
 
 1. 以AEM管理員身分登入您的AEM Forms作者例項。 使用您的本機AEM認證登入。 請勿使用Adobe ID登入。 點選 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**。
 
@@ -183,7 +183,7 @@ Automated Forms Conversion服務使用Day CQ郵件服務來傳送電子郵件通
 
 若要使用Automated Forms Conversion服務，請建立專案，並在Adobe Developer Console上將Automated Forms Configuration Service API新增至專案。 整合會產生API金鑰、用戶端密碼、裝載(JWT)。
 
-1. 登入https://console.adobe.io/。 使用您的Adobe ID，即您的管理員已布建用來登入Adobe I/O主控台以登入的開發人員帳戶。
+1. 登入 [https://console.adobe.io/](https://console.adobe.io/)。 使用您的Adobe ID，即您的管理員已布建用來登入Adobe I/O主控台以登入的開發人員帳戶。
 1. 從右上角選擇您的組織。 如果您不清楚自己的組織為何，請聯絡您的管理員。
 1. 點選 **[!UICONTROL Create new project]**。 此時會出現一個畫面，讓您開始使用新專案。 點選 **[!UICONTROL Add API]**。 此時會出現一個畫面，其中列出您帳戶所有已啟用的API。
 1. 選取 **[!UICONTROL Automated Forms Conversion service]** 並點選 **[!UICONTROL Next]**。 此時會出現用於設定API的畫面。
