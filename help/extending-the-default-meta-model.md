@@ -7,7 +7,10 @@ uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 translation-type: tm+mt
-source-git-commit: ffab4d916cbd545078f4b72b8de5c9968f23b0da
+source-git-commit: 77bdb4e88194bd634dea125852ff2a897bc24678
+workflow-type: tm+mt
+source-wordcount: '2372'
+ht-degree: 1%
 
 ---
 
@@ -22,9 +25,7 @@ Meta-model是JSON結構描述。 在您開始使用meta-model之前，請確定�
 
 ## 預設元模型 {#default-meta-model}
 
-自動表單轉換服務有預設的中繼模型。 它是JSON結構描述，並與Automated Forms Conversion服務的其他元件一起駐留在Adobe Cloud。 您可在本機AEM伺服器上尋找中繼模型的副本，網址為：
-
-http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/global.schema.json。
+自動表單轉換服務有預設的中繼模型。 它是JSON結構描述，並與Automated Forms Conversion服務的其他元件一起駐留在Adobe Cloud。 您可在本機AEM伺服器上尋找中繼模型的副本，網址為： http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/global.schema.json。 您也可以按 [一下這裡](assets/global.schema.json) ，以存取或下載預設結構。
 
 元模型的模式是從位於https://schema.org/docs/schemas.html的模式實體中衍生出來的。 它有Person、PostalAddress、LocalBusiness等實體，定義於https://schema.org。 中繼模型的每個實體都符合JSON結構描述物件類型。 下列程式碼代表範例元模型結構：
 
@@ -140,19 +141,19 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
    <td> 
     <p>type屬性定義生成的自適應表單域的資料類型。 標題屬性的可能值包括：</p>
     <ul> 
-     <li>字串：生成文本資料類型的自適應表單欄位。</li> 
-     <li>數字：生成數字資料類型的自適應表單欄位。</li>
-     <li>整數：生成具有子類型設定為整數的數字資料類型的自適應表單欄位。</li>
-     <li>布林值：生成交換機自適應表單元件。</li>
+     <li>字串： 生成文本資料類型的自適應表單欄位。</li> 
+     <li>數字： 生成數字資料類型的自適應表單欄位。</li>
+     <li>整數： 生成具有子類型設定為整數的數字資料類型的自適應表單欄位。</li>
+     <li>布林值： 生成交換機自適應表單元件。</li>
      </ul><p>有關在元模型中使用type屬性的詳細資訊，請參 <strong>閱自定義元模型示例中的</strong><a href="#custommetamodelexamples">修改表單欄位類型。</a></p></td> 
   </tr>
   <td><p>模式</p></td> 
    <td> 
-    <p>pattern屬性基於規則運算式來限制生成的自適應表單域的值。 例如，中繼模型中的下列程式碼會將產生的最適化表單欄位值限制為十位數：<br>"pattern":"/\\d{10}/"同樣地，中繼模型中的下列程式碼會限制欄位的值為特定的日期格式。<br><br> 「模式」:"date{DD MMM, YYYY}",</p> </td> 
+    <p>pattern屬性基於規則運算式來限制生成的自適應表單域的值。 例如，中繼模型中的下列程式碼會將產生的最適化表單欄位值限制為十位數：<br>"pattern": "/\\d{10}/"同樣地，中繼模型中的下列程式碼會限制欄位的值為特定的日期格式。<br><br> 「模式」: "date{DD MMM, YYYY}",</p> </td> 
   </tr>
   <td><p>格式</p></td> 
    <td> 
-    <p>format屬性會根據命名模式（而非規則運算式）來限制所產生的最適化表單欄位的值。 format屬性的可能值包括：<ul><li>電子郵件：產生電子郵件最適化表單元件。</li><li>主機名：生成文本框自適應表單元件。</li></ul>有關在元模型中使用format屬性的詳細資訊，請參 <strong>閱自定義元模型示例中的</strong><a href="#custommetamodelexamples">修改表單欄位的格式。</a></p> </td> 
+    <p>format屬性會根據命名模式（而非規則運算式）來限制所產生的最適化表單欄位的值。 format屬性的可能值包括：<ul><li>電子郵件： 產生電子郵件最適化表單元件。</li><li>主機名： 生成文本框自適應表單元件。</li></ul>有關在元模型中使用format屬性的詳細資訊，請參 <strong>閱自定義元模型示例中的</strong><a href="#custommetamodelexamples">修改表單欄位的格式。</a></p> </td> 
   </tr>
   <td><p>enum和enumNames</p></td> 
    <td> 
@@ -270,7 +271,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 
 #### 修改表單欄位的類型 {#modify-the-type-of-a-form-field}
 
-**範例**:在轉換 **後，修改表單中文字類型的「銀行帳戶號碼** 」欄位，再轉換為最適化表單中的「編號類型」欄位。
+**範例**: 在轉換 **後，修改表單中文字類型的「銀行帳戶號碼** 」欄位，再轉換為最適化表單中的「編號類型」欄位。
 
 在此自訂中繼模型中，轉換服務會使用 **aem:affKeyword中的文字作為搜尋關鍵字** 。 在擷取表單 **中的「銀行帳號** 」文字後，轉換服務會使用type屬性，將欄位轉換為 **數字類型** 。
 
@@ -285,7 +286,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 
 #### 將「說明」文字新增至表格欄位 {#add-help-text-to-a-form-field}
 
-**範例**:將「說明」文字新增至 **最適化表單的「銀行帳號** 」欄位。
+**範例**: 將「說明」文字新增至 **最適化表單的「銀行帳號** 」欄位。
 
 在此自訂中繼模型中，轉換服務會使用 **aem:affKeyword中的文字作為搜尋關鍵字** 。 在擷取表單 **中的銀行帳號** (Bank account number **)文字後，轉換服務會使用description屬性，將「說明(Help)」文字新增至最適化表** 單欄位。
 
@@ -301,7 +302,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 
 #### 將表單欄位轉換為最適化表單中的多選核取方塊 {#convert-a-form-field-to-multiple-choice-check-boxes-in-the-adaptive-form}
 
-**範例**:在轉換 **前，將表單中字串類型的「國家／地區** 」欄位轉換為轉換後最適化表單中的核取方塊。
+**範例**: 在轉換 **前，將表單中字串類型的「國家／地區** 」欄位轉換為轉換後最適化表單中的核取方塊。
 
 在此自訂中繼模型中，轉換服務會使用 **aem:affKeyword中的文字作為搜尋關鍵字** 。 在擷取表單中 **的Country** 文字後，轉換服務會使用enum屬性，將欄位轉換為下列核 **取方塊** :
 
@@ -335,7 +336,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 
 #### 修改表單欄位的格式 {#modify-the-format-of-a-form-field}
 
-**範例**:將「電子郵件地址」欄 **位的格式** ，修改為電子郵件格式。
+**範例**: 將「電子郵件地址」欄 **位的格式** ，修改為電子郵件格式。
 
 在此自訂中繼模型中，轉換服務會使用 **aem:affKeyword中的文字作為搜尋關鍵字** 。 在擷取表單 **中的「電子郵件位址** 」文字後，轉換服務會使用format屬性，將欄位轉換為電子郵件 **格式** 。
 
@@ -385,7 +386,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 
 #### 將文字欄位轉換為最適化表單中的下拉式清單 {#convert-a-text-field-to-drop-down-list-in-the-adaptive-form}
 
-**範例**:將轉換 **前表單中字串類型的「國家** 」欄位轉換為轉換後最適化表單中的下拉式選項。
+**範例**: 將轉換 **前表單中字串類型的「國家** 」欄位轉換為轉換後最適化表單中的下拉式選項。
 
 在此自訂中繼模型中，轉換服務會使用 **aem:affKeyword中的文字作為搜尋關鍵字** 。 在擷取表單 **中的Country** 文字後，轉換服務會使用enum屬性，將欄位轉換為下列下拉式清單 **選項** :
 
