@@ -7,7 +7,10 @@ uuid: 0f6dc39c-99b7-49a4-8e9e-ecc4a35110c0
 topic-tags: introduction
 discoiquuid: e17c2d2c-8300-4467-aa01-57365697939f
 translation-type: tm+mt
-source-git-commit: 022b86b77c4a524f320cbcbcd6bad4403ddf57d8
+source-git-commit: b1df14a331dc4aef7ce6383dec0091fa6db1fd7b
+workflow-type: tm+mt
+source-wordcount: '1685'
+ht-degree: 4%
 
 ---
 
@@ -15,12 +18,12 @@ source-git-commit: 022b86b77c4a524f320cbcbcd6bad4403ddf57d8
 # 常見問題{#frequently-asked-questions}
 
 1. **Automated Forms Conversion服務支援哪個AEM Forms版本？**
-   <p>Automated Forms Conversion服務支援AEM 6.4 Forms和AEM 6.5 Forms。 它可與OSGi上的AEM Forms和JEE上的AEM Forms搭配使用。 您需要AEM作者例項上方的最新AEM Forms附加套件才能使用服務。 如需詳細指示，請參 <a href="configure-service.md">閱設定自動表單轉換服務</a> 。</p> 
+   <p>Automated Forms Conversion服務支援AEM 6.4 Forms和AEM 6.5 Forms。 它可與OSGi上的AEM Forms和JEE上的AEM Forms搭配使用。 您需要AEM作者例項上方的最新AEM Forms附加套件才能使用服務。 For detailed instructions, see <a href="configure-service.md">Configure the Automated Forms Conversion</a> service.</p> 
     <br>
 
 1. **此服務是否可在內部部署？**
-   <p>Adobe會定期訓練自動表單轉換服務的AI和ML演算法，並提供新的資料集，以提升轉換精度。 更新的演算法會以定期間隔部署至在Adobe Cloud上執行的轉換服務。 服務的所有客戶都從更新的演算法中獲益。 因此，雲端托管的中央部署最適合「自動化表單轉換」服務，以持續學習並改善所有客戶。</p> 
-    <p>該服務將空白表單轉換為自適應表單。 此服務不支援填寫表單，也不支援從填寫表單擷取資料。 將表單傳送至服務進行轉換之前，先從填寫的表單中移除資料，並移除表單中的專屬資訊或將其列入白名單</p> <br>
+   <p>Adobe會定期訓練自動表單轉換服務的AI和ML演算法，並提供新的資料集，以提升轉換精度。 更新的演算法會以定期間隔部署至在Adobe Cloud上執行的轉換服務。 服務的所有客戶都從更新的演算法中獲益。 因此，雲端托管的中央部署最適合Automated Forms Conversion服務，以持續學習並改善所有客戶。</p> 
+    <p>該服務將空白表單轉換為自適應表單。 此服務不支援填寫表單，也不支援從填寫表單擷取資料。 在將表單傳送至服務進行轉換之前，先從填寫的表單中移除資料，並移除或允許表單中的專屬資訊</p> <br>
 
 1. **此服務是否支援所有格式的PDF表格？ 支援哪些語言？**
    <p>此服務可將非互動式PDF表單、以XFA為基礎的XDP和PDF表單，以及AcroForms轉換為最適化表單。 服務不支援掃描或填寫的表單。 如需其他限制，請參閱已 <a href="known-issues.md">知問題文章</a> 。<br /> </p> 
@@ -50,7 +53,7 @@ source-git-commit: 022b86b77c4a524f320cbcbcd6bad4403ddf57d8
    <p>此服務可將PDF表單轉換為最適化表單。 服務不支援掃描或填寫的表單。 如需其他限制，請參閱已 <a href="known-issues.md">知問題文章</a> 。</p> <br>
 
 1. **該服務是否可將掃描的表單或僅將表單的影像轉換為自適應表單？**
-   <p>該服務不支援將掃描的表單或表單的影像轉換為自適應的出廠設定。 不過，您使用Adobe Acrobat將表單的影像轉換為PDF表單。 然後，使用服務將PDF表單轉換為最適化表單。 在Acrobat中，請務必使用高品質的表單影像進行轉換。 它改善了轉換的品質。</p> <br>
+   <p>該服務不支援將掃描的表單或表單的影像轉換為自適應的出廠設定。 但是，您可以使用 Adobe Acrobat 將表單影像轉換為 PDF 表單。 然後，使用本服務將 PDF 表單轉換為最適化表單。 請總是使用高品質的表單影像在 Acrobat 中進行轉換。 這可以提升轉換的品質。</p> <br>
 
 1. **有些以XDP為基礎的表單會使用表單片段，這些表單片段應該上傳到哪裡？**
    <p class="MsoNormal">將表單片段上傳至轉換檔案夾並保留原始檔案夾結構。 它有助於保留XDP型表單和表單片段中使用的相對路徑。</p> <br>
@@ -98,7 +101,8 @@ source-git-commit: 022b86b77c4a524f320cbcbcd6bad4403ddf57d8
    <p>時間長度取決於輸入表單的大小和複雜性以及請求數。 與手動轉換表單的程式相比，本服務希望以更快的速度將PDF表單轉換為可調式表單，大幅縮短實現價值的時間。 </p> <br />
 
 1. **如果遇到與RSA庫相關的錯誤，該怎麼辦？ 錯誤訊息類似下列訊息：** <br/>
-   `*ERROR* [0:0:0:0:0:0:0:1 [1565757652491] POST /content/dam/formsanddocuments/demo004.affBatchProcessor.html HTTP/1.1] org.apache.sling.engine.impl.SlingRequestProcessorImpl service: Uncaught Throwable java.lang.NoClassDefFoundError: Could not initialize class com.rsa.cryptoj.o.dl at com.rsa.jsafe.JSAFE_SecureRandom.getInstance(Unknown Source) at com.adobe.internal.pdfm.util.Util.appendRandomNumberToPrefix(Util.java: 169) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34] at com.adobe.internal.pdfm.logging.JobLog.&amp;lt;init&amp;gt;(JobLog.java:126) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34]` 如果 <br>未為RSA/BuncyCastle庫配置引導委託，則會發生上述錯誤。 執行以下步驟以解決問題：
+   `*ERROR* [0:0:0:0:0:0:0:1 [1565757652491] POST /content/dam/formsanddocuments/demo004.affBatchProcessor.html HTTP/1.1] org.apache.sling.engine.impl.SlingRequestProcessorImpl service: Uncaught Throwable java.lang.NoClassDefFoundError: Could not initialize class com.rsa.cryptoj.o.dl at com.rsa.jsafe.JSAFE_SecureRandom.getInstance(Unknown Source) at com.adobe.internal.pdfm.util.Util.appendRandomNumberToPrefix(Util.java: 169) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34] at com.adobe.internal.pdfm.logging.JobLog.&amp;lt;init&amp;gt;(JobLog.java:126) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34]` <br>
+如果未為RSA/BuncyCastle庫配置引導委託，則會發生上述錯誤。 執行以下步驟以解決問題：
    <p> </p>
 
    1. 停止AEM例項。 導覽至資料 `[AEM installation directory]\crx-quickstart\conf\` 夾。 開啟sling.properties檔案以進行編輯。 如果您使 `[AEM installation directory]\crx-quickstart\bin\start.bat` 用啟動AEM例項，請編輯位於的sling.properties `[AEM_root]\crx-quickstart\`。
