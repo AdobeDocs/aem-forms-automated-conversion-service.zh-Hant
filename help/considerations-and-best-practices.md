@@ -10,7 +10,10 @@ discoiquuid: b786e40a-202e-4e17-a2f5-1f77c46538c2
 privatebeta: true
 index: false
 translation-type: tm+mt
-source-git-commit: afe461baa5bcfc1106c16aae2d6a9c839ea675e8
+source-git-commit: 356eb083b889a1bf151c32bc5f01a6d263b96274
+workflow-type: tm+mt
+source-wordcount: '575'
+ht-degree: 3%
 
 ---
 
@@ -19,7 +22,7 @@ source-git-commit: afe461baa5bcfc1106c16aae2d6a9c839ea675e8
 
 AEM Forms Automated Conversion服務可將PDF表單轉換為最適化表單。 該服務使用人工智慧和機器學習算法來理解源表單的佈局和領域。 每項機器學習服務都會持續從來源資料中學習，並在每次流失時產生改善的輸出。 這些服務從人類的體驗中學習。
 
-自動化表單轉換服務是針對大量表單進行培訓的。 它可輕鬆識別來源表單中的欄位，並產生最適化表單。 不過，PDF表格中有些欄位和樣式很容易讓人看到，但是卻很難為服務瞭解。 服務可指派不同於適用欄位類型或面板給某些欄位或樣式。 以下列出所有此類欄位和樣式模式。
+自動化表單轉換服務是針對大量表單進行培訓的。 它可輕鬆識別來源表單中的欄位，並產生最適化表單。 不過，PDF表格中有些欄位和樣式很容易讓人看得到，但是卻很難為服務瞭解。 服務可指派不同於適用欄位類型或面板給某些欄位或樣式。 以下列出所有此類欄位和樣式模式。
 
 服務會開始識別並指派正確的欄位或面板給這些模式，因為它會不斷從來源資料中學習。 目前，您可以使用「檢閱」 [和「更正」編輯器](review-correct-ui-edited.md) ，來修正此類問題。 在開始修正問題或進一步閱讀之前，請先熟悉最適 [化表單元件](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html)。
 
@@ -29,7 +32,7 @@ AEM Forms Automated Conversion服務可將PDF表單轉換為最適化表單。 �
 Comment Type: draft
 
 <ul>
-<li>Service does not convert filled PDF forms to adaptive form. Use empty adaptive forms.Service does not convert colored PDF forms to adaptive form. Use black and white or grayscale adaptive forms. <br /> </li>
+<li>Service does not convert filled PDF forms to adaptive form. Use empty adaptive forms.Service does not convert colored PDF forms to adaptive form. Use  and white or grayscale adaptive forms. <br /> </li>
 <li>Service does not convert filled PDF forms to adaptive form. Use empty adaptive forms.</li>
 <li>Service does not support scanned forms. Do not use scanned forms. </li>
 <li>Service can fail to recognize text and fields in a dense form. Increase the width between text and fields of a dense form before starting the conversion.</li>
@@ -65,13 +68,13 @@ Comment Type: draft
    <td><img src="assets/image-in-adaptive-form.png" /></td> 
   </tr>
   <tr>
-   <td><p><strong>圖樣</strong></p> <p>不會轉換帶有虛線或非清晰邊界和邊界的表。</p> <p><strong>解析度</strong></p> <p>使用具有明確邊界和邊界的表。 支援。</p> </td> 
+   <td><p><strong>圖樣</strong></p> <p>不會轉換帶有虛線或非清晰邊界和邊框的表格。</p> <p><strong>解析度</strong></p> <p>使用具有明確邊界和邊界的表。 支援。</p> </td> 
    <td><img src="assets/border-less-tables.png" /></td> 
   </tr>
  </tbody>
 </table>
 
-## Choice Group {#choice-group}
+## Choice Group  {#choice-group}
 
 <table border="1" cellpadding="1" cellspacing="0" width="100%"> 
  <tbody>
