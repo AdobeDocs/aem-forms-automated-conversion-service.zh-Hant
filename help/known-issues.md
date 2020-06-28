@@ -7,9 +7,9 @@ uuid: b1dc661b-ccd3-457f-acbb-4bd25db86e1e
 topic-tags: introduction
 discoiquuid: 9cd2363c-47a0-46e9-98cd-1fe088b9cd6e
 translation-type: tm+mt
-source-git-commit: 902131e27d458b88f7f5c5f85c90de89f77e4bd7
+source-git-commit: 1c48cc1b271bfea19ac2394eaf40be21060a349e
 workflow-type: tm+mt
-source-wordcount: '785'
+source-wordcount: '774'
 ht-degree: 1%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 1%
    * 不支援XFA表單的可重複面板。
    * 如果您使用「檢閱與更正」編輯器修改表格中的清單，列寬不會自動調整，而文字可能會溢出至表格的下一行。
    * 此功 **[!UICONTROL Auto-detect multi-column layout from input forms]** 能無法與「檢閱」和「更正」編輯器和「表單片段」搭配使用。
-   * 使用「檢閱」和「更正」編輯器建立的塗鴉簽名無法載入已發佈的最適化表單。 使用者無法使用此類塗鴉簽名元件來簽署最適化表單。
+   * 使用「檢閱」和「更正」編輯器建立的塗鴉簽名無法載入已發佈的最適化表單。
 
 
 * 針對XFA型表單：
