@@ -8,10 +8,10 @@ contentOwner: khsingh
 topic-tags: forms
 discoiquuid: 9358219c-6079-4552-92b9-b427a23811af
 translation-type: tm+mt
-source-git-commit: 5031050795a558795c151e9f3c26a16736566adf
+source-git-commit: 019ae541117f037f11703a88162ec3ab4cb67947
 workflow-type: tm+mt
-source-wordcount: '1464'
-ht-degree: 8%
+source-wordcount: '1480'
+ht-degree: 7%
 
 ---
 
@@ -24,7 +24,7 @@ AEM Forms Automated Forms Conversion服務（採用Adobe Sensei）會自動將PD
 
 * [**設定轉換服務&#x200B;**](configure-service.md)
 
-* **準備要[套用至](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html)已轉換表單的範本：** 使用範本可讓您在所有最適化表單中套用一致的品牌。 此外，Automated Forms Conversion服務不會擷取並使用來源PDF檔案的頁首和頁尾。 您可以使用最適化表單範本來指定頁首和頁尾。 在轉換期間，範本中指定的頁首和頁尾會套用至最適化表單。
+* **準備要[套用至](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html)已轉換表單的範本：** 使用範本可讓您在所有最適化表單中套用一致的品牌。 此外，Automated Forms Conversion服務不會擷取並使用來源PDF檔案的頁首和頁尾。 您可以使用最適化表單範本來指定頁首和頁尾。 在轉換期間，範本中指定的頁首和頁尾會套用至最適化表單。 當您為範本建立資料夾時，請為每個人選 **[!UIC取「控制瀏覽設定]** 」選項。
 
 * **準備要[套用至](https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html)已轉換表單的主題：** 使用主題可讓您將一致的樣式套用至組織的所有調適性表單。
 
@@ -84,7 +84,7 @@ AEM Forms Automated Forms Conversion服務（採用Adobe Sensei）會自動將PD
 
 1. 在「轉換 **[!UICONTROL Additional]** 設定」對話方塊的標籤中，
    * 選取 **[!UICONTROL Extract fragment from adaptive forms]** 允許轉換服務識別、擷取和下載轉換表單片段的選項。 當您選擇該選 **[!UICONTROL Extract fragment from adaptive forms]** 項時，將啟用指定用於保存提取的表單片段和相應表單片段結構描述的路徑的選項。
-   * 如果您現有的JSON **[!UICONTROL existing adaptive form fragments]**&#x200B;結構描述式和結構描述不太適應的表單片段，而且您打算在自動產生的最適化表單中使用這些片段，請指定其位置。 轉換服務會將可用的JSON架構型和架構較不適應性的表單片段與輸入的PDF表單（僅限非互動式PDF表單）相符，如果有相符，則相符的最適化表單片段會用於對應的最適化表單。
+   * 如果您現有的JSON **[!UICONTROL existing adaptive form fragments]**&#x200B;結構描述式和結構描述不太適應的表單片段，而且您打算在自動產生的最適化表單中使用這些片段，請指定其位置。 轉換服務會將可用的JSON架構型和架構較不適應的表單片段與輸入的PDF表單相符（僅限非互動PDF表單），如果有相符，則相符的最適化表單片段會用於對應的最適化表單。
    >[!NOTE]
    >
    >
