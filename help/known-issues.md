@@ -7,7 +7,10 @@ uuid: b1dc661b-ccd3-457f-acbb-4bd25db86e1e
 topic-tags: introduction
 discoiquuid: 9cd2363c-47a0-46e9-98cd-1fe088b9cd6e
 translation-type: tm+mt
-source-git-commit: 2fcceb45d9be4297fcd923f5a17c7b593294e855
+source-git-commit: 902131e27d458b88f7f5c5f85c90de89f77e4bd7
+workflow-type: tm+mt
+source-wordcount: '785'
+ht-degree: 1%
 
 ---
 
@@ -25,6 +28,8 @@ source-git-commit: 2fcceb45d9be4297fcd923f5a17c7b593294e855
    * 不支援XFA表單的可重複面板。
    * 如果您使用「檢閱與更正」編輯器修改表格中的清單，列寬不會自動調整，而文字可能會溢出至表格的下一行。
    * 此功 **[!UICONTROL Auto-detect multi-column layout from input forms]** 能無法與「檢閱」和「更正」編輯器和「表單片段」搭配使用。
+   * 使用「檢閱」和「更正」編輯器建立的塗鴉簽名無法載入已發佈的最適化表單。 使用者無法使用此類塗鴉簽名元件來簽署最適化表單。
+
 
 * 針對XFA型表單：
    * 不支援從以XFA為基礎的表單擷取片段。
@@ -70,6 +75,6 @@ source-git-commit: 2fcceb45d9be4297fcd923f5a17c7b593294e855
 * 不支援超過15頁的PDF表格。
 * 加密、受密碼保護和安全的檔案不會轉換。 在執行轉換之前，請先移除加密或密碼。
 * 不支援複雜的表格，例如無邊框表格、巢狀表格、有色列的表格，以及具有預留位置值的表格。 在轉換後，使用最適化表單編輯器來新增或修改複雜的表格。 僅支援包含空白欄位、正確標題和清除邊界的簡單表格。
-* 該服務僅將英語表單轉換為自適應表單。 您可以使用 [AEM翻譯工作流程，將轉換的最適化表單翻譯成其](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)他語言。
+* 該服務僅將英語表單轉換為自適應表單。 You can translate converted adaptive forms to another language using [AEM translation workflow](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
 * AEM 6.4 Forms不支援自動偵測多欄版面輸入表單。
 
