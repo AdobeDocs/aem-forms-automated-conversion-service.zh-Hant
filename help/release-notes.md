@@ -2,10 +2,10 @@
 title: 新增功能 發行說明——自動表單轉換服務
 description: '瞭解自動表單轉換服務的最新功能及錯誤修正 '
 translation-type: tm+mt
-source-git-commit: caa019d1a7dd1968a52df5ec5be4755e1c6c4ee6
+source-git-commit: 1c6bdd03d5a3ac37a11a31e5c7948c28412b67aa
 workflow-type: tm+mt
 source-wordcount: '326'
-ht-degree: 94%
+ht-degree: 92%
 
 ---
 
@@ -46,7 +46,7 @@ ht-degree: 94%
 
 ### 特殊說明
 
-**安裝自動表單轉換服務連接工具封裝**
+**安裝Automated Forms Conversion Service連接器套件**
 
 如欲使用 AFC-2020.03.1 版本中提供的最新功能與改善，您需要連接工具封裝 1.1.38 版本或更高。您可以於 [AEM 封裝共用](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1)下載連接工具封裝。
 
