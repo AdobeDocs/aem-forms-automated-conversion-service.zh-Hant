@@ -1,11 +1,11 @@
 ---
 title: 新增功能 發行說明——自動表單轉換服務
 description: '瞭解自動表單轉換服務的最新功能及錯誤修正 '
-translation-type: ht
-source-git-commit: 5031050795a558795c151e9f3c26a16736566adf
-workflow-type: ht
-source-wordcount: '305'
-ht-degree: 100%
+translation-type: tm+mt
+source-git-commit: 054b6cb03843c28cea19cdbc68e439f86cb1625f
+workflow-type: tm+mt
+source-wordcount: '325'
+ht-degree: 94%
 
 ---
 
@@ -22,6 +22,13 @@ ht-degree: 100%
 * 已棄用功能
 * 特殊說明
 * 未來變更計劃
+
+
+## 2020年7月16日(AFC-2020.07.1)
+
+### 功能改善
+
+改善文字、表單和選擇群組欄位自動轉換至對應最適化表單元件的功能。
 
 ## 2020 年 3 月 20 日 (AFC-2020.03.1)
 
