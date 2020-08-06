@@ -5,7 +5,10 @@ uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 translation-type: tm+mt
-source-git-commit: c0ca850a0a1e82e34364766601011d6367b218ac
+source-git-commit: ead1b4ee177029c60f095dc596b1f3db5878760e
+workflow-type: tm+mt
+source-wordcount: '1153'
+ht-degree: 1%
 
 ---
 
@@ -22,7 +25,7 @@ source-git-commit: c0ca850a0a1e82e34364766601011d6367b218ac
 
 本文說明成功執行所有這些整合階段的逐步指示。
 
-本文討論的範例是自訂資料和中繼資料服務的參考實作，以整合Forms Portal頁面與資料庫。 示例實施中使用的資料庫是MySQL 5.6.24。不過，您可以將Forms Portal頁面與您選擇的任何資料庫整合。
+本文討論的範例是自訂資料和中繼資料服務的參考實作，以整合Forms Portal頁面與資料庫。 示例實施中使用的資料庫是MySQL 5.6.24。 不過，您可以將Forms Portal頁面與您選擇的任何資料庫整合。
 
 ## 先決條件 {#pre-requisites}
 
@@ -30,7 +33,7 @@ source-git-commit: c0ca850a0a1e82e34364766601011d6367b218ac
 * 為您 [的AEM實例安裝](https://helpx.adobe.com/experience-manager/aem-releases-updates.html) 最新的Service Pack
 * AEM Forms附加元件套件的最新版本
 * Configure [Automated Forms Conversion service](configure-service.md)
-* 設定資料庫。 示例實施中使用的資料庫是MySQL 5.6.24。不過，您可以將轉換的最適化表單與您選擇的任何資料庫整合。
+* 設定資料庫。 示例實施中使用的資料庫是MySQL 5.6.24。 不過，您可以將轉換的最適化表單與您選擇的任何資料庫整合。
 
 ## 設定AEM實例與資料庫之間的連線 {#set-up-connection-aem-instance-database}
 
@@ -204,7 +207,7 @@ source-git-commit: c0ca850a0a1e82e34364766601011d6367b218ac
     </tr>
     <tr> 
     <td><p>JDBC驅動程式類</p></td> 
-    <td><p>com.mysql.jdbc.driver</p></td>
+    <td><p>com.mysql.jdbc.Driver</p></td>
     </tr>
     <tr> 
     <td><p>JDBC連接URI</p></td> 
