@@ -2,10 +2,10 @@
 title: 新增功能 發行說明——自動表單轉換服務
 description: '瞭解自動表單轉換服務的最新功能及錯誤修正 '
 translation-type: tm+mt
-source-git-commit: e2298422e0af9b1c678e7604be3efb6da377d7dd
+source-git-commit: bf14583de678ef963b0f2084c3da4624c9304b30
 workflow-type: tm+mt
-source-wordcount: '343'
-ht-degree: 88%
+source-wordcount: '338'
+ht-degree: 89%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 88%
 
 ### 新功能
 
-您現在也可以使用服務，將彩色的PDF表格轉換為最適化表格。
+新增支援將彩色PDF表格轉換為最適化表格。
 
 ### 功能改善
 
