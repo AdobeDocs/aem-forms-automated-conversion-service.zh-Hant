@@ -7,7 +7,10 @@ uuid: e24773a2-be14-4184-a168-48aa976d459a
 topic-tags: introduction
 discoiquuid: 79f2026e-73a5-4bd1-b041-d1399b4ad23e
 translation-type: tm+mt
-source-git-commit: fa3b365b9762a044fddb3820ad3c091d211e0ae6
+source-git-commit: e2298422e0af9b1c678e7604be3efb6da377d7dd
+workflow-type: tm+mt
+source-wordcount: '1259'
+ht-degree: 2%
 
 ---
 
@@ -25,12 +28,12 @@ source-git-commit: fa3b365b9762a044fddb3820ad3c091d211e0ae6
 您可以視需要一次或分階段上傳所有PDF表格。 在上傳表單前，請參閱以下提醒：
 
 * 將資料夾中的表單數保持在小於15，並將資料夾中的頁數總數保持在小於50。
-* 將資料夾的大小保持在10 MB以下。 請勿將表單保留在子資料夾中。
+* 將資料夾的大小保持在10 MB以下。 不要將表單放在子資料夾中。 
 * 將頁數保持在小於15的形式中。
 * 將來源檔案整理成8-15份檔案。 在單一批次中使用通用的最適化表單片段來保留來源表單。
 * 請勿上傳受保護的表單。 該服務不會轉換受密碼保護和安全的表單。
 * Do not upload the [PDF Portfolios](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html). 本服務不會將PDF資料夾轉換為最適化表單。
-* 請勿上傳掃描、彩色、非英文和填寫的表格。 此服務不支援這些表單。
+* 請勿上傳掃描、非英文語言和填寫的表格。 此服務不支援這些表單。
 * 請勿上傳檔案名稱中含空格的來源表單。 在上傳表單之前，先從檔案名稱中移除空格。
 
 當您使用XDP表單進行轉換時，請先執行下列步驟，再上傳來源XPD表單：
@@ -56,7 +59,7 @@ source-git-commit: fa3b365b9762a044fddb3820ad3c091d211e0ae6
 
 AEM [!DNL Forms Automated Conversion service] 使用人工智慧和機器學習演算法來瞭解來源表單的版面配置和欄位。 每項機器學習服務都會持續從來源資料中學習，並在每次流失時產生改善的輸出。 這些服務借鑒了人類的經驗。
 
-[!DNL Automated Forms Conversion service] 接受過大量形式訓練。 它可輕鬆識別來源表單中的欄位，並產生最適化表單。 不過，PDF表格中有些欄位和樣式很容易讓人看得到，但是卻很難為服務瞭解。 服務可指派不同於適用欄位類型或面板給某些欄位或樣式。 以下列出所有此類欄位和樣式模式。
+[!DNL Automated Forms Conversion service] 接受過大量形式訓練。 它可輕鬆識別來源表單中的欄位，並產生最適化表單。 不過，PDF表格中有些欄位和樣式很容易讓人看到，但是卻很難為服務瞭解。 服務可指派不同於適用欄位類型或面板給某些欄位或樣式。 以下列出所有此類欄位和樣式模式。
 
 服務會開始識別並指派正確的欄位或面板給這些模式，因為它會不斷從來源資料中學習。 目前，您可以使用「檢閱」 [和「更正」編輯器](review-correct-ui-edited.md) ，來修正此類問題。 在開始修正問題或進一步閱讀之前，請先熟悉最適 [化表單元件](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html)。
 
@@ -64,38 +67,37 @@ AEM [!DNL Forms Automated Conversion service] 使用人工智慧和機器學習�
 
 | 圖樣 | 範例 |
 |--- |--- |
-| **Pattern**<br> Service不會將彩色PDF表單轉換為最適化表單。 <br><br>**解析度&#x200B;**<br>：使用黑白或灰階PDF表格。 | ![彩色表格](assets/best-practice-coloured-forms.png) |
-| **Pattern** <br>Service不會將填寫的PDF表單轉換為最適化表單。 <br><br>**解析度&#x200B;**<br>使用空的最適化表單。 | ![填寫表單](assets/best-practice-filled-forms.png) |
-| **Pattern** <br>Service無法識別密集表單中的文字和欄位。 <br><br>**解析度&#x200B;**<br>—在開始轉換之前，增加密集表單的文字和欄位之間的寬度。 |  |
-| **Pattern** <br>Service不支援掃描的表單。 <br><br>**解析度&#x200B;**<br>請勿使用掃描的表單。 | ![掃描的表單](assets/scanned-forms.png) |
-| **Pattern** <br>Service不會擷取影像和影像中的文字。 <br><br>**解析度&#x200B;**<br>：手動將影像或文字新增至轉換的表單。 | ![包含文字表單的影像](assets/best-practice-image-with-text.png) |
-| **具有**<br>點狀或非清除邊界和邊界的陣清單不進行轉換。 <br><br>**解析度&#x200B;**(<br>Resolution)使用具有明確邊界和邊界的表。 支援。 | ![非清除表格表單](assets/best-practice-table-dotted-non-clear.png) |
-| **模式** (Pattern <br> )最適化表單不支援立即可用的垂直文字。 因此，服務不會將垂直文字轉換為對應的Adaptive Forms文字。 <br><br>**解析度&#x200B;**(<br>Resolution)視需要使用最適化表單編輯器來新增垂直文字。 | ![非清除表格表單](assets/vertical-text.png) |
+| **Pattern** <br>Service不會將填寫的PDF表單轉換為最適化表單。 <br><br>**解析度**<br>使用空的最適化表單。 | ![填寫表單](assets/best-practice-filled-forms.png) |
+| **Pattern** <br>Service無法識別密集表單中的文字和欄位。 <br><br>**解析度**<br> —在開始轉換之前，增加密集表單的文字和欄位之間的寬度。 |  |
+| **Pattern** <br>Service不支援掃描的表單。 <br><br>**解析度**<br>請勿使用掃描的表單。 | ![掃描的表單](assets/scanned-forms.png) |
+| **Pattern** <br>Service不會擷取影像和影像中的文字。 <br><br>**解析度**<br> ：手動將影像或文字新增至轉換的表單。 | ![包含文字表單的影像](assets/best-practice-image-with-text.png) |
+| **具有**<br>點狀或非清除邊界和邊界的陣清單不進行轉換。 <br><br>**解析度** ( <br>Resolution)使用具有明確邊界和邊界的表。 支援。 | ![非清除表格表單](assets/best-practice-table-dotted-non-clear.png) |
+| **模式** (Pattern <br> )最適化表單不支援立即可用的垂直文字。 因此，服務不會將垂直文字轉換為對應的Adaptive Forms文字。 <br><br>**解析度** ( <br> Resolution)視需要使用最適化表單編輯器來新增垂直文字。 | ![非清除表格表單](assets/vertical-text.png) |
 
 
 
-### Choice群組 {#choice-group}
+### Choice群組  {#choice-group}
 
 | 圖樣 | 解析度 |
 |--- |--- |
-| **「陣列選** 擇」(Pattern <br> Choice)組選項中除框或圓形外的形狀不會轉換為相應的自適應表單元件。 <br><br>**解析度&#x200B;**<br>：將選擇的形狀選項變更為方塊或圓形，或使用「檢閱與修正」編輯器來識別形狀。 | ![選擇欄位 ](assets/best-practice-choice-group-options.png) |
+| **「陣列選** 擇」(Pattern <br> Choice)組選項中除框或圓形外的形狀不會轉換為相應的自適應表單元件。 <br><br>**解析度**<br> ：將選擇的形狀選項變更為方塊或圓形，或使用「檢閱與修正」編輯器來識別形狀。 | ![選擇欄位 ](assets/best-practice-choice-group-options.png) |
 
 ### 表單欄位 {#form-fields}
 
 | 圖樣 | 解析度 |
 |--- |--- |
-| **模式**<br> 服務不會識別沒有明確邊界的欄位。 <br><br>**解析度&#x200B;**<br>：使用「檢閱」和「修正」編輯器來識別這些欄位。 | ![具有非清晰邊界的欄位](assets/best-practice-fields-without-clear-borders.png) |
-| **Pattern**<br> Service可能無法識別表單底部或右側有標題的某些選擇群組表單欄位。 <br><br>**解析度&#x200B;**<br>：使用「審閱」和「更正」編輯器來識別這些欄位 | ![選擇欄位](assets/best-practice-caption-bottom-right.png) |
-| **Pattern**<br> Service會將錯誤的類型合併或指定給彼此相距甚遠或邊界不明確的某些表單域。 <br><br>**解析度&#x200B;**<br>：使用「檢閱」和「修正」編輯器來識別這些欄位。 | ![選擇欄位](assets/best-practice-placed-very-near.png) |
-| **Pattern**<br> Service可能無法識別字幕遠離或字幕與輸入欄位間虛線的欄位。 <br><br>**解決方&#x200B;**<br>法：使用邊界明確的表單欄位，或使用「檢閱與修正」編輯器來修正此類問題。 | ![字幕欄位之間的遠離欄位或虛線](assets/best-practice-far-away-captions-or-a-dotted-line.png) |
+| **模式**<br> 服務不會識別沒有明確邊界的欄位。 <br><br>**解析度**<br> ：使用「檢閱」和「修正」編輯器來識別這些欄位。 | ![具有非清晰邊界的欄位](assets/best-practice-fields-without-clear-borders.png) |
+| **Pattern**<br> Service可能無法識別表單底部或右側有標題的某些選擇群組表單欄位。 <br><br>**解析度**<br> ：使用「審閱」和「更正」編輯器來識別這些欄位 | ![選擇欄位](assets/best-practice-caption-bottom-right.png) |
+| **Pattern**<br> Service會將錯誤的類型合併或指定給彼此相距甚遠或邊界不明確的某些表單域。 <br><br>**解析度**<br> ：使用「檢閱」和「修正」編輯器來識別這些欄位。 | ![選擇欄位](assets/best-practice-placed-very-near.png) |
+| **Pattern**<br> Service可能無法識別字幕遠離或字幕與輸入欄位間虛線的欄位。 <br><br>**解決方**<br> 法：使用邊界明確的表單欄位，或使用「檢閱與修正」編輯器來修正此類問題。 | ![字幕欄位之間的遠離欄位或虛線](assets/best-practice-far-away-captions-or-a-dotted-line.png) |
 
 ### 清單 {#lists}
 
 | 圖樣 | 解析度 |
 |--- |--- |
 | **包含表**<br><br><br>****<br>單欄位的模式清單將合併或不轉換為相應的自適應表單元件解析度使用具有清晰邊界的表單欄位，或使用「查看」和「更正」編輯器來修復此類問題。 | ![清單包含選擇組](assets/best-practice-lists-containing-form-fields.png) |
-| **Pattern** <br>Service可讓數個巢狀清單保留未識別的「解析度」( <br><br>**Resolution **)「使用檢閱<br>」(Use Review)和「更正」(Correct)編輯器來修正此類問題。 | ![清單包含選擇組](assets/best-practice-nested-lists.png) |
-| **Pattern**<br> Service會合併某些包含選擇群組的清單，以相互 <br><br>**解析&#x200B;**<br>「使用檢視和更正」編輯器來修正此類問題。 | ![清單包含選擇組](assets/best-practice-check-box-in-table-cells.png) |
+| **Pattern** <br>Service可讓數個巢狀清單保留未識別的「解析度 <br><br>**」(Resolution**<br> )「使用檢閱」(Use Review)和「更正」(Correct)編輯器來修正此類問題。 | ![清單包含選擇組](assets/best-practice-nested-lists.png) |
+| **Pattern**<br> Service會合併某些包含選擇群組的清單，以相互 <br><br>**解析**<br> 「使用檢閱和更正」編輯器來修正此類問題。 | ![清單包含選擇組](assets/best-practice-check-box-in-table-cells.png) |
 
 <!--
 Comment Type: draft
