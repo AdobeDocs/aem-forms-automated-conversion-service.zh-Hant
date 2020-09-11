@@ -7,9 +7,9 @@ uuid: b1dc661b-ccd3-457f-acbb-4bd25db86e1e
 topic-tags: introduction
 discoiquuid: 9cd2363c-47a0-46e9-98cd-1fe088b9cd6e
 translation-type: tm+mt
-source-git-commit: 1c48cc1b271bfea19ac2394eaf40be21060a349e
+source-git-commit: e2298422e0af9b1c678e7604be3efb6da377d7dd
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '768'
 ht-degree: 1%
 
 ---
@@ -69,12 +69,12 @@ ht-degree: 1%
 
 ## 限制 {#limitations}
 
-* 不支援具有複雜動態版面的PDF表格、含虛線外框的欄位、填色欄位或彩色欄位。
+* 不支援具有複雜動態版面的PDF表格、具有虛線輪廓的欄位或填入欄位。
 * 影像中的影像和文字無法識別。 手動將影像新增至轉換的表單。
 * 不支援圖稿XDP檔案。
 * 不支援超過15頁的PDF表格。
 * 加密、受密碼保護和安全的檔案不會轉換。 在執行轉換之前，請先移除加密或密碼。
-* 不支援複雜的表格，例如無邊框表格、巢狀表格、有色列的表格，以及具有預留位置值的表格。 在轉換後，使用最適化表單編輯器來新增或修改複雜的表格。 僅支援包含空白欄位、正確標題和清除邊界的簡單表格。
+* 不支援複雜的表格，例如無邊框表格、巢狀表格和具有預留位置值的表格。 在轉換後，使用最適化表單編輯器來新增或修改複雜的表格。 僅支援包含空白欄位、正確標題和清除邊界的簡單表格。
 * 該服務僅將英語表單轉換為自適應表單。 You can translate converted adaptive forms to another language using [AEM translation workflow](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
 * AEM 6.4 Forms不支援自動偵測多欄版面輸入表單。
 
