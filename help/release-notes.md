@@ -5,7 +5,7 @@ translation-type: tm+mt
 source-git-commit: 9b904622fcf421d82a183569d915926a2761d3f5
 workflow-type: tm+mt
 source-wordcount: '338'
-ht-degree: 89%
+ht-degree: 97%
 
 ---
 
@@ -32,7 +32,7 @@ ht-degree: 89%
 
 ### 功能改善
 
-文字、表單和選擇群組欄位自動轉換至對應最適化表單元件的改進。
+改善文字、表單及選擇群組欄位自動轉換至相應的最適化表單元件的功能。
 
 
 ## 2020 年 3 月 20 日 (AFC-2020.03.1)
@@ -51,7 +51,7 @@ ht-degree: 89%
 
 ### 特殊說明
 
-**安裝Automated Forms Conversion Service連接器套件**
+**安裝自動表單轉換服務連接工具封裝**
 
 如欲使用 AFC-2020.03.1 版本中提供的最新功能與改善，您需要連接工具封裝 1.1.38 版本或更高。您可以於 [AEM 封裝共用](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1)下載連接工具封裝。
 
