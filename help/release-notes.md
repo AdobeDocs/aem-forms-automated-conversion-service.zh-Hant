@@ -1,11 +1,11 @@
 ---
 title: 新增功能 發行說明——自動表單轉換服務
 description: '瞭解自動表單轉換服務的最新功能及錯誤修正 '
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 9b904622fcf421d82a183569d915926a2761d3f5
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '338'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -26,9 +26,9 @@ ht-degree: 97%
 
 ## 2020 年 7 月 16 日 (AFC-2020.07.0)
 
-### 新功能
+### 新增功能
 
-新增支援將彩色PDF表格轉換為最適化表格。
+新增將彩色 PDF 表單轉換為最適化表單的功能。
 
 ### 功能改善
 
