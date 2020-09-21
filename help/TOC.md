@@ -3,20 +3,20 @@ cloud: experience-cloud
 product: experience manager
 sub-product: 表單轉換服務
 audience: end-user
-user-guide-title: Adobe Experience Manager 表單自動轉換服務
+user-guide-title: Adobe Experience Manager Forms 自動轉換服務
 user-guide-description: Speed up the conversion of print forms to adaptive forms.
 breadcrumb-title: Forms Automated Conversion Guide
 breadcrumb-url: /docs/aem-forms-automated-conversion-service/using/introduction.html
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 09f609f3a634e33270b94bd09da50f08d0ea0a6e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '77'
 ht-degree: 100%
 
 ---
 
 
-# Adobe Experience Manager 表單自動轉換服務 {#using}
+# Adobe Experience Manager Forms 自動轉換服務 {#using}
 
 + [發行說明](release-notes.md)
 + [簡介](introduction.md)
