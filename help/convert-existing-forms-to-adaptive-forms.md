@@ -8,9 +8,9 @@ contentOwner: khsingh
 topic-tags: forms
 discoiquuid: 9358219c-6079-4552-92b9-b427a23811af
 translation-type: tm+mt
-source-git-commit: 5fdf997fdde07cc4546accebddb85a248f36e057
+source-git-commit: 14e6d1fba9f27fde4fe24de83cb00c9847ea4e90
 workflow-type: tm+mt
-source-wordcount: '1477'
+source-wordcount: '1579'
 ht-degree: 7%
 
 ---
@@ -22,11 +22,16 @@ AEM Forms Automated Forms Conversion服務（採用Adobe Sensei）會自動將PD
 
 ## 先決條件 {#pre-requisites}
 
-* [**設定轉換服務&#x200B;**](configure-service.md)
+* [**設定轉換服務**](configure-service.md)
 
 * **準備要[套用至](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html)已轉換表單的範本：** 使用範本可讓您在所有最適化表單中套用一致的品牌。 此外，Automated Forms Conversion服務不會擷取並使用來源PDF檔案的頁首和頁尾。 您可以使用最適化表單範本來指定頁首和頁尾。 在轉換期間，範本中指定的頁首和頁尾會套用至最適化表單。 為模板建立資料夾時，請為每個人選 **[!UICONTROL Browse configurations]** 擇選項。
 
 * **準備要[套用至](https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html)已轉換表單的主題：** 使用主題可讓您將一致的樣式套用至組織的所有調適性表單。
+
+* **將Adobe Sign文字標籤新增至來源PDF檔案：** 當來源PDF表單有 [Adobe Sign文字標籤時](https://helpx.adobe.com/sign/using/text-tag.html)，服務會自動將這些標籤轉換為對應的最適化表單欄位，並自動填入簽署者詳細資訊。 此功能僅適用於AcroForms，而且最適化表單支援有限數目的Adobe Sign欄位。
+
+
+   如需支援標籤的完整清單，請在最適化表單編輯器中開啟表單，並新增Adobe Sign區塊。 使用Adobe Sign區塊尋找所有支援的Adobe Sign欄位。 它提供下拉式清單以選取所有支援的欄位。
 
 ## 開始轉換程式 {#start-the-conversion-process}
 
@@ -73,6 +78,7 @@ AEM Forms Automated Forms Conversion服務（採用Adobe Sensei）會自動將PD
    * 使用「 **產生不含資料模型系結的最適化表單** 」選項，以選取您要產生具有或不含資料模型系結的最適化表單。
 如果您未選取此選項，轉換服務會自動將最適化表單與JSON結構描述關聯，並在最適化表單和JSON結構描述中可用的欄位間建立資料系結。 欄位 **[!UICONTROL Save generated data model schema at]** 會顯示儲存產生之JSON結構描述的預設位置。 您也可以自訂位置以儲存產生的結構。
 如果您選取此選項，轉換服務會產生不含資料模型系結的最適化表單。 成功轉換後，您可將最適化表單與表單資料模型、XML結構描述或JSON結構描述建立關聯。 如需詳細資訊，請參 [閱建立最適化表單](https://helpx.adobe.com/experience-manager/6-5/forms/using/creating-adaptive-form.html)。
+
    <!--
    Comment Type: draft
 
@@ -85,6 +91,7 @@ AEM Forms Automated Forms Conversion服務（採用Adobe Sensei）會自動將PD
 1. 在「轉換 **[!UICONTROL Additional]** 設定」對話方塊的標籤中，
    * 選取 **[!UICONTROL Extract fragment from adaptive forms]** 允許轉換服務識別、擷取和下載轉換表單片段的選項。 當您選擇該選 **[!UICONTROL Extract fragment from adaptive forms]** 項時，將啟用指定用於保存提取的表單片段和相應表單片段結構描述的路徑的選項。
    * 如果您現有的JSON **[!UICONTROL existing adaptive form fragments]**&#x200B;結構描述式和結構描述不太適應的表單片段，而且您打算在自動產生的最適化表單中使用這些片段，請指定其位置。 轉換服務會將可用的JSON架構型和架構較不適應性的表單片段與輸入的PDF表單（僅限非互動式PDF表單）相符，如果有相符，則相符的最適化表單片段會用於對應的最適化表單。
+
    >[!NOTE]
    >
    >
@@ -105,6 +112,7 @@ AEM Forms Automated Forms Conversion服務（採用Adobe Sensei）會自動將PD
 
    * 在成功轉換時，將轉換的自適應表單和相關模式下載到轉換對話框的頁籤 **[!UICONTROL Basic]** 中指定的路徑。 只有在開始轉換之前選取「擷取片段」選項時，才會下載表單片段和對應的架構。
    * 在失敗的轉換中，如 **[!UICONTROL Conversion Failed]** 果所有輸入表單都無法轉換，或當只有少數輸入表單無法轉換時 **[!UICONTROL Partially Failed]** ，就會顯示訊息。 狀態電子郵件會在設定的電 [子郵件位址上傳送](configure-service.md#configureemailnotification) ，並將錯誤記錄至error.log檔案。
+
    如果您要將以XFA為基礎的PDF表單轉換為最適化表單，轉換服務會自動將PDF表單與已轉換的最適化表單建立關聯，做為記錄檔案範本。 轉換後，您可以開啟最適化表單屬性，以在標籤的區段中檢視「記錄 **[!UICONTROL Document of Record Template Configuration]** 檔案」 **[!UICONTROL Form Model]** 範本。 </br>
 
    只有啟用> > > **[!UICONTROL Tools]** > > **[!UICONTROL Cloud Services]** >選項，轉換服務才會自動將PDF表單上傳至已轉換的最適化表單，作為「記錄檔案」範本 **[!UICONTROL Automated Forms Conversion Configuration]****[!UICONTROL Properties of selected configuration]****[!UICONTROL Advanced]****[!UICONTROL Generate Document of Record]** 。
