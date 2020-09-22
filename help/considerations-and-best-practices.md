@@ -1,6 +1,5 @@
 ---
-title: '[不發佈]最佳做法和注意事項 '
-seo-title: '[不發佈]最佳做法和注意事項 '
+title: '最佳實務和考量 '
 description: 'null'
 seo-description: 'null'
 page-status-flag: never-activated
@@ -10,15 +9,19 @@ discoiquuid: b786e40a-202e-4e17-a2f5-1f77c46538c2
 privatebeta: true
 index: false
 translation-type: tm+mt
-source-git-commit: e2298422e0af9b1c678e7604be3efb6da377d7dd
+source-git-commit: bc7a0a86a211214d6e43e7c95809f6f40fe267f8
 workflow-type: tm+mt
-source-wordcount: '555'
-ht-degree: 3%
+source-wordcount: '542'
+ht-degree: 4%
 
 ---
 
 
-# [不要發佈最佳做法] 和注意事項 {#do-not-publish-best-practices-and-considerations}
+# 最佳實務和考量 {#do-not-publish-best-practices-and-considerations}
+
+<!--
+[DO NOT PUBLISH]
+-->
 
 AEM Forms Automated Conversion服務可將PDF表單轉換為最適化表單。 該服務使用人工智慧和機器學習算法來理解源表單的佈局和領域。 每項機器學習服務都會持續從來源資料中學習，並在每次流失時產生改善的輸出。 這些服務從人類的體驗中學習。
 
