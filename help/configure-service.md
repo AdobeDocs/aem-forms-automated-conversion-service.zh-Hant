@@ -2,9 +2,9 @@
 title: 設定自動表單轉換服務
 description: 讓您的AEM實例準備好使用Automated Forms Conversion服務
 translation-type: tm+mt
-source-git-commit: 117280695bfddad627e5f7bcb54ff019bbf2026a
+source-git-commit: 741ff89370a5215b70d90c49eea220171efe9339
 workflow-type: tm+mt
-source-wordcount: '2531'
+source-wordcount: '2547'
 ht-degree: 7%
 
 ---
@@ -74,7 +74,7 @@ AEM例項包含基本表單功能。 轉換服務需要AEM Forms的完整功能�
 
 ### （可選）下載和安裝連接器套件  {#installConnectorPackage}
 
-此連接器套件可讓您提早存取 [Auto-detect邏輯區段功能](convert-existing-forms-to-adaptive-forms.md#run-the-conversion) ，以及AFC-2020.03.1版中提供的增強功能。 如果您不需要AFC-2020.03.1中提供的功能和改進，請勿安裝軟體包。  您可以 [從AEM Package Share下載連接器套件](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1)。
+此連接器套件可讓您提早存取 [Auto-detect邏輯區段功能](convert-existing-forms-to-adaptive-forms.md#run-the-conversion) ，以及AFC-2020.03.1版中提供的增強功能。如果您不需要AFC-2020.03.1中提供的功能和改進，請勿安裝軟體包。 您可以 [從AEM Package Share下載連接器套件](https://www.adobeaemcloud.com/content/marketplace/marketplaceProxy.html?packagePath=/content/companies/public/adobe/packages/cq650/featurepack/AFCS-Connector-2020.03.1)。
 
 
 ### 建立自訂主題和範本 {#referencepackage}
@@ -85,11 +85,11 @@ AEM例項包含基本表單功能。 轉換服務需要AEM Forms的完整功能�
 
 在您繼續設定服務並連線您的本機實例與Adobe Cloud上執行的服務之前，請先瞭解連線至服務所需的角色和權限。 本服務使用兩種不同的角色類型：管理員和開發人員：
 
-* **管理員**: 管理員負責管理組織的Adobe軟體和服務。 管理員授與組織內開發人員的存取權，以便連線至在Adobe Cloud上執行的自動化表單轉換服務。 當為組織布建管理員時，管理員會收到一封有標題的電子郵件 **[!UICONTROL 'You now have administrator rights to manage Adobe software and services for your organization']**。 如果您是管理員，請檢查郵箱中是否有前述標題的電子郵件，並繼 [續授予您組織開發人員的存取權](#adduseranddevs)。
+* **管理員**:管理員負責管理組織的Adobe軟體和服務。 管理員授與組織內開發人員的存取權，以便連線至在Adobe Cloud上執行的自動化表單轉換服務。 當為組織布建管理員時，管理員會收到一封有標題的電子郵件 **[!UICONTROL 'You now have administrator rights to manage Adobe software and services for your organization']**。 如果您是管理員，請檢查郵箱中是否有前述標題的電子郵件，並繼 [續授予您組織開發人員的存取權](#adduseranddevs)。
 
 ![管理員存取權授予電子郵件](assets/admin-console-adobe-io-access-grantedx75.png)
 
-* **開發人員**: 開發人員會將本機AEM Forms作者例項連結至Adobe Cloud上執行的Automated Forms Conversion服務。 當管理員授與開發人員連線至自動表單轉換服務的權限時，您現在可以存取標題為「您」的電子郵件會傳送給開發人員，以管理您組織的Adobe API整合。 如果您是開發人員，請檢查郵箱中是否有前述標題的電子郵件，然後繼續 [Connect your local AEM instance to Automated Forms Conversion service on Adobe Cloud。](#connectafcadobeio)
+* **開發人員**:開發人員會將本機AEM Forms作者例項連結至Adobe Cloud上執行的Automated Forms Conversion服務。 當管理員授與開發人員連線至自動表單轉換服務的權限時，您現在可以存取標題為「您」的電子郵件會傳送給開發人員，以管理您組織的Adobe API整合。 如果您是開發人員，請檢查郵箱中是否有前述標題的電子郵件，然後繼續 [Connect your local AEM instance to Automated Forms Conversion service on Adobe Cloud。](#connectafcadobeio)
 
 ![開發人員存取授權電子郵件](assets/email-developer-accessx94.png)
 
@@ -97,7 +97,7 @@ AEM例項包含基本表單功能。 轉換服務需要AEM Forms的完整功能�
 
 在Adobe啟用您組織的存取權並提供管理員必要的權限後，管理員可以登入Admin Console（詳細說明如下）、建立描述檔，以及將開發人員新增至描述檔。 開發人員可將AEM Forms的本機執行個體連接至Adobe Cloud上的Automated Forms Conversion服務。
 
-開發人員是指定用來執行轉換服務的組織成員。 只有新增至Adobe Automated Forms Conversion服務設定檔的開發人員才有權使用Automated Forms Conversion服務。 請執行下列步驟以建立描述檔並新增開發人員至描述檔：
+開發人員是指定用來執行轉換服務的組織成員。 只有新增至Adobe Automated Forms Conversion服務設定檔的開發人員才有權使用Automated Forms Conversion服務。 執行下列步驟以建立描述檔並新增開發人員至描述檔。 至少需要一個描述檔才能授予貴組織開發人員必要的存取權：
 
 1. 登入管 [理控制台](https://adminconsole.adobe.com/)。 使用 **已布建的管理員** (Adobe ID)，以使用Automated Forms Conversion服務登入。 請勿使用任何其他ID或Federated ID登入。
 1. 按一下選 **[!UICONTROL Automated Forms Conversion]** 項。
@@ -163,8 +163,9 @@ Automated Forms Conversion服務使用Day CQ郵件服務來傳送電子郵件通
 
 1. 指定下列項目：
 
-   * 標題： 指定標題。
+   * 標題：指定標題。
    * 授權伺服器： [https://ims-na1.adobelogin.com](https://ims-na1.adobelogin.com)\
+
    現在將其他欄位留空（稍後將提供）。 保持頁面開啟。
 
    <!--
