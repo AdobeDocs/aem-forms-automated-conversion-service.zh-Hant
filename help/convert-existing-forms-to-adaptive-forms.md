@@ -8,9 +8,9 @@ contentOwner: khsingh
 topic-tags: forms
 discoiquuid: 9358219c-6079-4552-92b9-b427a23811af
 translation-type: tm+mt
-source-git-commit: 14e6d1fba9f27fde4fe24de83cb00c9847ea4e90
+source-git-commit: fa8a27021fbccdd1c6c0721a6e5c032db486e262
 workflow-type: tm+mt
-source-wordcount: '1579'
+source-wordcount: '1585'
 ht-degree: 7%
 
 ---
@@ -30,8 +30,8 @@ AEM Forms Automated Forms Conversion服務（採用Adobe Sensei）會自動將PD
 
 * **將Adobe Sign文字標籤新增至來源PDF檔案：** 當來源PDF表單有 [Adobe Sign文字標籤時](https://helpx.adobe.com/sign/using/text-tag.html)，服務會自動將這些標籤轉換為對應的最適化表單欄位，並自動填入簽署者詳細資訊。 此功能僅適用於AcroForms，而且最適化表單支援有限數目的Adobe Sign欄位。
 
-
-   如需支援標籤的完整清單，請在最適化表單編輯器中開啟表單，並新增Adobe Sign區塊。 使用Adobe Sign區塊尋找所有支援的Adobe Sign欄位。 它提供下拉式清單以選取所有支援的欄位。
+   </br>
+    最適化表單僅支援簽名、文字、編號、日期、下拉式選單、核取方塊、初始、簽章區塊、數位簽章、簽署者標題、簽署者電子郵件、簽署者的公司、簽署日期和簽署者的完整名稱Adobe Sign欄位。 因此，服務將僅前述欄位的文本標籤轉換為相應的自適應表單欄位。
 
 ## 開始轉換程式 {#start-the-conversion-process}
 
