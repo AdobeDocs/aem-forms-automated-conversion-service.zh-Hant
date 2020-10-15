@@ -1,9 +1,9 @@
 ---
 title: 新增功能 發行說明——自動表單轉換服務
 description: '瞭解自動表單轉換服務的最新功能及錯誤修正 '
-translation-type: ht
-source-git-commit: 9b904622fcf421d82a183569d915926a2761d3f5
-workflow-type: ht
+translation-type: tm+mt
+source-git-commit: 8808e2d9c762617ba67e2f1ab4e103f828e11c58
+workflow-type: tm+mt
 source-wordcount: '338'
 ht-degree: 100%
 
@@ -43,7 +43,7 @@ ht-degree: 100%
 
 在預設狀態中，此服務會為 PDF 表單的每一頁分別建立頂層面板。 現在，您可以透過 **[!UICONTROL Auto-detect logical sections]** 選項僅建立邏輯面板，不再建立頁面層級面板（基於頁碼的面板）。 這個選項還可將不屬於任何具有前置邏輯區段之區段的欄位，與橫跨至兩個相鄰頁面的邏輯區段的欄位合併成一個邏輯區段。 例如，如果邏輯區段中有些欄位位於第一頁底部，有些位於第二頁頂部，則所有該欄位都會合併成一個邏輯區段。
 
-### 功能改善
+### 功能改善 {#improvements}
 
 **改善清單偵測**
 
