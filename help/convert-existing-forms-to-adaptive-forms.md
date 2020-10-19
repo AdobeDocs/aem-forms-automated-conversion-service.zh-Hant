@@ -8,9 +8,9 @@ contentOwner: khsingh
 topic-tags: forms
 discoiquuid: 9358219c-6079-4552-92b9-b427a23811af
 translation-type: tm+mt
-source-git-commit: fa8a27021fbccdd1c6c0721a6e5c032db486e262
+source-git-commit: 19c688ae925774c008683be8b92afcbfb9f2bcdb
 workflow-type: tm+mt
-source-wordcount: '1585'
+source-wordcount: '1599'
 ht-degree: 7%
 
 ---
@@ -24,14 +24,15 @@ AEM Forms Automated Forms Conversion服務（採用Adobe Sensei）會自動將PD
 
 * [**設定轉換服務**](configure-service.md)
 
-* **準備要[套用至](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html)已轉換表單的範本：** 使用範本可讓您在所有最適化表單中套用一致的品牌。 此外，Automated Forms Conversion服務不會擷取並使用來源PDF檔案的頁首和頁尾。 您可以使用最適化表單範本來指定頁首和頁尾。 在轉換期間，範本中指定的頁首和頁尾會套用至最適化表單。 為模板建立資料夾時，請為每個人選 **[!UICONTROL Browse configurations]** 擇選項。
+* **準備要 [套用至](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html) 已轉換表單的範本：** 使用範本可讓您在所有最適化表單中套用一致的品牌。 此外，Automated Forms Conversion服務不會擷取並使用來源PDF檔案的頁首和頁尾。 您可以使用最適化表單範本來指定頁首和頁尾。 在轉換期間，範本中指定的頁首和頁尾會套用至最適化表單。 為模板建立資料夾時，請為每個人選 **[!UICONTROL Browse configurations]** 擇選項。
 
-* **準備要[套用至](https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html)已轉換表單的主題：** 使用主題可讓您將一致的樣式套用至組織的所有調適性表單。
+* **準備要 [套用至](https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html) 已轉換表單的主題：** 使用主題可讓您將一致的樣式套用至組織的所有調適性表單。
 
-* **將Adobe Sign文字標籤新增至來源PDF檔案：** 當來源PDF表單有 [Adobe Sign文字標籤時](https://helpx.adobe.com/sign/using/text-tag.html)，服務會自動將這些標籤轉換為對應的最適化表單欄位，並自動填入簽署者詳細資訊。 此功能僅適用於AcroForms，而且最適化表單支援有限數目的Adobe Sign欄位。
+* **將Adobe Sign文字標籤新增至來源PDF檔案：** 當來源PDF表單有 [Adobe Sign文字標籤時](https://helpx.adobe.com/sign/using/text-tag.html)，服務會在轉換期間保留所有簽署者相關資訊。 產生的最適化表單會填入所有簽署者詳細資料，同時傳送最適化表單至Adobe Sign服務進行簽署。 此功能僅適用於AcroForms，且最適化表單屬性與AcroForm屬性完全對齊。
 
-   </br>
-    最適化表單僅支援簽名、文字、編號、日期、下拉式選單、核取方塊、初始、簽章區塊、數位簽章、簽署者標題、簽署者電子郵件、簽署者的公司、簽署日期和簽署者的完整名稱Adobe Sign欄位。 因此，服務將僅前述欄位的文本標籤轉換為相應的自適應表單欄位。
+若要將Adobe Sign文字標籤新增至來源PDF檔案，請使用 [Text Tag](https://helpx.adobe.com/sign/using/text-tag.html) （文字標籤）取代來源PDF檔案中欄位名稱，或使用「使用Acrobat DC建立表格」文章中所述的「轉換為Adobe Sign表格 [](https://helpx.adobe.com/sign/using/create-forms-with-acrobat.html#) 」。
+
+
 
 ## 開始轉換程式 {#start-the-conversion-process}
 
