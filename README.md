@@ -1,9 +1,16 @@
 ---
-source-git-commit: 5f945d77db476387159d342511b82691cf7708ee
+source-git-commit: d2af4611e68447253a818e0c83ff3ec519056373
+workflow-type: tm+mt
 translation-type: tm+mt
+source-wordcount: '517'
+ht-degree: 17%
 
 ---
 # Contribute文章
+
+| EXL-PR | EXL | 預覽 | 啟動 | 已發佈 | 說明 |
+|--- |--- |--- |--- |--- |--- |
+| [![建置狀態](https://docs.ci.corp.adobe.com/view/exl-pr/job/aem-forms-automated-conversion-service.en_pr-exl/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/aem-forms-automated-conversion-service.en_pr-exl/lastBuild/) | [![建置狀態](https://docs.ci.corp.adobe.com/view/exl-pr/job/aem-forms-automated-conversion-service.en_exl/lastBuild/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/aem-forms-automated-conversion-service.en_exl/lastBuild/lastBuild) | [預覽URL](https://experienceleague.corp.adobe.com/docs/aem-forms-automated-conversion-service/using/introduction.html?lang=en) | [activate-exl](https://docs.ci.corp.adobe.com/job/activate-exl/build/) | [即時URL](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/introduction.html?lang=en) | [Authoring 指南](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en) |
 
 我們歡迎社群和檔案團隊以外的Adobe員工提供內容。
 
@@ -27,7 +34,7 @@ Adobe使用條款涵蓋您提交之本回購檔案及程式碼範例的輕微更
 
 ### 社群成員的重大變更或新文章
 
-如果您是Adobe社群的一員，並想要建立文章或提交重大變更，請按一下GitHub儲存庫中的「 **Issues** 」標籤以提交期刊。 此提交內容會開始與檔案團隊對話。 您必須與作者（或其他Adobe員工）合作，才能發佈新內容。
+如果您是Adobe社群的一員，並想要建立文章或提交重大變更，請按一下GitHub儲存庫中的「 **Issues** 」標籤以提交期刊。此提交內容會開始與檔案團隊對話。您必須與作者 (或其他Adobe員工) 合作，才能發佈新內容。
 
 <!--
 If you submit a pull request with significant changes to documentation and code examples, you'll see a message in the pull request asking you to submit an online contribution license agreement (CLA). You must complete the online form before we can review your pull request.
