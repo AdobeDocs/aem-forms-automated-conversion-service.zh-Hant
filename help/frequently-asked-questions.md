@@ -7,9 +7,9 @@ uuid: 0f6dc39c-99b7-49a4-8e9e-ecc4a35110c0
 topic-tags: introduction
 discoiquuid: e17c2d2c-8300-4467-aa01-57365697939f
 translation-type: tm+mt
-source-git-commit: 14e6d1fba9f27fde4fe24de83cb00c9847ea4e90
+source-git-commit: c4f0d07b38cdb6aa162a0b61abe12fe9d1677a8c
 workflow-type: tm+mt
-source-wordcount: '1822'
+source-wordcount: '1866'
 ht-degree: 4%
 
 ---
@@ -140,3 +140,6 @@ ht-degree: 4%
    <p> 當您使用Automated Forms Conversion Service將PDF表單轉換為最適化表單，而PDF表單具有Adobe Sign文字標籤時，這些標籤會轉換為對應的最適化表單欄位，並自動填入簽署者詳細資訊。  此功能僅適用於Acro Forms，而且最適化表單支援有限數目的Adobe Sign欄位。</p>  </br>
 
    <p> 如需支援標籤的完整清單，請在最適化表單編輯器中開啟表單，並新增Adobe Sign區塊。 使用Adobe Sign區塊尋找所有支援的Adobe Sign欄位。 它提供下拉式清單以選取所有支援的欄位。</p>
+
+1. **如何建立啟用Adobe Sign的PDF表格？**
+若要建立啟用Adobe Sign的PDF表格，請將 [Adobe Sign文字標籤新增至欄位名稱](https://helpx.adobe.com/sign/using/text-tag.html) ，或使用「 [轉換為Adobe Sign表格」選項](https://helpx.adobe.com/sign/using/create-forms-with-acrobat.html) 。 </br>
