@@ -8,9 +8,9 @@ contentOwner: khsingh
 topic-tags: forms
 discoiquuid: 9358219c-6079-4552-92b9-b427a23811af
 translation-type: tm+mt
-source-git-commit: 1c4eb103b1d3b40ead4137f05e6af01d581365e5
+source-git-commit: c4f0d07b38cdb6aa162a0b61abe12fe9d1677a8c
 workflow-type: tm+mt
-source-wordcount: '1616'
+source-wordcount: '1487'
 ht-degree: 7%
 
 ---
@@ -28,8 +28,7 @@ AEM Forms Automated Forms Conversion服務（採用Adobe Sensei）會自動將PD
 
 * **準備要 [套用至](https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html) 已轉換表單的主題：** 使用主題可讓您將一致的樣式套用至組織的所有調適性表單。
 
-* **將Adobe Sign文字標籤新增至來源PDF檔案：** 當來源PDF表單有 [Adobe Sign文字標籤時](https://helpx.adobe.com/sign/using/text-tag.html)，服務會在轉換期間保留所有Adobe Sign相關資訊。 產生的最適化表單會將AcroForm中的簽署者資訊與最適化表單欄位建立關聯，並保留與對應最適化表單欄位相關的資料完整性，同時將最適化表單傳送至Adobe簽名服務進行簽署。 此功能僅適用於AcroForms，且最適化表單屬性與AcroForm屬性完全對齊 <br>\
-   若要將Adobe Sign文字標籤新增至來源PDF檔案，請使用 [Text Tag](https://helpx.adobe.com/sign/using/text-tag.html) （文字標籤）取代來源PDF檔案中欄位名稱，或使用「使用Acrobat DC建立表格」文章中所述的「轉換為Adobe Sign表格 [](https://helpx.adobe.com/sign/using/create-forms-with-acrobat.html#) 」。
+* **（選用）** ，將來 [**源PDF表格轉換為Adobe Sign表格**](frequently-asked-questions.md)
 
 
 ## 開始轉換程式 {#start-the-conversion-process}
