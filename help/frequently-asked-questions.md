@@ -7,7 +7,7 @@ uuid: 0f6dc39c-99b7-49a4-8e9e-ecc4a35110c0
 topic-tags: introduction
 discoiquuid: e17c2d2c-8300-4467-aa01-57365697939f
 translation-type: tm+mt
-source-git-commit: 49f1b6c93529ab30141503ab884801cf1c37b20b
+source-git-commit: ac110cc2e8b29603fb7ff8b86c5d323f13bc204e
 workflow-type: tm+mt
 source-wordcount: '1866'
 ht-degree: 4%
@@ -142,4 +142,7 @@ ht-degree: 4%
    <p> 如需支援標籤的完整清單，請在最適化表單編輯器中開啟表單，並新增Adobe Sign區塊。 使用Adobe Sign區塊尋找所有支援的Adobe Sign欄位。 它提供下拉式清單以選取所有支援的欄位。</p>
 
 1. **如何建立啟用Adobe Sign的PDF表格？**
-   </p>若要建立啟用Adobe Sign的PDF表格：</p> 將[Adobe Sign文字標籤](https://helpx.adobe.com/sign/using/text-tag.html)新增至欄位名稱，或使用[轉換為Adobe Sign表格](https://helpx.adobe.com/sign/using/create-forms-with-acrobat.html)選項。 </br>
+
+   </p>若要建立啟用Adobe Sign的PDF表格：</p>
+
+   將 [Adobe Sign文字標籤新增至欄位名稱](https://helpx.adobe.com/sign/using/text-tag.html) ，或使用「 [轉換為Adobe Sign表單」選項](https://helpx.adobe.com/sign/using/create-forms-with-acrobat.html) 。
