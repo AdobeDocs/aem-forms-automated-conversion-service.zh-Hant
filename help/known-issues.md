@@ -7,9 +7,9 @@ uuid: b1dc661b-ccd3-457f-acbb-4bd25db86e1e
 topic-tags: introduction
 discoiquuid: 9cd2363c-47a0-46e9-98cd-1fe088b9cd6e
 translation-type: tm+mt
-source-git-commit: e2298422e0af9b1c678e7604be3efb6da377d7dd
+source-git-commit: 589eacfd6200f4336b7a4a7708e10f3dfe08406d
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '808'
 ht-degree: 1%
 
 ---
@@ -77,4 +77,7 @@ ht-degree: 1%
 * 不支援複雜的表格，例如無邊框表格、巢狀表格和具有預留位置值的表格。 在轉換後，使用最適化表單編輯器來新增或修改複雜的表格。 僅支援包含空白欄位、正確標題和清除邊界的簡單表格。
 * 該服務僅將英語表單轉換為自適應表單。 You can translate converted adaptive forms to another language using [AEM translation workflow](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
 * AEM 6.4 Forms不支援自動偵測多欄版面輸入表單。
+* 使用來源PDF表單中的顏色編碼的資訊不會傳遞至最適化表單。
+* 來源PDF表單的顏色會保留至最適化表單主題。
+* 彩色PDF表單會視為灰階表單，並據以偵測欄位。
 
