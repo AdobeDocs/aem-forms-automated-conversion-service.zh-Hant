@@ -1,11 +1,11 @@
 ---
 title: 簡介
 description: '將列印表單加速轉換為最適化表單 '
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: c4f0d07b38cdb6aa162a0b61abe12fe9d1677a8c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '674'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -32,7 +32,7 @@ Adobe 為您的組織啟用存取權限，並向您指定的組織管理員提�
 
 此服務支援非互動式 PDF 表單、使用 Adobe Acrobat 建立的名為 AcroForms 的表單，以及使用 AEM Forms 或 Adobe LiveCycle 建立的基於 XFA 的表單。
 
-此服務也支援啟用Adobe Sign的PDF表單。 如果來源PDF表單有Adobe Sign文字標籤，服務會在轉換期間保留所有Adobe Sign相關資訊，並將來源PDF中顯示的簽署者資訊與對應的最適化表單欄位建立關聯。 此功能僅適用於AcroForms。
+此服務也支援啟用 Adobe Sign 的 PDF 表單。 如果源 PDF 表單有 Adobe Sign 文字標記，則此服務會保留轉換期間所有 Adobe Sign 的相關資訊，並將源 PDF 中顯示的簽署者資訊與對應的最適化表單欄位建立關聯。 此功能僅適用於 AcroForms。
 
 此服務僅能將英語表單轉換為最適化表單。 您可以使用 [AEM 翻譯工作流程](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)將生成的最適化表單翻譯成另一種語言。
 
