@@ -1,9 +1,9 @@
 ---
 title: 新增功能 發行說明——自動表單轉換服務
 description: '瞭解自動表單轉換服務的最新功能及錯誤修正 '
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 8808e2d9c762617ba67e2f1ab4e103f828e11c58
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '338'
 ht-degree: 100%
 
