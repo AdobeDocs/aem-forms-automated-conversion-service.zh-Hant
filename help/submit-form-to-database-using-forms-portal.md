@@ -13,7 +13,7 @@ ht-degree: 1%
 ---
 
 
-# 使用Forms Portal整合最適化表單與資料庫 {#submit-forms-to-database-using-forms-portal}
+# 使用Forms Portal {#submit-forms-to-database-using-forms-portal}將最適化表單與資料庫整合
 
 「自動表單轉換」服務可讓您將非互動式PDF表單、Acro表單或以XFA為基礎的PDF表單轉換為最適化表單。 在開始轉換程式時，您可以選擇是否使用資料系結產生最適化表單。
 
@@ -25,17 +25,17 @@ ht-degree: 1%
 
 本文說明成功執行所有這些整合階段的逐步指示。
 
-本文討論的範例是自訂資料和中繼資料服務的參考實作，以整合Forms Portal頁面與資料庫。 示例實施中使用的資料庫是MySQL 5.6.24。 不過，您可以將Forms Portal頁面與您選擇的任何資料庫整合。
+本文討論的範例是自訂資料和中繼資料服務的參考實作，以整合Forms Portal頁面與資料庫。 示例實施中使用的資料庫是MySQL 5.6.24。不過，您可以將Forms Portal頁面與您選擇的任何資料庫整合。
 
-## 先決條件 {#pre-requisites}
+## 先決條件{#pre-requisites}
 
 * 設定AEM 6.4或6.5作者實例
-* 為您 [的AEM實例安裝](https://helpx.adobe.com/experience-manager/aem-releases-updates.html) 最新的Service Pack
+* 為您的AEM實例安裝[最新的Service Pack](https://helpx.adobe.com/experience-manager/aem-releases-updates.html)
 * AEM Forms附加元件套件的最新版本
-* Configure [Automated Forms Conversion service](configure-service.md)
-* 設定資料庫。 示例實施中使用的資料庫是MySQL 5.6.24。 不過，您可以將轉換的最適化表單與您選擇的任何資料庫整合。
+* 配置[自動表單轉換服務](configure-service.md)
+* 設定資料庫。 示例實施中使用的資料庫是MySQL 5.6.24。不過，您可以將轉換的最適化表單與您選擇的任何資料庫整合。
 
-## 設定AEM實例與資料庫之間的連線 {#set-up-connection-aem-instance-database}
+## 設定AEM實例與資料庫{#set-up-connection-aem-instance-database}之間的連線
 
 在AEM實例和MYSQL資料庫之間設定連接包括：
 
@@ -47,18 +47,18 @@ ht-degree: 1%
 
 * [設定和設定Forms Portal整合的範例套件](#set-up-and-configure-sample)
 
-### 安裝mysql-connector-java-5.1.39-bin.jar檔案 {#install-mysql-connector-java-file}
+### 安裝mysql-connector-java-5.1.39-bin.jar檔案{#install-mysql-connector-java-file}
 
 對所有作者和發佈實例執行以下步驟以安裝mysql-connector-java-5.1.39-bin.jar檔案：
 
 1. 導覽至http://[server]:[port]/system/console/depfinder並搜尋com.mysql.jdbc套件。
 1. 在「導出者」(Exported by)列中，檢查軟體包是否由任何包導出。 如果軟體包未由任何包導出，請繼續。
-1. 導覽至http://[server]:[port]/system **[!UICONTROL Install/Update]**/console/bundles，然後按一下。
-1. 單 **[!UICONTROL Choose File]** 擊並瀏覽以選擇mysql-connector-java-5.1.39-bin.jar檔案。 此外，請選取 **[!UICONTROL Start Bundle]** 和核取 **[!UICONTROL Refresh Packages]** 方塊。
-1. 按一下 **[!UICONTROL Install]** 或 **[!UICONTROL Update]**。 完成後，重新啟動伺服器。
+1. 導覽至http://[server]:[port]/system/console/bundles，然後按一下&#x200B;**[!UICONTROL Install/Update]**。
+1. 按一下&#x200B;**[!UICONTROL Choose File]**&#x200B;並瀏覽以選擇mysql-connector-java-5.1.39-bin.jar檔案。 此外，選擇&#x200B;**[!UICONTROL Start Bundle]**&#x200B;和&#x200B;**[!UICONTROL Refresh Packages]**&#x200B;複選框。
+1. 按一下&#x200B;**[!UICONTROL Install]**&#x200B;或&#x200B;**[!UICONTROL Update]**。 完成後，重新啟動伺服器。
 1. （僅限Windows）關閉您作業系統的系統防火牆。
 
-### 在資料庫中建立模式和表 {#create-schema-and-tables-in-database}
+### 在資料庫{#create-schema-and-tables-in-database}中建立模式和表
 
 執行以下步驟以在資料庫中建立模式和表：
 
@@ -68,9 +68,9 @@ ht-degree: 1%
    CREATE SCHEMA `formsportal` ;
    ```
 
-   其中 **formsportal** 是指架構的名稱。
+   其中&#x200B;**formsportal**&#x200B;是指架構的名稱。
 
-1. 使用以 **下SQL陳述式** ，在資料庫模式中建立資料表：
+1. 使用以下SQL陳述式在資料庫模式中建立&#x200B;**data**&#x200B;表：
 
    ```sql
     CREATE TABLE `data` (
@@ -82,7 +82,7 @@ ht-degree: 1%
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
    ```
 
-1. 使用以 **下SQL陳述式** ，在資料庫架構中建立元資料表：
+1. 使用以下SQL陳述式在資料庫模式中建立&#x200B;**metadata**&#x200B;表：
 
    ```sql
    CREATE TABLE `metadata` (
@@ -122,7 +122,7 @@ ht-degree: 1%
        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
    ```
 
-1. 使用以 **下SQL陳述式在資料庫模式中建立** additionalmetadatatable表：
+1. 使用以下SQL陳述式在資料庫模式中建立&#x200B;**additionalmetadatatable**&#x200B;表：
 
    ```sql
    CREATE TABLE `additionalmetadatatable` (
@@ -134,7 +134,7 @@ ht-degree: 1%
        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
    ```
 
-1. 使用以 **下SQL陳述式** ，在資料庫模式中建立可注釋表：
+1. 使用以下SQL陳述式在資料庫模式中建立&#x200B;**commenttable**&#x200B;表：
 
    ```sql
    CREATE TABLE `commenttable` (
@@ -145,12 +145,12 @@ ht-degree: 1%
        `time` varchar(255) DEFAULT NULL);
    ```
 
-### 設定AEM例項與資料庫之間的連線 {#configure-connection-between-aem-instance-and-database}
+### 配置AEM實例與資料庫{#configure-connection-between-aem-instance-and-database}之間的連接
 
 執行下列設定步驟，以建立AEM例項與MYSQL資料庫之間的連線：
 
-1. 前往「AEM Web Console Configuration」（AEM Web Console設定）頁 *面[:]http://[host]:* port/system/console/configMgr。
-1. 按一下以在編 **[!UICONTROL Forms Portal Draft and Submission Configuration]** 輯模式中開啟。
+1. 前往「AEM Web Console設定」頁面，網址為&#x200B;*http://[host]:[port]/system/console/configMgr*。
+1. 按一下以在編輯模式下開啟&#x200B;**[!UICONTROL Forms Portal Draft and Submission Configuration]**。
 1. 指定屬性的值，如下表所述：
 
    <table> 
@@ -192,8 +192,8 @@ ht-degree: 1%
     </tr>
     </tbody> 
     </table>
-1. 保持其他配置不變，然後按一下 **[!UICONTROL Save]**。
-1. 在「Web控制台配置」中， **[!UICONTROL Apache Sling Connection Pooled DataSource]** 查找並按一下以在編輯模式下開啟。 指定屬性的值，如下表所述：
+1. 保持其他配置不變，然後按一下&#x200B;**[!UICONTROL Save]**。
+1. 在「Web控制台配置」的編輯模式下，查找並按一下以開啟&#x200B;**[!UICONTROL Apache Sling Connection Pooled DataSource]**。 指定屬性的值，如下表所述：
 
    <table> 
     <tbody> 
@@ -264,39 +264,39 @@ ht-degree: 1%
     </tbody> 
     </table>
 
-### 設定並設定範例 {#set-up-and-configure-sample}
+### 設定並配置示例{#set-up-and-configure-sample}
 
 對所有作者和發佈實例執行以下步驟以安裝和配置示例：
 
-1. 將下列 **** aem-fp-db-integration-sample-pkg-6.1.2.zip套件下載至您的檔案系統。
+1. 將下列&#x200B;**aem-fp-db-integration-sample-pkg-6.1.2.zip**&#x200B;套件下載至您的檔案系統。
 
    [取得檔案](assets/aem-fp-db-integration-sample-pkg-6.1.2.zip)
 
-1. 前往AEM封裝管理器，網址 *為[http://]host[:]port*/crx/packmgr/。
+1. 前往位於&#x200B;*http://[host]的AEM套件管理器：[port]/crx/packmgr/*。
 1. 按一下 **[!UICONTROL Upload Package]**.
-1. 瀏覽以選 **取aem-fp-db-integration-sample-pkg-6.1.2.zip套件** ，然後按一下 **[!UICONTROL OK]**。
-1. 按一 **[!UICONTROL Install]** 下套件旁的，以安裝套件。
+1. 瀏覽以選擇&#x200B;**aem-fp-db-integration-sample-pkg-6.1.2.zip**&#x200B;套件，然後按一下&#x200B;**[!UICONTROL OK]**。
+1. 按一下軟體包旁的&#x200B;**[!UICONTROL Install]**&#x200B;以安裝軟體包。
 
-## 設定已轉換的最適化表單，以整合Forms Portal {#configure-converted-adaptive-form-for-forms-portal-integration}
+## 為Forms Portal整合配置已轉換的自適應表單{#configure-converted-adaptive-form-for-forms-portal-integration}
 
 執行下列步驟，以啟用使用「表單入口網站」頁面的自適應表單提交：
-1. [執行轉換](convert-existing-forms-to-adaptive-forms.md#start-the-conversion-process) ，將來源表單轉換為最適化表單。
+1. [執行轉](convert-existing-forms-to-adaptive-forms.md#start-the-conversion-process) 換，將來源表單轉換為最適化表單。
 1. 在編輯模式中開啟最適化表單。
-1. 點選「表單容器」並選取「設定 ![自訂表單](assets/configure-adaptive-form.png)」。
-1. 在區段 **[!UICONTROL Submission]** 中，從下 **[!UICONTROL Forms Portal Submit Action]** 拉式清 **[!UICONTROL Submit Action]** 單中選取。
-1. 點選「 ![儲存範本原則](assets/edit_template_done.png) 」以儲存設定。
+1. 點選「表單容器」並選取「設定![設定自適應表單」。](assets/configure-adaptive-form.png)
+1. 在&#x200B;**[!UICONTROL Submission]**&#x200B;部分，從&#x200B;**[!UICONTROL Submit Action]**&#x200B;下拉清單中選擇&#x200B;**[!UICONTROL Forms Portal Submit Action]**。
+1. 點選![儲存範本原則](assets/edit_template_done.png)以儲存設定。
 
-## 建立和設定Forms Portal頁面 {#create-configure-forms-portal-page}
+## 建立並設定Forms Portal頁面{#create-configure-forms-portal-page}
 
 執行下列步驟以建立Forms Portal頁面並加以設定，以便您使用此頁面提交最適化表單：
 
-1. 登入AEM作者例項並點選 **[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Sites]**。
-1. 選擇您要儲存新Forms Portal頁面的位置，然後點選 **[!UICONTROL Create]** > **[!UICONTROL Page]**。
-1. 選取頁面的範本、點選、 **[!UICONTROL Next]**&#x200B;指定頁面的標題並點選 **[!UICONTROL Create]**。
-1. 點選 **[!UICONTROL Edit]** 以設定頁面。
-1. 在頁首中，點選「 ![編輯範本](assets/edit_template_sites.png) > **[!UICONTROL Edit Template]** 」以開啟頁面的範本。
-1. 點選「版面容器」並點選「 ![編輯範本原則」](assets/edit_template_policy.png)。 在標籤 **[!UICONTROL Allowed Components]** 中，啟用和選 **[!UICONTROL Document Services]** 項， **[!UICONTROL Document Services Predicates]** 然後點選「 ![儲存範本」原則](assets/edit_template_done.png)。
-1. 在頁 **[!UICONTROL Search & Lister]** 面中插入元件。 因此，您的AEM實例上所有現有的可用最適化表單都會列在頁面上。
-1. 在頁 **[!UICONTROL Drafts & Submissions]** 面中插入元件。 兩個標籤 **[!UICONTROL Draft Forms]** 和 **[!UICONTROL Submitted Forms]**，會顯示在Forms Portal頁面上。 該選 **[!UICONTROL Draft Forms]** 項卡還顯示已轉換的最適化表單，這些表單是使用配置已轉換的適 [應性表單以進行Forms Portal整合的步驟生成的](#configure-converted-adaptive-form-for-forms-portal-integration)
+1. 登入AEM作者例項，然後點選&#x200B;**[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Sites]**。
+1. 選擇要保存新Forms Portal頁面的位置，然後點選&#x200B;**[!UICONTROL Create]** > **[!UICONTROL Page]**。
+1. 選擇頁面的範本，點選&#x200B;**[!UICONTROL Next]**，指定頁面的標題並點選&#x200B;**[!UICONTROL Create]**。
+1. 點選&#x200B;**[!UICONTROL Edit]**&#x200B;以設定頁面。
+1. 在頁首中，點選![編輯範本](assets/edit_template_sites.png) > **[!UICONTROL Edit Template]**&#x200B;以開啟頁面的範本。
+1. 點選「Layout Container（版面容器）」並點選「![Edit template policy（編輯範本原則）」。 ](assets/edit_template_policy.png)在&#x200B;**[!UICONTROL Allowed Components]**&#x200B;標籤中，啟用&#x200B;**[!UICONTROL Document Services]**&#x200B;和&#x200B;**[!UICONTROL Document Services Predicates]**&#x200B;選項，然後點選![儲存範本原則](assets/edit_template_done.png)。
+1. 將&#x200B;**[!UICONTROL Search & Lister]**&#x200B;元件插入頁面。 因此，您的AEM實例上所有現有的可用最適化表單都會列在頁面上。
+1. 將&#x200B;**[!UICONTROL Drafts & Submissions]**&#x200B;元件插入頁面。 兩個標籤&#x200B;**[!UICONTROL Draft Forms]**&#x200B;和&#x200B;**[!UICONTROL Submitted Forms]**&#x200B;會顯示在Forms Portal頁面上。 **[!UICONTROL Draft Forms]**&#x200B;頁籤還顯示使用[配置轉換的Forms Portal整合自適應表單](#configure-converted-adaptive-form-for-forms-portal-integration)中提及的步驟生成的已轉換自適應表單
 
-1. 點選 **[!UICONTROL Preview]**、點選已轉換的最適化表單、指定最適化表單欄位的值並送出。 您為最適化表單欄位指定的值會提交至整合式資料庫。
+1. 點選&#x200B;**[!UICONTROL Preview]**、點選已轉換的最適化表單、指定最適化表單欄位的值並送出。 您為最適化表單欄位指定的值會提交至整合式資料庫。
