@@ -27,7 +27,7 @@ AEM Forms Automated Conversion服務可將PDF表單轉換為最適化表單。 �
 
 自動化表單轉換服務是針對大量表單進行培訓的。 它可輕鬆識別來源表單中的欄位，並產生最適化表單。 不過，PDF表格中有些欄位和樣式很容易讓人看到，但是卻很難為服務瞭解。 服務可指派不同於適用欄位類型或面板給某些欄位或樣式。 以下列出所有此類欄位和樣式模式。
 
-服務會開始識別並指派正確的欄位或面板給這些模式，因為它會不斷從來源資料中學習。 目前，您可以使用「檢閱」 [和「更正」編輯器](review-correct-ui-edited.md) ，來修正此類問題。 在開始修正問題或進一步閱讀之前，請先熟悉最適 [化表單元件](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html)。
+服務會開始識別並指派正確的欄位或面板給這些模式，因為它會不斷從來源資料中學習。 目前，您可使用[Review and Correct](review-correct-ui-edited.md)編輯器來修正此類問題。 開始修正問題或進一步閱讀之前，請先熟悉[最適化表單元件](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html)。
 
 ## 一般 {#general}
 
@@ -59,7 +59,7 @@ AEM Forms Automated Conversion服務可將PDF表單轉換為最適化表單。 �
  </tbody>
 </table>
 
-## Choice Group  {#choice-group}
+## 選擇群組{#choice-group}
 
 <table border="1" cellpadding="1" cellspacing="0" width="100%"> 
  <tbody>
@@ -74,7 +74,7 @@ AEM Forms Automated Conversion服務可將PDF表單轉換為最適化表單。 �
  </tbody>
 </table>
 
-## 表單欄位 {#form-fields}
+## 表單欄位{#form-fields}
 
 <table border="1" cellpadding="1" cellspacing="0" width="100%"> 
  <tbody>
