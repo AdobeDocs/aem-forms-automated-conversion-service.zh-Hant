@@ -5,8 +5,11 @@ description: 'AFCS 常見問題與解決方法 '
 seo-description: AFCS 常見問題與解決方法
 contentOwner: khsingh
 topic-tags: forms
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: c413c5dc2da3a3e7e116b3355c63620f9dab17f8
+workflow-type: tm+mt
+source-wordcount: '586'
+ht-degree: 100%
 
 ---
 
@@ -21,15 +24,15 @@ source-git-commit: c413c5dc2da3a3e7e116b3355c63620f9dab17f8
 
 | 錯誤 | 範例 |
 |--- |--- |
-| **錯誤訊息** <br> 沒有存取權杖標頭可用。<br><br> **原因** <br> 管理員已建立了多個 IMS 組態或 IMS 組態無法連接至 Adobe Cloud 上的 AFCS 服務。 <br><br>**解決方法&#x200B;**<br>如果有多個組態，請刪除所有的組態並[建立一個新的組態](configure-service.md#obtainpubliccertificates)。<br>如果只有一個組態，請使用「**&#x200B;健康情況檢查&#x200B;**」以[檢查連網狀態](configure-service.md#createintegrationoption)。 | ![沒有存取權杖標頭可用](assets/invalid-ims-configurations.png) |
-| **錯誤訊息** <br> 無法連接到服務。  <br><br>**原因&#x200B;**<br>服務 URL 不正確，或自動表單轉換服務雲端服務中沒有提及服務 URL。<br><br>**解決方法** <br> 在自動表單轉換服務雲端服務中修正[服務 URL](configure-service.md#configure-the-cloud-service)。 | ![無法連接到服務。](assets/wrong-service-url-configured.png) |
-| **錯誤訊息** <br> 本服務未能轉換表單。  <br><br>**原因&#x200B;**<br>您這端的連網問題、排程維護導致服務無法使用或 Adobe Cloud 運行中斷。<br><br>**解決方法** <br> 解決您這端的連網問題，並在 https://status.adobe.com/ 上查看服務狀態，是否有排程維護或無預期的運行中斷。 | ![無法連接到服務。](assets/conversion-failure.png) |
-| **錯誤訊息** <br> 頁數超過 15 頁。  <br><br>**原因&#x200B;**<br>源表單長度超過 15 頁。<br><br>**解決方法** <br> 使用 Adobe Acrobat 來分割超過 15 頁的表單。 將表單的頁數調整為 15 頁以下。 | ![無法連接到服務。](assets/number-of-pages.png) |
-| **錯誤訊息** <br> 文件數量超過 15 份。  <br><br>**原因&#x200B;**<br>資料夾內含超過 15 份表單。<br><br>**解決方法** <br> 將資料夾中的表單數量調整為 15 份以下。 將資料夾中的總頁數調整為 50 頁以下。 將資料夾的大小調整為 10 MB 以下。 不要將表單放在子資料夾中。 將源表單整理為每批次 8 到 15 份表單。 | ![無法連接到服務。](assets/number-of-pages.png) |
-| **錯誤訊息** <br> 不支援該源檔案格式。  <br><br>**原因&#x200B;**<br>內含源表單的資料夾中有一些不支援的檔案。<br><br>**解決方法** <br> 本服務只支援 .xdp 與 .pdf 檔案。 從資料夾移除所有具有其他附檔名的檔案後，再進行轉換。 | ![無法連接到服務。](assets/unsupported-file-formats.png) |
-| **錯誤訊息** <br> 不支援掃描的表單。  <br><br>**原因&#x200B;**<br>PDF 表單僅內含掃描後的表單影像，不具有內容結構。<br><br>**解決方法** <br> 本服務無法直接將掃描後的表單或表單影像轉換至最適化表單。 但是，您可以使用 Adobe Acrobat 將表單影像轉換為 PDF 表單。 然後，使用本服務將 PDF 表單轉換為最適化表單。 請總是使用高品質的表單影像在 Acrobat 中進行轉換。 這可以提升轉換的品質。 | ![無法連接到服務。](assets/scanned-forms-error.png) |
-| **錯誤訊息** <br> 不支援加密的 PDF 表單。  <br><br>**原因&#x200B;**<br>資料夾內含加密的 PDF 表單。<br><br>**解決方法** <br> 本服務不支援將加密的 PDF 表單轉換為最適化表單。 請移除加密並上傳未加密的表單，然後進行轉換。 | ![無法連接到服務。](assets/secured-pdf-form.png) |
-| **錯誤訊息** <br>無法解析元模型 JSON 架構。  <br><br>**原因&#x200B;**<br>提供給服務的 JSON 架構格式不正確、內含無效字元或使用無效的語法來匹配元件。<br><br>**解決方法** <br> 檢查 JSON 檔案的格式。 您可以使用任何線上的 JSON 驗證程式來檢查架構的格式和結構。 請參閱[擴展預設元模型](extending-the-default-meta-model.md)文章以獲取有關元模型語法的資訊。 | ![無法連接到服務。](assets/invalid-meta-model-schema.png) |
+| **錯誤訊息** <br> 沒有存取權杖標頭可用。<br><br> **原因** <br> 管理員已建立了多個 IMS 組態或 IMS 組態無法連接至 Adobe Cloud 上的 AFCS 服務。 <br><br>**解決方法** <br> 如果有多個組態，請刪除所有的組態並[建立一個新的組態](configure-service.md#obtainpubliccertificates)。 <br>如果只有一個組態，請使用「**健康情況檢查**」以[檢查連網狀態](configure-service.md#createintegrationoption)。 | ![沒有存取權杖標頭可用](assets/invalid-ims-configurations.png) |
+| **錯誤訊息** <br> 無法連接到服務。  <br><br>**原因** <br> 服務 URL 不正確，或自動表單轉換服務雲端服務中沒有提及服務 URL。 <br><br>**解決方法** <br> 在自動表單轉換服務雲端服務中修正[服務 URL](configure-service.md#configure-the-cloud-service)。 | ![無法連接到服務。](assets/wrong-service-url-configured.png) |
+| **錯誤訊息** <br> 本服務未能轉換表單。  <br><br>**原因** <br> 您這端的連網問題、排程維護導致服務無法使用或 Adobe Cloud 運行中斷。 <br><br>**解決方法** <br> 解決您這端的連網問題，並在 https://status.adobe.com/ 上查看服務狀態，是否有排程維護或無預期的運行中斷。 | ![無法連接到服務。](assets/conversion-failure.png) |
+| **錯誤訊息** <br> 頁數超過 15 頁。  <br><br>**原因** <br> 源表單長度超過 15 頁。  <br><br>**解決方法** <br> 使用 Adobe Acrobat 來分割超過 15 頁的表單。 將表單的頁數調整為 15 頁以下。 | ![無法連接到服務。](assets/number-of-pages.png) |
+| **錯誤訊息** <br> 文件數量超過 15 份。  <br><br>**原因** <br>  資料夾內含超過 15 份表單。 <br><br>**解決方法** <br> 將資料夾中的表單數量調整為 15 份以下。 將資料夾中的總頁數調整為 50 頁以下。 將資料夾的大小調整為 10 MB 以下。 不要將表單放在子資料夾中。 將源表單整理為每批次 8 到 15 份表單。 | ![無法連接到服務。](assets/number-of-pages.png) |
+| **錯誤訊息** <br> 不支援該源檔案格式。  <br><br>**原因** <br> 內含源表單的資料夾中有一些不支援的檔案。 <br><br>**解決方法** <br> 本服務只支援 .xdp 與 .pdf 檔案。 從資料夾移除所有具有其他附檔名的檔案後，再進行轉換。 | ![無法連接到服務。](assets/unsupported-file-formats.png) |
+| **錯誤訊息** <br> 不支援掃描的表單。  <br><br>**原因** <br> PDF 表單僅內含掃描後的表單影像，不具有內容結構。 <br><br>**解決方法** <br> 本服務無法直接將掃描後的表單或表單影像轉換至最適化表單。 但是，您可以使用 Adobe Acrobat 將表單影像轉換為 PDF 表單。 然後，使用本服務將 PDF 表單轉換為最適化表單。 請總是使用高品質的表單影像在 Acrobat 中進行轉換。 這可以提升轉換的品質。 | ![無法連接到服務。](assets/scanned-forms-error.png) |
+| **錯誤訊息** <br> 不支援加密的 PDF 表單。  <br><br>**原因** <br> 資料夾內含加密的 PDF 表單。 <br><br>**解決方法** <br> 本服務不支援將加密的 PDF 表單轉換為最適化表單。 請移除加密並上傳未加密的表單，然後進行轉換。 | ![無法連接到服務。](assets/secured-pdf-form.png) |
+| **錯誤訊息** <br>無法解析元模型 JSON 架構。  <br><br>**原因** <br> 提供給服務的 JSON 架構格式不正確、內含無效字元或使用無效的語法來匹配元件。  <br><br>**解決方法** <br> 檢查 JSON 檔案的格式。 您可以使用任何線上的 JSON 驗證程式來檢查架構的格式和結構。 請參閱[擴展預設元模型](extending-the-default-meta-model.md)文章以獲取有關元模型語法的資訊。 | ![無法連接到服務。](assets/invalid-meta-model-schema.png) |
 
 <!--
 
