@@ -1,16 +1,12 @@
 ---
-source-git-commit: d2af4611e68447253a818e0c83ff3ec519056373
+source-git-commit: c8489a521f35c60ee28227f499e9a0a7541960b9
 workflow-type: tm+mt
 translation-type: tm+mt
-source-wordcount: '517'
-ht-degree: 17%
+source-wordcount: '435'
+ht-degree: 18%
 
 ---
 # Contribute文章
-
-| EXL-PR | EXL | 預覽 | 啟動 | 已發佈 | 說明 |
-|--- |--- |--- |--- |--- |--- |
-| [![建置狀態](https://docs.ci.corp.adobe.com/view/exl-pr/job/aem-forms-automated-conversion-service.en_pr-exl/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/aem-forms-automated-conversion-service.en_pr-exl/lastBuild/) | [![建置狀態](https://docs.ci.corp.adobe.com/view/exl-pr/job/aem-forms-automated-conversion-service.en_exl/lastBuild/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/aem-forms-automated-conversion-service.en_exl/lastBuild/lastBuild) | [預覽URL](https://experienceleague.corp.adobe.com/docs/aem-forms-automated-conversion-service/using/introduction.html?lang=en) | [activate-exl](https://docs.ci.corp.adobe.com/job/activate-exl/build/) | [即時URL](https://experienceleague.adobe.com/docs/aem-forms-automated-conversion-service/using/introduction.html?lang=en) | [Authoring 指南](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en) |
 
 我們歡迎社群和檔案團隊以外的Adobe員工提供內容。
 
@@ -20,15 +16,15 @@ ht-degree: 17%
 
 ## 關於您對Adobe內容的貢獻
 
-請參閱 [Adobe Docs投稿人指南](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html)。
+請參閱[Adobe Docs投稿人指南](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html)。
 
 您的貢獻方式取決於您的身份，以及您想要貢獻的變更：
 
 ### 小幅變更或要求
 
-若要提交請求，請按一 **下文章中的「記錄問題** 」連結，這會在GitHub中開啟問題。 指定標題和說明，然後按一下「提 **交新期刊」**。
+若要提交請求，請按一下文章中的「記錄期刊&#x200B;**」連結，此連結會在GitHub中開啟期刊。**&#x200B;指定標題和說明，然後按一下「提交新期刊」。****
 
-若要請求小幅更新，請按一 **下文章中的「編輯此頁面** 」連結，此連結會在GitHub中開啟來源文章。 使用GitHub UI進行更新。 如需詳細資訊， [請參閱一般的Adobe Docs投稿人指南](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html) 。
+若要要求小幅更新，請按一下文章中的「編輯此頁面&#x200B;**」連結，此連結會在GitHub中開啟來源文章。**&#x200B;使用GitHub UI進行更新。 如需詳細資訊，請參閱一般[Adobe Docs投稿人指南](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html)。
 
 Adobe使用條款涵蓋您提交之本回購檔案及程式碼範例的輕微更正或澄清。
 
@@ -42,7 +38,7 @@ If you submit a pull request with significant changes to documentation and code 
 
 ### Adobe員工的重大變更
 
-如果您是解決方案產品團隊的技術撰稿人、計畫經理或開發人員，而您的工作是為技術文章撰稿或撰寫文章，則應使用位於的專用儲存庫 [!UICONTROL Adobe Experience Cloud]`https://git.corp.adobe.com/AdobeDocs`。 請參閱內 [部協作指南](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html)。
+如果您是[!UICONTROL Adobe Experience Cloud]解決方案產品團隊的技術撰稿人、計畫經理或開發人員，而您的工作是貢獻或編寫技術文章，則應使用`https://git.corp.adobe.com/AdobeDocs`的專用資料庫。 請參閱[內部協作指南](https://docs.adobe.com/content/help/en/collaborative-doc-instructions/collaboration-guide/home.html)。
 
 <!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
 
@@ -50,7 +46,7 @@ If you submit a pull request with significant changes to documentation and code 
 
 社群參與者可使用GitHub UI進行基本編輯，或將repo分叉以作出重大貢獻。
 
-如需詳細 [資訊，請參閱Adobe Docs投稿人指南](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html) 。
+如需詳細資訊，請參閱[Adobe Docs Contributor Guide](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html)。
 
 ## 如何使用標籤格式化主題
 
