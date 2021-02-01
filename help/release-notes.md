@@ -2,10 +2,10 @@
 title: 新增功能 發行說明——自動表單轉換服務
 description: '瞭解自動表單轉換服務的最新功能及錯誤修正 '
 translation-type: tm+mt
-source-git-commit: 923fee97428b8063f6a973b90eb91fdb25e5dd12
+source-git-commit: f3e8774a04d37fab70d797c528db8311abe59a5a
 workflow-type: tm+mt
-source-wordcount: '353'
-ht-degree: 95%
+source-wordcount: '361'
+ht-degree: 93%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 95%
 
 ## 2021年2月1日(AFC-2021.01)
 
-在將表單欄位組織成面板並產生面板標題方面的效能改進。
+在將表單欄位組織成面板，以及在將來源表單轉換為最適化表單時產生面板標題的改進。
 
 ## 2020 年 7 月 16 日 (AFC-2020.07.0)
 
