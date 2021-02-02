@@ -2,7 +2,7 @@
 title: 新增功能 發行說明——自動表單轉換服務
 description: '瞭解自動表單轉換服務的最新功能及錯誤修正 '
 translation-type: tm+mt
-source-git-commit: 3fa3f484268c7cbe655408f90d53ae8d28b3a7ee
+source-git-commit: 765f7bd4126fe4b8f4dd92c4b3eb556dae4e9ff0
 workflow-type: tm+mt
 source-wordcount: '363'
 ht-degree: 93%
@@ -23,8 +23,7 @@ ht-degree: 93%
 * 特殊說明
 * 未來變更計劃
 
-
-## 2021年2月1日(AFC-2021.01.2)
+## 2021年2月2日(AFC-2021.01.2)
 
 ### 功能改善
 
