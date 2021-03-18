@@ -9,11 +9,13 @@ user-guide-title: Adobe Experience Manager Forms 自動轉換服務
 user-guide-description: 將 PDF 表單轉換為回應式且適用於行動裝置的 HTML 表單。
 breadcrumb-title: 表單自動轉換指南
 breadcrumb-url: /docs/aem-forms-automated-conversion-service/using/introduction.html
+feature: 適用性表單
+role: 業務從業人員
 translation-type: tm+mt
-source-git-commit: ab178dd8d1786c6c341d4a1a3da0aecebead31dd
+source-git-commit: b3946630c5180a600fe7acc25f1084601dec04ef
 workflow-type: tm+mt
-source-wordcount: '91'
-ht-degree: 100%
+source-wordcount: '95'
+ht-degree: 97%
 
 ---
 
