@@ -1,5 +1,5 @@
 ---
-cloud: experience-cloud
+cloud: Experience Cloud
 product: experience manager
 sub-product: 表單轉換服務
 solution: Experience Manager, Experience Manager Forms
@@ -12,10 +12,10 @@ breadcrumb-url: /docs/aem-forms-automated-conversion-service/using/introduction.
 feature: 適用性表單
 role: 業務從業人員
 translation-type: tm+mt
-source-git-commit: b3946630c5180a600fe7acc25f1084601dec04ef
+source-git-commit: 8c4cf4ff72e9ca7e8daa76f495abd75a865cd2f7
 workflow-type: tm+mt
 source-wordcount: '95'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
