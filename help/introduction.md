@@ -1,14 +1,13 @@
 ---
 title: 簡介
-description: '將列印表單加速轉換為最適化表單 '
-translation-type: tm+mt
-source-git-commit: 53b88de185ed1b6669ecfc3c7c6649d5627741e9
+description: 將列印表單加速轉換為最適化表單
+exl-id: edabeac8-cd66-48ca-a99f-9643a1c184cf
+source-git-commit: 1a3f79925f25dcc7dbe007f6e634f6e3a742bf72
 workflow-type: tm+mt
 source-wordcount: '685'
 ht-degree: 75%
 
 ---
-
 
 # 簡介 {#introduction-to-automated-forms-conversion-service}
 
@@ -17,14 +16,14 @@ ht-degree: 75%
 * 無須手動將列印表單轉換為最適化表單
 * 在轉換過程中應用模式和適當的驗證
 * 在轉換過程中生成記錄文件
-* 將常發生的欄位群組至可重複使用的表單片段
+* 將常出現的欄位分組為可重複使用的表單片段
 * 在轉換過程中啟用 Adobe Analytics
 
-![這相當容易。 您提供來源表單，並將一切交給我們。 我們提供您精美的調適性表單。 您隨時都可以調整輸出，讓您滿意。](assets/pdf-to-adaptive-form-gitx50.gif)
+![這相當容易。 您提供來源表格，並將所有內容留給我們。 我們提供您美觀的最適化表單。 您隨時都可以修改輸出內容，讓您滿意。](assets/pdf-to-adaptive-form-gitx50.gif)
 
 ## 入門 {#onboarding}
 
-此服務可免費提供6.4AEMForms和6.AEM5Forms內部部署定期客戶和Adobe管理服務企業客戶。 您可以聯絡 Adobe Sales 團隊或您的 Adobe 代表，請求存取該服務。該服務還免費提供，作為Cloud Service客戶，AEM Forms也可以預先使用。
+AEM 6.4 Forms和AEM 6.5 Forms內部部署定期客戶和Adobe管理服務企業客戶可免費使用本服務。 您可以聯絡 Adobe Sales 團隊或您的 Adobe 代表，請求存取該服務。AEM Forms作為Cloud Service客戶，也可免費使用並預先啟用此服務。
 
 Adobe 為您的組織啟用存取權限，並向您指定的組織管理員提供所需的特權。 管理員可以授予組織的 AEM Forms 開發人員（使用者）存取權限以連接到該服務。 欲知詳情，請參閱[設定自動表單轉換服務](configure-service.md)。
 
@@ -32,7 +31,7 @@ Adobe 為您的組織啟用存取權限，並向您指定的組織管理員提�
 
 此服務支援非互動式 PDF 表單、使用 Adobe Acrobat 建立的名為 AcroForms 的表單，以及使用 AEM Forms 或 Adobe LiveCycle 建立的基於 XFA 的表單。
 
-該服務還支援啟用Adobe Sign的PDF forms。 如果源 PDF 表單有 Adobe Sign 文字標記，則此服務會保留轉換期間所有 Adobe Sign 的相關資訊，並將源 PDF 中顯示的簽署者資訊與對應的最適化表單欄位建立關聯。 此功能僅適用於 AcroForms。
+此服務也支援啟用Adobe Sign的PDF forms。 如果源 PDF 表單有 Adobe Sign 文字標記，則此服務會保留轉換期間所有 Adobe Sign 的相關資訊，並將源 PDF 中顯示的簽署者資訊與對應的最適化表單欄位建立關聯。 此功能僅適用於 AcroForms。
 
 此服務僅能將英語表單轉換為最適化表單。 您可以使用 [AEM 翻譯工作流程](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)將生成的最適化表單翻譯成另一種語言。
 
@@ -51,14 +50,14 @@ Adobe 為您的組織啟用存取權限，並向您指定的組織管理員提�
 設定 AEM Forms 環境後，如欲將 PDF 表單轉換為最適化表單，請 [上傳 PDF 表單](convert-existing-forms-to-adaptive-forms.md)至 AEM 執行個體，然後[開始轉換](convert-existing-forms-to-adaptive-forms.md#run-the-conversion)。 在上傳表單前，請參閱以下提醒：
 
 * 請勿上傳受保護的表單。 此服務無法轉換受密碼保護和加密的表單。
-* 請勿上傳掃描、彩色、非英文和填寫的表格。 此服務不支援這些表單。
+* 請勿上傳掃描、彩色、非英文和已填寫的表單。 此服務不支援這些表單。
 * 請勿上傳檔案名中帶有空格的 PDF 表單。
-* 請勿上傳 [PDF Portfolio](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html)。 服務不會將PDFPortfolio轉換為最適化表單。
+* 請勿上傳 [PDF Portfolio](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html)。 此服務不會將PDFPortfolio轉換為最適化表單。
 * 完成[最佳實務和考量](styles-and-pattern-considerations-and-best-practices.md)文章中描述的 PDF 表單的建議更改。
 * 閱讀[已知問題](known-issues.md)文章以避免犯錯。
 
 ### 3. 檢閱轉換後的表單 {#review-converted-forms}
 
-現實世界的表單在欄位配置、命名或隱含建議方面可能有複雜的資料擷取需求，而這些可能無法由AI/ML偵測邏輯精確擷取。 自動轉換完成後，您可以使用[檢閱和修正編輯器](review-correct-ui-edited.md)來檢查轉換後的表格並進行必要的更新，使成果更佳並更能提供符合期望的體驗。 完成必要的修改後，再一次轉換表單。
+現實世界的表單在欄位配置、命名或內隱建議方面可能具有複雜的資料擷取需求，而基於AI/ML的偵測邏輯可能無法準確擷取這些表單。 自動轉換完成後，您可以使用[檢閱和修正編輯器](review-correct-ui-edited.md)來檢查轉換後的表格並進行必要的更新，使成果更佳並更能提供符合期望的體驗。 完成必要的修改後，再一次轉換表單。
 
-自動轉換所花費的時間取決於各種因素，如輸入表單的大小、表單的複雜性、貸款在服務處理隊列上。 使用者可透過資料夾 / 檔案上的狀態顯示器時時瞭解進度。 轉換完成後，使用者設定的電子郵件地址也會收到電子郵件通知。
+自動轉換所花費的時間取決於各種因素，例如輸入表單的大小、表單的複雜性、服務的處理佇列上的貸款。 使用者可透過資料夾 / 檔案上的狀態顯示器時時瞭解進度。 轉換完成後，使用者設定的電子郵件地址也會收到電子郵件通知。
