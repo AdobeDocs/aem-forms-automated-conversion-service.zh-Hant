@@ -2,10 +2,10 @@
 title: 新增功能 發行說明——自動表單轉換服務
 description: 瞭解自動表單轉換服務的最新功能及錯誤修正
 exl-id: fccafbc9-28c1-4736-922c-24d675b25213
-source-git-commit: 1a3f79925f25dcc7dbe007f6e634f6e3a742bf72
+source-git-commit: fd568dca4ac552a1d9695d13ece1d03b2c1457b1
 workflow-type: tm+mt
-source-wordcount: '386'
-ht-degree: 88%
+source-wordcount: '409'
+ht-degree: 84%
 
 ---
 
@@ -22,13 +22,19 @@ ht-degree: 88%
 * 特殊說明
 * 未來變更計劃
 
-## 2021年3月03日(AFC-2021.02.2){#mar-2021}
+## 2021年6月24日(AFC-2021.06.2) {#june-2021}
+
+### 功能改善 {#june-2021-improvements}
+
+已改善自動偵測來源表單中邏輯區段並將這些區段轉換為相應最適化表單面板的準確度。
+
+## 2021年3月03日(AFC-2021.02.2) {#mar-2021}
 
 ### 功能改善 {#march-2021-improvements}
 
 改善將表單內容組織為選擇群組和欄位，同時將來源表單轉換為最適化表單的功能。
 
-## 2021年2月02日(AFC-2021.01.2){#feb-2021}
+## 2021年2月02日(AFC-2021.01.2) {#feb-2021}
 
 ### 功能改善 {#feb-2021-improvements}
 
@@ -36,7 +42,7 @@ ht-degree: 88%
 
 ## 2020 年 7 月 16 日 (AFC-2020.07.2) {#jul-2020}
 
-### 新功能 {#whats-new-jul-2020-}
+### 新增功能 {#whats-new-jul-2020-}
 
 新增將彩色 PDF 表單轉換為最適化表單的功能。
 
@@ -53,13 +59,13 @@ ht-degree: 88%
 
 在預設狀態中，此服務會為 PDF 表單的每一頁分別建立頂層面板。 現在，您可以透過 **[!UICONTROL Auto-detect logical sections]** 選項僅建立邏輯面板，不再建立頁面層級面板（基於頁碼的面板）。 這個選項還可將不屬於任何具有前置邏輯區段之區段的欄位，與橫跨至兩個相鄰頁面的邏輯區段的欄位合併成一個邏輯區段。 例如，如果邏輯區段中有些欄位位於第一頁底部，有些位於第二頁頂部，則所有該欄位都會合併成一個邏輯區段。
 
-### 功能改善  {#mar-2020-improvements}
+### 功能改善 {#mar-2020-improvements}
 
 **改善清單偵測**
 
 現在，此服務可以更有效地偵測有項目符號及編號的清單。
 
-### 特殊說明  {#special-instructions}
+### 特殊說明 {#special-instructions}
 
 **安裝自動表單轉換服務連接工具封裝**
 
