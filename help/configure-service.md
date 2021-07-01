@@ -3,7 +3,7 @@ title: 設定自動表單轉換服務
 description: 準備好AEM執行個體以使用Automated forms conversion服務
 role: Business Practitioner, Administrator
 exl-id: 8f21560f-157f-41cb-ba6f-12a4d6e18555
-source-git-commit: 1a3f79925f25dcc7dbe007f6e634f6e3a742bf72
+source-git-commit: 17d1c447d8aa68341214270932fb076b512422af
 workflow-type: tm+mt
 source-wordcount: '2670'
 ht-degree: 6%
@@ -147,7 +147,7 @@ automated forms conversion服務使用Day CQ郵件服務來傳送電子郵件通
 
 #### 將使用者新增至表單使用者群組 {#adduserstousergroup}
 
-在指定用來執行服務的AEM使用者的設定檔中指定電子郵件地址。 確保用戶是[forms user](https://helpx.adobe.com/experience-manager/6-4/forms/using/forms-groups-privileges-tasks.html)組的成員。 電子郵件會傳送至執行轉換之使用者的電子郵件地址。 要指定用戶的電子郵件地址並將用戶添加到表單用戶組：
+在指定用來執行服務的AEM使用者的設定檔中指定電子郵件地址。 確保用戶是[forms user](https://experienceleague.adobe.com/docs/experience-manager-65/forms/manage-administer-aem-forms/forms-groups-privileges-tasks.html)組的成員。 電子郵件會傳送至執行轉換之使用者的電子郵件地址。 要指定用戶的電子郵件地址並將用戶添加到表單用戶組：
 
 1. 以AEM管理員身分登入您的AEM Forms製作執行個體。 使用您的本機AEM憑證登入。 請勿使用Adobe ID登入。 點選&#x200B;**[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Users]**。
 
@@ -223,7 +223,7 @@ automated forms conversion服務使用Day CQ郵件服務來傳送電子郵件通
 
    <br/> <br/>
 
-#### 配置Cloud Service{#configure-the-cloud-service}
+#### 設定Cloud Service {#configure-the-cloud-service}
 
 建立Cloud Service設定以將您的AEM執行個體連線至轉換服務。 它也可讓您指定轉換的範本、主題和表單片段。 您可以為每組表單分別建立多個雲端服務設定。 例如，您可以為銷售部門表單設定個別的設定，以及為客戶支援表單設定個別的設定。 執行下列步驟以建立雲端服務設定：
 
