@@ -7,14 +7,14 @@ uuid: e24773a2-be14-4184-a168-48aa976d459a
 topic-tags: introduction
 discoiquuid: 79f2026e-73a5-4bd1-b041-d1399b4ad23e
 exl-id: 9ada091a-e7c6-40e9-8196-c568f598fc2a
-source-git-commit: 1a3f79925f25dcc7dbe007f6e634f6e3a742bf72
+source-git-commit: 17d1c447d8aa68341214270932fb076b512422af
 workflow-type: tm+mt
 source-wordcount: '1259'
 ht-degree: 3%
 
 ---
 
-# 最佳做法和已知的複雜模式{#Best-practices-and-considerations2}
+# 最佳實務和已知的複雜模式 {#Best-practices-and-considerations2}
 
 本檔案提供的准則和建議，可供使用[!DNL Automated Forms Conversion service]時的表單管理員、作者和開發人員受益。 文章探討從準備來源表單到修正複雜模式（需要額外努力才能自動轉換）等最佳實務。 這些最佳做法對[!DNL Automated Forms Conversion service]的整體效能和產出有共同的貢獻。
 
@@ -39,7 +39,7 @@ ht-degree: 3%
 
 * 分析XDP表單並修正視覺問題。 確保源文檔使用預期的控制項和結構。 例如，源表單可以具有用於單個選擇的複選框，而不是單選按鈕。 將核取方塊變更為選項按鈕，以產生具有預期元件的最適化表單。
 * [開始轉換之前，將系](http://www.adobe.com/go/learn_aemforms_designer_65) 結新增至XDP格式。當源XDP表單中有綁定可用時，服務會在轉換期間自動將綁定應用到相應的最適化表單欄位。 它可節省手動應用綁定所需的時間。
-* [將Adobe Sign](https://helpx.adobe.com/sign/using/text-tag.html) 標籤新增至XDP檔案。服務會自動將Adobe Sign標籤轉換為對應的最適化表單欄位。 適用性Forms支援有限數量的Adobe Sign欄位。 如需完整的支援欄位清單，請參閱在最適化表單中使用Adobe Sign](https://docs.adobe.com/content/help/en/experience-manager-65/forms/adaptive-forms-advanced-authoring/working-with-adobe-sign.html)檔案。[
+* [將Adobe Sign](https://helpx.adobe.com/sign/using/text-tag.html) 標籤新增至XDP檔案。服務會自動將Adobe Sign標籤轉換為對應的最適化表單欄位。 適用性Forms支援有限數量的Adobe Sign欄位。 如需完整的支援欄位清單，請參閱在最適化表單中使用Adobe Sign](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/working-with-adobe-sign.html?lang=en)檔案。[
 * 盡可能將XDP文檔中的複雜表轉換為簡單表。 表格包含表格單元格中的表單欄位、大小不均的單元格、行或列跨越的單元格、合併的單元格、部分邊框或沒有可見邊框的表格被視為一個複雜表格。 具有上述任何一個項的表被視為複雜表。
 <!-- * Use sub-forms in XDP documents to create panels in adaptive forms. Service converts each sub-form to one or more adaptive form panels during conversion. -->
 
@@ -75,13 +75,13 @@ AEM [!DNL Forms Automated Conversion service]使用人工智慧和機器學習�
 
 
 
-### 選擇組{#choice-group}
+### 選擇組  {#choice-group}
 
 | 圖樣 | 解析度 |
 |--- |--- |
 | **** <br> 具有方框或圓以外形狀的PatternChoice組選項不會轉換為相應的最適化表單元件。<br><br>**** <br> 解析度將選項形狀更改為框或圓形，或使用審閱和更正編輯器來標識形狀。 | ![選擇欄位  ](assets/best-practice-choice-group-options.png) |
 
-### 表單欄位{#form-fields}
+### 表單欄位 {#form-fields}
 
 | 圖樣 | 解析度 |
 |--- |--- |
