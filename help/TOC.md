@@ -10,11 +10,11 @@ user-guide-description: 將 PDF 表單轉換為回應式且適用於行動裝置
 breadcrumb-title: 表單自動轉換指南
 breadcrumb-url: /docs/aem-forms-automated-conversion-service/using/introduction.html
 feature: 適用性表單
-role: Business Practitioner
-source-git-commit: 8c4cf4ff72e9ca7e8daa76f495abd75a865cd2f7
+role: User
+source-git-commit: 6aae2035969e99abca0d310d8b023e2c22a9e938
 workflow-type: tm+mt
-source-wordcount: '92'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
