@@ -1,12 +1,12 @@
 ---
 title: 設定自動表單轉換服務
 description: 準備好AEM執行個體以使用Automated forms conversion服務
-role: Business Practitioner, Administrator
+role: User, Admin
 exl-id: 8f21560f-157f-41cb-ba6f-12a4d6e18555
-source-git-commit: 17d1c447d8aa68341214270932fb076b512422af
+source-git-commit: 6aae2035969e99abca0d310d8b023e2c22a9e938
 workflow-type: tm+mt
-source-wordcount: '2670'
-ht-degree: 6%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
