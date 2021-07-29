@@ -2,10 +2,10 @@
 title: 簡介
 description: 將列印表單加速轉換為最適化表單
 exl-id: edabeac8-cd66-48ca-a99f-9643a1c184cf
-source-git-commit: 1a3f79925f25dcc7dbe007f6e634f6e3a742bf72
+source-git-commit: fed54ea64e19c77868e8e58e29e909cf4447f696
 workflow-type: tm+mt
-source-wordcount: '685'
-ht-degree: 75%
+source-wordcount: '690'
+ht-degree: 71%
 
 ---
 
@@ -27,13 +27,13 @@ AEM 6.4 Forms和AEM 6.5 Forms內部部署定期客戶和Adobe管理服務企業�
 
 Adobe 為您的組織啟用存取權限，並向您指定的組織管理員提供所需的特權。 管理員可以授予組織的 AEM Forms 開發人員（使用者）存取權限以連接到該服務。 欲知詳情，請參閱[設定自動表單轉換服務](configure-service.md)。
 
-## 支援的PDF forms和語言{#supported-languages-and-pdf-forms}
+## 支援的PDF forms和語言 {#supported-languages-and-pdf-forms}
 
 此服務支援非互動式 PDF 表單、使用 Adobe Acrobat 建立的名為 AcroForms 的表單，以及使用 AEM Forms 或 Adobe LiveCycle 建立的基於 XFA 的表單。
 
 此服務也支援啟用Adobe Sign的PDF forms。 如果源 PDF 表單有 Adobe Sign 文字標記，則此服務會保留轉換期間所有 Adobe Sign 的相關資訊，並將源 PDF 中顯示的簽署者資訊與對應的最適化表單欄位建立關聯。 此功能僅適用於 AcroForms。
 
-此服務僅能將英語表單轉換為最適化表單。 您可以使用 [AEM 翻譯工作流程](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)將生成的最適化表單翻譯成另一種語言。
+此服務可將英文、法文、德文和西班牙文語言表單轉換為最適化表單。 您也可以使用[AEM翻譯工作流程](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)將產生的最適化表單翻譯成其他語言。
 
 ## 轉換工作流程  {#conversion-workflow}
 
@@ -60,4 +60,4 @@ Adobe 為您的組織啟用存取權限，並向您指定的組織管理員提�
 
 現實世界的表單在欄位配置、命名或內隱建議方面可能具有複雜的資料擷取需求，而基於AI/ML的偵測邏輯可能無法準確擷取這些表單。 自動轉換完成後，您可以使用[檢閱和修正編輯器](review-correct-ui-edited.md)來檢查轉換後的表格並進行必要的更新，使成果更佳並更能提供符合期望的體驗。 完成必要的修改後，再一次轉換表單。
 
-自動轉換所花費的時間取決於各種因素，例如輸入表單的大小、表單的複雜性、服務的處理佇列上的貸款。 使用者可透過資料夾 / 檔案上的狀態顯示器時時瞭解進度。 轉換完成後，使用者設定的電子郵件地址也會收到電子郵件通知。
+自動轉換所花費的時間取決於各種因素，例如輸入表單的大小、表單的複雜性、服務處理佇列上的貸款。 使用者可透過資料夾 / 檔案上的狀態顯示器時時瞭解進度。 轉換完成後，使用者設定的電子郵件地址也會收到電子郵件通知。
