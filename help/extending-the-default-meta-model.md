@@ -7,9 +7,9 @@ uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 exl-id: f679059c-18aa-4cb5-8368-ed27e96c20de
-source-git-commit: 1a3f79925f25dcc7dbe007f6e634f6e3a742bf72
+source-git-commit: 3f91fc0541f8fe8dbc997ae0b401c8a0a49347dd
 workflow-type: tm+mt
-source-wordcount: '2372'
+source-wordcount: '2569'
 ht-degree: 1%
 
 ---
@@ -22,9 +22,9 @@ automated forms conversion服務識別並從來源表單中擷取表單物件。
 
 中繼模型是JSON結構描述。 開始使用中繼模型之前，請確定您熟悉JSON。 您必須具備建立、編輯和讀取JSON格式儲存之資料的經驗。
 
-## 預設元模型{#default-meta-model}
+## 預設元模型 {#default-meta-model}
 
-automated forms conversion服務具有預設元模型。 此為JSON結構，與Automated forms conversion服務的其他元件一起駐留在Adobe雲端。 您可以在本機AEM伺服器上找到中繼模型的復本：http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/global.schema.json。 您也可以[按一下這裡](assets/global.schema.json)存取或下載預設架構。
+automated forms conversion服務具有預設元模型。 此為JSON結構，與Automated forms conversion服務的其他元件一起駐留在Adobe雲端。 您可以在本機AEM伺服器上找到中繼模型的復本：http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/`global.schema.json`。 您也可以[按一下這裡](assets/en.globalschema.json)來存取或下載英文架構。 [法文](assets/fr.globalschema.json)、[德文](assets/de.globalschema.json)和[西班牙文](assets/es.globalschema.json)語言的元模型也可供下載。
 
 元模型的模式是從https://schema.org/docs/schemas.html上的架構實體派生的。 https://schema.org上定義了人員、郵遞區號、本地業務和更多實體。 元模型的每個實體都遵守JSON結構描述物件類型。 以下代碼表示元模型結構示例：
 
@@ -44,7 +44,7 @@ automated forms conversion服務具有預設元模型。 此為JSON結構，與A
     }
 ```
 
-## 下載預設元模型{#download-the-default-meta-model}
+## 下載預設元模型 {#download-the-default-meta-model}
 
 執行以下步驟將預設元模型下載到本地檔案系統：
 
@@ -64,7 +64,7 @@ automated forms conversion服務具有預設元模型。 此為JSON結構，與A
    <li>Step text</li>
    -->
 
-## 了解元模型{#understanding-the-meta-model}
+## 了解元模型 {#understanding-the-meta-model}
 
 中繼模型是指包含實體的JSON結構描述檔案。 JSON結構檔案中的所有實體都包含名稱和ID。 每個實體可包含多個屬性。 實體及其屬性可能會根據網域而有所不同。 您可以使用關鍵字和欄位設定來擴大結構檔案，以將結構屬性對應至最適化表單元件。
 
@@ -156,7 +156,7 @@ automated forms conversion服務具有預設元模型。 此為JSON結構，與A
   </tr>
   <td><p>enum和enumNames</p></td> 
    <td> 
-    <p>enum和enumNames屬性將下拉清單、複選框或單選按鈕欄位的值限制為固定集。 enumNames中列出的值顯示在用戶介面上。 使用列舉屬性列出的值用於計算。<br>如需詳細資訊，請 <strong>參閱在最適化表單中將表單欄位轉換為多選核取方塊</strong>、 <strong>在最適化表單中將文字欄位轉換為下拉式清單</strong>，以及 <strong>在自訂中繼模型範例中新增其</strong> 他 <a href="#custommetamodelexamples">選項。</a></p> </td> 
+    <p>enum和enumNames屬性將下拉式清單、核取方塊或選項按鈕欄位的值限制為固定集。 enumNames中列出的值顯示在用戶介面上。 使用列舉屬性列出的值用於計算。<br>如需詳細資訊，請 <strong>參閱在最適化表單中將表單欄位轉換為多選核取方塊</strong>、 <strong>在最適化表單中將文字欄位轉換為下拉式清單</strong>，以及 <strong>在自訂中繼模型範例中新增其</strong> 他 <a href="#custommetamodelexamples">選項。</a></p> </td> 
   </tr>
  </tbody> 
 </table>
@@ -214,7 +214,46 @@ automated forms conversion服務在轉換期間對來源表單執行關鍵字搜
  </tbody> 
 </table>
 
-## 使用自訂中繼模型{#modify-adaptive-form-fields-using-custom-meta-model}修改最適化表單欄位
+## 以您自己的語言建立自訂元模型{#language-specific-meta-model}
+
+您可以建立語言特定的元模型。 此類元模型可協助您以所選擇的語言建立對應規則。 automated forms conversion服務可讓您以下列語言建立元模型：
+
+* English(en)
+* French(fr)
+* German(de)
+* 西班牙文()
+
+將&#x200B;*aem:Language*&#x200B;中繼標籤標籤新增至中繼模型頂端，以指定其語言。 例如，
+
+```JSON
+"metaTags": {
+        "aem:Language": "de"
+    }
+```
+
+英語是元模型的預設語言。
+
+### 建立語言特定元模型的考量
+
+* 確保每個索引鍵的名稱都使用英文。 例如， emailAddress。
+* 請確定所有&#x200B;*id*&#x200B;鍵的所有實體參考和預先定義的值都使用英文。 例如&quot;id&quot;:&quot;ContactPoint&quot; / &quot;$ref&quot;:&quot;實體&quot;。
+* 確保元模型中包含的以下鍵的描述或消息與元模型的語言相對應：
+   * aem:affKeyword
+   * 標題
+   * 說明
+   * enumNames
+   * shortDescription
+   * validatePictureClauseMessage
+
+   例如，當元模型的語言是法文時(「aem:Language」：&quot;fr&quot;)，請確定所有說明和訊息都使用法文。
+
+* 請確定所有[JSON結構屬性](#jsonschemaproperties)僅使用支援的值。
+
+下圖顯示了英語元模型和相應的法語元模型的示例：
+
+![](assets/language-specific-meta-model-comparison.png)
+
+## 使用自訂中繼模型修改最適化表單欄位 {#modify-adaptive-form-fields-using-custom-meta-model}
 
 除了預設元模型中列出的模式和驗證之外，您的組織還可以具有模式和驗證。 您可以擴展預設元模型，以添加特定於貴組織的模式、驗證和實體。 automated forms conversion服務會在轉換期間將自訂中繼模型套用至表單欄位。 您可以隨著發現組織特有的新模式、驗證和實體而持續更新元模型。
 
@@ -224,7 +263,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 
 不過，您可以在資料夾中儲存自訂中繼模型，並修改轉換服務屬性，以便在轉換期間使用自訂中繼模型。
 
-### 轉換期間使用自訂元模型{#use-custom-meta-model-during-conversion}
+### 轉換期間使用自訂中繼模型 {#use-custom-meta-model-during-conversion}
 
 執行下列步驟以在轉換期間使用自訂中繼模型：
 
@@ -250,7 +289,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 * 新增其他選項至下拉式清單
 * 將字串欄位轉換為多行欄位
 
-#### 修改表單欄位{#modify-the-label-of-a-form-field}的標籤
+#### 修改表單欄位的標籤 {#modify-the-label-of-a-form-field}
 
 **範例：** 轉換後，將表單中的「銀行帳號」標籤修改為最適化表單中的「自訂帳號」。
 
@@ -268,7 +307,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 }
 ```
 
-#### 修改表單欄位{#modify-the-type-of-a-form-field}的類型
+#### 修改表單欄位的類型 {#modify-the-type-of-a-form-field}
 
 **範例**:在轉換 **後，** 修改表單中文本類型的銀行帳戶編號欄位，然後再轉換為最適化表單中的編號類型欄位。
 
@@ -283,7 +322,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 }
 ```
 
-#### 將幫助文本添加到表單欄位{#add-help-text-to-a-form-field}
+#### 將幫助文本添加到表單欄位 {#add-help-text-to-a-form-field}
 
 **範例**:將「說明」文字新增至 **最適化** 表單的「銀行帳戶編號」欄位。
 
@@ -299,7 +338,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 }
 ```
 
-#### 將表單欄位轉換為最適化表單{#convert-a-form-field-to-multiple-choice-check-boxes-in-the-adaptive-form}中的多選核取方塊
+#### 將表單欄位轉換為最適化表單中的多選核取方塊 {#convert-a-form-field-to-multiple-choice-check-boxes-in-the-adaptive-form}
 
 **範例**:轉換前 **** 將表單中字串類型的「國家/地區」欄位轉換為轉換後最適化表單中的核取方塊。
 
@@ -333,7 +372,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 }
 ```
 
-#### 修改表單欄位{#modify-the-format-of-a-form-field}的格式
+#### 修改表單欄位的格式 {#modify-the-format-of-a-form-field}
 
 **範例**:將「電子郵件地址」 **的格** 式修改為電子郵件格式。
 
@@ -349,7 +388,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 }
 ```
 
-#### 將驗證新增至最適化表單欄位{#add-validations-to-adaptive-form-fields}
+#### 將驗證新增至最適化表單欄位 {#add-validations-to-adaptive-form-fields}
 
 **範例1:** 將驗證新增至適 **用** 性表單的「郵遞區號」欄位。
 
@@ -383,7 +422,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 }
 ```
 
-#### 將文字欄位轉換為最適化表單{#convert-a-text-field-to-drop-down-list-in-the-adaptive-form}中的下拉式清單
+#### 將文字欄位轉換為最適化表單中的下拉式清單 {#convert-a-text-field-to-drop-down-list-in-the-adaptive-form}
 
 **範例**:將轉換 **** 前表單中字串類型的「國家/地區」欄位轉換為轉換後最適化表單中的下拉式選項。
 
@@ -417,7 +456,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 }
 ```
 
-#### 將其他選項添加到下拉清單{#add-additional-options-to-the-drop-down-list}
+#### 新增其他選項至下拉式清單 {#add-additional-options-to-the-drop-down-list}
 
 **範例：** 使 **用** 自訂中繼模型，將Sri Lankaas新增為現有的下拉式清單中的額外選項。
 
@@ -445,7 +484,7 @@ http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamo
 }
 ```
 
-#### 將字串欄位轉換為多行欄位{#convert-a-string-field-to-a-multi-line-field}
+#### 將字串欄位轉換為多行欄位 {#convert-a-string-field-to-a-multi-line-field}
 
 **範例：** 轉換 **** 後，將字串類型的「位址」欄位轉換為表單中的多行欄位。
 
