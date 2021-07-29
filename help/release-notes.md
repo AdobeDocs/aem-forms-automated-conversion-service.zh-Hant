@@ -2,10 +2,10 @@
 title: 新增功能 發行說明——自動表單轉換服務
 description: 瞭解自動表單轉換服務的最新功能及錯誤修正
 exl-id: fccafbc9-28c1-4736-922c-24d675b25213
-source-git-commit: fd568dca4ac552a1d9695d13ece1d03b2c1457b1
+source-git-commit: 3f91fc0541f8fe8dbc997ae0b401c8a0a49347dd
 workflow-type: tm+mt
-source-wordcount: '409'
-ht-degree: 84%
+source-wordcount: '426'
+ht-degree: 80%
 
 ---
 
@@ -21,6 +21,10 @@ ht-degree: 84%
 * 已棄用功能
 * 特殊說明
 * 未來變更計劃
+
+## 2021年7月29日(AFC-2021.07.2) {#july-2021}
+
+* 新增將法文、德文和西班牙文PDF forms轉換為最適化表單的功能。
 
 ## 2021年6月24日(AFC-2021.06.2) {#june-2021}
 
