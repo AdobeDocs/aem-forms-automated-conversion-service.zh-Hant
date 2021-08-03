@@ -6,10 +6,10 @@ seo-description: AFCS 常見問題與解決方法
 contentOwner: khsingh
 topic-tags: forms
 exl-id: e8406ed9-37f5-4f26-be97-ad042f9ca57c
-source-git-commit: 1a3f79925f25dcc7dbe007f6e634f6e3a742bf72
+source-git-commit: 5353a071f8633b36fc73c34c5d7629228659e2ba
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 100%
+source-wordcount: '661'
+ht-degree: 89%
 
 ---
 
@@ -32,6 +32,7 @@ ht-degree: 100%
 | **錯誤訊息** <br> 不支援掃描的表單。  <br><br>**原因** <br> PDF 表單僅內含掃描後的表單影像，不具有內容結構。 <br><br>**解決方法** <br> 本服務無法直接將掃描後的表單或表單影像轉換至最適化表單。 但是，您可以使用 Adobe Acrobat 將表單影像轉換為 PDF 表單。 然後，使用本服務將 PDF 表單轉換為最適化表單。 請總是使用高品質的表單影像在 Acrobat 中進行轉換。 這可以提升轉換的品質。 | ![無法連接到服務。](assets/scanned-forms-error.png) |
 | **錯誤訊息** <br> 不支援加密的 PDF 表單。  <br><br>**原因** <br> 資料夾內含加密的 PDF 表單。 <br><br>**解決方法** <br> 本服務不支援將加密的 PDF 表單轉換為最適化表單。 請移除加密並上傳未加密的表單，然後進行轉換。 | ![無法連接到服務。](assets/secured-pdf-form.png) |
 | **錯誤訊息** <br>無法解析元模型 JSON 架構。  <br><br>**原因** <br> 提供給服務的 JSON 架構格式不正確、內含無效字元或使用無效的語法來匹配元件。  <br><br>**解決方法** <br> 檢查 JSON 檔案的格式。 您可以使用任何線上的 JSON 驗證程式來檢查架構的格式和結構。 請參閱[擴展預設元模型](extending-the-default-meta-model.md)文章以獲取有關元模型語法的資訊。 | ![無法連接到服務。](assets/invalid-meta-model-schema.png) |
+| **錯誤（僅限內部部署環境）** <br> 選 **[!UICONTROL Source Language]** 項未列出最適化表單的正確語言。<br><br>**** <br> 原因適用性表單的jcr:language屬性未正確設定。<br><br>**** <br> ResolutionOpen CRX-DE lite，導覽至 `/content/forms/af/`，開 `jcr:content` 啟節點，並將節點的值設定為正確的語言。有關支援的語言清單，請參閱[添加不支援的語言環境的本地化支援](https://experienceleague.adobe.com/docs/experience-manager-65/forms/manage-administer-aem-forms/supporting-new-language-localization.html#add-localization-support-for-non-supported-locales)。 | ![無法連接到服務。](assets/aem-forms-translation-project-language-unavailable.png) |
 
 <!--
 
