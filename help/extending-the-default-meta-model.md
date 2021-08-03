@@ -7,9 +7,9 @@ uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 exl-id: f679059c-18aa-4cb5-8368-ed27e96c20de
-source-git-commit: 3f91fc0541f8fe8dbc997ae0b401c8a0a49347dd
+source-git-commit: 28e07a0264edaaeef22d211f411f7908ca0abaed
 workflow-type: tm+mt
-source-wordcount: '2569'
+source-wordcount: '2591'
 ht-degree: 1%
 
 ---
@@ -221,23 +221,23 @@ automated forms conversion服務在轉換期間對來源表單執行關鍵字搜
 * English(en)
 * French(fr)
 * German(de)
-* 西班牙文()
+* Spanish(es)
 
 將&#x200B;*aem:Language*&#x200B;中繼標籤標籤新增至中繼模型頂端，以指定其語言。 例如，
 
 ```JSON
 "metaTags": {
-        "aem:Language": "de"
+        "aem:Language": "fr"
     }
 ```
 
-英語是元模型的預設語言。
+當未指定語言時，服務會認為元模型使用英語。
 
 ### 建立語言特定元模型的考量
 
 * 確保每個索引鍵的名稱都使用英文。 例如， emailAddress。
-* 請確定所有&#x200B;*id*&#x200B;鍵的所有實體參考和預先定義的值都使用英文。 例如&quot;id&quot;:&quot;ContactPoint&quot; / &quot;$ref&quot;:&quot;實體&quot;。
-* 確保元模型中包含的以下鍵的描述或消息與元模型的語言相對應：
+* 請確定所有id鍵的所有實體參考和預先定義值僅包含ASCII字元。 例如&quot;id&quot;:&quot;ContactPoint&quot; / &quot;$ref&quot;:&quot;#ContactPoint&quot;。
+* 確保與以下鍵對應的所有值都使用指定的元模型語言：
    * aem:affKeyword
    * 標題
    * 說明
@@ -247,7 +247,7 @@ automated forms conversion服務在轉換期間對來源表單執行關鍵字搜
 
    例如，當元模型的語言是法文時(「aem:Language」：&quot;fr&quot;)，請確定所有說明和訊息都使用法文。
 
-* 請確定所有[JSON結構屬性](#jsonschemaproperties)僅使用支援的值。
+* 請確定所有[JSON結構屬性](#jsonschemaproperties)僅使用支援的值。 例如，type屬性只能跨越字串、數字、整數和布林的選定值。
 
 下圖顯示了英語元模型和相應的法語元模型的示例：
 
