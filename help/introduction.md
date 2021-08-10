@@ -2,10 +2,10 @@
 title: 簡介
 description: 將列印表單加速轉換為最適化表單
 exl-id: edabeac8-cd66-48ca-a99f-9643a1c184cf
-source-git-commit: fed54ea64e19c77868e8e58e29e909cf4447f696
+source-git-commit: af05922f9eb76b7b0a30601824c6006fe555ea80
 workflow-type: tm+mt
-source-wordcount: '690'
-ht-degree: 71%
+source-wordcount: '699'
+ht-degree: 70%
 
 ---
 
@@ -50,7 +50,7 @@ Adobe 為您的組織啟用存取權限，並向您指定的組織管理員提�
 設定 AEM Forms 環境後，如欲將 PDF 表單轉換為最適化表單，請 [上傳 PDF 表單](convert-existing-forms-to-adaptive-forms.md)至 AEM 執行個體，然後[開始轉換](convert-existing-forms-to-adaptive-forms.md#run-the-conversion)。 在上傳表單前，請參閱以下提醒：
 
 * 請勿上傳受保護的表單。 此服務無法轉換受密碼保護和加密的表單。
-* 請勿上傳掃描、彩色、非英文和已填寫的表單。 此服務不支援這些表單。
+* 請勿上傳掃描、彩色、已填入的表單和表單，其語言不包括英文、法文、德文和西班牙文。 此服務不支援這些表單。
 * 請勿上傳檔案名中帶有空格的 PDF 表單。
 * 請勿上傳 [PDF Portfolio](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html)。 此服務不會將PDFPortfolio轉換為最適化表單。
 * 完成[最佳實務和考量](styles-and-pattern-considerations-and-best-practices.md)文章中描述的 PDF 表單的建議更改。
