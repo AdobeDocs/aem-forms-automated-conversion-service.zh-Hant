@@ -7,10 +7,10 @@ uuid: 0f6dc39c-99b7-49a4-8e9e-ecc4a35110c0
 topic-tags: introduction
 discoiquuid: e17c2d2c-8300-4467-aa01-57365697939f
 exl-id: 3a29f8d4-8ea0-49eb-bfe0-0eab5f0c52c7
-source-git-commit: 1a3f79925f25dcc7dbe007f6e634f6e3a742bf72
+source-git-commit: af05922f9eb76b7b0a30601824c6006fe555ea80
 workflow-type: tm+mt
-source-wordcount: '1825'
-ht-degree: 4%
+source-wordcount: '1830'
+ht-degree: 3%
 
 ---
 
@@ -31,7 +31,7 @@ ht-degree: 4%
    <p>此服務可將非互動式PDF forms、XFA型XDP和PDF forms，以及AcroForms轉換為最適化表單。 此服務不支援掃描或填寫的表單。 如需其他限制，請參閱<a href="known-issues.md">已知問題</a>文章。<br /> </p> 
     <p>我們定期增加對其他源類型的支援。 將<a href="introduction.md">受支援的PDF forms</a>區段保留在監視清單上，以定期更新新增的功能。</p>
 
-   此服務僅能將英語表單轉換為最適化表單。 您可以使用[AEM翻譯工作流程將產生的最適化表單翻譯成其他語言。](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)</br> </br>
+   此服務只能將英文、法文、德文和西班牙文語言表單轉換為最適化表單。 您可以使用[AEM翻譯工作流程將產生的最適化表單翻譯成其他語言。](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)</br> </br>
 
 1. **此服務是否可產生XDP而非最適化表單？**
 
