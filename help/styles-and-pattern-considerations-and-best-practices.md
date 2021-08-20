@@ -7,9 +7,9 @@ uuid: e24773a2-be14-4184-a168-48aa976d459a
 topic-tags: introduction
 discoiquuid: 79f2026e-73a5-4bd1-b041-d1399b4ad23e
 exl-id: 9ada091a-e7c6-40e9-8196-c568f598fc2a
-source-git-commit: 86ffe3a6aa0257afe06310dbbc7a5ff8db3060e2
+source-git-commit: 65b0d6f6568ce7915b1a8bd85981bead967d869c
 workflow-type: tm+mt
-source-wordcount: '1257'
+source-wordcount: '1267'
 ht-degree: 3%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 3%
 * 將源文檔整理為一組8-15個文檔。 將來源表單與通用的最適化表單片段保留在單一批次中。
 * 請勿上傳受保護的表單。 此服務不會轉換受密碼保護和安全的表單。
 * 請勿上傳[PDFPortfolio](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html)。 此服務不會將PDFPortfolio轉換為最適化表單。
-* 請勿上傳已掃描和填寫的表單。 此服務不支援這些表單。
+* 請勿上傳掃描、填入和表單，使用英文、法文、德文和西班牙文以外的任何語言。 此服務不支援這些表單。
 * 請勿上傳檔案名稱中含有空格的來源表單。 先從檔案名稱中移除空格，再上傳表單。
 
 使用XDP表單進行轉換時，請先執行下列步驟，再上傳來源XPD表單：
