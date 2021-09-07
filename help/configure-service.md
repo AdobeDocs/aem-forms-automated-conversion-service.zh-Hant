@@ -3,9 +3,9 @@ title: 設定自動表單轉換服務
 description: 準備好AEM執行個體以使用Automated forms conversion服務
 role: User, Admin
 exl-id: 8f21560f-157f-41cb-ba6f-12a4d6e18555
-source-git-commit: 264208305996e98ff2dbccf0e63027b4c757754c
+source-git-commit: 47261710e6616c27c210ac53bffcc2387a06ea7a
 workflow-type: tm+mt
-source-wordcount: '2682'
+source-wordcount: '2684'
 ht-degree: 6%
 
 ---
@@ -72,7 +72,6 @@ AEM例項包含基本表單功能。 轉換服務需要完整的AEM Forms功能�
 
 >[!NOTE]
 > 安裝附加套件後，請務必執行強制安裝後設定。
-
 
 <!-- ### (Optional) Download and install connector package  {#installConnectorPackage}
 
@@ -241,7 +240,7 @@ automated forms conversion服務使用Day CQ郵件服務來傳送電子郵件通
    | 範本 | 要套用至轉換表單的預設範本。 開始轉換之前，您一律可以指定不同的範本。 範本包含最適化表單的基本結構和初始內容。 您可以從現成可用的範本中選擇範本。 您也可以建立自訂範本。 |
    | 主題 | 要套用至轉換表單的預設主題。 開始轉換之前，您一律可以指定不同的主題。  您可以按一下圖示，選擇現成可用的主題。 您也可以建立自訂主題。 |
    | 現有片段 | 現有片段的位置（如果有）。 |
-   | 自訂元模型 | 自訂中繼模型的.schema.json檔案路徑。 您可以為英文、法文、德文和西班牙文語言建立不同的元模型。 |
+   | 自訂元模型 | 自訂中繼模型的.schema.json檔案路徑。 您可以為英文、法文、德文、西班牙文、義大利文和葡萄牙文語言建立不同的元模型。 |
 
 1. 在&#x200B;**[!UICONTROL Create Automated Forms Conversion Configuration]**&#x200B;頁面的&#x200B;**[!UICONTROL Advanced]**&#x200B;標籤中，指定以下欄位的值：
 

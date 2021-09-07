@@ -1,15 +1,15 @@
 ---
 title: 已知問題
-seo-title: 已知問題
+seo-title: Known Issues
 description: automated forms conversion服務的已知問題和限制
-seo-description: 開始使用AEM FormsAutomated forms conversion服務前，請先了解服務的已知問題和限制
+seo-description: Before you begin using AEM Forms Automated Forms Conversion service, learn about the known issues and limitations of the service
 uuid: b1dc661b-ccd3-457f-acbb-4bd25db86e1e
 topic-tags: introduction
 discoiquuid: 9cd2363c-47a0-46e9-98cd-1fe088b9cd6e
 exl-id: 35f59e02-e38e-473a-94c8-123e0a85ac8e
-source-git-commit: af05922f9eb76b7b0a30601824c6006fe555ea80
+source-git-commit: 47261710e6616c27c210ac53bffcc2387a06ea7a
 workflow-type: tm+mt
-source-wordcount: '813'
+source-wordcount: '794'
 ht-degree: 1%
 
 ---
@@ -75,7 +75,7 @@ ht-degree: 1%
 * 不支援超過15頁的PDF forms。
 * 加密、密碼保護和安全的文檔不會轉換。 在執行轉換之前，請刪除加密或密碼。
 * 不支援具有佔位符值的複雜表，如無邊框表、嵌套表和表。 轉換後，使用最適化表單編輯器來新增或修改複雜表格。 僅支援帶有空欄位、適當標題和清除邊界的簡單表。
-* 此服務僅將英文、法文、德文和西班牙文表單轉換為最適化表單。 您可以使用[AEM翻譯工作流程](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)將轉換的最適化表單翻譯成其他語言。
+* 此服務僅將英文、法文、德文、西班牙文、義大利文和葡萄牙文等語言表單轉換為最適化表單。 您可以使用[AEM翻譯工作流程](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)將轉換的最適化表單翻譯成其他語言。
 * AEM 6.4 Forms不支援自動偵測輸入表單的多欄版面配置。
 * 使用來源PDF表單中的顏色編碼的資訊不會傳遞至最適化表單。
 * 來源PDF表單的顏色不會傳遞至最適化表單主題。

@@ -1,15 +1,15 @@
 ---
 title: '最佳實務和考量 '
-seo-title: '最佳實務和考量 '
+seo-title: Best practices and considerations
 description: automated forms conversion服務的最佳實務和考量
-seo-description: 源PDF forms中Automated forms conversion服務發現難以識別的樣式和模式清單
+seo-description: List of styles and patterns in source PDF forms which Automated Forms Conversion service finds difficult to identify
 uuid: e24773a2-be14-4184-a168-48aa976d459a
 topic-tags: introduction
 discoiquuid: 79f2026e-73a5-4bd1-b041-d1399b4ad23e
 exl-id: 9ada091a-e7c6-40e9-8196-c568f598fc2a
-source-git-commit: 9d107d2dfc64fd84d4f734ded5898612ce9a3295
+source-git-commit: 47261710e6616c27c210ac53bffcc2387a06ea7a
 workflow-type: tm+mt
-source-wordcount: '1267'
+source-wordcount: '1247'
 ht-degree: 3%
 
 ---
@@ -33,12 +33,12 @@ ht-degree: 3%
 * 請勿上傳受保護的表單。 此服務不會轉換受密碼保護和安全的表單。
 * 請勿上傳[PDFPortfolio](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html)。 此服務不會將PDFPortfolio轉換為最適化表單。
 * 請勿上傳檔案名稱中含有空格的來源表單。 先從檔案名稱中移除空格，再上傳表單。
-* 請勿上傳掃描、填入和表單，使用英文、法文、德文和西班牙文以外的任何語言。 此服務不支援這些表單。
+* 請勿上傳掃描、填入和表單，其語言不包括英文、法文、德文、西班牙文、義大利文和葡萄牙文。 此服務不支援這些表單。
 
 使用XDP表單進行轉換時，請先執行下列步驟，再上傳來源XPD表單：
 
 * 分析XDP表單並修正視覺問題。 確保源文檔使用預期的控制項和結構。 例如，源表單可以具有用於單個選擇的複選框，而不是單選按鈕。 將核取方塊變更為選項按鈕，以產生具有預期元件的最適化表單。
-* [開始轉換之前，將系](http://www.adobe.com/go/learn_aemforms_designer_65) 結新增至XDP格式。當源XDP表單中有綁定可用時，服務會在轉換期間自動將綁定應用到相應的最適化表單欄位。 它可節省手動應用綁定所需的時間。
+* [開始轉換之前，將系](http://www.adobe.com/go/learn_aemforms_designer_65_tw) 結新增至XDP格式。當源XDP表單中有綁定可用時，服務會在轉換期間自動將綁定應用到相應的最適化表單欄位。 它可節省手動應用綁定所需的時間。
 * [將Adobe Sign](https://helpx.adobe.com/sign/using/text-tag.html) 標籤新增至XDP檔案。服務會自動將Adobe Sign標籤轉換為對應的最適化表單欄位。 適用性Forms支援有限數量的Adobe Sign欄位。 如需完整的支援欄位清單，請參閱在最適化表單中使用Adobe Sign](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/working-with-adobe-sign.html?lang=en)檔案。[
 * 盡可能將XDP文檔中的複雜表轉換為簡單表。 表格包含表格單元格中的表單欄位、大小不均的單元格、行或列跨越的單元格、合併的單元格、部分邊框或沒有可見邊框的表格被視為一個複雜表格。 具有上述任何一個項的表被視為複雜表。
 <!-- * Use sub-forms in XDP documents to create panels in adaptive forms. Service converts each sub-form to one or more adaptive form panels during conversion. -->

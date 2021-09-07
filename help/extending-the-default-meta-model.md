@@ -1,15 +1,15 @@
 ---
 title: 擴展預設元模型
-seo-title: 擴展預設元模型
+seo-title: Extend the default meta-model
 description: 擴充預設元模型，以新增貴組織專屬的模式、驗證和實體，並在執行Automated forms conversion服務時將設定套用至最適化表單欄位。
-seo-description: 擴充預設元模型，以新增貴組織專屬的模式、驗證和實體，並在執行Automated forms conversion服務時將設定套用至最適化表單欄位。
+seo-description: Extend the default meta-model to add pattern, validations, and entities specific to your organization and apply configurations to adaptive form fields while running the Automated Forms Conversion service.
 uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 exl-id: f679059c-18aa-4cb5-8368-ed27e96c20de
-source-git-commit: 28e07a0264edaaeef22d211f411f7908ca0abaed
+source-git-commit: 47261710e6616c27c210ac53bffcc2387a06ea7a
 workflow-type: tm+mt
-source-wordcount: '2591'
+source-wordcount: '2565'
 ht-degree: 1%
 
 ---
@@ -24,7 +24,7 @@ automated forms conversion服務識別並從來源表單中擷取表單物件。
 
 ## 預設元模型 {#default-meta-model}
 
-automated forms conversion服務具有預設元模型。 此為JSON結構，與Automated forms conversion服務的其他元件一起駐留在Adobe雲端。 您可以在本機AEM伺服器上找到中繼模型的復本：http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/`global.schema.json`。 您也可以[按一下這裡](assets/en.globalschema.json)來存取或下載英文架構。 [法文](assets/fr.globalschema.json)、[德文](assets/de.globalschema.json)和[西班牙文](assets/es.globalschema.json)語言的元模型也可供下載。
+automated forms conversion服務具有預設元模型。 此為JSON結構，與Automated forms conversion服務的其他元件一起駐留在Adobe雲端。 您可以在本機AEM伺服器上找到中繼模型的復本：http://&lt;server>:&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/`global.schema.json`。 您也可以[按一下這裡](assets/en.globalschema.json)來存取或下載英文架構。 [法文](assets/fr.globalschema.json)、[德文](assets/de.globalschema.json) [西班牙文](assets/es.globalschema.json)、[義大利文](assets/it.globalschema.json)和[葡萄牙文](assets/pt_br.globalschema.json)語言的元模型也可供下載。
 
 元模型的模式是從https://schema.org/docs/schemas.html上的架構實體派生的。 https://schema.org上定義了人員、郵遞區號、本地業務和更多實體。 元模型的每個實體都遵守JSON結構描述物件類型。 以下代碼表示元模型結構示例：
 
@@ -222,6 +222,8 @@ automated forms conversion服務在轉換期間對來源表單執行關鍵字搜
 * French(fr)
 * German(de)
 * Spanish(es)
+* Italian(it)
+* 葡萄牙文(pt-br)
 
 將&#x200B;*aem:Language*&#x200B;中繼標籤標籤新增至中繼模型頂端，以指定其語言。 例如，
 
