@@ -1,20 +1,19 @@
 ---
 cloud: Experience Cloud
 product: experience manager
-sub-product: 表單轉換服務
+sub-product: forms conversion service
 solution: Experience Manager, Experience Manager Forms
 type: Documentation
 audience: end-user
 user-guide-title: Adobe Experience Manager Forms 自動轉換服務
 user-guide-description: 將 PDF 表單轉換為回應式且適用於行動裝置的 HTML 表單。
 breadcrumb-title: 表單自動轉換指南
-breadcrumb-url: /docs/aem-forms-automated-conversion-service/using/introduction.html
-feature: 適用性表單
+feature: Adaptive Forms
 role: User
-source-git-commit: 6aae2035969e99abca0d310d8b023e2c22a9e938
+source-git-commit: 5e1b1c1aa0ac51e23d009e7a85b0e071ff842b04
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '87'
+ht-degree: 100%
 
 ---
 
