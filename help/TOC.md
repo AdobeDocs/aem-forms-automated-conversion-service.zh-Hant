@@ -25,7 +25,7 @@ ht-degree: 100%
 + [最佳實務和考量](styles-and-pattern-considerations-and-best-practices.md)
 + [設定服務](configure-service.md)
 + [將列印表單轉換為最適化表單](convert-existing-forms-to-adaptive-forms.md)
-+ [檢閱並修正轉換後的表格](review-correct-ui-edited.md)
++ [檢閱並修正轉換後的表單](review-correct-ui-edited.md)
 + [擴展預設元模型](extending-the-default-meta-model.md)
 + [基於資料來源的建議預填及提交最適化表單的工作流程](prefill-submit-forms.md)
 + [啟用最適化表單生成記錄文件的建議工作流程](enable-document-of-record-generation.md)
