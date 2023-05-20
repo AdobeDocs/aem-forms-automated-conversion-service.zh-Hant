@@ -1,5 +1,5 @@
 ---
-title: '將 PDF 表單轉換為最適化表單 '
+title: 將 PDF forms 轉換為最適化表單
 seo-title: Convert PDF forms to adaptive forms
 description: 運行Automated forms conversion服務以將PDF forms轉換為自適應表單
 seo-description: Run the Automated Forms Conversion service to convert PDF forms to adaptive forms
@@ -15,7 +15,7 @@ ht-degree: 6%
 
 ---
 
-# 將 PDF 表單轉換為最適化表單 {#convert-print-forms-to-adaptive-forms}
+# 將 PDF forms 轉換為最適化表單 {#convert-print-forms-to-adaptive-forms}
 
 AEM FormsAutomated forms conversion服務由Adobe Sensei提供支援，可自動將PDF forms轉換為設備友好且響應迅速的自適應格式。 無論您是使用非互動式PDF forms、 AcroFormsPDF forms還是基於XFA的，Automated forms conversion服務都可以輕鬆地將這些表單轉換為自適應表單。 有關功能、轉換工作流和登錄資訊的資訊，請參閱 [automated forms conversion](introduction.md) 服務。
 
@@ -69,7 +69,7 @@ AEM FormsAutomated forms conversion服務由Adobe Sensei提供支援，可自動
 
 1. 在 **[!UICONTROL Basic]** 的子菜單：
 
-   * **[!UICONTROL Select a cloud configuration]**. 選擇配置時，已指定預設模板和主題。 如果需要，可以指定其他模板或主題。
+   * **[!UICONTROL Select a cloud configuration]**。選擇配置時，已指定預設模板和主題。 如果需要，可以指定其他模板或主題。
    * 指定保存生成的自適應表單和相應架構的位置。 可以使用預設路徑或指定自定義路徑。
    * 使用 **生成沒有資料模型綁定的自適應表單** 選項，以選擇是否要生成具有或不具有資料模型綁定的自適應窗體。
 如果未選擇此選項，則轉換服務將自動將自適應表單與JSON架構相關聯，並在自適應表單和JSON架構中可用的欄位之間建立資料綁定。 的 **[!UICONTROL Save generated data model schema at]** 欄位顯示用於保存生成的JSON架構的預設位置。 還可以自定義位置以保存生成的架構。
