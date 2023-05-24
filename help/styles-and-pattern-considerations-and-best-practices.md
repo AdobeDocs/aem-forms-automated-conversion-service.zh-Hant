@@ -1,7 +1,7 @@
 ---
 title: 最佳實務和考量
 seo-title: Best practices and considerations
-description: automated forms conversion服務的最佳做法和注意事項
+description: automated forms conversion服務的最佳實務和考量事項
 seo-description: List of styles and patterns in source PDF forms which Automated Forms Conversion service finds difficult to identify
 uuid: e24773a2-be14-4184-a168-48aa976d459a
 topic-tags: introduction
@@ -14,89 +14,89 @@ ht-degree: 3%
 
 ---
 
-# 最佳做法和已知的複雜模式 {#Best-practices-and-considerations2}
+# 最佳實務和已知的複雜模式 {#Best-practices-and-considerations2}
 
-本文檔提供了管理員、作者和開發人員在使用時可從中獲益的指導和建議 [!DNL Automated Forms Conversion service]。 它討論了從準備源表單到修復複雜模式（需要為自動轉換付出額外努力）的最佳做法。 這些最佳做法共同促進本公司的整體業績和產出 [!DNL Automated Forms Conversion service]。
+本檔案提供表單管理員、作者和開發人員在使用時可受益的准則和建議 [!DNL Automated Forms Conversion service]. 它討論了從準備來源表單到修正複雜模式的最佳實務，這些模式需要額外的自動化轉換工作。 這些最佳實務會共同為整體效能和成果作出貢獻， [!DNL Automated Forms Conversion service].
 
-## 最佳做法
+## 最佳實務
 
-轉換服務將轉換您的PDF formsAEM [!DNL Forms] 實例到自適應窗體。 下面列出的最佳做法可幫助您提高轉換速度和準確性。 此外，這些最佳做法可幫助您節省轉換活動後花費的時間。
+轉換服務會轉換AEM上可用的PDF forms [!DNL Forms] 最適化表單的例項。 下列最佳實務可協助您改善轉換速度和準確性。 此外，這些最佳實務可協助您節省在轉換活動後所花的時間。
 
-### 上載源之前
+### 上傳來源之前
 
-您可以按需要一次或分階段上載所有PDF forms。 在上傳表單前，請參閱以下提醒：
+您可以一次上傳所有PDF forms，也可以視需要分階段上傳。 在上傳表單前，請參閱以下提醒：
 
-* 將資料夾中的表單數保留為小於15，並將資料夾中的總頁數保留為小於50。
+* 將資料夾中的表單數保持在15頁以下，將資料夾中的總頁數保持在50頁以下。
 * 將資料夾大小保持在10 MB以下。 不要將表單放在子資料夾中。 
-* 將頁數保持在小於15的形式下。
-* 將源文檔組織為一組8-15個文檔。 將具有通用自適應表單片段的源表單保留在單個批中。
-* 不要上載受保護的表單。 該服務不轉換受密碼保護和安全的表單。
-* 不上載 [PDFPortfolio](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html)。 該服務不會將PDFPortfolio轉換為自適應格式。
-* 不要上載檔案名中帶空格的源表單。 在上載表單之前，從檔案名中刪除空間。
-* 不要上載掃描、填寫和表單，而不是使用英語、法語、德語、西班牙語、義大利語和葡萄牙語。 此服務不支援這些表單。
+* 將表單的頁數保持在15頁以下。
+* 將來原始檔組織成批次8至15份檔案。 將具有常見最適化表單片段的來源表單放在單一批次中。
+* 請勿上傳受保護的表單。 此服務無法轉換受密碼保護和安全的表單。
+* 不要上傳 [PDFPortfolio](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html). 此服務無法將PDFPortfolio轉換為最適化表單。
+* 請勿上傳檔案名稱中有空格的來源表單。 上傳表單前，請先移除檔案名稱中的空格。
+* 請勿上傳英文、法文、德文、西班牙文、義大利文和葡萄牙文以外任何語言的掃描、填寫和表單。 此服務不支援這些表單。
 
-使用XDP表單進行轉換時，請在上載源XPD表單之前執行以下步驟：
+當您使用XDP表單進行轉換時，請先執行以下步驟再上傳來源XPD表單：
 
-* 分析XDP表單並修復可視問題。 確保源文檔使用預期的控制項和結構。 例如，源表單可以具有複選框，而不是單個選區的單選按鈕。 將複選框更改為單選按鈕以生成具有預期元件的自適應表單。
-* [將綁定添加到XDP窗體](http://www.adobe.com/go/learn_aemforms_designer_65_tw) 開始轉換。 當綁定在源XDP表單中可用時，服務會在轉換期間自動將綁定應用到相應的自適應表單欄位。 它為您節省了手動應用綁定所需的時間。
-* [添加Adobe Sign標籤](https://helpx.adobe.com/sign/using/text-tag.html) 到XDP檔案。 該服務自動將Adobe Sign標籤轉換為相應的自適應表單域。 適應性Forms支援有限數量的Adobe Sign領域。 有關支援欄位的完整清單，請參見 [以自適應形式使用Adobe Sign](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/working-with-adobe-sign.html?lang=en) 文檔。
-* 如果可能，將XDP文檔中的複雜表轉換為簡單表。 表格單元格中包含表單域、大小不均勻的單元格、行或列跨越的單元格、合併的單元格、部分邊框或沒有可見邊框的表被視為一個複雜表。 包含上述任何一項的表被視為複雜表。
+* 分析XDP表單並修正視覺問題。 確保來原始檔使用預期的控制項和結構。 例如，來源表單可能有核取方塊，而不是單一選取範圍的選項按鈕。 將核取方塊變更為選項按鈕，以產生具有所需元件的調適型表單。
+* [將繫結新增至XDP表單](http://www.adobe.com/go/learn_aemforms_designer_65_tw) 開始轉換之前。 當來源XDP表單中有繫結時，服務會在轉換期間自動將繫結套用至對應的調適型表單欄位。 這樣可節省您手動套用繫結所需的時間。
+* [新增Adobe Sign標籤](https://helpx.adobe.com/sign/using/text-tag.html) 到XDP檔案。 此服務會自動將Adobe Sign標籤轉換為對應的自適應表單欄位。 最適化Forms支援有限數量的Adobe Sign欄位。 如需支援欄位的完整清單，請參閱 [在最適化表單中使用Adobe Sign](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/working-with-adobe-sign.html?lang=en) 說明檔案。
+* 可能的話，將XDP檔案中的複雜表格轉換為簡單表格。 表格中的表單欄位位於表格儲存格中、大小不均的儲存格、橫跨的列或欄儲存格、合併的儲存格、部分框線或沒有可見框線，這些表格都被視為複雜表格。 含有上述任一專案的表格會視為複雜表格。
 <!-- * Use sub-forms in XDP documents to create panels in adaptive forms. Service converts each sub-form to one or more adaptive form panels during conversion. -->
 
 ### 開始轉換之前
 
-* 建立自適應表單模板。 模板有助於為組織或部門的表單指定統一的結構。
-* 在自適應表單模板中指定頁眉和頁腳。 該服務忽略源文檔的頁眉 — 頁腳，並使用自適應表單模板中指定的頁眉 — 頁腳。
-* 建立自適應窗體主題。 主題有助於為您的組織或部門的形式提供統一的外觀和感覺。
-* 配置表單資料模型以保存資料源並從中檢索。 為表單資料模型建立和配置讀和寫服務。
-* 建立自適應表單片段並配置服務以使用自適應表單片段。
-* 為需要業務流程自動化的表單準備通用工作流模型。
-* 配置Adobe Analytics（如果需要）
+* 建立自適應表單範本。 範本有助於為組織或部門的表單指定統一結構。
+* 指定最適化表單範本中的頁首與頁尾。 此服務會忽略來原始檔的頁首 — 頁尾，並使用最適化表單範本中指定的頁首 — 頁尾。
+* 建立最適化表單主題。 主題有助於為組織或部門的表單提供統一的外觀和感覺。
+* 設定表單資料模型，以儲存資料來源並從中擷取。 建立並設定表單資料模型的讀取和寫入服務。
+* 建立最適化表單片段並設定服務以使用您的最適化表單片段。
+* 為需要業務流程自動化的表單準備通用工作流程模型。
+* 視需要設定Adobe Analytics
 
 
 ## 瞭解複雜模式
 
-AEM [!DNL Forms Automated Conversion service] 使用人工智慧和機器學習算法來理解源表單的佈局和欄位。 每個機器學習服務都不斷從源資料中學習，並在每次混亂中產生改進的輸出。 這些服務從人類經驗中學習。
+AEM [!DNL Forms Automated Conversion service] 使用人工智慧和機器學習演演算法來瞭解來源表單的版面和欄位。 每個機器學習服務都會持續學習來源資料，並在每次流失時產生改善的輸出。 這些服務會向人類等體驗學習。
 
-[!DNL Automated Forms Conversion service] 是用一系列形式訓練的。 它可輕鬆識別源表單中的欄位並生成自適應表單。 但是，PDF forms中也有一些領域和風格，它們很容易被人們看到，但很難為服務理解。 該服務可以將不同於適用欄位類型或面板的欄位或樣式分配給某些欄位或樣式。 下面列出了所有此類欄位和樣式模式。
+[!DNL Automated Forms Conversion service] 接受過大量表單的訓練。 它可輕鬆識別來源表單中的欄位並產生調適型表單。 不過，PDF forms中有些欄位和樣式肉眼很容易看到，但此服務卻難以理解。 此服務可將與適用欄位型別或面板不同的欄位或樣式指派給某些欄位或樣式。 以下列出所有此類欄位和樣式模式。
 
-當服務不斷從源資料中學習時，它將開始識別並為這些模式分配正確的欄位或面板。 目前，你可以 [審閱並更正](review-correct-ui-edited.md) 編輯器來解決這些問題。 在開始解決問題或進一步閱讀之前，請熟悉 [自適應表單元件](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html)。
+當服務不斷從來源資料學習時，就會開始識別並指派正確的欄位或面板給這些模式。 目前，您可以使用 [檢閱並更正](review-correct-ui-edited.md) 編輯器以修正此類問題。 在開始修正問題或進一步閱讀之前，請先熟悉 [最適化表單元件](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html).
 
 ### 一般模式 {#general}
 
 | 模式 | 範例 |
 |--- |--- |
-| **圖案** <br>服務不會將填充的PDF forms轉換為自適應表單。 <br><br>**解決** <br>使用空的自適應表單。 | ![填充窗體](assets/best-practice-filled-forms.png) |
-| **圖案** <br>服務無法識別密集表單中的文本和欄位。 <br><br>**解決** <br> 在開始轉換之前，增加密集表單的文本和欄位之間的寬度。 |  |
-| **圖案** <br>服務不支援掃描的表單。 <br><br>**解決** <br>不要使用掃描的表單。 | ![掃描的表單](assets/scanned-forms.png) |
-| **圖案** <br>服務不提取影像內的影像和文本。 <br><br>**解決** <br> 手動將影像或文本添加到已轉換的表單。 | ![帶文本窗體的影像](assets/best-practice-image-with-text.png) |
-| **圖案** <br>帶點線或非清除邊界和邊框的表不會轉換。 <br><br>**解決** <br>使用具有明確顯式邊界和邊框的表。 支援。 | ![非清除表格](assets/best-practice-table-dotted-non-clear.png) |
-| **圖案** <br> 自適應表單不支援框外的垂直文本。 因此，服務不會將垂直文本轉換為相應的自適應Forms文本。 <br><br>**解決** <br> 如果需要，可使用自適應表單編輯器添加垂直文本。 | ![非清除表格](assets/vertical-text.png) |
+| **圖樣** <br>服務無法將填入的PDF forms轉換為最適化表單。 <br><br>**解析度** <br>使用空白的最適化表單。 | ![已填寫的表單](assets/best-practice-filled-forms.png) |
+| **圖樣** <br>服務可能無法識別密集表單中的文字和欄位。 <br><br>**解析度** <br> 在開始轉換之前，增加密集表單的文字和欄位之間的寬度。 |  |
+| **圖樣** <br>服務不支援掃描的表單。 <br><br>**解析度** <br>請勿使用掃描的表單。 | ![掃描的表單](assets/scanned-forms.png) |
+| **圖樣** <br>服務不會擷取影像中的影像和文字。 <br><br>**解析度** <br> 手動將影像或文字新增至轉換後的表單。 | ![含文字表單的影像](assets/best-practice-image-with-text.png) |
+| **圖樣** <br>具有虛線或非清除邊界與邊界的表格不會轉換。 <br><br>**解析度** <br>使用具有明確邊界和框線的表格。 支援。 | ![未清除表格表單](assets/best-practice-table-dotted-non-clear.png) |
+| **圖樣** <br> 調適型表單不支援開箱即用的垂直文字。 因此，此服務不會將垂直文字轉換為對應的Adaptive Forms文字。 <br><br>**解析度** <br> 如有需要，可使用自適應表單編輯器新增垂直文字。 | ![未清除表格表單](assets/vertical-text.png) |
 
 
 
-### 選擇組  {#choice-group}
-
-| 模式 | 解析度 |
-|--- |--- |
-| **圖案** <br> 不會將形狀為框或圓以外的選項組選項轉換為相應的自適應窗體元件。 <br><br>**解決** <br> 將選擇選項形狀更改為框或圓，或使用「審閱」和「正確」編輯器來標識形狀。 | ![選擇欄位 ](assets/best-practice-choice-group-options.png) |
-
-### 表單域 {#form-fields}
+### 選擇群組  {#choice-group}
 
 | 模式 | 解析度 |
 |--- |--- |
-| **圖案** <br> 服務不標識沒有清除邊框的欄位。 <br><br>**解決** <br> 使用「審閱」(Review)和「正確」(Correct)編輯器來標識此類欄位。 | ![具有非清除邊界的欄位](assets/best-practice-fields-without-clear-borders.png) |
-| **圖案** <br> 服務可能無法識別某些選擇組表單域的底部或右側帶有標題。 <br><br>**解決** <br> 使用「審閱」和「正確」編輯器來標識此類欄位 | ![選擇欄位](assets/best-practice-caption-bottom-right.png) |
-| **圖案** <br> 服務會將錯誤類型合併或分配給彼此非常靠近或沒有明確邊框的某些表單域。 <br><br>**解決** <br> 使用「審閱」(Review)和「正確」(Correct)編輯器來標識此類欄位。 | ![選擇欄位](assets/best-practice-placed-very-near.png) |
-| **圖案** <br> 服務無法識別帶有遠離字幕或字幕和輸入欄位之間的虛線的欄位。 <br><br>**解決** <br> 使用具有明確邊界的表單域或使用「審閱」和「更正」編輯器修復此類問題。 | ![字幕欄位之間的遠離欄位或虛線](assets/best-practice-far-away-captions-or-a-dotted-line.png) |
+| **圖樣** <br> 具有方塊或圓圈以外形狀的選擇群組選項不會轉換為對應的最適化表單元件。 <br><br>**解析度** <br> 將選擇選項形狀變更為方塊或圓形，或使用「檢閱並修正」編輯器來識別形狀。 | ![選擇欄位 ](assets/best-practice-choice-group-options.png) |
+
+### 表單欄位 {#form-fields}
+
+| 模式 | 解析度 |
+|--- |--- |
+| **圖樣** <br> 沒有清晰的邊界，服務無法識別欄位。 <br><br>**解析度** <br> 使用「稽核並修正」編輯器來識別此類欄位。 | ![邊界不清晰的欄位](assets/best-practice-fields-without-clear-borders.png) |
+| **圖樣** <br> 服務可能無法識別某些選擇群組表單欄位，表單底部或右側會有註解。 <br><br>**解析度** <br> 使用「稽核並修正」編輯器來識別此類欄位 | ![選擇欄位](assets/best-practice-caption-bottom-right.png) |
+| **圖樣** <br> 服務會合併或指派錯誤的型別給一些彼此非常靠近或沒有明確邊界的表單欄位。 <br><br>**解析度** <br> 使用「稽核並修正」編輯器來識別此類欄位。 | ![選擇欄位](assets/best-practice-placed-very-near.png) |
+| **圖樣** <br> 服務可能無法識別字幕很遠的欄位或字幕與輸入欄位之間的虛線。 <br><br>**解析度** <br> 使用具有明確界限的表單欄位，或使用檢閱和修正編輯器來修正此類問題。 | ![註解欄位之間的遠距欄位或虛線](assets/best-practice-far-away-captions-or-a-dotted-line.png) |
 
 ### 清單 {#lists}
 
 | 模式 | 解析度 |
 |--- |--- |
-| **圖案** <br>包含表單域的清單被合併或未轉換為相應的自適應表單元件 <br><br>**解決** <br>使用具有明確邊界的表單域或使用「審閱」和「更正」編輯器修復此類問題。 | ![清單包含選擇組](assets/best-practice-lists-containing-form-fields.png) |
-| **圖案** <br>服務可以保留幾個未標識的嵌套清單 <br><br>**解決** <br> 使用「審閱」(Review)和「正確」(Correct)編輯器修復此類問題。 | ![清單包含選擇組](assets/best-practice-nested-lists.png) |
-| **圖案** <br> 服務將包含選擇組的某些清單彼此合併 <br><br>**解決** <br> 使用「審閱」(Review)和「正確」(Correct)編輯器修復此類問題。 | ![清單包含選擇組](assets/best-practice-check-box-in-table-cells.png) |
+| **圖樣** <br>包含表單欄位的清單會合併或未轉換為對應的最適化表單元件 <br><br>**解析度** <br>使用具有明確界限的表單欄位，或使用檢閱和修正編輯器來修正此類問題。 | ![包含選擇群組的清單](assets/best-practice-lists-containing-form-fields.png) |
+| **圖樣** <br>服務可能會保留一些無法識別的巢狀清單 <br><br>**解析度** <br> 使用檢閱和修正編輯器來修正此類問題。 | ![包含選擇群組的清單](assets/best-practice-nested-lists.png) |
+| **圖樣** <br> 服務會合併一些包含選擇群組的清單 <br><br>**解析度** <br> 使用檢閱和修正編輯器來修正此類問題。 | ![包含選擇群組的清單](assets/best-practice-check-box-in-table-cells.png) |
 
 <!--
 Comment Type: draft
