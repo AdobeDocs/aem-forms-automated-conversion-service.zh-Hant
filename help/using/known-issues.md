@@ -1,13 +1,14 @@
 ---
 title: 已知問題
-seo-title: Known Issues
 description: automated forms conversion服務的已知問題和限制
-seo-description: Before you begin using AEM Forms Automated Forms Conversion service, learn about the known issues and limitations of the service
-uuid: b1dc661b-ccd3-457f-acbb-4bd25db86e1e
+solution: Experience Manager Forms
+feature: Adaptive Forms
+topic: Administration
 topic-tags: introduction
-discoiquuid: 9cd2363c-47a0-46e9-98cd-1fe088b9cd6e
+role: Admin, Developer
+level: Beginner, Intermediate
 exl-id: 35f59e02-e38e-473a-94c8-123e0a85ac8e
-source-git-commit: 298d6c0641d7b416edb5b2bcd5fec0232f01f4c7
+source-git-commit: 43616abd46a17a8eeda30a116f09b88780ce9a77
 workflow-type: tm+mt
 source-wordcount: '794'
 ht-degree: 1%
@@ -42,7 +43,7 @@ ht-degree: 1%
 
 <table>
     <tr>
-        <td>複合文字欄位的繫結和資料遺失。 複合文字欄位有多個文字方塊彼此對齊。 例如，在AcroForm中，信用卡號碼會分割成多個文字方塊，而每個文字方塊都有個別的繫結。 當AcroForm轉換為最適化表單時，轉換後的最適化表單具有適用於所有文字方塊的單一繫結。 做為因應措施，在將AcroForm轉換為最適化表單之前，請修改AcroForm以使用單一文字方塊來接受信用卡號碼。</td>
+        <td>複合文字欄位的繫結和資料遺失。 複合文字欄位有多個文字方塊彼此對齊。 例如，在AcroForm中，信用卡號碼會分割為多個文字方塊，而每個文字方塊都有個別的繫結。 當AcroForm轉換為最適化表單時，轉換後的最適化表單具有適用於所有文字方塊的單一繫結。 做為因應措施，在將AcroForm轉換為最適化表單之前，請修改AcroForm以使用單一文字方塊來接受信用卡號碼。</td>
         <td><img  src="assets/creditCard_Composite.png"/>                                                            </td>
     </tr>
     <tr>

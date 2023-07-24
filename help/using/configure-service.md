@@ -1,9 +1,14 @@
 ---
 title: 設定自動表單轉換服務
 description: 準備好您的AEM執行個體以使用Automated forms conversion服務
-role: User, Admin
+solution: Experience Manager Forms
+feature: Adaptive Forms
+topic: Administration
+topic-tags: forms
+role: Admin, Developer, User
+level: Beginner, Intermediate
 exl-id: 8f21560f-157f-41cb-ba6f-12a4d6e18555
-source-git-commit: 298d6c0641d7b416edb5b2bcd5fec0232f01f4c7
+source-git-commit: e95b4ed35f27f920b26c05f3398529f825948f1f
 workflow-type: tm+mt
 source-wordcount: '2684'
 ht-degree: 7%
@@ -106,7 +111,7 @@ Adobe為您的組織啟用存取權並提供必要的許可權給管理員後，
 1. 登入 [Admin Console](https://adminconsole.adobe.com/). 使用 **Adobe ID** 已布建為使用Automated forms conversion服務登入的管理員。 請勿登入任何其他ID或Federated ID。
 1. 按一下 **[!UICONTROL Automated Forms Conversion]** 選項。
 1. 按一下 **[!UICONTROL New Profile]** 在 **[!UICONTROL Products]** 標籤。
-1. 指定 **[!UICONTROL Name]**， **[!UICONTROL Display Name]**、和 **[!UICONTROL Description]** 用於設定檔。 按一下 **[!UICONTROL Done]**. 設定檔已建立。
+1. 指定 **[!UICONTROL Name]**， **[!UICONTROL Display Name]**、和 **[!UICONTROL Description]** 用於設定檔。 按一下 **[!UICONTROL Done]**。設定檔已建立。
 
    ![指定新設定檔的詳細資料。](assets/create-new-profile-details.png)
 
@@ -165,7 +170,7 @@ automated forms conversion服務會使用Day CQ郵件服務來傳送電子郵件
 
 1. 選取 **[!UICONTROL Automated Forms Conversion Service]** 雲端解決方案中的。
 
-1. 選取 **[!UICONTROL Create new certificate]** 核取方塊並指定別名。 別名的作用是對話方塊的名稱。點選 **[!UICONTROL Create certificate]**。對話方塊隨即顯示。按一下 **[!UICONTROL OK]**. 憑證已建立。
+1. 選取 **[!UICONTROL Create new certificate]** 核取方塊並指定別名。 別名的作用是對話方塊的名稱。點選 **[!UICONTROL Create certificate]**。對話方塊隨即顯示。按一下 **[!UICONTROL OK]**。憑證已建立。
 
 1. 點選 **[!UICONTROL Download Public Key]** 並儲存 *AEM-Adobe-IMS.crt* 您的電腦上的憑證檔案。 憑證檔案用於 [在Adobe Developer主控台設定服務API](#createintegration). 點選 **[!UICONTROL Next]**。
 
@@ -265,7 +270,7 @@ automated forms conversion服務會使用Day CQ郵件服務來傳送電子郵件
    </table>
 
    * 如果來源是副檔名為.XDP的XFA型表單，則輸出DOR會保留XFA配置，否則轉換服務會使用現成的範本為其他XFA型表單產生DOR。
-   * 提交XFA表單時，表單的提交資料會儲存為XML元素或屬性。 例如， `<Amount currency="USD"> 10.00 </Amount>`. 貨幣會儲存為屬性和貨幣金額，10.00會儲存為元素。 最適化表單的提交資料沒有屬性，只有元素。 因此，當以XFA為基礎的表單轉換為最適化表單時，最適化表單提交資料會包含每個這類屬性的元素。 例如，
+   * 提交XFA表單時，表單的提交資料會儲存為XML元素或屬性。 例如，`<Amount currency="USD"> 10.00 </Amount>`。貨幣會儲存為屬性和貨幣金額，10.00會儲存為元素。 最適化表單的提交資料沒有屬性，只有元素。 因此，當以XFA為基礎的表單轉換為最適化表單時，最適化表單提交資料會包含每個這類屬性的元素。 例如，
 
    ```css
       {

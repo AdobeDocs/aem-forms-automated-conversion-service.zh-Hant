@@ -1,13 +1,14 @@
 ---
 title: 常見問題
-seo-title: Frequently asked questions
 description: 常見問答集或常見問題
-seo-description: frequently asked questions for Automated Forms Conversion Service
-uuid: 0f6dc39c-99b7-49a4-8e9e-ecc4a35110c0
+solution: Experience Manager Forms
+feature: Adaptive Forms
+topic: Administration
 topic-tags: introduction
-discoiquuid: e17c2d2c-8300-4467-aa01-57365697939f
+role: Admin, Developer
+level: Beginner, Intermediate
 exl-id: 3a29f8d4-8ea0-49eb-bfe0-0eab5f0c52c7
-source-git-commit: 298d6c0641d7b416edb5b2bcd5fec0232f01f4c7
+source-git-commit: e95b4ed35f27f920b26c05f3398529f825948f1f
 workflow-type: tm+mt
 source-wordcount: '1799'
 ht-degree: 3%
@@ -94,7 +95,7 @@ ht-degree: 3%
 此服務僅支援空白或未填寫的表單。 請勿上傳含有個人識別資訊(PII)的已填寫表單或表單。 此外，請移除來源表單中預先填寫的資料、個人識別資訊(PII)、機密和專屬資訊。 <br/>
 
 1. **頁首和頁尾應放置在何處？**
-   <p>在最適化表單範本中放置頁首和頁尾。 如果來源PDF表單有頁首和頁尾，服務會在轉換期間偵測偵測偵測到的頁首和頁尾，並將其取代為適用性表單範本中可用的頁首和頁尾。 如果最適化表單中包含任何額外的頁首或頁尾，您可以使用 <a href="review-correct-ui-edited.md">檢閱並更正</a> 編輯器以修正或移除此類頁首或頁尾。</p> <br />
+   <p>將頁首和頁尾放入最適化表單範本中。 如果來源PDF表單有頁首和頁尾，服務會在轉換期間偵測偵測偵測到的頁首和頁尾，並將其取代為適用性表單範本中可用的頁首和頁尾。 如果最適化表單中包含任何額外的頁首或頁尾，您可以使用 <a href="review-correct-ui-edited.md">檢閱並更正</a> 編輯器以修正或移除此類頁首或頁尾。</p> <br />
 
 1. **與手動規劃、建立資產（主題、範本）、建立及發佈最適化表單的程式相比，此服務可節省多少時間？**
    <p>時間長短取決於輸入表單的大小和複雜性，以及請求數量。 此服務旨在透過以快得多的速度將PDF forms轉換為最適化表單，大幅縮短實現價值的時間，而不是手動轉換表單的程式。 </p> <br />

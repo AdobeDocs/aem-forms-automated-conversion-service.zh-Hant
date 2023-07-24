@@ -1,15 +1,15 @@
 ---
 title: 基於資料來源的建議預填及提交最適化表單的工作流程
-seo-title: Prefill and submit options for adaptive forms
 description: 針對使用Automated forms conversion服務產生的最適化表單，以資料來源為基礎的預填和提交工作流程。
-seo-description: Data-source based prefill and submit workflows for adaptive forms generated using Automated Forms Conversion Service.
-uuid: 91409a82-141c-4233-82b1-1539a0b250f8
-contentOwner: khsingh
+solution: Experience Manager Forms
+feature: Adaptive Forms
+topic: Administration
 topic-tags: forms
-discoiquuid: cad34fff-7f9f-4a27-8b5c-d0a523903eec
-privatebeta: true
+role: Admin, Developer
+level: Beginner, Intermediate
+contentOwner: khsingh
 exl-id: 5deef8f5-5098-47c1-b696-b2db59e92931
-source-git-commit: 298d6c0641d7b416edb5b2bcd5fec0232f01f4c7
+source-git-commit: e95b4ed35f27f920b26c05f3398529f825948f1f
 workflow-type: tm+mt
 source-wordcount: '2437'
 ht-degree: 2%
