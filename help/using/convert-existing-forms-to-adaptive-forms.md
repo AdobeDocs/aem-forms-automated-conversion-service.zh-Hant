@@ -1,27 +1,28 @@
 ---
 title: 將PDF forms轉換為最適化表單
 seo-title: Convert PDF forms to adaptive forms
-description: 執行Automated forms conversion服務將PDF forms轉換為最適化表單
-seo-description: Run the Automated Forms Conversion service to convert PDF forms to adaptive forms
+description: 執行Automated forms conversion服務(AFCS)將PDF forms轉換為最適化表單
+seo-description: Run the Automated Forms Conversion service (AFCS) to convert PDF forms to adaptive forms
 contentOwner: khsingh
 topic-tags: forms
 feature: Adaptive Forms, Foundation Components
-source-git-commit: 444cc37ec6fa2af2d8d2952efd18368a5725e881
+exl-id: 415e05b5-5a90-490c-bf7c-d3365ce95e24
+source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
 workflow-type: tm+mt
-source-wordcount: '1612'
+source-wordcount: '1616'
 ht-degree: 6%
 
 ---
 
 # 將PDF forms轉換為最適化表單 {#convert-print-forms-to-adaptive-forms}
 
-AEM FormsAutomated forms conversion服務採用Adobe Sensei技術，可自動將您的PDF forms轉換為適合裝置的回應式表單。 無論您是使用非互動式PDF forms、Acro Forms或XFA型PDF forms，Automated forms conversion服務皆可輕鬆將這些表單轉換為最適化表單。 如需功能、轉換工作流程和上線資訊的詳細資訊，請參閱 [automated forms conversion](introduction.md) 服務。
+AEM FormsAutomated forms conversion服務(AFCS)採用Adobe Sensei技術，可自動將PDF forms轉換為適合裝置的回應式最適化表單。 無論您是使用非互動式PDF forms、Acro Forms或XFA型PDF forms，Automated forms conversion服務(AFCS)均可輕鬆將這些表單轉換為最適化表單。 如需功能、轉換工作流程和上線資訊的詳細資訊，請參閱 [automated forms conversion](introduction.md) 服務。
 
-## 先決條件 {#pre-requisites}
+## 必要條件  {#pre-requisites}
 
 * [**設定轉換服務**](configure-service.md)
 
-* **準備 [範本](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html) 要套用至轉換後的表單：** 使用範本可讓您將一致的品牌套用至所有最適化表單。 此外，Automated forms conversion服務不會擷取並使用來源PDF檔案的頁首與頁尾。 您可以使用最適化表單範本來指定頁首與頁尾。 範本中指定的頁首和頁尾會在轉換期間套用至最適化表單。 當您為範本建立資料夾時，請選取 **[!UICONTROL Browse configurations]** 選項供所有人使用。
+* **準備 [範本](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html) 要套用至轉換後的表單：** 使用範本可讓您將一致的品牌套用至所有最適化表單。 此外，Automated forms conversion服務(AFCS)不會擷取並使用來源PDF檔案的頁首與頁尾。 您可以使用最適化表單範本來指定頁首與頁尾。 範本中指定的頁首和頁尾會在轉換期間套用至最適化表單。 當您為範本建立資料夾時，請選取 **[!UICONTROL Browse configurations]** 選項供所有人使用。
 
 * **準備 [主題](https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html) 要套用至轉換後的表單：** 使用主題可讓您將一致的樣式套用至組織的所有最適化表單。
 

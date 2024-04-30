@@ -1,6 +1,6 @@
 ---
 title: 檢閱並修正轉換後的表單
-description: 檢閱並修正由Automated forms conversion服務轉換的最適化表單。
+description: 檢閱並修正由Automated forms conversion服務(AFCS)轉換的最適化表單。
 solution: Experience Manager Forms
 feature: Adaptive Forms, Foundation Components
 topic: Administration
@@ -8,16 +8,16 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 64330fa2-aa9d-4ba4-96df-b75deed3e693
-source-git-commit: 919886cda2ec50ddb9b403cbb0e92fec2821c10e
+source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
 workflow-type: tm+mt
-source-wordcount: '2510'
+source-wordcount: '2512'
 ht-degree: 0%
 
 ---
 
 # 檢閱並修正轉換後的表單{#review-and-correct-converted-forms}
 
-AEM FormsAutomated forms conversion服務會識別輸入PDF檔案的欄位、內容和版面，並將PDF檔案轉換為最適化表單。 輸出調適型表單可能有一些欄位遺失或轉換不正確。 您可以使用檢閱和修正編輯器來改善已識別的欄位，並重新產生最適化表單，使輸出更接近所需的體驗。 第一次轉換後，您可以在編輯器中開啟輸入PDF檔案，以：
+AEM FormsAutomated forms conversion服務(AFCS)可識別輸入PDF檔案的欄位、內容和版面，並將PDF檔案轉換為最適化表單。 輸出調適型表單可能有一些欄位遺失或轉換不正確。 您可以使用檢閱和修正編輯器來改善已識別的欄位，並重新產生最適化表單，使輸出更接近所需的體驗。 第一次轉換後，您可以在編輯器中開啟輸入PDF檔案，以：
 
 * 檢視轉換期間識別的所有欄位和內容
 * 識別轉換期間遺漏的欄位和內容

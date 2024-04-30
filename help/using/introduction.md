@@ -1,5 +1,5 @@
 ---
-title: automated forms conversion服務簡介
+title: automated forms conversion服務(AFCS)簡介
 description: 將列印表單加速轉換為最適化表單
 solution: Experience Manager Forms
 feature: Adaptive Forms, Foundation Components
@@ -8,16 +8,16 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: edabeac8-cd66-48ca-a99f-9643a1c184cf
-source-git-commit: 919886cda2ec50ddb9b403cbb0e92fec2821c10e
+source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
 workflow-type: tm+mt
-source-wordcount: '703'
-ht-degree: 64%
+source-wordcount: '711'
+ht-degree: 58%
 
 ---
 
-# 簡介 {#introduction-to-automated-forms-conversion-service}
+# automated forms conversion服務(AFCS) {#introduction-to-automated-forms-conversion-service}
 
-「自動表單轉換」服務可透過將 PDF 表單自動轉換為最適化表單，協助加速資料擷取體驗的數位化和現代化。 這項由 Adobe Sensei 支援的服務會將您的 PDF 表單自動轉換為適合裝置、回應式且基於 HTML5 的最適化表單。 妥善利用現有的 PDF Forms 和 XFA 功能，該服務還可以在轉換過程中將適當的驗證、樣式和佈局應用於最適化表單欄位。 此服務的好處：
+automated forms conversion服務(AFCS)可將PDF forms自動轉換為最適化表單，協助加速資料擷取體驗的數位化和現代化。 這項由 Adobe Sensei 支援的服務會將您的 PDF 表單自動轉換為適合裝置、回應式且基於 HTML5 的最適化表單。 妥善利用現有的 PDF Forms 和 XFA 功能，該服務還可以在轉換過程中將適當的驗證、樣式和佈局應用於最適化表單欄位。 此服務的好處：
 
 * 無須手動將列印表單轉換為最適化表單
 * 在轉換過程中應用模式和適當的驗證
@@ -43,13 +43,13 @@ Adobe 為您的組織啟用存取權限，並向您指定的組織管理員提�
 
 ## 轉換工作流程  {#conversion-workflow}
 
-自動表單轉換服務在 Adobe Cloud 上運行。 您將 AEM 執行個體連接到服務，並將表單上傳到 AEM 執行個體後，即可開始轉換。 完整的轉換過程如下所列：
+automated forms conversion服務(AFCS)會在Adobe雲端上執行。 您將 AEM 執行個體連接到服務，並將表單上傳到 AEM 執行個體後，即可開始轉換。 完整的轉換過程如下所列：
 
 ![工作流程](assets/conversion-workflow.png)
 
 ### 1.設定環境 {#set-up-the-environment}
 
-自動表單轉換服務在 Adobe Cloud 上運行。 [設定您組織的 Adobe I/O 帳戶，並將您本端的 AEM 執行個體連接](configure-service.md)至 Adobe Cloud 上運行的轉換服務。
+automated forms conversion服務(AFCS)會在Adobe雲端上執行。 [設定您組織的 Adobe I/O 帳戶，並將您本端的 AEM 執行個體連接](configure-service.md)至 Adobe Cloud 上運行的轉換服務。
 
 ### 2.將PDF forms轉換為最適化表單 {#use-the-conversion-service}
 
