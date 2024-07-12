@@ -25,7 +25,7 @@ automated forms conversion服務(AFCS)可將PDF forms自動轉換為最適化表
 * 將常見欄位分組為可重複使用的表單片段
 * 在轉換過程中啟用 Adobe Analytics
 
-![這相當容易。 您提供源表單，接下來交給我們所有內容。 我們為您提供美觀的最適化表單。 您可以隨時修改成果以致完美。 ](assets/pdf-to-adaptive-form-gitx50.gif)
+![這相當容易。 您提供源表單，接下來交給我們所有內容。 我們為您提供美觀的最適化表單。 您可以隨時修改成果以致完美。](assets/pdf-to-adaptive-form-gitx50.gif)
 
 ## 上線 {#onboarding}
 
@@ -39,7 +39,7 @@ Adobe 為您的組織啟用存取權限，並向您指定的組織管理員提�
 
 此服務也支援啟用Adobe Sign的PDF forms。 如果源 PDF 表單有 Adobe Sign 文字標記，則此服務會保留轉換期間所有 Adobe Sign 的相關資訊，並將源 PDF 中顯示的簽署者資訊與對應的最適化表單欄位建立關聯。 此功能僅適用於 AcroForms。
 
-此服務可將英文、法文、德文、西班牙文、義大利文和葡萄牙文的表單轉換為最適化表單。 您也可以使用將生成的最適化表單翻譯成另一種語言 [AEM翻譯工作流程](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
+此服務可將英文、法文、德文、西班牙文、義大利文和葡萄牙文的表單轉換為最適化表單。 您也可以使用[AEM翻譯工作流程](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)將產生的自適應表單翻譯成其他語言。
 
 ## 轉換工作流程  {#conversion-workflow}
 

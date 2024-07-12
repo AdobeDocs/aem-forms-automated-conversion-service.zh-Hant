@@ -1,6 +1,6 @@
 ---
 title: 最佳實務和考量事項
-description: 不要發佈
+description: 不要PUBLISH
 seo-description: DO NOT PUBLISH
 page-status-flag: never-activated
 uuid: c2821264-39e2-44f8-b234-835c46f33fd5
@@ -26,7 +26,7 @@ AEM Forms自動轉換服務會將PDF表單轉換為最適化表單。 此服務�
 
 automated forms conversion服務(AFCS)已接受大量表單的訓練。 它可輕鬆識別來源表單中的欄位並產生調適型表單。 不過，PDF forms中有些欄位和樣式雖然肉眼很容易看見，但服務上卻難以理解。 此服務可將與適用欄位型別或面板不同的指派給某些欄位或樣式。 以下列出所有此類欄位和樣式模式。
 
-服務會持續從來源資料學習，開始識別並指派正確的欄位或面板給這些模式。 目前，您可以使用 [檢閱並修正](review-correct-ui-edited.md) 編輯器以修正此類問題。 在開始修正問題或進一步閱讀之前，請先熟悉 [最適化表單元件](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html).
+服務會持續從來源資料學習，開始識別並指派正確的欄位或面板給這些模式。 目前，您可以使用[檢閱並修正](review-correct-ui-edited.md)編輯器來修正此類問題。 在開始修正問題或進一步閱讀之前，請先熟悉[最適化表單元件](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html)。
 
 ## 一般 {#general}
 

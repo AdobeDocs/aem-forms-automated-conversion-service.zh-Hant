@@ -22,13 +22,13 @@ ht-degree: 1%
 ## 已知問題 {#known-issues}
 
 * 包含轉換表單的資料夾總共不應超過15個表單和50頁。 來源資料夾的大小不應超過10 MB。 請勿在來源資料夾中建立子資料夾。
-* 某些表單物件很容易被肉眼看見，但是 [服務很難識別](styles-and-pattern-considerations-and-best-practices.md). 使用 [檢閱並修正編輯器](review-correct-ui-edited.md) 以識別及轉換此類表單物件。
+* 某些表單物件很容易被人看見，但[對於服務](styles-and-pattern-considerations-and-best-practices.md)很難識別。 使用[檢閱並修正編輯器](review-correct-ui-edited.md)來識別並轉換這類表單物件。
 * 檢閱並修正編輯器：
 
    * 沒有復原動作。 「儲存」按鈕會永久儲存變更。
    * 不支援XFA型表單的可重複面板。
    * 如果您使用「稽核並修正」編輯器修改表格中的清單，列寬不會自動調整，且文字可能會溢位至表格的下一列。
-   * 此 **[!UICONTROL Auto-detect multi-column layout from input forms]** 功能無法用於檢閱和修正編輯器和表單片段。
+   * **[!UICONTROL Auto-detect multi-column layout from input forms]**&#x200B;功能不適用於檢閱和修正編輯器和表單片段。
    * 使用「稽核並修正」編輯器建立的手寫簽名無法載入已發佈的調適型表單。
 
 
@@ -37,9 +37,9 @@ ht-degree: 1%
    * 不支援XFA指令碼。 例如，自動為下拉式元件產生值的指令碼。
    * 中繼模型不適用於選擇群組
    * 無法識別含有單一字元的選擇群組選項
-   * 當來原始檔是動態XFA (.XDP)並且它是 [在最適化表單中定義XFA屬性的行為](https://helpx.adobe.com/experience-manager/6-5/forms/using/xfa-api-supported-in-adaptive-form.html#supportedxfaelementsandtheirmappinginadaptiveformsbr)，則不會遵循來原始檔的presence屬性。 例如，來原始檔中的欄位標籤為隱藏，且指令碼使欄位可見，則在輸出最適化表單中該欄位保持可見。
+   * 當來原始檔是動態XFA (.XDP)，而且它[以最適化表單](https://helpx.adobe.com/experience-manager/6-5/forms/using/xfa-api-supported-in-adaptive-form.html#supportedxfaelementsandtheirmappinginadaptiveformsbr)定義XFA屬性的行為時，將不會遵循來原始檔的存在性屬性。 例如，來原始檔中的欄位標籤為隱藏，且指令碼使欄位可見，則在輸出最適化表單中該欄位保持可見。
 
-* 當您使用 **使用輸入AcroForm作為所產生的最適化表單的記錄檔案(DoR)** 選項，請考量下列事項：
+* 當您使用&#x200B;**使用輸入AcroForm作為產生的最適化表單的記錄檔案(DoR)**&#x200B;選項時，請考慮下列事項：
 
 <table>
     <tr>
@@ -76,7 +76,7 @@ ht-degree: 1%
 * 不支援超過15頁的PDF forms。
 * 加密的、受密碼保護及安全檔案不會轉換。 執行轉換前，請先移除加密或密碼。
 * 不支援複雜表格，例如無框表格、巢狀表格和具有預留位置值的表格。 使用自適應表單編輯器在轉換後新增或修改複雜表格。 僅支援具有空白欄位、適當標題和清除邊界的簡單表格。
-* 此服務僅將英文、法文、德文、西班牙文、義大利文和葡萄牙文的表單轉換為最適化表單。 您可以使用將已轉換的最適化表單翻譯成另一種語言 [AEM翻譯工作流程](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html).
+* 此服務僅將英文、法文、德文、西班牙文、義大利文和葡萄牙文的表單轉換為最適化表單。 您可以使用[AEM翻譯工作流程](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)將轉換後的適用性表單翻譯成其他語言。
 * AEM 6.4 Forms不支援自動偵測輸入表單的多欄配置。
 * 使用來源PDF表單中的顏色編碼的資訊未轉存至最適化表單。
 * 來源PDF表單的顏色未延續至最適化表單主題。
