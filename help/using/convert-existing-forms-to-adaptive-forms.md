@@ -1,28 +1,25 @@
 ---
 title: 將PDF forms轉換為最適化表單
-seo-title: Convert PDF forms to adaptive forms
-description: 執行Automated forms conversion服務(AFCS)將PDF forms轉換為最適化表單
-seo-description: Run the Automated Forms Conversion service (AFCS) to convert PDF forms to adaptive forms
-contentOwner: khsingh
-topic-tags: forms
+description: 執行自動錶單轉換服務(AFCS)，將PDF forms轉換為最適化表單
 feature: Adaptive Forms, Foundation Components
-exl-id: 415e05b5-5a90-490c-bf7c-d3365ce95e24
-source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
+role: Admin, Developer
+level: Beginner, Intermediate
+source-git-commit: 02e808d6d777078d148f073835e24fd20712eade
 workflow-type: tm+mt
-source-wordcount: '1616'
-ht-degree: 6%
+source-wordcount: '1783'
+ht-degree: 5%
 
 ---
 
 # 將PDF forms轉換為最適化表單 {#convert-print-forms-to-adaptive-forms}
 
-AEM FormsAutomated forms conversion服務(AFCS)採用Adobe Sensei技術，可自動將PDF forms轉換為適合裝置的回應式最適化表單。 無論您是使用非互動式PDF forms、Acro Forms或XFA型PDF forms，Automated forms conversion服務(AFCS)均可輕鬆將這些表單轉換為最適化表單。 如需功能、轉換工作流程和上線資訊的相關資訊，請參閱[Automated forms conversion](introduction.md)服務。
+AEM Forms Automated Forms Conversion服務(AFCS)採用Adobe Sensei技術，可自動將您的PDF forms轉換為適合裝置的回應式調適型表單<!--foundation and [core components](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction)-->。 無論您使用非互動式PDF forms、Acro Forms或XFA型PDF forms，自動錶單轉換服務(AFCS)可輕鬆將這些表單轉換為最適化表單。 如需功能、轉換工作流程和上線資訊的相關資訊，請參閱[自動錶單轉換](introduction.md)服務。
 
 ## 必要條件 {#pre-requisites}
 
 * [**設定轉換服務**](configure-service.md)
 
-* **準備要套用至轉換表單的[範本](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html)：**&#x200B;使用範本可讓您將一致的品牌套用至所有最適化表單。 此外，Automated forms conversion服務(AFCS)不會擷取並使用來源PDF檔案的頁首與頁尾。 您可以使用最適化表單範本來指定頁首與頁尾。 範本中指定的頁首和頁尾會在轉換期間套用至最適化表單。 當您為範本建立資料夾時，請為每個人選取&#x200B;**[!UICONTROL Browse configurations]**&#x200B;選項。
+* **準備要套用至轉換表單的[範本](https://helpx.adobe.com/experience-manager/6-5/forms/using/template-editor.html)：**&#x200B;使用範本可讓您將一致的品牌套用至所有最適化表單。 此外，自動錶單轉換服務(AFCS)不會擷取並使用來源PDF檔案的頁首與頁尾。 您可以使用最適化表單範本來指定頁首與頁尾。 範本中指定的頁首和頁尾會在轉換期間套用至最適化表單。 當您為範本建立資料夾時，請為每個人選取&#x200B;**[!UICONTROL Browse configurations]**&#x200B;選項。
 
 * **準備要套用至轉換表單的[主題](https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html)：**&#x200B;使用主題可讓您將一致的樣式套用至組織的所有最適化表單。
 
@@ -38,20 +35,19 @@ AEM FormsAutomated forms conversion服務(AFCS)採用Adobe Sensei技術，可自
 
 ### 將PDF forms上傳至您的AEM Forms伺服器 {#upload-pdf-forms-to-your-aem-forms-server}
 
-轉換服務會將AEM Forms例項上可用的PDF forms轉換為最適化表單。 您可以一次上傳所有PDF forms，也可以視需要分階段上傳。 在上傳表單前，請參閱以下提醒：
+轉換服務會將您AEM Forms例項上可用的PDF forms轉換為最適化表單。 您可以一次上傳所有PDF forms，也可以視需要分階段上傳。 在上傳表單前，請參閱以下提醒：
 
 * 將資料夾中的表單數保持在15個以內，將資料夾中的總頁數保持在50個以內。
 * 將資料夾大小保持在10 MB以下。 請勿將表單放在子資料夾中。
 * 將表單的頁數保持在15頁以下。
 * 請勿上傳受保護的表單。 此服務無法轉換受密碼保護和安全的表單。
 * 請勿上傳檔案名稱中帶有空格的來源表單。 上傳表單前，請先移除檔案名稱中的空格。
-* 請勿上傳 [PDF Portfolio](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html)。 此服務無法將PDFPortfolio轉換為最適化表單。
+* 請勿上傳 [PDF Portfolio](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html)。 此服務無法將PDF Portfolio轉換為最適化表單。
 * 閱讀[已知問題](known-issues.md)和[最佳實務和考量](styles-and-pattern-considerations-and-best-practices.md)區段，並對表單進行建議的變更。
 
 執行以下步驟，上傳要轉換至AEM Forms執行個體資料夾的表單：
 
 1. 登入AEM Forms執行個體。
-
 1. 點選&#x200B;**[!UICONTROL Adobe Experience Manager]** ![](assets/adobeexperiencemanager.png) > **[!UICONTROL Navigation]** ![](assets/compass.png) > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**。
 1. 點選&#x200B;**[!UICONTROL Create]**> **[!UICONTROL Folder]**。 指定資料夾的&#x200B;**標題**&#x200B;和&#x200B;**名稱**。 點選 **[!UICONTROL Create]**。資料夾已建立。
 1. 點選以開啟新建立的資料夾。
@@ -62,9 +58,24 @@ AEM FormsAutomated forms conversion服務(AFCS)採用Adobe Sensei技術，可自
 上傳表單並設定服務後，請執行以下步驟以開始轉換：
 
 1. 在您的AEM Forms執行個體上，點選&#x200B;**[!UICONTROL Adobe Experience Manager]** ![轉換設定對話方塊](assets/adobeexperiencemanager.png) > **[!UICONTROL Navigation]** ![](assets/compass.png) > **[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]**。
-1. 選取包含PDF forms（要轉換的表單）的表單或資料夾，然後點選&#x200B;**[!UICONTROL Start Automated Conversion]**。 **[!UICONTROL Conversion Settings]**&#x200B;對話方塊隨即顯示。
+1. 選取包含PDF forms （要轉換的表單）的表單或資料夾，然後點選&#x200B;**[!UICONTROL Start Automated Conversion]**。 **[!UICONTROL Conversion Settings]**&#x200B;對話方塊隨即顯示。
 
    ![指定組態](assets/conversion-settings-dialog.png)
+
+   **將PDF轉換為最適化表單核心元件**
+
+   <span class="preview">此功能在早期採用者計畫之下。 您可以從您的官方電子郵件ID寫信到aem-forms-ea@adobe.com ，以加入率先採用者計畫並請求存取該功能。</span>
+
+   將PDF forms轉換為以基礎為基礎的表單時，需要上述轉換設定。 若要將PDF表單轉換為核心元件式的最適化表單：
+
+   1. 請確保已在您的AEM Forms執行個體上啟用[核心元件](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction)。 如果未啟用，您可以[在您的AEM 6.5](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components)或[Cloud Service環境](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/enable-adaptive-forms-core-components)上啟用核心元件。
+   1. 選取以[核心元件為基礎的最適化表單範本和主題](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components)，如下圖所示：
+      ![選取自適應表單範本](assets/select-af-template-1.png)。
+   1. 點選&#x200B;**[!UICONTROL Start Conversion]**&#x200B;以將PDF轉換為以核心元件為基礎的表單。
+   >[!NOTE]
+   > * 資料繫結或資料模型結構描述等屬性不適用於核心元件式最適化表單，但基礎元件可使用相同屬性。
+   > * [檢閱並修正轉換後的表單](#review-and-correct-the-converted-forms)不適用於核心元件型表單。
+
 
 1. 在[轉換設定]對話方塊的&#x200B;**[!UICONTROL Basic]**&#x200B;標籤中：
 
@@ -86,23 +97,23 @@ AEM FormsAutomated forms conversion服務(AFCS)採用Adobe Sensei技術，可自
 
 1. 在「轉換設定」對話方塊的&#x200B;**[!UICONTROL Additional]**&#x200B;標籤中，
    * 選取&#x200B;**[!UICONTROL Extract fragment from adaptive forms]**&#x200B;選項，讓轉換服務識別、擷取及下載轉換表單的表單片段。 當您選取&#x200B;**[!UICONTROL Extract fragment from adaptive forms]**&#x200B;選項時，會啟用用於指定儲存擷取之表單片段和對應表單片段結構描述的路徑的選項。
-   * 如果您有一些現有的JSON結構描述型和非結構描述型最適化表單片段，而且您打算在自動產生的最適化表單中使用這些片段，請指定&#x200B;**[!UICONTROL existing adaptive form fragments]**&#x200B;的位置。 轉換服務會將可用的JSON結構描述型和無結構描述的最適化表單片段與輸入PDF forms進行比對(僅限非互動式PDF forms)，如果有相符專案，對應的最適化表單中就會使用相符的自適應表單片段。
+   * 如果您有一些現有的JSON結構描述型和非結構描述型最適化表單片段，而且您打算在自動產生的最適化表單中使用這些片段，請指定&#x200B;**[!UICONTROL existing adaptive form fragments]**&#x200B;的位置。 轉換服務會將可用的JSON結構描述型和無結構描述的最適化表單片段與輸入PDF forms (僅限非互動式PDF forms)進行比對，如果有相符專案，對應的最適化表單中就會使用相符的自適應表單片段。
 
    >[!NOTE]
    >
    >
    > * 您一次只能使用&#x200B;**[!UICONTROL  Extract Fragment]**&#x200B;或&#x200B;**[!UICONTROL Use existing adaptive form fragments]**&#x200B;選項。 您無法同時使用這兩個選項。
-   > * 您只能將&#x200B;**[!UICONTROL Use existing adaptive form fragments]**&#x200B;選項用於非互動式PDF forms。 尚未支援其他表單型別。
+   > * **[!UICONTROL Use existing adaptive form fragments]**&#x200B;選項只能與非互動式PDF forms搭配使用。 尚未支援其他表單型別。
    > * 您只能使用未繫結的片段或透過自動轉換服務繫結至JSON結構描述的片段。 請勿使用XFA片段。 不支援XFA片段。
    >
 
-   * 選取&#x200B;**[!UICONTROL Auto-detect multi-column layout of input forms]**&#x200B;選項，以保留大型熒幕（如桌上型電腦和筆記型電腦）的來源表單版面配置。 選項有助於保留來源表單的多欄版面配置。 例如，當來源PDF有兩個欄的版面配置時，該服務會產生輸出最適化表單，有兩個欄的版面配置適用於大熒幕顯示器，而單欄的版面配置適用於小熒幕裝置，例如行動電話。 此功能在資料來源結構描述結構方面有一些已知問題。 如需詳細資訊，請參閱[已知問題](known-issues.md)文章。
+   * 選取&#x200B;**[!UICONTROL Auto-detect multi-column layout of input forms]**&#x200B;選項，以保留大型熒幕（如桌上型電腦和筆記型電腦）的來源表單版面配置。 選項有助於保留來源表單的多欄版面配置。 例如，當來源PDF有兩個欄的版面配置時，該服務會產生輸出回應式表單，其中有兩個欄的版面配置適用於大熒幕顯示器，而單欄的版面配置適用於小熒幕裝置，例如行動電話。 此功能在資料來源結構描述結構方面有一些已知問題。 如需詳細資訊，請參閱[已知問題](known-issues.md)文章。
    * 在預設狀態中，此服務會為 PDF 表單的每一頁分別建立頂層面板。 現在，您可以使用&#x200B;**[!UICONTROL Auto-detect logical sections]**&#x200B;選項來不建立頁面層級面板（以頁碼為基礎的面板），而僅建立邏輯面板。 這個選項還可將不屬於任何具有前置邏輯區段之區段的欄位，與橫跨至兩個相鄰頁面的邏輯區段的欄位合併成一個邏輯區段。 例如，如果邏輯區段中有些欄位位於第一頁底部，有些位於第二頁頂部，則所有該欄位都會合併成一個邏輯區段。
 
      >[!NOTE]
      > 您需要聯結器封裝1.1.38或更高版本才能使用&#x200B;**[!UICONTROL Auto-detect logical sections]**&#x200B;功能。
 
-* (僅限AEM Formsas a Cloud Service) [自動將區段轉換為片段]選項適用於超過15頁的PDF forms。 這會將偵測到的頂層區段轉換為片段。 它也會啟用所有已建立片段的延遲載入。 它有助於提高轉換表單的渲染速度，並使在自適應表單編輯器中載入大型表單變得更容易。
+* (僅限AEM Forms as a Cloud Service) [自動將區段轉換為片段]選項適用於超過15頁的PDF forms。 這會將偵測到的頂層區段轉換為片段。 它也會啟用所有已建立片段的延遲載入。 它有助於提高轉換表單的渲染速度，並使在自適應表單編輯器中載入大型表單變得更容易。
 
   >[!NOTE]
   > 使用「自動將區段轉換為片段」選項時，請勿使用回應式版面範本。
@@ -118,7 +129,7 @@ AEM FormsAutomated forms conversion服務(AFCS)採用Adobe Sensei技術，可自
    * 成功轉換後，轉換的最適化表單和相關結構描述會下載到轉換對話方塊的&#x200B;**[!UICONTROL Basic]**&#x200B;索引標籤中指定的路徑。 只有在開始轉換前選取擷取片段選項時，才會下載表單片段和對應的結構描述。
    * 在轉換失敗時，如果所有輸入表單都無法轉換，則會顯示&#x200B;**[!UICONTROL Conversion Failed]**&#x200B;訊息，或者如果只有少數幾個輸入表單無法轉換，則會顯示&#x200B;**[!UICONTROL Partially Failed]**&#x200B;訊息。 已在[設定的電子郵件地址](configure-service.md#configureemailnotification)上傳送狀態電子郵件，並會將錯誤記錄到error.log檔案中。
 
-   如果您將XFA型PDF表單轉換為最適化表單，轉換服務會自動將PDF表單與轉換後的最適化表單建立關聯，作為記錄檔案範本。 轉換後，您可以開啟最適化表單屬性，以在&#x200B;**[!UICONTROL Form Model]**&#x200B;索引標籤的&#x200B;**[!UICONTROL Document of Record Template Configuration]**&#x200B;區段中檢視記錄檔案範本。</br>
+   如果您將XFA型PDF表單轉換為最適化表單，轉換服務會自動將PDF表單與已轉換的最適化表單建立關聯，作為記錄檔案範本。 轉換後，您可以開啟最適化表單屬性，以在&#x200B;**[!UICONTROL Form Model]**&#x200B;索引標籤的&#x200B;**[!UICONTROL Document of Record Template Configuration]**&#x200B;區段中檢視記錄檔案範本。</br>
 
    只有當您啟用&#x200B;**[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Automated Forms Conversion Configuration]** > **[!UICONTROL Properties of selected configuration]** > **[!UICONTROL Advanced]** > **[!UICONTROL Generate Document of Record]**&#x200B;選項時，轉換服務才會自動將PDF表單上傳到已轉換的最適化表單作為記錄檔案範本。
 

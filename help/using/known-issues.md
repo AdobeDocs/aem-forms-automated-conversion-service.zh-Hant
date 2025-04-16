@@ -1,6 +1,6 @@
 ---
 title: 已知問題
-description: automated forms conversion服務(AFCS)的已知問題和限制
+description: 自動錶單轉換服務(AFCS)的已知問題和限制
 solution: Experience Manager Forms
 feature: Adaptive Forms
 topic: Administration
@@ -8,16 +8,16 @@ topic-tags: introduction
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 35f59e02-e38e-473a-94c8-123e0a85ac8e
-source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
+source-git-commit: a2472d5a1a66ffada7be485415f50f32643e03fc
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '821'
 ht-degree: 1%
 
 ---
 
 # 已知問題和限制 {#known-issues-limitations}
 
-開始使用AEM FormsAutomated forms conversion服務(AFCS)之前，請檢閱下列已知問題和限制：
+開始使用AEM Forms自動化表單轉換服務(AFCS)之前，請檢閱下列已知問題和限制：
 
 ## 已知問題 {#known-issues}
 
@@ -70,14 +70,16 @@ ht-degree: 1%
 
 ## 限制 {#limitations}
 
-* 不支援具有複雜動態版面的PDF forms、具有虛線外框的欄位或填滿的欄位。
+* 不支援具有複雜動態版面的PDF forms、具有虛線外框的欄位或實心欄位。
 * 無法識別影像內的影像和文字。 手動將影像新增至轉換後的表單。
 * 不支援圖稿XDP檔案。
-* 不支援超過15頁的PDF forms。
+* 不支援大於15頁的PDF forms。
 * 加密的、受密碼保護及安全檔案不會轉換。 執行轉換前，請先移除加密或密碼。
 * 不支援複雜表格，例如無框表格、巢狀表格和具有預留位置值的表格。 使用自適應表單編輯器在轉換後新增或修改複雜表格。 僅支援具有空白欄位、適當標題和清除邊界的簡單表格。
 * 此服務僅將英文、法文、德文、西班牙文、義大利文和葡萄牙文的表單轉換為最適化表單。 您可以使用[AEM翻譯工作流程](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)將轉換後的適用性表單翻譯成其他語言。
 * AEM 6.4 Forms不支援自動偵測輸入表單的多欄配置。
 * 使用來源PDF表單中的顏色編碼的資訊未轉存至最適化表單。
 * 來源PDF表單的顏色未延續至最適化表單主題。
-* 會將彩色PDF forms視為灰階表單，並據此偵測欄位。
+* 彩色PDF forms會被視為灰階表單，而系統也會據此偵測欄位。
+* 資料繫結或資料模型結構描述等屬性無法用於核心元件型最適化表單。
+* 檢閱並修正核心元件式表單無法使用轉換後的表單。
