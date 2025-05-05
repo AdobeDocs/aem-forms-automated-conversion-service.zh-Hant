@@ -63,7 +63,7 @@ AEM FormsAutomated forms conversion服務(AFCS)可識別輸入PDF檔案的欄位
 
 ### 開始之前 {#before-you-start}
 
-* 檢閱和修正編輯器不支援片段。 請勿使用編輯器來檢閱在轉換期間啟用了&#x200B;**擷取片段**&#x200B;選項的轉換。 您可以針對這類轉換使用[最適化表單編輯器](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html)。
+* 檢閱和修正編輯器不支援片段。 請勿使用編輯器來檢閱在轉換期間啟用了&#x200B;**擷取片段**&#x200B;選項的轉換。 您可以針對這類轉換使用[最適化表單編輯器](https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/introduction-forms-authoring.html)。
 
 * 「稽核並修正」編輯器沒有復原動作。 僅使用「儲存」按鈕來永久儲存變更。
 
@@ -187,7 +187,7 @@ AEM FormsAutomated forms conversion服務(AFCS)可識別輸入PDF檔案的欄位
 
 在「稽核並修正」編輯器中完成所有必要的變更後，您可以重新傳送表單以進行轉換。 若要傳送表單以進行轉換，請點選&#x200B;**[!UICONTROL Save & Convert]**。 **[!UICONTROL Sent for conversion label]**&#x200B;已套用至包含來原始檔的資料夾，且更新的來源表單已上傳至Adobe I/O上執行的轉換服務。
 
-根據表單的複雜性，轉換服務可能需要一些時間才能轉換表單。 轉換完成後，轉換後的自適應表單和相關資產會下載到您的電腦。 轉換完成後，您可以在編輯器中檢閱表單，並視需要在[最適化表單編輯器](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html)中開啟最適化表單，以取得最終修正集。
+根據表單的複雜性，轉換服務可能需要一些時間才能轉換表單。 轉換完成後，轉換後的自適應表單和相關資產會下載到您的電腦。 轉換完成後，您可以在編輯器中檢閱表單，並視需要在[最適化表單編輯器](https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/introduction-forms-authoring.html)中開啟最適化表單，以取得最終修正集。
 
 如果您在更新最適化表單編輯器中的表單後，重新傳送表單以供轉換，則最適化表單中所做的所有變更都會遺失。 只有在成功轉換之後，您才能在檢閱和修正編輯器中開啟表單。
 

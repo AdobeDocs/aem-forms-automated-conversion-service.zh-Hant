@@ -39,7 +39,7 @@ Adobe 為您的組織啟用存取權限，並向您指定的組織管理員提�
 
 此服務也支援啟用Adobe Sign的PDF forms。 如果源 PDF 表單有 Adobe Sign 文字標記，則此服務會保留轉換期間所有 Adobe Sign 的相關資訊，並將源 PDF 中顯示的簽署者資訊與對應的最適化表單欄位建立關聯。 此功能僅適用於 AcroForms。
 
-此服務可將英文、法文、德文、西班牙文、義大利文和葡萄牙文的表單轉換為最適化表單。 您也可以使用[AEM翻譯工作流程](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)將產生的自適應表單翻譯成其他語言。
+此服務可將英文、法文、德文、西班牙文、義大利文和葡萄牙文的表單轉換為最適化表單。 您也可以使用[AEM翻譯工作流程](https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)將產生的自適應表單翻譯成其他語言。
 
 ## 轉換工作流程  {#conversion-workflow}
 
@@ -58,7 +58,7 @@ automated forms conversion服務(AFCS)會在Adobe雲端上執行。 [設定您�
 * 請勿上傳受保護的表單。 此服務無法轉換受密碼保護和加密的表單。
 * 請勿上傳英文、法文、德文、西班牙文、義大利文和葡萄牙文以外任何語言的掃描、彩色、已填寫表單和表單。 此服務不支援這些表單。
 * 請勿上傳檔案名中帶有空格的 PDF 表單。
-* 請勿上傳 [PDF Portfolio](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html)。 此服務無法將PDFPortfolio轉換為最適化表單。
+* 請勿上傳 [PDF Portfolio](https://helpx.adobe.com/tw/acrobat/using/overview-pdf-portfolios.html)。 此服務無法將PDFPortfolio轉換為最適化表單。
 * 完成[最佳實務和考量](styles-and-pattern-considerations-and-best-practices.md)文章中描述的 PDF 表單的建議更改。
 * 閱讀[已知問題](known-issues.md)文章以避免犯錯。
 

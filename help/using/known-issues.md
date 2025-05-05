@@ -37,7 +37,7 @@ ht-degree: 1%
    * 不支援XFA指令碼。 例如，自動為下拉式元件產生值的指令碼。
    * 中繼模型不適用於選擇群組
    * 無法識別含有單一字元的選擇群組選項
-   * 當來原始檔是動態XFA (.XDP)，而且它[以最適化表單](https://helpx.adobe.com/experience-manager/6-5/forms/using/xfa-api-supported-in-adaptive-form.html#supportedxfaelementsandtheirmappinginadaptiveformsbr)定義XFA屬性的行為時，將不會遵循來原始檔的存在性屬性。 例如，來原始檔中的欄位標籤為隱藏，且指令碼使欄位可見，則在輸出最適化表單中該欄位保持可見。
+   * 當來原始檔是動態XFA (.XDP)，而且它[以最適化表單](https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/xfa-api-supported-in-adaptive-form.html#supportedxfaelementsandtheirmappinginadaptiveformsbr)定義XFA屬性的行為時，將不會遵循來原始檔的存在性屬性。 例如，來原始檔中的欄位標籤為隱藏，且指令碼使欄位可見，則在輸出最適化表單中該欄位保持可見。
 
 * 當您使用&#x200B;**使用輸入AcroForm作為產生的最適化表單的記錄檔案(DoR)**&#x200B;選項時，請考慮下列事項：
 
@@ -76,7 +76,7 @@ ht-degree: 1%
 * 不支援大於15頁的PDF forms。
 * 加密的、受密碼保護及安全檔案不會轉換。 執行轉換前，請先移除加密或密碼。
 * 不支援複雜表格，例如無框表格、巢狀表格和具有預留位置值的表格。 使用自適應表單編輯器在轉換後新增或修改複雜表格。 僅支援具有空白欄位、適當標題和清除邊界的簡單表格。
-* 此服務僅將英文、法文、德文、西班牙文、義大利文和葡萄牙文的表單轉換為最適化表單。 您可以使用[AEM翻譯工作流程](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)將轉換後的適用性表單翻譯成其他語言。
+* 此服務僅將英文、法文、德文、西班牙文、義大利文和葡萄牙文的表單轉換為最適化表單。 您可以使用[AEM翻譯工作流程](https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)將轉換後的適用性表單翻譯成其他語言。
 * AEM 6.4 Forms不支援自動偵測輸入表單的多欄配置。
 * 使用來源PDF表單中的顏色編碼的資訊未轉存至最適化表單。
 * 來源PDF表單的顏色未延續至最適化表單主題。
