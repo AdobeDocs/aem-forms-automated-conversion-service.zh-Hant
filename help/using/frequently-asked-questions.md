@@ -101,7 +101,7 @@ ht-degree: 3%
    <p>時間長短取決於輸入表單的大小和複雜性，以及請求數量。 此服務旨在大幅縮短實現價值的時間，將PDF forms轉換為最適化表單，且速度比手動表單轉換程式快得多。 </p> <br />
 
 1. **如果我遇到與RSA資料庫相關的錯誤，該怎麼辦？ 錯誤訊息類似於以下提及的訊息：** <br/>
-   `*ERROR* [0:0:0:0:0:0:0:1 [1565757652491] POST /content/dam/formsanddocuments/demo004.affBatchProcessor.html HTTP/1.1] org.apache.sling.engine.impl.SlingRequestProcessorImpl service: Uncaught Throwable java.lang.NoClassDefFoundError: Could not initialize class com.rsa.cryptoj.o.dl at com.rsa.jsafe.JSAFE_SecureRandom.getInstance(Unknown Source) at com.adobe.internal.pdfm.util.Util.appendRandomNumberToPrefix(Util.java: 169) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34] at com.adobe.internal.pdfm.logging.JobLog.&amp;lt;init&amp;gt;(JobLog.java:126) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34]` <br>
+   `*ERROR* [0:0:0:0:0:0:0:1 [1565757652491] POST /content/dam/formsanddocuments/demo004.affBatchProcessor.html HTTP/1.1] org.apache.sling.engine.impl.SlingRequestProcessorImpl service: Uncaught Throwable java.lang.NoClassDefFoundError: Could not initialize class com.rsa.cryptoj.o.dl at com.rsa.jsafe.JSAFE_SecureRandom.getInstance(Unknown Source) at com.adobe.internal.pdfm.util.Util.appendRandomNumberToPrefix(Util.java: 169) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34] at com.adobe.internal.pdfm.logging.JobLog.&lt;init&gt;(JobLog.java:126) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34]` <br>
 未針對RSA/BouncyCastle程式庫設定開機委派時，會發生上述錯誤。 執行以下步驟以解決問題：
    <p> </p>
 
@@ -109,6 +109,7 @@ ht-degree: 3%
    1. 將下列屬性新增至sling.properties檔案： <br/> `sling.bootdelegation.class.com.rsa.jsafe.provider.JsafeJCE=com.rsa.*`<br />  `sling.bootdelegation.class.org.bouncycastle.jce.provider.BouncyCastleProvider=org.bouncycastle.*`<br /> `sling.bootdelegation.xerces=org.apache.xerces.*`
    1. 儲存並關閉檔案。<br/>
    1. 啟動AEM執行個體。<br/>
+
    <br/>
 
 1. **如何自動變更最適化表單文字的大小寫？**

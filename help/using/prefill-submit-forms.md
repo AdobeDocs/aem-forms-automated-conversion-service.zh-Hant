@@ -103,7 +103,7 @@ ht-degree: 1%
 ## 必要條件 {#pre-requisites}
 
 * 設定[AEM作者執行個體](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html)
-* 在AEM編寫執行個體](configure-service.md)上設定[Automated forms conversion服務(AFCS)
+* 在AEM編寫執行個體[&#128279;](configure-service.md)上設定Automated forms conversion服務(AFCS)
 
 ## 最適化表單範例 {#sample-adaptive-form}
 
@@ -364,7 +364,7 @@ CREATE TABLE `applicant` (
 1. 點選&#x200B;**[!UICONTROL Form Model]**&#x200B;標籤，從&#x200B;**[!UICONTROL Select From]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL Schema]**，然後點選&#x200B;**[!UICONTROL Select Schema]**&#x200B;以上傳儲在本機檔案系統上的&#x200B;**loanapplication** XSD結構描述。 選取XSD結構描述的根元素，然後點選&#x200B;**[!UICONTROL Save & Close]**&#x200B;以儲存表單。
 1. 選取&#x200B;**範例貸款申請表單**&#x200B;並點選&#x200B;**[!UICONTROL Edit]**。
 1. 點選「申請人名稱」文字方塊，然後選取![設定圖示](assets/configure_icon.svg) （設定）。
-在「繫結參考」欄位中，選取**應徵者** > **名稱**，然後點選![完成圖示](assets/save_icon.svg)以儲存屬性。 同樣地，為&#x200B;**地址**、**電話號碼**、**電子郵件**、**職業**、**年薪（美元）**&#x200B;和&#x200B;**否，建立資料繫結。 具有XSD結構描述實體的相依家族成員**&#x200B;欄位。
+在「繫結參考」欄位中，選取&#x200B;**應徵者** > **名稱**，然後點選![完成圖示](assets/save_icon.svg)以儲存屬性。 同樣地，為&#x200B;**地址**、**電話號碼**、**電子郵件**、**職業**、**年薪（美元）**&#x200B;和&#x200B;**否，建立資料繫結。 具有XSD結構描述實體的相依家族成員**&#x200B;欄位。
 
 1. 再次選取&#x200B;**輸出**&#x200B;資料夾中可用的已轉換的&#x200B;**範例貸款申請表單**，然後選取&#x200B;**[!UICONTROL Preview]** > **[!UICONTROL Preview with Data]**。</br>
 

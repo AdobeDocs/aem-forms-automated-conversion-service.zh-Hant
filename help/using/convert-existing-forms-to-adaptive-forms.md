@@ -70,8 +70,10 @@ AEM Forms Automated Forms Conversion服務(AFCS)採用Adobe Sensei技術，可�
 
    1. 請確保已在您的AEM Forms執行個體上啟用[核心元件](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/introduction)。 如果未啟用，您可以[在您的AEM 6.5](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components)或[Cloud Service環境](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/forms/setup-configure-migrate/enable-adaptive-forms-core-components)上啟用核心元件。
    1. 選取以[核心元件為基礎的最適化表單範本和主題](https://experienceleague.adobe.com/en/docs/experience-manager-core-components/using/adaptive-forms/sample-themes-templates-form-data-models-core-components)，如下圖所示：
+
       ![選取自適應表單範本](assets/select-af-template-1.png)。
    1. 點選&#x200B;**[!UICONTROL Start Conversion]**&#x200B;以將PDF轉換為以核心元件為基礎的表單。
+
    >[!NOTE]
    > * 資料繫結或資料模型結構描述等屬性不適用於核心元件式最適化表單，但基礎元件可使用相同屬性。
    > * [檢閱並修正轉換後的表單](#review-and-correct-the-converted-forms)不適用於核心元件型表單。
@@ -81,8 +83,8 @@ AEM Forms Automated Forms Conversion服務(AFCS)採用Adobe Sensei技術，可�
 
    * **[!UICONTROL Select a cloud configuration]**。當您選取組態時，已指定預設範本和主題。 您可以視需要指定不同的範本或主題。
    * 指定儲存所產生的最適化表單和對應結構描述的位置。 您可以使用預設路徑或指定自訂路徑。
-   * 使用&#x200B;**產生沒有資料模型繫結的最適化表單**選項，選取是否要產生具有或不具有資料模型繫結的最適化表單。
-如果您未選取此選項，轉換服務會自動將最適化表單與JSON結構描述相關聯，並在最適化表單和JSON結構描述中可用的欄位之間建立資料繫結。 **[!UICONTROL Save generated data model schema at]**欄位會顯示儲存產生的JSON結構描述的預設位置。 您也可以自訂位置以儲存產生的結構描述。
+   * 使用&#x200B;**產生沒有資料模型繫結的最適化表單**&#x200B;選項，選取是否要產生具有或不具有資料模型繫結的最適化表單。
+如果您未選取此選項，轉換服務會自動將最適化表單與JSON結構描述相關聯，並在最適化表單和JSON結構描述中可用的欄位之間建立資料繫結。 **[!UICONTROL Save generated data model schema at]**&#x200B;欄位會顯示儲存產生的JSON結構描述的預設位置。 您也可以自訂位置以儲存產生的結構描述。
 如果您選取此選項，轉換服務會產生沒有資料模型繫結的調適型表單。 成功轉換後，您可以將最適化表單與表單資料模型、XML結構描述或JSON結構描述建立關聯。 如需詳細資訊，請參閱[建立最適化表單](https://helpx.adobe.com/experience-manager/6-5/forms/using/creating-adaptive-form.html)。
 
    <!--
@@ -102,7 +104,7 @@ AEM Forms Automated Forms Conversion服務(AFCS)採用Adobe Sensei技術，可�
    >[!NOTE]
    >
    >
-   > * 您一次只能使用&#x200B;**[!UICONTROL  Extract Fragment]**&#x200B;或&#x200B;**[!UICONTROL Use existing adaptive form fragments]**&#x200B;選項。 您無法同時使用這兩個選項。
+   > * 您一次只能使用&#x200B;**[!UICONTROL &#x200B; Extract Fragment]**&#x200B;或&#x200B;**[!UICONTROL Use existing adaptive form fragments]**&#x200B;選項。 您無法同時使用這兩個選項。
    > * **[!UICONTROL Use existing adaptive form fragments]**&#x200B;選項只能與非互動式PDF forms搭配使用。 尚未支援其他表單型別。
    > * 您只能使用未繫結的片段或透過自動轉換服務繫結至JSON結構描述的片段。 請勿使用XFA片段。 不支援XFA片段。
    >

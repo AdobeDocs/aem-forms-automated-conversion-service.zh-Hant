@@ -193,7 +193,7 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
    >
    > 選取在您組織的開發人員授與存取權時建立的設定檔。 如果您不知道要選取的設定檔，請聯絡管理員。
 
-1. 按一下&#x200B;**[!UICONTROL OAuth Server-to-Server]**以檢視API金鑰、使用者端密碼，以及將您的AEM執行個體連線至自動錶單轉換服務(AFCS)所需的其他資訊。
+1. 按一下&#x200B;**[!UICONTROL OAuth Server-to-Server]**&#x200B;以檢視API金鑰、使用者端密碼，以及將您的AEM執行個體連線至自動錶單轉換服務(AFCS)所需的其他資訊。
    ![選取Oath認證](/help/using/assets/select-oauth-credential.png)
 
    頁面上的資訊會用於建立IMS設定，如[在AEM作者執行個體上建立IMS技術設定](#2-create-ims-technical-configuration-on-aem-author-instance)區段中所述。
@@ -253,7 +253,7 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
 
 1. 在您的AEM Forms執行個體上，按一下&#x200B;**[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]**> **[!UICONTROL Cloud Services]** > **[!UICONTROL Automate Forms Conversion Configuration]**。
 1. 選取&#x200B;**[!UICONTROL Global]**&#x200B;資料夾並按一下&#x200B;**[!UICONTROL Create]**。
-**建立自動錶單轉換組態**&#x200B;的頁面已顯示。 設定是在&#x200B;**全域**資料夾中建立。 您也可以在現有的不同資料夾中建立設定，或為您的設定建立資料夾。
+**建立自動錶單轉換組態**&#x200B;的頁面已顯示。 設定是在&#x200B;**全域**&#x200B;資料夾中建立。 您也可以在現有的不同資料夾中建立設定，或為您的設定建立資料夾。
    ![選取全域資料夾](/help/using/assets/create-afcs-cloud-conf.png)
 1. 在&#x200B;**[!UICONTROL Create Automated Forms Conversion Configuration]**&#x200B;頁面上，指定下列欄位的值並按一下&#x200B;**[!UICONTROL Next]**。
 
@@ -270,7 +270,7 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
    | 現有片段 | 現有片段的位置（如果有）。 |
    | 自訂中繼模型 | 自訂中繼模型的.schema.json檔案路徑。 您可以建立英文、法文、德文、西班牙文、義大利文和葡萄牙文的個別中繼模型。 |
 
-1. 在&#x200B;**[!UICONTROL Create Automated Forms Conversion Configuration]**&#x200B;頁面的&#x200B;**[!UICONTROL Advanced]**標籤中，指定下列欄位的值：
+1. 在&#x200B;**[!UICONTROL Create Automated Forms Conversion Configuration]**&#x200B;頁面的&#x200B;**[!UICONTROL Advanced]**&#x200B;標籤中，指定下列欄位的值：
    ![AFCS組態](/help/using/assets/afcs-config.png)
 
    <table>
