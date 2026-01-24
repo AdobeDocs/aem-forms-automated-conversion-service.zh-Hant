@@ -37,7 +37,7 @@ AEM 說明文件涵蓋標準使用案例。因此，一般不會記錄錯誤、�
 
 歡迎您協助提出任何改善 AEM 說明文件的想法。但是，評論、問題和提取要求僅為&#x200B;*協助撰寫*。不是用來回答您有關如何使用 AEM、實作 AEM 專案或解決技術問題。
 
-[&#128279;](https://experienceleague.adobe.com/zh-hant?support-solution=Experience+Manager#home) [&#128279;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community)
+[&#128279;](https://experienceleague.adobe.com/zh-hant?support-solution=Experience+Manager#home) [&#128279;](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/ct-p/adobe-experience-manager-community?profile.language=zh-Hant)
 
 **&#x200B;**&#x200B;**
 
