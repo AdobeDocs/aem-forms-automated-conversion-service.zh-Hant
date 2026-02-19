@@ -8,10 +8,10 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: fccafbc9-28c1-4736-922c-24d675b25213
-source-git-commit: e95b4ed35f27f920b26c05f3398529f825948f1f
+source-git-commit: 2c2b8f0103c608e68f28b89964d200490b46e781
 workflow-type: tm+mt
-source-wordcount: '487'
-ht-degree: 64%
+source-wordcount: '504'
+ht-degree: 54%
 
 ---
 
@@ -34,7 +34,7 @@ ht-degree: 64%
 
 ## 2021年8月29日(AFC-2021.08.0) {#aug-2021}
 
-* 新增將義大利文和葡萄牙文PDF forms轉換為最適化表單的功能。
+* 新增將義大利文和葡萄牙文的PDF forms轉換為最適化表單的功能。
 
 ## 2021 年 7 月 29 日 (AFC-2021.07.2) {#july-2021}
 
@@ -88,4 +88,4 @@ ht-degree: 64%
 
 如欲使用AFC-2020.03.1發行版本中提供的最新功能與改善，您需要連線工具封裝1.1.38或更高版本。
 
-如果您已有正常運轉的自動表單轉換服務環境，並欲使用轉換服務的最新功能，請依序安裝最新的服務包、最新的 AEM Forms 附加封裝，與最新的連接工具封裝。 欲知詳細說明，請參閱[設定自動表單轉換服務](configure-service.md)文章。
+如果您已有正常運轉的自動錶單轉換服務環境(AEM 6.5或AEM 6.5 LTS)，若要使用轉換服務的最新功能，請依序安裝最新的Service Pack、最新的AEM Forms附加元件套件和最新的聯結器套件。 AEM Forms as a Cloud Service會自動傳送更新。 欲知詳細說明，請參閱[設定自動表單轉換服務](configure-service.md)文章。

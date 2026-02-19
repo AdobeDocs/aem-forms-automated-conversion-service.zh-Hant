@@ -1,12 +1,12 @@
 ---
 title: 使用Forms入口網站提交最適化表單至資料庫
-description: 擴展預設元模型以新增組織特定的模式、驗證和實體，並在執行Automated forms conversion服務(AFCS)時將設定套用至調適型表單欄位。
+description: 擴充預設中繼模型以新增特定於貴組織的模式、驗證和實體，並在執行自動錶單轉換服務(AFCS)時將設定套用至調適型表單欄位。
 uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
-source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
+source-git-commit: 2c2b8f0103c608e68f28b89964d200490b46e781
 workflow-type: tm+mt
-source-wordcount: '1159'
+source-wordcount: '1161'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 # 使用Forms入口網站整合最適化表單與資料庫 {#submit-forms-to-database-using-forms-portal}
 
-automated forms conversion服務(AFCS)可讓您將非互動式PDF表單、Acro表單或XFAPDF表單轉換為最適化表單。 起始轉換程式時，您可以選擇產生具有或不具有資料繫結的最適化表單。
+自動錶單轉換服務(AFCS)可讓您將非互動式PDF表單、Acro表單或XFA型PDF表單轉換為最適化表單。 起始轉換程式時，您可以選擇產生具有或不具有資料繫結的最適化表單。
 
 如果您選擇產生沒有資料繫結的調適型表單，則可以在轉換後整合已轉換的調適型表單與表單資料模型、XML結構描述或JSON結構描述。 不過，如果您產生具有資料繫結的調適型表單，轉換服務會自動將調適型表單與JSON結構描述相關聯，並在調適型表單和JSON結構描述中可用的欄位之間建立資料繫結。 然後，您可以將最適化表單與您選擇的資料庫整合、在表單中填寫資料，並使用Forms入口網站將其提交至資料庫。
 
@@ -28,15 +28,15 @@ automated forms conversion服務(AFCS)可讓您將非互動式PDF表單、Acro�
 
 ## 必要條件 {#pre-requisites}
 
-* 設定AEM 6.4或6.5編寫執行個體
+* 設定AEM 6.5或AEM 6.5 LTS編寫執行個體
 * 為您的AEM執行個體安裝[最新Service Pack](https://helpx.adobe.com/tw/experience-manager/aem-releases-updates.html)
 * 最新版本的AEM Forms附加元件套件
-* 設定[Automated forms conversion服務(AFCS)](configure-service.md)
+* 設定[自動錶單轉換服務(AFCS)](configure-service.md)
 * 設定資料庫。 範例實作中使用的資料庫是MySQL 5.6.24。不過，您可以將轉換後的最適化表單與您選擇的任何資料庫整合。
 
 ## 設定AEM執行個體與資料庫之間的連線 {#set-up-connection-aem-instance-database}
 
-設定AEM執行處理與MYSQL資料庫之間的連線包含：
+設定AEM執行個體與MYSQL資料庫之間的連線包含：
 
 * [安裝MYSQL聯結器套件](#install-mysql-connector-java-file)
 
@@ -146,9 +146,9 @@ automated forms conversion服務(AFCS)可讓您將非互動式PDF表單、Acro�
 
 ### 設定AEM執行個體與資料庫之間的連線 {#configure-connection-between-aem-instance-and-database}
 
-執行以下設定步驟來建立AEM執行處理與MYSQL資料庫之間的連線：
+執行以下設定步驟來建立AEM執行個體與MYSQL資料庫之間的連線：
 
-1. 移至&#x200B;*http://[主機]：[連線埠]/system/console/configMgr*&#x200B;的AEM Web主控台組態頁面。
+1. 移至&#x200B;*http://[主機]：[連線埠]/system/console/configMgr*&#x200B;的AEM Web主控台設定頁面。
 1. 按一下以編輯模式開啟&#x200B;**[!UICONTROL Forms Portal Draft and Submission Configuration]**。
 1. 指定特性值，如下表所述：
 
@@ -254,7 +254,7 @@ automated forms conversion服務(AFCS)可讓您將非互動式PDF表單、Acro�
     </tr>
      <tr> 
     <td><p>驗證查詢</p></td> 
-    <td><p>範例值為SELECT 1(mysql)、select 1 from dual(oracle)、SELECT 1(MS Sql Server) (validationQuery)</p></td>
+    <td><p>範例值為SELECT 1(mysql)，從dual(oracle)選取1，從SELECT 1(MS Sql Server) (validationQuery)選取</p></td>
     </tr>
      <tr> 
     <td><p>驗證查詢逾時</p></td> 
@@ -282,7 +282,7 @@ automated forms conversion服務(AFCS)可讓您將非互動式PDF表單、Acro�
 1. [執行轉換](convert-existing-forms-to-adaptive-forms.md#start-the-conversion-process)，將來源表單轉換為最適化表單。
 1. 在編輯模式中開啟最適化表單。
 1. 點選「表單容器」，然後選取「設定![設定自適應表單](assets/configure-adaptive-form.png)」。
-1. 在&#x200B;**[!UICONTROL Submission]**&#x200B;區段中，從&#x200B;**[!UICONTROL Submit Action]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL Forms Portal Submit Action]**。
+1. 在&#x200B;**[!UICONTROL Submission]**&#x200B;區段中，從&#x200B;**[!UICONTROL Forms Portal Submit Action]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL Submit Action]**。
 1. 點選![儲存範本原則](assets/edit_template_done.png)以儲存設定。
 
 ## 建立及設定Forms入口網站頁面 {#create-configure-forms-portal-page}

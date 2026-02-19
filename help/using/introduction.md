@@ -1,5 +1,5 @@
 ---
-title: automated forms conversion服務(AFCS)簡介
+title: 自動化表單轉換服務(AFCS)簡介
 description: 將列印表單加速轉換為最適化表單
 solution: Experience Manager Forms
 feature: Adaptive Forms, Foundation Components
@@ -8,16 +8,16 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: edabeac8-cd66-48ca-a99f-9643a1c184cf
-source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
+source-git-commit: 2c2b8f0103c608e68f28b89964d200490b46e781
 workflow-type: tm+mt
-source-wordcount: '711'
-ht-degree: 58%
+source-wordcount: '738'
+ht-degree: 53%
 
 ---
 
-# automated forms conversion服務(AFCS) {#introduction-to-automated-forms-conversion-service}
+# 自動錶單轉換服務(AFCS) {#introduction-to-automated-forms-conversion-service}
 
-automated forms conversion服務(AFCS)可將PDF forms自動轉換為最適化表單，協助加速資料擷取體驗的數位化和現代化。 這項由 Adobe Sensei 支援的服務會將您的 PDF 表單自動轉換為適合裝置、回應式且基於 HTML5 的最適化表單。 妥善利用現有的 PDF Forms 和 XFA 功能，該服務還可以在轉換過程中將適當的驗證、樣式和佈局應用於最適化表單欄位。 此服務的好處：
+自動錶單轉換服務(AFCS)可將PDF forms自動轉換為最適化表單，有助於加速資料擷取體驗的數位化和現代化。 這項由 Adobe Sensei 支援的服務會將您的 PDF 表單自動轉換為適合裝置、回應式且基於 HTML5 的最適化表單。 妥善利用現有的 PDF Forms 和 XFA 功能，該服務還可以在轉換過程中將適當的驗證、樣式和佈局應用於最適化表單欄位。 此服務的好處：
 
 * 無須手動將列印表單轉換為最適化表單
 * 在轉換過程中應用模式和適當的驗證
@@ -29,7 +29,7 @@ automated forms conversion服務(AFCS)可將PDF forms自動轉換為最適化表
 
 ## 上線 {#onboarding}
 
-AEM 6.4 Forms和AEM 6.5 Forms內部部署定期客戶和Adobe管理服務企業客戶可免費使用該服務。 您可以聯絡Adobe銷售團隊或您的Adobe代表，要求存取該服務。 AEM Formsas a Cloud Service客戶也可以免費使用此服務並預先啟用該服務。
+AEM 6.5 Forms和AEM 6.5 LTS Forms內部部署定期客戶和Adobe代管服務企業客戶可免費使用該服務。 您可以聯絡Adobe銷售團隊或您的Adobe代表，要求存取該服務。 AEM Forms as a Cloud Service客戶也可以免費使用這項服務並預先啟用它。
 
 Adobe 為您的組織啟用存取權限，並向您指定的組織管理員提供所需的特權。 管理員可以授予組織的 AEM Forms 開發人員（使用者）存取權限以連接到該服務。 欲知詳情，請參閱[設定自動表單轉換服務](configure-service.md)。
 
@@ -39,17 +39,17 @@ Adobe 為您的組織啟用存取權限，並向您指定的組織管理員提�
 
 此服務也支援啟用Adobe Sign的PDF forms。 如果源 PDF 表單有 Adobe Sign 文字標記，則此服務會保留轉換期間所有 Adobe Sign 的相關資訊，並將源 PDF 中顯示的簽署者資訊與對應的最適化表單欄位建立關聯。 此功能僅適用於 AcroForms。
 
-此服務可將英文、法文、德文、西班牙文、義大利文和葡萄牙文的表單轉換為最適化表單。 您也可以使用[AEM翻譯工作流程](https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)將產生的自適應表單翻譯成其他語言。
+此服務可將英文、法文、德文、西班牙文、義大利文和葡萄牙文的表單轉換為最適化表單。 您也可以使用[AEM翻譯工作流程](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)，將產生的適用性表單翻譯成其他語言。
 
 ## 轉換工作流程  {#conversion-workflow}
 
-automated forms conversion服務(AFCS)會在Adobe雲端上執行。 您將 AEM 執行個體連接到服務，並將表單上傳到 AEM 執行個體後，即可開始轉換。 完整的轉換過程如下所列：
+自動錶單轉換服務(AFCS)在Adobe Cloud上執行。 您將 AEM 執行個體連接到服務，並將表單上傳到 AEM 執行個體後，即可開始轉換。 完整的轉換過程如下所列：
 
 ![工作流程](assets/conversion-workflow.png)
 
 ### 1.設定環境 {#set-up-the-environment}
 
-automated forms conversion服務(AFCS)會在Adobe雲端上執行。 [設定您組織的 Adobe I/O 帳戶，並將您本端的 AEM 執行個體連接](configure-service.md)至 Adobe Cloud 上運行的轉換服務。
+自動錶單轉換服務(AFCS)在Adobe Cloud上執行。 [設定您組織的Adobe I/O帳戶，並將您本端的AEM執行個體連線](configure-service.md)到Adobe Cloud上執行的轉換服務。 對於AEM 6.5和AEM 6.5 LTS，如果您使用以核心元件為基礎的範本和主題，則必須啟用調適型表單核心元件；請參閱[設定服務](configure-service.md#referencepackage)。
 
 ### 2.將PDF forms轉換為最適化表單 {#use-the-conversion-service}
 
@@ -58,7 +58,7 @@ automated forms conversion服務(AFCS)會在Adobe雲端上執行。 [設定您�
 * 請勿上傳受保護的表單。 此服務無法轉換受密碼保護和加密的表單。
 * 請勿上傳英文、法文、德文、西班牙文、義大利文和葡萄牙文以外任何語言的掃描、彩色、已填寫表單和表單。 此服務不支援這些表單。
 * 請勿上傳檔案名中帶有空格的 PDF 表單。
-* 請勿上傳 [PDF Portfolio](https://helpx.adobe.com/tw/acrobat/using/overview-pdf-portfolios.html)。 此服務無法將PDFPortfolio轉換為最適化表單。
+* 請勿上傳 [PDF Portfolio](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html)。 此服務無法將PDF Portfolio轉換為最適化表單。
 * 完成[最佳實務和考量](styles-and-pattern-considerations-and-best-practices.md)文章中描述的 PDF 表單的建議更改。
 * 閱讀[已知問題](known-issues.md)文章以避免犯錯。
 
