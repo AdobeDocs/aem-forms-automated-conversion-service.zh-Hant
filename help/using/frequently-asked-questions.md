@@ -66,7 +66,7 @@ ht-degree: 3%
    * 轉換時提供安全的PDF forms。 請勿使用受密碼保護或安全的PDF forms進行轉換。
    * 網際網路連線已中斷。 請確認您在轉換期間已連線至網際網路。
    * Source PDF有表單的影像，而非實際表單。
-   * 服務設定不正確、未提供服務URL，或提供的服務URL不正確。 在[ > ](configure-service.md#configure-the-cloud-service) > **[!UICONTROL AEM]** > **[!UICONTROL Tools]**&#x200B;檢查&#x200B;**[!UICONTROL Cloud Services]**&#x200B;服務組態&#x200B;**[!UICONTROL Automated Forms Conversion configuration]**。
+   * 服務設定不正確、未提供服務URL，或提供的服務URL不正確。 在[&#x200B; > &#x200B;](configure-service.md#configure-the-cloud-service) > **[!UICONTROL AEM]** > **[!UICONTROL Tools]**&#x200B;檢查&#x200B;**[!UICONTROL Cloud Services]**&#x200B;服務組態&#x200B;**[!UICONTROL Automated Forms Conversion configuration]**。
    * IMS設定未正確設定。 對IMS設定執行健康狀態檢查以確保其正常運作。 若要檢查IMS設定是否正確：
       1. 前往`http://[servername]:[port]/libs/cq/adobeims-configuration/content/configurations.html`
       2. 選取設定。 按一下標題中的&#x200B;**[!UICONTROL Check Health]**，然後按一下&#x200B;**[!UICONTROL Check]**。 如果成功，您會收到&#x200B;**[!UICONTROL Token retrieved successfully!]**&#x200B;訊息。<br> <br>
@@ -101,7 +101,7 @@ ht-degree: 3%
    <p>時間長短取決於輸入表單的大小和複雜性，以及請求數量。 此服務旨在透過以快得多的速度將PDF forms轉換為最適化表單，大幅縮短實現價值的時間，而不是以手動方式轉換表單。 </p> <br />
 
 1. **如果我遇到與RSA資料庫相關的錯誤，該怎麼辦？ 錯誤訊息類似於以下提及的訊息：** <br/>
-   `*ERROR* [0:0:0:0:0:0:0:1 [1565757652491] POST /content/dam/formsanddocuments/demo004.affBatchProcessor.html HTTP/1.1] org.apache.sling.engine.impl.SlingRequestProcessorImpl service: Uncaught Throwable java.lang.NoClassDefFoundError: Could not initialize class com.rsa.cryptoj.o.dl at com.rsa.jsafe.JSAFE_SecureRandom.getInstance(Unknown Source) at com.adobe.internal.pdfm.util.Util.appendRandomNumberToPrefix(Util.java: 169) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34] at com.adobe.internal.pdfm.logging.JobLog.&amp;lt;init&amp;gt;(JobLog.java:126) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34]` <br>
+   `*ERROR* [0:0:0:0:0:0:0:1 [1565757652491] POST /content/dam/formsanddocuments/demo004.affBatchProcessor.html HTTP/1.1] org.apache.sling.engine.impl.SlingRequestProcessorImpl service: Uncaught Throwable java.lang.NoClassDefFoundError: Could not initialize class com.rsa.cryptoj.o.dl at com.rsa.jsafe.JSAFE_SecureRandom.getInstance(Unknown Source) at com.adobe.internal.pdfm.util.Util.appendRandomNumberToPrefix(Util.java: 169) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34] at com.adobe.internal.pdfm.logging.JobLog.&lt;init&gt;(JobLog.java:126) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34]` <br>
 未針對RSA/BouncyCastle程式庫設定開機委派時，會發生上述錯誤。 執行以下步驟以解決問題：
    <p> </p>
 
