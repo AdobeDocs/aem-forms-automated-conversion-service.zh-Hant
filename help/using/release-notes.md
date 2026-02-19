@@ -8,16 +8,16 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: fccafbc9-28c1-4736-922c-24d675b25213
-source-git-commit: 2c2b8f0103c608e68f28b89964d200490b46e781
+source-git-commit: 23d441d19dea63382f0a0024b4682d5bd0eaa63c
 workflow-type: tm+mt
-source-wordcount: '504'
-ht-degree: 54%
+source-wordcount: '503'
+ht-degree: 52%
 
 ---
 
 # 發行說明
 
-自動表單轉換服務不斷改善。 如欲瞭解最新發展，請定期造訪此頁面。 此頁面內含下列資訊：
+自動表單轉換服務不斷改善。 若要取得最新發展，請定期造訪本頁面。 此頁面內含下列資訊：
 
 * 搶先體驗
 * 最新版本
@@ -89,3 +89,4 @@ ht-degree: 54%
 如欲使用AFC-2020.03.1發行版本中提供的最新功能與改善，您需要連線工具封裝1.1.38或更高版本。
 
 如果您已有正常運轉的自動錶單轉換服務環境(AEM 6.5或AEM 6.5 LTS)，若要使用轉換服務的最新功能，請依序安裝最新的Service Pack、最新的AEM Forms附加元件套件和最新的聯結器套件。 AEM Forms as a Cloud Service會自動傳送更新。 欲知詳細說明，請參閱[設定自動表單轉換服務](configure-service.md)文章。
+

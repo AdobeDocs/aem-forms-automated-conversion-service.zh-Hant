@@ -4,9 +4,9 @@ description: 擴充預設中繼模型以新增特定於貴組織的模式、驗�
 uuid: f98b4cca-f0a3-4db8-aef2-39b8ae462628
 topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
-source-git-commit: 2c2b8f0103c608e68f28b89964d200490b46e781
+source-git-commit: 23d441d19dea63382f0a0024b4682d5bd0eaa63c
 workflow-type: tm+mt
-source-wordcount: '1161'
+source-wordcount: '1159'
 ht-degree: 1%
 
 ---
@@ -299,3 +299,4 @@ ht-degree: 1%
 1. 在頁面中插入&#x200B;**[!UICONTROL Drafts & Submissions]**&#x200B;元件。 Forms入口網站頁面上會顯示兩個索引標籤&#x200B;**[!UICONTROL Draft Forms]**&#x200B;和&#x200B;**[!UICONTROL Submitted Forms]**。 **[!UICONTROL Draft Forms]**&#x200B;索引標籤也會顯示使用[為Forms入口網站整合設定已轉換的最適化表單](#configure-converted-adaptive-form-for-forms-portal-integration)中提及的步驟所產生的已轉換最適化表單
 
 1. 點選&#x200B;**[!UICONTROL Preview]**，點選轉換的最適化表單，指定最適化表單欄位的值並提交它。 您為最適化表單欄位指定的值會提交至整合式資料庫。
+
