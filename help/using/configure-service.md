@@ -60,22 +60,22 @@ Adobe 為您的組織啟用存取權，並向您指定的組織管理員提供�
 
 自動錶單轉換服務(AFCS)會在AEM作者執行個體上執行。 您需要AEM 6.5、AEM 6.5 LTS或AEM Forms as a Cloud Service才能設定AEM編寫執行個體。
 
-* 如果您尚未啟動並執行AEM 6.5或AEM 6.5 LTS，請從以下位置下載。 下載AEM之後，如需設定AEM作者執行個體的指示，請參閱[部署和維護](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html#defaultlocalinstall)：
+* 如果您尚未啟動並執行AEM 6.5或AEM 6.5 LTS，請從以下位置下載。 下載AEM之後，如需設定AEM作者執行個體的指示，請參閱[部署和維護](https://helpx.adobe.com/tw/experience-manager/6-5/sites/deploying/using/deploy.html#defaultlocalinstall)：
 
    * 如果您是AEM現有客戶，請從[AEM授權網站](http://licensing.adobe.com)下載Adobe 6.5或AEM 6.5 LTS。
 
    * 如果您是Adobe合作夥伴，請使用[Adobe合作夥伴訓練計畫](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q)要求AEM 6.5或AEM 6.5 LTS。
 
-* 如果您使用AEM Forms as a Cloud Service，請參閱上線[AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-forms-cloud-service.html?lang=en#setup-environment)和[設定本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-local-development-environment.html?lang=en#setup-environment)。
+* 如果您使用AEM Forms as a Cloud Service，請參閱上線[AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-forms-cloud-service.html?lang=zh-Hant#setup-environment)和[設定本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-local-development-environment.html?lang=zh-Hant#setup-environment)。
 
 
 ### (僅適用於AEM 6.5和AEM 6.5 LTS)下載並安裝AEM最新Service Pack {#servicepack}
 
-下載並安裝最新的AEM Service Pack。 如需詳細指示，請參閱[AEM 6.5 Service Pack發行說明](https://helpx.adobe.com/experience-manager/6-5/release-notes/sp-release-notes.html)。
+下載並安裝最新的AEM Service Pack。 如需詳細指示，請參閱[AEM 6.5 Service Pack發行說明](https://helpx.adobe.com/tw/experience-manager/6-5/release-notes/sp-release-notes.html)。
 
 ### (僅適用於AEM 6.5和AEM 6.5 LTS)下載並安裝AEM Forms附加元件套件  {#downloadaemformsaddon}
 
-AEM執行個體包含基本表單功能。 轉換服務需要AEM Forms的完整功能。 下載並安裝AEM Forms附加元件套件，以使用AEM Forms的所有功能。 需要套件才能設定並執行轉換服務。 如需詳細指示，請參閱[安裝及設定資料擷取功能。](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi)
+AEM執行個體包含基本表單功能。 轉換服務需要AEM Forms的完整功能。 下載並安裝AEM Forms附加元件套件，以使用AEM Forms的所有功能。 需要套件才能設定並執行轉換服務。 如需詳細指示，請參閱[安裝及設定資料擷取功能。](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi)
 >[!NOTE]
 > 安裝附加套件後，請務必執行必要的安裝後組態。
 >
@@ -89,7 +89,7 @@ The connector package provides early access to the [Auto-detect logical sections
 
 **AEM Forms as a Cloud Service：**&#x200B;您可以使用現成的範本，或建立自訂範本，並將[服務組態](#configure-the-cloud-service)指向它們。
 
-**(僅適用於AEM 6.5和AEM 6.5 LTS)**&#x200B;自動錶單轉換服務(AFCS)需要至少一個主題和一個範本，才能將PDF表單轉換為最適化表單。 若要使用以核心元件為基礎的範本和主題，您必須[啟用最適化表單核心元件](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html)；此處會記錄相關指示。 如果您在[生產模式](https://helpx.adobe.com/experience-manager/6-5/sites/administering/using/production-ready.html) （nosamplecontent執行模式）下啟動AEM 6.5或AEM 6.5 LTS，則不會安裝參考套件。 建立您自己的自訂主題和範本，或在您的作者執行個體上下載並安裝[AEM Forms參考Assets](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)套件以取得參考主題和範本。 然後指向[服務組態](#configure-the-cloud-service)，在使用服務之前使用範本和佈景主題。
+**(僅適用於AEM 6.5和AEM 6.5 LTS)**&#x200B;自動錶單轉換服務(AFCS)需要至少一個主題和一個範本，才能將PDF表單轉換為最適化表單。 若要使用以核心元件為基礎的範本和主題，您必須[啟用最適化表單核心元件](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=zh-Hant)；此處會記錄相關指示。 如果您在[生產模式](https://helpx.adobe.com/tw/experience-manager/6-5/sites/administering/using/production-ready.html) （nosamplecontent執行模式）下啟動AEM 6.5或AEM 6.5 LTS，則不會安裝參考套件。 建立您自己的自訂主題和範本，或在您的作者執行個體上下載並安裝[AEM Forms參考Assets](https://experience.adobe.com/#/downloads/content/software-distribution/en/aemcloud.html)套件以取得參考主題和範本。 然後指向[服務組態](#configure-the-cloud-service)，在使用服務之前使用範本和佈景主題。
 
 ## 設定存取權和許可權
 
@@ -141,7 +141,7 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
 
    3. Open the **[!UICONTROL Day CQ Link Externalizer]** configuration. In the **[!UICONTROL Domains]** field, specify the actual host name or IP address and port number for local, author, and publish instances. Click **[!UICONTROL Save]**.
 
-* For AEM Forms as a Cloud Service, [log a support ticket to enable the email service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=en#sending-email). -->
+* For AEM Forms as a Cloud Service, [log a support ticket to enable the email service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/developing/development-guidelines.html?lang=zh-Hant#sending-email). -->
 
 ### 新增使用者至表單 — 使用者群組 {#adduserstousergroup}
 
