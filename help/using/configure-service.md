@@ -52,8 +52,8 @@ Adobe 為您的組織啟用存取權限，並向您指定的組織管理員提�
 
 
 1. [下載並安裝AEM6.5或AEM6.5 LTS，或板載AEM Formsas a Cloud Service](#aemquickstart)
-1. (AEM僅適用於6.5AEM和6.5 LTS)[下載並安裝最新AEM的Service Pack](#servicepack)
-1. (AEM僅適用於6.5AEM和6.5 LTS)[下載並安裝最新的AEM Forms附加程式包](#downloadaemformsaddon)
+1. (AEM僅適用於6.5AEM和6.5 LTS) [下載並安裝最新AEM的Service Pack](#servicepack)
+1. (AEM僅適用於6.5AEM和6.5 LTS) [下載並安裝最新的AEM Forms附加程式包](#downloadaemformsaddon)
 1. （可選）[下載並安裝最新的連接器包](#installConnectorPackage)
 1. [建立自定義主題和模板(AEM6.5 / 6.5 LTS)或使用預設值(Cloud Service)](#referencepackage)
 
@@ -206,7 +206,7 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
    >
    > 選擇在授予您組織的開發人員訪問權限時建立的配置檔案。 如果您不知道要選擇的配置檔案，請與管理員聯繫。
 
-1. 按一下&#x200B;**[!UICONTROL OAuth Server-to-Server]**查看將實例連接到Automated forms conversion服務(AFCS)所需的API密鑰、客戶端AEM密鑰和其他資訊。
+1. 按一下&#x200B;**[!UICONTROL OAuth Server-to-Server]**&#x200B;查看將實例連接到Automated forms conversion服務(AFCS)所需的API密鑰、客戶端AEM密鑰和其他資訊。
    ![選擇誓言憑據](/help/using/assets/select-oauth-credential.png)
 
    頁面上的資訊用於建立IMS配置，如[在作者實例](#2-create-ims-technical-configuration-on-aem-author-instance)上建立IMS技AEM術配置部分所述。
@@ -267,7 +267,7 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
 
 1. 在您的AEM Forms執行個體上，按一下&#x200B;**[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]**> **[!UICONTROL Cloud Services]** > **[!UICONTROL Automate Forms Conversion Configuration]**。
 1. 選取&#x200B;**[!UICONTROL Global]**&#x200B;資料夾並按一下&#x200B;**[!UICONTROL Create]**。
-**建立自動錶單轉換組態**&#x200B;的頁面已顯示。 設定是在&#x200B;**全域**資料夾中建立。 您也可以在現有的不同資料夾中建立設定，或為您的設定建立資料夾。
+**建立自動錶單轉換組態**&#x200B;的頁面已顯示。 設定是在&#x200B;**全域**&#x200B;資料夾中建立。 您也可以在現有的不同資料夾中建立設定，或為您的設定建立資料夾。
    ![選取全域資料夾](/help/using/assets/create-afcs-cloud-conf.png)
 1. 在&#x200B;**[!UICONTROL Create Automated Forms Conversion Configuration]**&#x200B;頁面上，指定下列欄位的值並按一下&#x200B;**[!UICONTROL Next]**。
 
@@ -284,7 +284,7 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
    | 現有片段 | 現有片段的位置（如果有）。 |
    | 自訂中繼模型 | 自訂中繼模型的.schema.json檔案路徑。 您可以建立英文、法文、德文、西班牙文、義大利文和葡萄牙文的個別中繼模型。 |
 
-1. 在&#x200B;**[!UICONTROL Create Automated Forms Conversion Configuration]**&#x200B;頁面的&#x200B;**[!UICONTROL Advanced]**標籤中，指定下列欄位的值：
+1. 在&#x200B;**[!UICONTROL Create Automated Forms Conversion Configuration]**&#x200B;頁面的&#x200B;**[!UICONTROL Advanced]**&#x200B;標籤中，指定下列欄位的值：
    ![AFCS組態](/help/using/assets/afcs-config.png)
 
    <table>
