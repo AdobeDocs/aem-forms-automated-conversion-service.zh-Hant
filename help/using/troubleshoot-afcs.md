@@ -28,7 +28,7 @@ ht-degree: 85%
 |--- |--- |
 | **錯誤訊息** <br> 沒有存取權杖標頭可用。<br><br> **原因** <br> 管理員已建立了多個 IMS 組態或 IMS 組態無法連接至 Adobe Cloud 上的 AFCS 服務。 <br><br>**解決方法** <br> 如果有多個組態，請刪除所有的組態並[建立一個新的組態](configure-service.md#obtainpubliccertificates)。 <br>如果只有一個組態，請使用「**健康情況檢查**」以[檢查連網狀態](configure-service.md#createintegrationoption)。 | ![沒有存取權杖標頭可用](assets/invalid-ims-configurations.png) |
 | **錯誤訊息** <br> 無法連接到服務。  <br><br>**原因** <br>服務URL不正確，或在Automated forms conversion服務(AFCS)雲端服務中沒有提及服務URL。 <br><br>**解決方法** <br>在Automated forms conversion服務(AFCS)雲端服務中修正[服務URL](configure-service.md#configure-the-cloud-service)。 | ![無法連接到服務。](assets/wrong-service-url-configured.png) |
-| **錯誤訊息** <br> 本服務未能轉換表單。  <br><br>**原因** <br> 您這端的連網問題、排程維護導致服務無法使用或 Adobe Cloud 運行中斷。 <br><br>**解決方法** <br> 解決您這端的連網問題，並在 https://status.adobe.com/ 上查看服務狀態，是否有排程維護或無預期的運行中斷。 | ![無法連接到服務。](assets/conversion-failure.png) |
+| **錯誤訊息** <br> 本服務未能轉換表單。  <br><br>**原因** <br> 您這端的連網問題、排程維護導致服務無法使用或 Adobe Cloud 運行中斷。 <br><br>**解決方法** <br> 解決您這端的連網問題，並在 https://status.adobe.com/zh-tw/ 上查看服務狀態，是否有排程維護或無預期的運行中斷。 | ![無法連接到服務。](assets/conversion-failure.png) |
 | **錯誤訊息** <br> 頁數超過 15 頁。  <br><br>**原因** <br> 源表單長度超過 15 頁。  <br><br>**解決方法** <br> 使用 Adobe Acrobat 來分割超過 15 頁的表單。 將表單的頁數調整為 15 頁以下。 | ![無法連接到服務。](assets/number-of-pages.png) |
 | **錯誤訊息** <br> 文件數量超過 15 份。  <br><br>**原因** <br>  資料夾內含超過 15 份表單。 <br><br>**解決方法** <br> 將資料夾中的表單數量調整為 15 份以下。 將資料夾中的總頁數調整為 50 頁以下。 將資料夾的大小調整為 10 MB 以下。 不要將表單放在子資料夾中。 將源表單整理為每批次 8 到 15 份表單。 | ![無法連接到服務。](assets/number-of-pages.png) |
 | **錯誤訊息** <br> 不支援該源檔案格式。  <br><br>**原因** <br> 內含源表單的資料夾中有一些不支援的檔案。 <br><br>**解決方法** <br> 本服務只支援 .xdp 與 .pdf 檔案。 從資料夾移除所有具有其他附檔名的檔案後，再進行轉換。 | ![無法連接到服務。](assets/unsupported-file-formats.png) |
@@ -56,7 +56,7 @@ ht-degree: 85%
 <td><img alt="Unable to connect to the service." src="assets/wrong-endpoint-configured.png" /></td>
 </tr>
 <tr>
-<td><strong>Error Message</strong> <br> The service failed to convert the form.  <br><br><strong>Reason</strong> <br> Network connectivity issues at your end, the service is down due to scheduled maintenance, or outage on Adobe Cloud. <br><br><strong>Resolution</strong> <br> Resolve network connectivity issues at your end and check the status of the service on <a href="https://status.adobe.com/">https://status.adobe.com/</a> for a planned or unplanned outage.</td>
+<td><strong>Error Message</strong> <br> The service failed to convert the form.  <br><br><strong>Reason</strong> <br> Network connectivity issues at your end, the service is down due to scheduled maintenance, or outage on Adobe Cloud. <br><br><strong>Resolution</strong> <br> Resolve network connectivity issues at your end and check the status of the service on <a href="https://status.adobe.com/zh-tw/">https://status.adobe.com/zh-tw/</a> for a planned or unplanned outage.</td>
 <td><img alt="The service failed to convert the form." src="assets/service-failure.png" /></td>
 </tr>
 <tr>
