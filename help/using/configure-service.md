@@ -1,6 +1,6 @@
 ---
-title: 配置Automated forms conversion服務(AFCS)
-description: 準AEM備實例使用Automated forms conversion服務(AFCS)
+title: 設定自動錶單轉換服務(AFCS)
+description: 準備好您的AEM執行個體以使用自動錶單轉換服務(AFCS)
 solution: Experience Manager Forms
 feature: Adaptive Forms
 topic: Administration
@@ -8,23 +8,23 @@ topic-tags: forms
 role: Admin, Developer, User
 level: Beginner, Intermediate
 exl-id: 8f21560f-157f-41cb-ba6f-12a4d6e18555
-source-git-commit: ba5457fc64a6525c3dc02a00484030760c373c98
+source-git-commit: 2ec7faabc02ec6f416aafcbe7f7305e9323bd9eb
 workflow-type: tm+mt
-source-wordcount: '2664'
+source-wordcount: '2663'
 ht-degree: 5%
 
 ---
 
-# 配置Automated forms conversion服務(AFCS) {#about-this-help}
+# 設定自動錶單轉換服務(AFCS) {#about-this-help}
 
-本文介紹管理AEM員如何配置Automated forms conversion服務(AFCS)，以自動將其PDF forms轉換到Adaptive Nigus。 本文針對您組織的AEMIT和管理員。 所提供的資訊假定任何閱讀本文的人都熟悉以下技術：
+本文說明AEM管理員如何設定自動錶單轉換服務(AFCS)，以自動將其PDF forms轉換為最適化Forms。 本文適用於貴組織的IT和AEM管理員。 所提供的資訊假設任何閱讀本文的人都熟悉以下技術：
 
-* 安裝、配置和管理Adobe Experience Manager和AEM包，
+* 安裝、設定和管理Adobe Experience Manager和AEM套件，
 
 * 使用Linux®和Microsoft® Windows®作業系統，
 
-* 配置SMTP郵件伺服器
-======
+* 設定SMTP郵件伺服器
+=======
 <!--
 >[!VIDEO](https://video.tv.adobe.com/v/29267/) 
 
@@ -33,51 +33,51 @@ ht-degree: 5%
 
 ## 上線{#onboarding}
 
-該服務可免費向6AEM.5Forms和6.5 LTSForms現AEM場定期客戶和Adobe管理服務企業客戶提供。 您可以聯繫Adobe銷售團隊或Adobe代表以請求訪問該服務。 該服務還面向AEM Formsas a Cloud Service客戶免費預啟用。
+AEM 6.5 Forms和AEM 6.5 LTS Forms內部部署定期客戶和Adobe代管服務企業客戶可免費使用該服務。 您可以聯絡Adobe銷售團隊或您的Adobe代表，要求存取該服務。 AEM Forms as a Cloud Service客戶也可以免費使用這項服務並預先啟用它。
 
 Adobe 為您的組織啟用存取權限，並向您指定的組織管理員提供所需的特權。 管理員可以授予組織的 AEM Forms 開發人員（使用者）存取權限以連接到該服務。
 
 ## 先決條件 {#prerequisites}
 
-您需要以下人員才能使用Automated forms conversion服務(AFCS):
+您需要下列專案才能使用自動錶單轉換服務(AFCS)：
 
-* Automated forms conversion服務(AFCS)已為您的組織啟用
-* 具有轉換服務管理員權限的Adobe ID帳戶
-* 具有最新AEMService Pack或最新更新的正在運AEM行的6.5、6.5 LTS或AEM Formsas a Cloud Service作者實AEM例。
-* 屬於AEMforms-user組AEM的用戶（在實例上）
+* 您的組織已啟用自動錶單轉換服務(AFCS)
+* 具有轉換服務之管理員許可權的Adobe ID帳戶
+* 已開始運作的AEM 6.5、AEM 6.5 LTS或AEM Forms as a Cloud Service製作執行個體，其中包含最新AEM Service Pack或最新更新。
+* 身為表單使用者群組成員的AEM使用者（在您的AEM執行個體上）
 
 ## 設定環境 {#setuptheservice}
 
-使用服務之前，請準AEM備您的作者實例以連接到在Adobe雲上運行的服務。 按列出的順序執行以下步驟，為服務準備實例：
+在使用服務之前，請準備您的AEM作者執行個體以連線到Adobe Cloud上執行的服務。 按照列出的順序執行以下步驟，準備執行個體以供服務使用：
 
 
-1. [下載並安裝AEM6.5或AEM6.5 LTS，或板載AEM Formsas a Cloud Service](#aemquickstart)
-1. (AEM僅適用於6.5AEM和6.5 LTS) [下載並安裝最新AEM的Service Pack](#servicepack)
-1. (AEM僅適用於6.5AEM和6.5 LTS) [下載並安裝最新的AEM Forms附加程式包](#downloadaemformsaddon)
-1. （可選）[下載並安裝最新的連接器包](#installConnectorPackage)
-1. [建立自定義主題和模板(AEM6.5 / 6.5 LTS)或使用預設值(Cloud Service)](#referencepackage)
+1. [下載並安裝AEM 6.5、AEM 6.5 LTS或內建AEM Forms as a Cloud Service](#aemquickstart)
+1. （僅適用於AEM 6.5和AEM 6.5 LTS） [下載並安裝最新的AEM Service Pack](#servicepack)
+1. （僅適用於AEM 6.5和AEM 6.5 LTS） [下載並安裝最新的AEM Forms附加元件套件](#downloadaemformsaddon)
+1. （選擇性） [下載並安裝最新的聯結器封裝](#installConnectorPackage)
+1. [建立自訂主題和範本(AEM 6.5 / 6.5 LTS)或使用預設值(Cloud Service)](#referencepackage)
 
-### 下載並安裝AEM6.5或AEM6.5 LTS或板載AEM Formsas a Cloud Service {#aemquickstart}
-
-
-Automated forms conversion服務(AFCS)在作者實AEM例上運行。 您需AEM要6.5、AEM6.5 LTS或AEM Formsas a Cloud Service來設AEM置作者實例。
-
-* 如果您沒有AEM6.5或AEM6.5 LTS啟動和運行，請從以下位置下載。 下載完AEM後，有關設定作者實例AEM的說明，請參閱[部署和維護](https://helpx.adobe.com/tw/experience-manager/6-5/sites/deploying/using/deploy.html#defaultlocalinstall)。
-
-   * 如果您是現有AEM客戶，請AEM從[Adobe許可網站](http://licensing.adobe.com)下載6.5或AEM6.5 LTS。
-
-   * 如果您是Adobe合作夥伴，請使用[Adobe合作夥伴培訓計畫](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q)AEM請求6.5或AEM6.5 LTS。
-
-* 如果您使用AEM Formsas a Cloud Service，請參閱板載到[AEM Formsas a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-forms-cloud-service.html?lang=zh-Hant#setup-environment)和[設定本地開發環境](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-local-development-environment.html?lang=zh-Hant#setup-environment)。
+### 下載並安裝AEM 6.5、AEM 6.5 LTS或內建AEM Forms as a Cloud Service {#aemquickstart}
 
 
-### (AEM僅適用於6.5AEM和6.5 LTS)下載並安裝最新AEM的Service Pack {#servicepack}
+自動錶單轉換服務(AFCS)會在AEM作者執行個體上執行。 您需要AEM 6.5、AEM 6.5 LTS或AEM Forms as a Cloud Service才能設定AEM編寫執行個體。
 
-下載並安裝最新AEM的Service Pack。 有關詳細說明，請參AEM閱[6.5 Service Pack發行說明](https://helpx.adobe.com/tw/experience-manager/6-5/release-notes/sp-release-notes.html)。
+* 如果您尚未啟動並執行AEM 6.5或AEM 6.5 LTS，請從以下位置下載。 下載AEM之後，如需設定AEM作者執行個體的指示，請參閱[部署和維護](https://helpx.adobe.com/tw/experience-manager/6-5/sites/deploying/using/deploy.html#defaultlocalinstall)：
 
-### (AEM僅適用於6.5AEM和6.5 LTS)下載和安裝AEM Forms附加軟體包  {#downloadaemformsaddon}
+   * 如果您是AEM現有客戶，請從[AEM授權網站](http://licensing.adobe.com)下載Adobe 6.5或AEM 6.5 LTS。
 
-實AEM例包含基本表單功能。 轉換服務需要AEM Forms的全部功能。 下載並安裝AEM Forms附加軟體包以利用AEM Forms的所有功能。 需要套件才能設定並執行轉換服務。 如需詳細指示，請參閱[安裝及設定資料擷取功能。](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi)
+   * 如果您是Adobe合作夥伴，請使用[Adobe合作夥伴訓練計畫](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q)要求AEM 6.5或AEM 6.5 LTS。
+
+* 如果您使用AEM Forms as a Cloud Service，請參閱上線[AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-forms-cloud-service.html?lang=zh-Hant#setup-environment)和[設定本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-local-development-environment.html?lang=zh-Hant#setup-environment)。
+
+
+### （僅適用於AEM 6.5和AEM 6.5 LTS）下載並安裝AEM最新Service Pack {#servicepack}
+
+下載並安裝最新的AEM Service Pack。 如需詳細指示，請參閱[AEM 6.5 Service Pack發行說明](https://helpx.adobe.com/tw/experience-manager/6-5/release-notes/sp-release-notes.html)。
+
+### （僅適用於AEM 6.5和AEM 6.5 LTS）下載並安裝AEM Forms附加元件套件  {#downloadaemformsaddon}
+
+AEM執行個體包含基本表單功能。 轉換服務需要AEM Forms的完整功能。 下載並安裝AEM Forms附加元件套件，以使用AEM Forms的所有功能。 需要套件才能設定並執行轉換服務。 如需詳細指示，請參閱[安裝及設定資料擷取功能。](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-65/content/forms/install-aem-forms/osgi-installation/installing-configuring-aem-forms-osgi)
 
 >[!NOTE]
 > 安裝附加套件後，請務必執行必要的安裝後組態。
@@ -184,86 +184,86 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
 若要在Adobe Developer Console上設定自動錶單轉換服務API，請執行以下步驟：
 
 1. 登入https://developer.adobe.com/console 。 使用您的管理員已布建以登入Adobe I/O主控台的Adobe ID開發人員帳戶來登入。
-1. 從右上角選擇您的組織。 如果您不清楚自己的組織為何，請聯絡您的管理員。
-1. 按一下 **[!UICONTROL Create new project]**。 將顯示一個螢幕，以便開始新項目。
+1. 從右上角選取您的組織。 如果您不清楚自己的組織為何，請聯絡您的管理員。
+1. 按一下 **[!UICONTROL Create new project]**。 隨即顯示開始使用新專案的畫面。
 
-   ![新建API項目](/help/using/assets/create-new-api-project.png)
+   ![建立新的API專案](/help/using/assets/create-new-api-project.png)
 
-1. 按一下 **[!UICONTROL Add API]**。 此時將顯示一個螢幕，其中列出了為您的帳戶啟用的所有API。
-   ![添加API](/help/using/assets/add-api.png)
+1. 按一下 **[!UICONTROL Add API]**。 隨即顯示畫面，列出已為您的帳戶啟用的所有API。
+   ![新增API](/help/using/assets/add-api.png)
 
-1. 選擇&#x200B;**[!UICONTROL Automated Forms Conversion service]**&#x200B;並按一下&#x200B;**[!UICONTROL Next]**。 將顯示一個用於配置API的螢幕。
-   ![選擇AFCS API](/help/using/assets/select-afcs-api.png)
+1. 選取&#x200B;**[!UICONTROL Automated Forms Conversion service]**&#x200B;並按一下&#x200B;**[!UICONTROL Next]**。 隨即顯示設定API的畫面。
+   ![選取AFCS API](/help/using/assets/select-afcs-api.png)
 
-1. 選擇&#x200B;**OAuth伺服器到伺服器**&#x200B;身份驗證方法。
+1. 選取&#x200B;**OAuth伺服器對伺服器**&#x200B;驗證方法。
 1. 指定&#x200B;**[!UICONTROL Credential Name]**&#x200B;並按一下&#x200B;**[!UICONTROL Next]**。
-   ![指定憑據名稱](/help/using/assets/specify-credential-name.png)
-1. 選擇&#x200B;**產品配置檔案**。 例如，選擇一個配置檔案作為&#x200B;**AFC_Flamingo_Test_Dev**。
+   ![指定認證名稱](/help/using/assets/specify-credential-name.png)
+1. 選取&#x200B;**產品設定檔**。 例如，選取設定檔作為&#x200B;**AFC_Flamingo_Test_Dev**。
 1. 按一下「**[!UICONTROL Save configured API]**」。
-   ![選擇配置檔案](/help/using/assets/select-profile.png)
+   ![選取設定檔](/help/using/assets/select-profile.png)
 
    >[!NOTE]
    >
-   > 選擇在授予您組織的開發人員訪問權限時建立的配置檔案。 如果您不知道要選擇的配置檔案，請與管理員聯繫。
+   > 選取在您組織的開發人員授與存取權時建立的設定檔。 如果您不知道要選取的設定檔，請聯絡管理員。
 
-1. 按一下&#x200B;**[!UICONTROL OAuth Server-to-Server]**&#x200B;查看將實例連接到Automated forms conversion服務(AFCS)所需的API密鑰、客戶端AEM密鑰和其他資訊。
-   ![選擇誓言憑據](/help/using/assets/select-oauth-credential.png)
+1. 按一下&#x200B;**[!UICONTROL OAuth Server-to-Server]**&#x200B;以檢視API金鑰、使用者端密碼，以及將您的AEM執行個體連線至自動錶單轉換服務(AFCS)所需的其他資訊。
+   ![選取Oath認證](/help/using/assets/select-oauth-credential.png)
 
-   頁面上的資訊用於建立IMS配置，如[在作者實例](#2-create-ims-technical-configuration-on-aem-author-instance)上建立IMS技AEM術配置部分所述。
+   頁面上的資訊會用於建立IMS設定，如[在AEM作者執行個體上建立IMS技術設定](#2-create-ims-technical-configuration-on-aem-author-instance)區段中所述。
 
-   ![OAuth憑據詳細資訊](/help/using/assets/oauth-credentials-details.png)
+   ![OAuth認證詳細資料](/help/using/assets/oauth-credentials-details.png)
 
-### &#x200B;2. 建立Adobe IMS配置
+### &#x200B;2. 建立Adobe IMS設定
 
 
-登錄到作者實例以建立Adobe IMS配置。 使用&#x200B;**OAuth憑據詳細資訊**&#x200B;檢索API密鑰、客戶端密鑰、技術帳戶ID、作用域和組織ID。
+登入您的作者執行個體以建立Adobe IMS設定。 使用&#x200B;**OAuth認證詳細資料**&#x200B;來擷取API金鑰、使用者端密碼、技術帳戶ID、範圍以及組織ID。
 
-1. 登錄到您的AEM Forms作者實例。 導航到&#x200B;**[!UICONTROL Tools]**> **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**。
+1. 登入您的AEM Forms作者執行個體。 導覽至&#x200B;**[!UICONTROL Tools]** > **[!UICONTROL Security]** > **[!UICONTROL Adobe IMS Configurations]**。
 1. 按一下「**[!UICONTROL Create]**」。
 
-   ![建立IMSAdobe配置](/help/using/assets/create-ims-conf.png)
+   ![建立IMS Adobe設定](/help/using/assets/create-ims-conf.png)
 
-1. 將顯示&#x200B;**[!UICONTROL Adobe IMS Technical Account Configuration]**&#x200B;頁。
+1. **[!UICONTROL Adobe IMS Technical Account Configuration]**&#x200B;頁面隨即顯示。
 
-   ![「Adobe IMS技術帳戶配置」頁](assets/adobe-ims-technical-account-configuration.png)
-1. 在&#x200B;**雲解決方案**&#x200B;中選擇&#x200B;**[!UICONTROL Automated Forms Conversion Service]**。
-1. 指定以下內容：
+   ![Adobe IMS技術帳戶設定頁面](assets/adobe-ims-technical-account-configuration.png)
+1. 在&#x200B;**雲端解決方案**&#x200B;中選取&#x200B;**[!UICONTROL Automated Forms Conversion Service]**。
+1. 指定下列專案：
 
    * **標題**：指定標題。
-   * **授權伺服器**: [https://ims-na1.adobelogin.com](https://ims-na1.adobelogin.com)
-   * 從[Configure the service APIs on Adobe Developer Console](#1-configure-the-service-apis-on-adobe-developer-console)部分檢索以下內容：
-      * **客戶端ID**：複製並貼上&#x200B;**API密鑰（客戶端ID）**。
-      * **客戶端密鑰**：複製並貼上&#x200B;**客戶端密鑰**。
-      * **作用域**：複製並貼上&#x200B;**作用域**。
-      * **組織ID**：複製並貼上&#x200B;**技術帳戶ID**。
+   * **授權伺服器**： [https://ims-na1.adobelogin.com](https://ims-na1.adobelogin.com)
+   * 從[在Adobe Developer Console](#1-configure-the-service-apis-on-adobe-developer-console)上設定服務API區段擷取下列專案：
+      * **使用者端識別碼**：複製並貼上&#x200B;**API金鑰（使用者端識別碼）**。
+      * **使用者端密碼**：複製並貼上&#x200B;**使用者端密碼**。
+      * **領域**：複製並貼上&#x200B;**領域**。
+      * **組織ID**：複製並貼上&#x200B;**組織ID**。
 
-     ![建立IMSAdobe配置](/help/using/assets/save-ims-configuration.png)
+     ![建立IMS Adobe設定](/help/using/assets/save-ims-configuration.png)
 
-1. 按一下 **[!UICONTROL Save]**。 建立Adobe IMS配置。
+1. 按一下 **[!UICONTROL Save]**。 Adobe IMS設定已建立。
 
    >[!CAUTION]
    >
-   > 僅建立一個IMS配置。 不要建立多個IMS配置。
+   > 僅建立一個IMS設定。 請勿建立多個IMS設定。
 
-1. 選擇&#x200B;**Adobe IMS配置**，然後按一下&#x200B;**[!UICONTROL Check Health]**。 對話方塊隨即顯示。
-   ![Chcek運行狀況](/help/using/assets/check-health.png)
+1. 選取&#x200B;**Adobe IMS設定**&#x200B;並按一下&#x200B;**[!UICONTROL Check Health]**。 對話方塊隨即顯示。
+   ![檢查健康狀態](/help/using/assets/check-health.png)
 
-   出現&#x200B;**檢查**&#x200B;對話框。
+   **檢查**&#x200B;對話方塊出現。
 
 1. 按一下「**[!UICONTROL Check]**」。
 
-   ![Chcek運行狀況](/help/using/assets/check-dialog.png)
+   ![檢查健康狀態](/help/using/assets/check-dialog.png)
 
    成功連線時，*已成功擷取 Token* 訊息就會顯示。
 
-   ![連接成功時，將顯示成功檢索的令牌消息。](/help/using/assets/healthy-dialog.png)
+   ![成功連線時，已成功擷取Token訊息就會顯示。](/help/using/assets/healthy-dialog.png)
 
 1. 按一下&#x200B;**關閉**。
 
 ### &#x200B;3. 建立自動表單轉換設定
 
-建立Automated forms conversion配置，將實AEM例連接到轉換服務。 它還允許您指定轉換的模板、主題和表單片段。 您可以為每組表單建立多個單獨的雲服務配置。
-例如，您可以為銷售部門表單單獨配置，而為客戶支援表單單獨配置。 執行以下步驟來建立雲端服務設定：
+建立自動錶單轉換設定，將您的AEM執行個體連線到轉換服務。 它也可讓您指定轉換的範本、主題和表單片段。 您可以為每組表單分別建立多個雲端服務設定。
+例如，您可以針對銷售部門表單設定不同的組態，而針對客戶支援表單設定不同的組態。 執行以下步驟來建立雲端服務設定：
 
 1. 在您的AEM Forms執行個體上，按一下&#x200B;**[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]**> **[!UICONTROL Cloud Services]** > **[!UICONTROL Automate Forms Conversion Configuration]**。
 1. 選取&#x200B;**[!UICONTROL Global]**&#x200B;資料夾並按一下&#x200B;**[!UICONTROL Create]**。
