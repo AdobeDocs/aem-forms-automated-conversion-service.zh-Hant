@@ -1,6 +1,6 @@
 ---
 title: 基於資料來源的建議預填及提交最適化表單的工作流程
-description: 針對使用Automated forms conversion服務(AFCS)產生的最適化表單，以資料來源為基礎的預先填寫和提交工作流程。
+description: 針對使用Automated Forms Conversion Service (AFCS)產生的最適化表單，以資料來源為基礎的預先填寫和提交工作流程。
 solution: Experience Manager Forms
 feature: Adaptive Forms
 topic: Administration
@@ -9,16 +9,31 @@ role: Admin, Developer
 level: Beginner, Intermediate
 contentOwner: khsingh
 exl-id: 5deef8f5-5098-47c1-b696-b2db59e92931
-source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
+TQID: https://experienceleague.adobe.com/TmEZJSIKPj6f2X5E7X8JY9AL5EGHSPuLhAzQlPdvGGM
+product_v2:
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2:
+  - id: df401a2a-327d-468c-a5e4-b7b7ccd071a0
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
-source-wordcount: '2397'
+source-wordcount: 2555
 ht-degree: 1%
 
 ---
 
 # 基於資料來源的建議預填及提交最適化表單的工作流程 {#recommended-data-source-btased-prefill-and-submit-workflows-for-adaptive-forms}
 
-您可以透過透過Automated forms conversion服務(AFCS)轉換的最適化表單，使用下列任何資料來源：
+下列資料來源可透過自動錶單轉換服務(AFCS)轉換的最適化表單使用：
 
 * 表單資料模型、OData或任何其他協力廠商服務
 * JSON結構描述
@@ -37,12 +52,12 @@ ht-degree: 1%
   <tr> 
    <td><p>表單資料模型、OData或任何其他協力廠商服務</p></td> 
    <td> 
-    <p><strong>選項1</strong>：您選取表單資料模型、OData或任何其他協力廠商服務做為資料來源。 您<a href="#generate-adaptive-forms-with-no-data-binding">使用Automated forms conversion服務(AFCS)產生無資料繫結的最適化表單</a>。 您可以手動將最適化表單欄位繫結至表單資料模型實體，並使用「表單資料模型預填服務」選項來預填欄位值。 使用「使用表單資料模型提交」選項來提交最適化表單。</p></td> 
+    <p><strong>選項1</strong>：您選取表單資料模型、OData或任何其他協力廠商服務做為資料來源。 您使用Automated Forms Conversion Service (AFCS) <a href="#generate-adaptive-forms-with-no-data-binding">產生無資料繫結的最適化表單</a>。 您可以手動將最適化表單欄位繫結至表單資料模型實體，並使用「表單資料模型預填服務」選項來預填欄位值。 使用「使用表單資料模型提交」選項來提交最適化表單。</p></td> 
   </tr>
   <tr> 
    <td></td> 
    <td> 
-   <p><strong>選項2</strong>：您選取表單資料模型、OData或任何其他協力廠商服務做為資料來源。 您<a href="#generate-adaptive-forms-with-no-data-binding">使用Automated forms conversion服務(AFCS)產生無資料繫結的最適化表單</a>。 您可以使用規則編輯器繫結調適型表單欄位以預填欄位值。 如有需要，請修改欄位值，並將資料提交至crx-repository。</p>
+   <p><strong>選項2</strong>：您選取表單資料模型、OData或任何其他協力廠商服務做為資料來源。 您使用Automated Forms Conversion Service (AFCS) <a href="#generate-adaptive-forms-with-no-data-binding">產生無資料繫結的最適化表單</a>。 您可以使用規則編輯器繫結調適型表單欄位以預填欄位值。 如有需要，請修改欄位值，並將資料提交至crx-repository。</p>
     </td> 
   </tr>
   <tr> 
@@ -58,7 +73,7 @@ ht-degree: 1%
   <tr>
   <td></td> 
    <td> 
-    <p><strong>選項1</strong>：您<a href="#generate-adaptive-forms-with-no-data-binding">使用Automated forms conversion服務(AFCS)產生無資料繫結的最適化表單</a>，並將JSON結構描述設定為資料來源。 您手動將最適化表單欄位繫結到JSON結構描述，然後<a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#Supportedprotocolsforprefillinguserdata" target="_blank">使用任何支援的通訊協定</a>來預先填入欄位值。 如有需要，請修改欄位值，並將資料提交至crx-repository。</p></td> 
+    <p><strong>選項1</strong>：您<a href="#generate-adaptive-forms-with-no-data-binding">使用自動錶單轉換服務(AFCS)產生無資料繫結的最適化表單</a>，並將JSON結構描述設定為資料來源。 您手動將最適化表單欄位繫結到JSON結構描述，然後<a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#Supportedprotocolsforprefillinguserdata" target="_blank">使用任何支援的通訊協定</a>來預先填入欄位值。 如有需要，請修改欄位值，並將資料提交至crx-repository。</p></td> 
   </tr>
   <tr>
   <td></td> 
@@ -68,7 +83,7 @@ ht-degree: 1%
   <tr>
   <td></td> 
    <td> 
-    <p><strong>選項2</strong>：您<a href="#generate-adaptive-forms-with-json-binding">使用Automated forms conversion服務(AFCS)產生具有JSON資料繫結的最適化表單</a>。 預填服務與表單提交功能順暢無礙。 您不需要任何設定步驟。</p> </td> 
+    <p><strong>選項2</strong>：您使用Automated Forms Conversion Service (AFCS) <a href="#generate-adaptive-forms-with-json-binding">產生具有JSON資料繫結的最適化表單</a>。 預填服務與表單提交功能順暢無礙。 您不需要任何設定步驟。</p> </td> 
   </tr>
    <tr>
   <td></td> 
@@ -78,7 +93,7 @@ ht-degree: 1%
   <tr>
   <td><p>XSD結構描述</p></td> 
    <td> 
-    <p>選取XSD結構描述作為資料來源。 根據選取的資料來源，您<a href="#generate-adaptive-forms-with-no-data-binding">使用Automated forms conversion服務(AFCS)產生無資料繫結的最適化表單</a>，並將XSD結構描述設定為資料來源。 您手動將最適化表單欄位繫結到XSD結構描述，然後<a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#Supportedprotocolsforprefillinguserdata" target="_blank">使用任何支援的通訊協定</a>來預先填入欄位值。 如有需要，請修改欄位值，並將資料提交至crx-repository。</p>
+    <p>選取XSD結構描述作為資料來源。 根據選取的資料來源，您<a href="#generate-adaptive-forms-with-no-data-binding">使用自動錶單轉換服務(AFCS)產生無資料繫結的最適化表單</a>，並將XSD結構描述設定為資料來源。 您手動將最適化表單欄位繫結到XSD結構描述，然後<a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#Supportedprotocolsforprefillinguserdata" target="_blank">使用任何支援的通訊協定</a>來預先填入欄位值。 如有需要，請修改欄位值，並將資料提交至crx-repository。</p>
     </td> 
   </tr>
   <tr>
@@ -91,10 +106,10 @@ ht-degree: 1%
 </table>
 
 
-如需Automated forms conversion服務(AFCS)的詳細資訊，請參閱下列文章：
+如需自動錶單轉換服務(AFCS)的詳細資訊，請參閱下列文章：
 
-* [automated forms conversion服務簡介](introduction.md)
-* [設定Automated forms conversion服務](configure-service.md)
+* [自動錶單轉換服務簡介](introduction.md)
+* [設定自動錶單轉換服務](configure-service.md)
 * [將列印表單轉換為最適化表單](convert-existing-forms-to-adaptive-forms.md)
 * [檢閱並修正轉換後的表單](review-correct-ui-edited.md)
 
@@ -103,17 +118,17 @@ ht-degree: 1%
 ## 必要條件 {#pre-requisites}
 
 * 設定[AEM作者執行個體](https://helpx.adobe.com/tw/experience-manager/6-5/sites/deploying/using/deploy.html)
-* 在AEM編寫執行個體[&#128279;](configure-service.md)上設定Automated forms conversion服務(AFCS)
+* 在AEM作者執行個體[&#128279;](configure-service.md)上設定自動錶單轉換服務(AFCS)
 
 ## 最適化表單範例 {#sample-adaptive-form}
 
-若要執行使用案例以預先填寫最適化表單中的欄位值並將它們提交至資料來源，請下載以下範例PDF檔案。
+若要執行使用案例以預先填寫最適化表單中的欄位值並將它們提交至資料來源，請下載以下PDF檔案範例。
 
 貸款申請表範例
 
 [取得檔案](assets/sample_loan_application_form.pdf)
 
-PDF檔案可作為Automated forms conversion服務(AFCS)的輸入。 此服務會將此檔案轉換為最適化表單。 下圖以PDF格式說明範例貸款申請。
+PDF檔案可當作自動錶單轉換服務(AFCS)的輸入。 此服務會將此檔案轉換為最適化表單。 下圖說明PDF格式的範例貸款應用程式。
 
 ![貸款申請表範例](assets/sample_form_new.png)
 
@@ -225,7 +240,7 @@ CREATE TABLE `applicant` (
 
 ## 產生無資料繫結的最適化表單 {#generate-adaptive-forms-with-no-data-binding}
 
-使用[Automated forms conversion服務將](convert-existing-forms-to-adaptive-forms.md) [範例貸款申請表單](#sample-adaptive-form)轉換為無資料繫結的最適化表單。 請確定您選取&#x200B;**[!UICONTROL Generate adaptive form(s) without data bindings]**&#x200B;核取方塊以產生無資料繫結的最適化表單。
+使用[自動錶單轉換服務將](convert-existing-forms-to-adaptive-forms.md) [範例貸款申請表單](#sample-adaptive-form)轉換為無資料繫結的最適化表單。 請確定您選取&#x200B;**[!UICONTROL Generate adaptive form(s) without data bindings]**&#x200B;核取方塊以產生無資料繫結的最適化表單。
 
 ![無資料繫結的最適化表單](assets/generate_af_without_binding.png)
 
@@ -236,12 +251,12 @@ CREATE TABLE `applicant` (
 * [XSD結構描述](#xsddatasource)
 
 >[!NOTE]
-> 如果您使用Automated forms conversion服務(AFCS)轉換的最適化表單包含多個同名欄位，請確保這些欄位已繫結至資料來源實體，以避免在提交期間可能遺失資料。
+> 如果您使用自動錶單轉換服務(AFCS)轉換的最適化表單包含多個同名欄位，請確保這些欄位已繫結至資料來源實體，以避免在提交期間可能遺失資料。
 >
 
 ### 使用資料庫、OData或任何第三方服務做為資料來源 {#sqldatasource}
 
-使用案例：您可以使用Automated forms conversion服務(AFCS)產生無資料繫結的最適化表單，並將MYSQL資料庫設定為資料來源。 您手動將最適化表單欄位繫結到表單資料模型實體，並使用&#x200B;**[!UICONTROL Form Data Model Prefill Service]**&#x200B;選項預先填寫欄位值。 您使用&#x200B;**[!UICONTROL Submit using Form Data Model]**&#x200B;選項來提交最適化表單。
+使用案例：您使用自動錶單轉換服務(AFCS)產生無資料繫結的最適化表單，並將MYSQL資料庫設定為資料來源。 您手動將最適化表單欄位繫結到表單資料模型實體，並使用&#x200B;**[!UICONTROL Form Data Model Prefill Service]**&#x200B;選項預先填寫欄位值。 您使用&#x200B;**[!UICONTROL Submit using Form Data Model]**&#x200B;選項來提交最適化表單。
 
 執行使用案例之前：
 
@@ -281,7 +296,7 @@ CREATE TABLE `applicant` (
 1. 點選&#x200B;**[!UICONTROL Preview]**&#x200B;以檢視預填的最適化表單欄位值。
 1. 如有需要，請修改欄位值並提交最適化表單。 欄位值會提交至MySQL資料庫。 您可以重新整理資料庫中的&#x200B;**應徵者**&#x200B;資料表，以檢視資料表中更新的值。
 
-**使用案例：**&#x200B;您使用Automated forms conversion服務(AFCS)產生無資料繫結的最適化表單，並將MYSQL資料庫設定為資料來源。 您可以使用規則編輯器繫結調適型表單欄位以預填欄位值。 如有需要，請修改欄位值，並將資料提交至crx-repository。
+**使用案例：**&#x200B;您使用自動錶單轉換服務(AFCS)產生無資料繫結的最適化表單，並將MYSQL資料庫設定為資料來源。 您可以使用規則編輯器繫結調適型表單欄位以預填欄位值。 如有需要，請修改欄位值，並將資料提交至crx-repository。
 
 執行以下步驟以使用[規則編輯器](https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/rule-editor.html)來叫用表單資料模型服務，以繫結最適化表單中的欄位和預填值：
 
@@ -307,7 +322,7 @@ CREATE TABLE `applicant` (
 
    1. 使用「輸出」區段建立最適化表單欄位與表單資料模型實體的繫結。 例如，將&#x200B;**[!UICONTROL Applicant Name]**&#x200B;最適化表單欄位與&#x200B;**名稱**&#x200B;實體繫結。
 
-   1. 點選 **[!UICONTROL Done]**。在規則編輯器頁面上再次點選&#x200B;**[!UICONTROL Done]**。
+   1. 點選 **[!UICONTROL Done]**。 在規則編輯器頁面上再次點選&#x200B;**[!UICONTROL Done]**。
 
    ![繫結參考的規則編輯器](assets/rule_editor_bind_references.png)
 
@@ -323,7 +338,7 @@ CREATE TABLE `applicant` (
 
 ### 使用JSON結構描述作為資料來源 {#jsondatasource}
 
-**使用案例：**&#x200B;您使用Automated forms conversion服務(AFCS)產生無資料繫結的最適化表單，並將JSON結構描述設定為資料來源。 您手動將最適化表單欄位繫結到JSON結構描述，並使用&#x200B;**含有資料的預覽**&#x200B;選項來預填欄位值。 如有需要，請修改欄位值，並將資料提交至crx-repository。
+**使用案例：**&#x200B;您使用自動錶單轉換服務(AFCS)產生無資料繫結的最適化表單，並將JSON結構描述設定為資料來源。 您手動將最適化表單欄位繫結到JSON結構描述，並使用&#x200B;**含有資料的預覽**&#x200B;選項來預填欄位值。 如有需要，請修改欄位值，並將資料提交至crx-repository。
 
 在執行使用案例之前，請確定您擁有：
 
@@ -351,7 +366,7 @@ CREATE TABLE `applicant` (
 
 ### 使用XSD結構描述做為資料來源 {#xsddatasource}
 
-**使用案例：**&#x200B;您使用Automated forms conversion服務(AFCS)產生無資料繫結的最適化表單，並將XSD結構描述設定為資料來源。 您手動將最適化表單欄位繫結到XSD結構描述，並使用&#x200B;**含有資料的預覽**&#x200B;來預填欄位值。 如有需要，請修改欄位值，並將資料提交至crx-repository。
+**使用案例：**&#x200B;您使用自動錶單轉換服務(AFCS)產生無資料繫結的最適化表單，並將XSD結構描述設定為資料來源。 您手動將最適化表單欄位繫結到XSD結構描述，並使用&#x200B;**含有資料的預覽**&#x200B;來預填欄位值。 如有需要，請修改欄位值，並將資料提交至crx-repository。
 
 在執行使用案例之前，請確定您擁有：
 
@@ -379,13 +394,13 @@ CREATE TABLE `applicant` (
 
 ## 產生具有JSON繫結的最適化表單 {#generate-adaptive-forms-with-json-binding}
 
-使用[Automated forms conversion服務(AFCS)將](convert-existing-forms-to-adaptive-forms.md) [範例貸款申請表單](#sample-adaptive-form)轉換為具有資料繫結的最適化表單。 確保在產生最適化表單時不要選取&#x200B;**[!UICONTROL Generate adaptive form(s) without data bindings]**&#x200B;核取方塊。
+使用[自動錶單轉換服務(AFCS)將](convert-existing-forms-to-adaptive-forms.md) [範例貸款申請表單](#sample-adaptive-form)轉換為具有資料繫結的最適化表單。 確保在產生最適化表單時不要選取&#x200B;**[!UICONTROL Generate adaptive form(s) without data bindings]**&#x200B;核取方塊。
 
 ![具有JSON繫結的最適化表單](assets/generate_af_with_data_bindings.png)
 
 ### 使用JSON結構描述作為資料來源 {#jsonwithdatabinding}
 
-**使用案例：**&#x200B;您使用Automated forms conversion服務(AFCS)產生具有JSON資料繫結的最適化表單。 預填服務與表單提交功能順暢無礙。 您不需要任何設定步驟。
+**使用案例：**&#x200B;您使用自動錶單轉換服務(AFCS)產生具有JSON資料繫結的最適化表單。 預填服務與表單提交功能順暢無礙。 您不需要任何設定步驟。
 
 在執行使用案例之前，請確定您有[具有資料繫結的最適化表單](#generate-adaptive-forms-with-json-binding)。
 

@@ -8,10 +8,29 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 5447b66f-9fac-476f-ab8a-9290bb1f9c0d
-source-git-commit: 23d441d19dea63382f0a0024b4682d5bd0eaa63c
+TQID: https://experienceleague.adobe.com/NjVGOlVHFuhj4IP-PL8NwhX0g78-x250m7QedQxLkEg
+product_v2:
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: a1df6763-63b5-45b4-8c8a-155a692a2b3e
+  - id: ae478996-b206-4712-9b0c-dc78a2644453
+  - id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: df401a2a-327d-468c-a5e4-b7b7ccd071a0
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
-source-wordcount: '1507'
-ht-degree: 1%
+source-wordcount: 1541
+ht-degree: 2%
 
 ---
 
@@ -33,7 +52,7 @@ ht-degree: 1%
 * 為您的AEM執行個體安裝[最新Service Pack](https://helpx.adobe.com/tw/experience-manager/aem-releases-updates.html)
 * 最新版本的AEM Forms附加元件套件
 * 設定[自動錶單轉換服務](configure-service.md)
-* 設定資料庫。 範例實作中使用的資料庫是MySQL 5.6.24。不過，您可以將轉換後的最適化表單與您選擇的任何資料庫整合。
+* 設定資料庫。 範例實作中使用的資料庫是MySQL 5.6.24。 不過，您可以將轉換後的最適化表單與您選擇的任何資料庫整合。
 
 ## 最適化表單範例 {#sample-adaptive-form}
 
@@ -162,7 +181,7 @@ CREATE TABLE `contactus` (
 
 1. 點選&#x200B;**[!UICONTROL Create]** > **[!UICONTROL Form Data Model]**。
 
-1. 在&#x200B;**[!UICONTROL Create Form Data Model]**&#x200B;精靈中，將&#x200B;**workflow_submit**&#x200B;指定為表單資料模型的名稱。 點選&#x200B;**[!UICONTROL Next]**。
+1. 在&#x200B;**[!UICONTROL Create Form Data Model]**&#x200B;精靈中，將&#x200B;**workflow_submit**&#x200B;指定為表單資料模型的名稱。 點選 **[!UICONTROL Next]**。
 
 1. 選取您在上一節中設定的MYSQL資料來源，然後點選&#x200B;**[!UICONTROL Create]**。
 
@@ -170,7 +189,7 @@ CREATE TABLE `contactus` (
 
    ![範例資料mysql](assets/fdm_details_workfdlow_submit.png)
 
-1. 在右窗格中選取資料模型物件，然後點選&#x200B;**[!UICONTROL Edit Properties]**。 從&#x200B;**[!UICONTROL get]**&#x200B;和&#x200B;**[!UICONTROL insert]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL Read Service]**&#x200B;和&#x200B;**[!UICONTROL Write Service]**。 指定讀取服務的引數，然後點選&#x200B;**[!UICONTROL Done]**。
+1. 在右窗格中選取資料模型物件，然後點選&#x200B;**[!UICONTROL Edit Properties]**。 從&#x200B;**[!UICONTROL Read Service]**&#x200B;和&#x200B;**[!UICONTROL Write Service]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL get]**&#x200B;和&#x200B;**[!UICONTROL insert]**。 指定讀取服務的引數，然後點選&#x200B;**[!UICONTROL Done]**。
 
 1. 在&#x200B;**[!UICONTROL Services]**&#x200B;標籤中，選取&#x200B;**[!UICONTROL get]**&#x200B;服務並點選&#x200B;**[!UICONTROL Edit Properties]**。 選取&#x200B;**[!UICONTROL Output Model Object]**、停用&#x200B;**[!UICONTROL Return array]**&#x200B;切換功能，然後點選&#x200B;**[!UICONTROL Done]**。
 
@@ -188,7 +207,7 @@ CREATE TABLE `contactus` (
 
 ![具有JSON繫結的最適化表單](assets/generate_af_with_data_bindings.png)
 
-選取可在&#x200B;**的**&#x200B;資料夾中取得的&#x200B;**[!UICONTROL output]**&#x200B;連絡我們表單&#x200B;**[!UICONTROL Forms & Documents]**，然後點選&#x200B;**[!UICONTROL Edit]**。 點選&#x200B;**[!UICONTROL Preview]**，在最適化表單欄位中輸入值，然後點選&#x200B;**[!UICONTROL Submit]**。
+選取可在&#x200B;**[!UICONTROL Forms & Documents]**&#x200B;的&#x200B;**[!UICONTROL output]**&#x200B;資料夾中取得的&#x200B;**連絡我們表單**，然後點選&#x200B;**[!UICONTROL Edit]**。 點選&#x200B;**[!UICONTROL Preview]**，在最適化表單欄位中輸入值，然後點選&#x200B;**[!UICONTROL Submit]**。
 
 登入&#x200B;**crx-repository**&#x200B;並導覽至&#x200B;*/content/forms/fp/admin/submit/data*，以檢視JSON格式的提交值。 以下是您提交轉換的&#x200B;**聯絡我們**&#x200B;最適化表單時，JSON格式的範例資料：
 
@@ -233,7 +252,7 @@ CREATE TABLE `contactus` (
 
 1. 點選&#x200B;**[!UICONTROL Invoke Form Data Model Service]**&#x200B;步驟並點選![設定](assets/configure_icon.png)。
 
-1. 在&#x200B;**[!UICONTROL Form Data Model]**&#x200B;索引標籤中，選取您在&#x200B;**[!UICONTROL Form Data Model path]**&#x200B;欄位中建立的表單資料模型，並從&#x200B;**[!UICONTROL insert]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL Service]**。
+1. 在&#x200B;**[!UICONTROL Form Data Model]**&#x200B;索引標籤中，選取您在&#x200B;**[!UICONTROL Form Data Model path]**&#x200B;欄位中建立的表單資料模型，並從&#x200B;**[!UICONTROL Service]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL insert]**。
 
 1. 在&#x200B;**[!UICONTROL Input for Service]**&#x200B;索引標籤中，從下拉式清單中選取&#x200B;**[!UICONTROL Provide input data using literal, variable, or a workflow metadata, and a JSON file]**，選取&#x200B;**[!UICONTROL Map input fields from input JSON]**&#x200B;核取方塊，選取&#x200B;**[!UICONTROL Relative to payload]**，並提供&#x200B;**data.xml**&#x200B;作為&#x200B;**[!UICONTROL Select input JSON document using]**&#x200B;欄位的值。
 
@@ -247,11 +266,11 @@ CREATE TABLE `contactus` (
 
 執行以下步驟，將最適化表單提交至您在前一節中建立的工作流程模型：
 
-1. 選取&#x200B;**[!UICONTROL output]**&#x200B;中&#x200B;**[!UICONTROL Forms & Documents]**&#x200B;資料夾中可用的轉換連絡人表單，然後點選&#x200B;**[!UICONTROL Edit]**。
+1. 選取&#x200B;**[!UICONTROL Forms & Documents]**&#x200B;中&#x200B;**[!UICONTROL output]**&#x200B;資料夾中可用的轉換連絡人表單，然後點選&#x200B;**[!UICONTROL Edit]**。
 
 1. 點選&#x200B;**[!UICONTROL Form Container]**，然後點選![設定](assets/configure_icon.png)，開啟最適化表單屬性。
 
-1. 在&#x200B;**[!UICONTROL Submission]**&#x200B;區段中，從&#x200B;**[!UICONTROL Invoke an AEM workflow]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL Submit Action]**，選取您在上一區段中建立的工作流程模型，並在&#x200B;**欄位中指定** data.xml **[!UICONTROL Data File Path]**。
+1. 在&#x200B;**[!UICONTROL Submission]**&#x200B;區段中，從&#x200B;**[!UICONTROL Submit Action]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL Invoke an AEM workflow]**，選取您在上一區段中建立的工作流程模型，並在&#x200B;**[!UICONTROL Data File Path]**&#x200B;欄位中指定&#x200B;**data.xml**。
 
 1. 點選![儲存](assets/save_icon.png)以儲存屬性。
 
@@ -263,11 +282,11 @@ CREATE TABLE `contactus` (
 
 1. 點選最適化表單中的&#x200B;**電子郵件**&#x200B;欄位，然後點選![編輯規則](assets/edit-rules.png)。
 
-1. 點選&#x200B;**[!UICONTROL Create]**&#x200B;並從&#x200B;**[!UICONTROL is changed]**&#x200B;區段的&#x200B;**[!UICONTROL Select State]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL When]**。
+1. 點選&#x200B;**[!UICONTROL Create]**&#x200B;並從&#x200B;**[!UICONTROL When]**&#x200B;區段的&#x200B;**[!UICONTROL Select State]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL is changed]**。
 
 1. 在&#x200B;**[!UICONTROL Then]**&#x200B;區段中，選取&#x200B;**[!UICONTROL Invoke Service]**&#x200B;和&#x200B;**get**&#x200B;作為您在此文章前一個區段中建立的表單資料模型的服務。
 
-1. 在&#x200B;**區段中選取**&#x200B;電子郵件&#x200B;**[!UICONTROL Input]**，並在&#x200B;**區段中選取表單資料模型的其餘三個欄位、**&#x200B;名稱&#x200B;**、**&#x200B;電話號碼&#x200B;**以及**&#x200B;問題說明&#x200B;**[!UICONTROL Output]**。 點選&#x200B;**[!UICONTROL Done]**&#x200B;以儲存設定。
+1. 在&#x200B;**[!UICONTROL Input]**&#x200B;區段中選取&#x200B;**電子郵件**，並在&#x200B;**[!UICONTROL Output]**&#x200B;區段中選取表單資料模型的其餘三個欄位、**名稱**、**電話號碼**&#x200B;以及&#x200B;**問題說明**。 點選&#x200B;**[!UICONTROL Done]**&#x200B;以儲存設定。
 
    ![設定電子郵件預填設定](assets/email_prefill_settings.png)
 

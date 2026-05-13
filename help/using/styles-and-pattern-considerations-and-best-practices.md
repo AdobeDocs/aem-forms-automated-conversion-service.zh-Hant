@@ -8,9 +8,25 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 9ada091a-e7c6-40e9-8196-c568f598fc2a
-source-git-commit: ba5457fc64a6525c3dc02a00484030760c373c98
+TQID: https://experienceleague.adobe.com/EixW6MGzAyHz-JcPYmnKQBLWqnEFOwUepUFOcG8DBUo
+product_v2:
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2:
+  - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
-source-wordcount: '1356'
+source-wordcount: 1356
 ht-degree: 3%
 
 ---
@@ -69,12 +85,12 @@ AEM [!DNL Forms Automated Conversion service]使用人工智慧和機器學習�
 
 | 模式 | 範例 |
 |--- |--- |
-| **模式** <br>服務未將已填入的PDF forms轉換為最適化表單。<br><br>**解析度** <br>使用空白的最適化表單。 | ![已填表單](assets/best-practice-filled-forms.png) |
-| **模式** <br>服務可能無法辨識密集表單中的文字和欄位。<br><br>**解析度** <br>在開始轉換之前，請增加密集表單的文字與欄位之間的寬度。 |  |
-| **模式** <br>服務不支援掃描的表單。<br><br>**解析度** <br>不使用掃描的表單。 | ![掃描的表單](assets/scanned-forms.png) |
-| **圖樣** <br>服務未擷取影像內的影像和文字。<br><br>**解析度** <br>手動將影像或文字新增至轉換後的表單。 | ![含文字表單的影像](assets/best-practice-image-with-text.png) |
-| **圖樣** <br>具有虛線或不清除邊界與框線的表格不會轉換。<br><br>**解析度** <br>使用具有明確邊界與框線的表格。 支援。 | ![未清除的資料表表單](assets/best-practice-table-dotted-non-clear.png) |
-| **圖樣** <br>最適化表單不支援開箱即用的垂直文字。 因此，此服務不會將垂直文字轉換為對應的Adaptive Forms文字。<br><br>**解析度** <br>如有需要，請使用最適化表單編輯器新增垂直文字。 | ![未清除的資料表表單](assets/vertical-text.png) |
+| **模式** <br>服務未將已填入的PDF forms轉換為最適化表單。 <br><br>**解析度** <br>使用空白的最適化表單。 | ![已填表單](assets/best-practice-filled-forms.png) |
+| **模式** <br>服務可能無法辨識密集表單中的文字和欄位。 <br><br>**解析度** <br>開始轉換之前，請增加文字與密集表單欄位之間的寬度。 |  |
+| **模式** <br>服務不支援掃描的表單。 <br><br>**解析度** <br>不使用掃描的表單。 | ![掃描的表單](assets/scanned-forms.png) |
+| **圖樣** <br>服務未擷取影像內的影像和文字。 <br><br>**解析度** <br>手動將影像或文字新增至轉換後的表單。 | ![含文字表單的影像](assets/best-practice-image-with-text.png) |
+| **圖樣** <br>具有虛線或不清除邊界與框線的表格不會轉換。 <br><br>**解析度** <br>使用具有明確邊界與框線的表格。 支援。 | ![未清除的資料表表單](assets/best-practice-table-dotted-non-clear.png) |
+| **圖樣** <br>最適化表單不支援開箱即用的垂直文字。 因此，此服務不會將垂直文字轉換為對應的Adaptive Forms文字。 <br><br>**解析度** <br>如有需要，請使用最適化表單編輯器新增垂直文字。 | ![未清除的資料表表單](assets/vertical-text.png) |
 
 
 
@@ -82,16 +98,16 @@ AEM [!DNL Forms Automated Conversion service]使用人工智慧和機器學習�
 
 | 模式 | 解決方法 |
 |--- |--- |
-| **圖樣** <br>具有方塊或圓圈以外形狀的選擇群組選項未轉換為對應的最適化表單元件。<br><br>**解析度** <br>將選擇選項圖形變更為方塊或圓形，或使用檢閱和修正編輯器來識別圖形。 | ![選擇欄位](assets/best-practice-choice-group-options.png) |
+| **圖樣** <br>具有方塊或圓圈以外形狀的選擇群組選項未轉換為對應的最適化表單元件。 <br><br>**解析度** <br>將選擇選項圖形變更為方塊或圓形，或使用檢閱和修正編輯器來識別圖形。 | ![選擇欄位](assets/best-practice-choice-group-options.png) |
 
 ### 表單欄位 {#form-fields}
 
 | 模式 | 解決方法 |
 |--- |--- |
-| **模式** <br>服務未識別沒有明確框線的欄位。<br><br>**解決方法** <br>使用[檢閱與修正]編輯器來識別這類欄位。 | ![具有非清除邊界的欄位](assets/best-practice-fields-without-clear-borders.png) |
-| **模式** <br>服務可能無法識別某些選擇群組表單欄位，這些欄位在表單的底部或右側有註解。<br><br>**解決方式** <br>使用檢閱和修正編輯器來識別這類欄位 | ![選擇欄位](assets/best-practice-caption-bottom-right.png) |
-| **模式** <br>服務會合併或指派錯誤的型別給彼此非常接近或沒有明確框線的某些表單欄位。<br><br>**解決方法** <br>使用[檢閱與修正]編輯器來識別這類欄位。 | ![選擇欄位](assets/best-practice-placed-very-near.png) |
-| **模式** <br>服務可能無法辨識含有遙遠標題的欄位，或是標題與輸入欄位之間的虛線。<br><br>**解決方法** <br>使用具有明確界限的表單欄位，或使用檢閱和修正編輯器來修正此類問題。 | ![註解欄位之間的遠距欄位或虛線](assets/best-practice-far-away-captions-or-a-dotted-line.png) |
+| **模式** <br>服務未識別沒有明確框線的欄位。 <br><br>**解決方式** <br>使用檢閱和修正編輯器來識別這類欄位。 | ![具有非清除邊界的欄位](assets/best-practice-fields-without-clear-borders.png) |
+| **模式** <br>服務可能無法識別某些選擇群組表單欄位，這些欄位在表單的底部或右側有註解。 <br><br>**解決方法** <br>使用檢閱和修正編輯器來識別這類欄位 | ![選擇欄位](assets/best-practice-caption-bottom-right.png) |
+| **模式** <br>服務會合併或指派錯誤的型別給彼此非常接近或沒有明確框線的某些表單欄位。 <br><br>**解決方式** <br>使用檢閱和修正編輯器來識別這類欄位。 | ![選擇欄位](assets/best-practice-placed-very-near.png) |
+| **模式** <br>服務可能無法辨識含有遙遠標題的欄位，或是標題與輸入欄位之間的虛線。 <br><br>**解決方法** <br>使用具有明確界限的表單欄位，或使用檢閱和修正編輯器來修正此類問題。 | ![註解欄位之間的遠距欄位或虛線](assets/best-practice-far-away-captions-or-a-dotted-line.png) |
 
 ### 清單 {#lists}
 

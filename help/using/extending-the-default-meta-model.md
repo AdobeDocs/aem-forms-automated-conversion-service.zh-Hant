@@ -1,6 +1,6 @@
 ---
 title: 擴展預設元模型
-description: 擴展預設元模型以新增組織特定的模式、驗證和實體，並在執行Automated forms conversion服務(AFCS)時將設定套用至調適型表單欄位。
+description: 擴充預設中繼模型以新增特定於貴組織的模式、驗證和實體，並在執行自動錶單轉換服務(AFCS)時將設定套用至調適型表單欄位。
 solution: Experience Manager Forms
 feature: Adaptive Forms
 topic: Administration
@@ -8,24 +8,39 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: f679059c-18aa-4cb5-8368-ed27e96c20de
-source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
+TQID: https://experienceleague.adobe.com/ehU-0CYTjc3aRDnkecBH7uiaO2QLvpDc9d7oxezCVaU
+product_v2:
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2:
+  - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
-source-wordcount: '2569'
+source-wordcount: 2659
 ht-degree: 1%
 
 ---
 
 # 擴展預設元模型 {#extend-the-default-meta-model}
 
-automated forms conversion服務(AFCS)會識別來源表單並從中擷取表單物件。 語意對應程式可協助服務決定如何以最適化表單呈現擷取的物件。 例如，來源表單可以有許多不同型別的日期表示。 語意對應程式有助於將來源表單的日期表單物件與調適型表單的日期元件對應到所有表示方式。 語意對應程式也允許服務在轉換期間預先設定並套用驗證、規則、資料模式、說明文字和協助工具屬性至調適型表單元件。
+自動錶單轉換服務(AFCS)可識別和擷取來源表單中的表單物件。 語意對應程式可協助服務決定如何以最適化表單呈現擷取的物件。 例如，來源表單可以有許多不同型別的日期表示。 語意對應程式有助於將來源表單的日期表單物件與調適型表單的日期元件對應到所有表示方式。 語意對應程式也允許服務在轉換期間預先設定並套用驗證、規則、資料模式、說明文字和協助工具屬性至調適型表單元件。
 
 ![](assets/meta-model.gif)
 
-中繼模型是JSON結構描述。 開始使用中繼模型之前，請確定您已精通JSON。 您必須具備建立、編輯和讀取以JSON格式儲存之資料的經驗。
+Meta-model是JSON結構描述。 開始使用中繼模型之前，請確定您已精通JSON。 您必須具備建立、編輯和讀取以JSON格式儲存之資料的經驗。
 
 ## 預設元模型 {#default-meta-model}
 
-automated forms conversion服務(AFCS)有預設的中繼模型。 它是JSON結構描述，並與Adobe服務(AFCS)的其他元件一起駐留在Automated forms conversion雲端。 您可以在下列網址，在本機AEM伺服器上找到中繼模型的復本： http://&lt;server>：&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/`global.schema.json`。 您也可以[按一下這裡](assets/en.globalschema.json)來存取或下載英文結構描述。 [法文](assets/fr.globalschema.json)、[德文](assets/de.globalschema.json) [西班牙文](assets/es.globalschema.json)、[義大利文](assets/it.globalschema.json)和[葡萄牙文](assets/pt_br.globalschema.json)語言的中繼模型也可供下載。
+自動錶單轉換服務(AFCS)有預設的中繼模型。 它是JSON結構描述，並與Automated Forms Conversion Service (AFCS)的其他元件一起位在Adobe雲端。 您可以在下列網址，在本機AEM伺服器上找到中繼模型的復本： http://&lt;server>：&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/`global.schema.json`。 您也可以[按一下這裡](assets/en.globalschema.json)來存取或下載英文結構描述。 [法文](assets/fr.globalschema.json)、[德文](assets/de.globalschema.json) [西班牙文](assets/es.globalschema.json)、[義大利文](assets/it.globalschema.json)和[葡萄牙文](assets/pt_br.globalschema.json)語言的中繼模型也可供下載。
 
 中繼模型的結構描述衍生自https://schema.org/docs/schemas.html上的結構描述實體。 它有Person、PostalAddress、LocalBusiness和https://schema.org上定義的更多實體。 中繼模型的每個實體都會遵守JSON結構描述物件型別。 下列程式碼代表範例中繼模型結構：
 
@@ -51,7 +66,7 @@ automated forms conversion服務(AFCS)有預設的中繼模型。 它是JSON結�
 
 1. 登入您的AEM Forms執行個體。
 1. 導覽至&#x200B;**[!UICONTROL Forms]** > **[!UICONTROL Forms & Documents]** **>** **[!UICONTROL Meta Model]**&#x200B;資料夾。
-1. 選取&#x200B;**[!UICONTROL global.schema.json]**&#x200B;檔案並點選&#x200B;**[!UICONTROL Download]**。 將會顯示下載對話方塊。 選取&#x200B;**[!UICONTROL Download asset(s) as binary files]**&#x200B;選項。 點選 **[!UICONTROL Download]**。已下載封存。
+1. 選取&#x200B;**[!UICONTROL global.schema.json]**&#x200B;檔案並點選&#x200B;**[!UICONTROL Download]**。 將會顯示下載對話方塊。 選取&#x200B;**[!UICONTROL Download asset(s) as binary files]**&#x200B;選項。 點選 **[!UICONTROL Download]**。 已下載封存。
 
    <!--
    Comment Type: draft
@@ -112,15 +127,15 @@ automated forms conversion服務(AFCS)有預設的中繼模型。 它是JSON結�
 * [關鍵字式搜尋，將屬性套用至產生的自適應表單欄位](#keywordsearch)
 * [其他屬性](#additionalproperties)
 
-![中繼模型屬性](assets/meta_model_elements.gif)
+![Meta模型屬性](assets/meta_model_elements.gif)
 
-轉換服務會根據使用&#x200B;**aem：affKeyword**&#x200B;所參考的關鍵字，對來源表單欄位執行搜尋作業。 轉換服務會將JSON結構描述屬性和其他屬性套用至符合搜尋條件的欄位。
+轉換服務會根據使用&#x200B;**aem:affKeyword**&#x200B;所參考的關鍵字，對來源表單欄位執行搜尋作業。 轉換服務會將JSON結構描述屬性和其他屬性套用至符合搜尋條件的欄位。
 
-在此範例中，轉換服務會在來源表單中搜尋電話、電話、行動電話、公司電話、住家電話、電話號碼、電話號碼和電話號碼關鍵字。 轉換服務會根據包含這些關鍵字的欄位，在轉換後將型別、模式和aem：afProperties套用至調適型表單欄位。
+在此範例中，轉換服務會在來源表單中搜尋電話、電話、行動電話、公司電話、住家電話、電話號碼、電話號碼和電話號碼關鍵字。 轉換服務會根據包含這些關鍵字的欄位，在轉換後將型別、模式和aem:afProperties套用至調適型表單欄位。
 
 ### 所產生的最適化表單欄位的JSON結構描述屬性 {#jsonschemaproperties}
 
-中繼模型支援使用Automated forms conversion服務(AFCS)產生的調適型表單欄位的下列JSON結構描述共同屬性：
+中繼模型支援使用自動錶單轉換服務(AFCS)產生之最適化表單欄位的下列JSON結構描述共同屬性：
 
 <table> 
  <tbody> 
@@ -147,7 +162,7 @@ automated forms conversion服務(AFCS)有預設的中繼模型。 它是JSON結�
      <li>布林值：產生切換最適化表單元件。</li>
      </ul><p>如需在中繼模型中使用型別屬性的詳細資訊，請參閱<a href="#custommetamodelexamples">自訂中繼模型範例中的<strong>修改表單欄位的型別</strong>。</a></p></td> 
   </tr>
-  <td><p>圖樣</p></td> 
+  <td><p>pattern</p></td> 
    <td> 
     <p>pattern屬性會根據規則運算式來限制產生的最適化表單欄位的值。 例如，中繼模型中的下列程式碼會將所產生的最適化表單欄位的值限製為10位數： <br>"pattern"： "/\\d{10}/"<br>同樣地，中繼模型中的下列程式碼會將欄位的值限製為特定日期格式。<br> "pattern"： "date{DD MMMM， YYYY}"，</p> </td> 
   </tr>
@@ -164,9 +179,9 @@ automated forms conversion服務(AFCS)有預設的中繼模型。 它是JSON結�
 
 ### 關鍵字式搜尋，將屬性套用至產生的自適應表單欄位 {#keywordsearch}
 
-automated forms conversion服務(AFCS)會在轉換期間在來源表單上執行關鍵字搜尋。 篩選符合搜尋條件的欄位後，轉換服務會將中繼模型中為這些欄位定義的屬性套用至產生的調適型表單欄位。
+自動錶單轉換服務(AFCS)會在轉換期間在來源表單上執行關鍵字搜尋。 篩選符合搜尋條件的欄位後，轉換服務會將中繼模型中為這些欄位定義的屬性套用至產生的調適型表單欄位。
 
-使用&#x200B;**aem：affKeyword**&#x200B;屬性參考關鍵字。
+使用&#x200B;**aem:affKeyword**&#x200B;屬性參考關鍵字。
 
 ```
 {
@@ -177,11 +192,11 @@ automated forms conversion服務(AFCS)會在轉換期間在來源表單上執行
 }
 ```
 
-在此範例中，轉換服務使用&#x200B;**aem：affKeyword**&#x200B;中的文字做為搜尋關鍵字。 擷取表單中的&#x200B;**銀行帳號**&#x200B;文字後，轉換服務會使用&#x200B;**type**&#x200B;屬性將欄位轉換為&#x200B;**number**&#x200B;型別。
+在此範例中，轉換服務使用&#x200B;**aem:affKeyword**&#x200B;中的文字做為搜尋關鍵字。 擷取表單中的&#x200B;**銀行帳號**&#x200B;文字後，轉換服務會使用&#x200B;**type**&#x200B;屬性將欄位轉換為&#x200B;**number**&#x200B;型別。
 
 ### 產生的最適化表單欄位的其他屬性 {#additionalproperties}
 
-您可以在中繼模型中使用&#x200B;**aem：afProperties**&#x200B;屬性，為使用Automated forms conversion服務(AFCS)產生的調適型表單欄位定義下列其他屬性：
+您可以在中繼模型中使用&#x200B;**aem:afProperties**&#x200B;屬性，為使用自動錶單轉換服務(AFCS)產生的最適化表單欄位定義下列其他屬性：
 
 <table> 
  <tbody> 
@@ -201,7 +216,7 @@ automated forms conversion服務(AFCS)會在轉換期間在來源表單上執行
   </tr>
   <td><p>jcr:title</p></td> 
    <td> 
-    <p>jcr：title屬性和title JSON結構描述屬性可讓您在轉換後修改最適化表單欄位的標籤。<br>如需詳細資訊，請參閱<a href="#custommetamodelexamples">自訂中繼模型範例中的<strong>修改表單欄位的標籤</strong>。</a><br>請參閱<a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/adaptive-form-json-schema-form-model.html" target="_blank">使用JSON結構描述建立最適化表單</a>，以取得更多您可以使用JSON結構描述套用至最適化表單欄位的屬性資訊。</p>
+    <p>jcr：title屬性和title JSON結構描述屬性可讓您在轉換後修改最適化表單欄位的標籤。<br>如需詳細資訊，請參閱<a href="#custommetamodelexamples">自訂中繼模型範例中的<strong>修改表單欄位的標籤</strong>。</a><br>請參閱<a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/adaptive-form-json-schema-form-model.html" target="_blank">使用JSON結構描述建立調適型表單</a>，以取得更多您可以使用JSON結構描述套用至調適型表單欄位的屬性資訊。</p>
     <p></p></td> 
   </tr>
   <td><p>sling：resourceType和guideNodeClass</p></td> 
@@ -217,7 +232,7 @@ automated forms conversion服務(AFCS)會在轉換期間在來源表單上執行
 
 ## 以您自己的語言建立自訂中繼模型{#language-specific-meta-model}
 
-您可以建立特定語言的中繼模型。 這類中繼模型可協助您以您選擇的語言建立對應規則。 automated forms conversion服務(AFCS)可讓您使用下列語言建立中繼模型：
+您可以建立特定語言的中繼模型。 這類中繼模型可協助您以您選擇的語言建立對應規則。 Automated Forms Conversion Service (AFCS)可讓您使用下列語言建立中繼模型：
 
 * English(en)
 * French(fr)
@@ -226,7 +241,7 @@ automated forms conversion服務(AFCS)會在轉換期間在來源表單上執行
 * Italian(it)
 * 葡萄牙文(pt-br)
 
-將&#x200B;*aem：Language* metatag標籤新增至中繼模型頂端，以指定其語言。 例如，
+將&#x200B;*aem:Language*&#x200B;中繼標籤標籤新增至中繼模型頂端，以指定其語言。 例如，
 
 ```JSON
 "metaTags": {
@@ -241,14 +256,14 @@ automated forms conversion服務(AFCS)會在轉換期間在來源表單上執行
 * 確定每個金鑰的名稱都是英文名稱。 例如，emailAddress。
 * 請確定所有實體參照和所有ID鍵的預定義值只包含ASCII字元。 例如&quot;id&quot;： &quot;ContactPoint&quot; / &quot;$ref&quot;： &quot;#ContactPoint&quot;。
 * 請確定與下列鍵值對應的所有值都使用指定的元模型語言：
-   * aem：affKeyword
+   * aem:affKeyword
    * 標題
    * 說明
    * enumName
    * shortDescription
    * validatePictureClauseMessage
 
-  例如，當中繼模型的語言是法文(「aem：Language」：「fr」)時，請確定所有說明和訊息都是法文。
+  例如，當中繼模型的語言是法文(&quot;aem:Language&quot;： &quot;fr&quot;)時，請確定所有說明和訊息都是法文。
 
 * 請確定所有[JSON結構描述屬性](#jsonschemaproperties)都只使用支援的值。 例如，type屬性只能跨越字串、數字、整數和布林值的選取值。
 
@@ -258,9 +273,9 @@ automated forms conversion服務(AFCS)會在轉換期間在來源表單上執行
 
 ## 使用自訂中繼模型修改最適化表單欄位 {#modify-adaptive-form-fields-using-custom-meta-model}
 
-除了預設元模型中列出的模式與驗證之外，您的組織還可以有這些模式與驗證。 您可以擴充預設元模型，以新增特定於貴組織的陣列、驗證和圖元。 automated forms conversion服務(AFCS)會在轉換期間將自訂中繼模型套用至表單欄位。 當發現組織特定的新陣列、驗證和圖元時，您可以繼續更新元模型。
+除了預設元模型中列出的模式與驗證之外，您的組織還可以有這些模式與驗證。 您可以擴充預設元模型，以新增特定於貴組織的陣列、驗證和圖元。 自動錶單轉換服務(AFCS)會在轉換期間將自訂中繼模型套用至表單欄位。 當發現組織特定的新陣列、驗證和圖元時，您可以繼續更新元模型。
 
-automated forms conversion服務(AFCS)會使用儲存在下列位置的預設中繼模型，在轉換期間將來源表單欄位對應到調適型表單欄位：
+自動錶單轉換服務(AFCS)會使用儲存在下列位置的預設中繼模型，在轉換期間將來源表單欄位對應到調適型表單欄位：
 
 http://&lt;server>：&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/global.schema.json
 
@@ -296,7 +311,7 @@ http://&lt;server>：&lt;port>/aem/forms.html/content/dam/formsanddocuments/meta
 
 **範例：**&#x200B;將表單中的銀行帳號標籤修改成最適化表單中的自訂帳號。
 
-在此自訂中繼模型中，轉換服務使用&#x200B;**title**&#x200B;屬性作為搜尋關鍵字。 擷取表單中的&#x200B;**銀行帳號**&#x200B;文字後，轉換服務會以&#x200B;**aem：afProperties**&#x200B;區段中&#x200B;**jcr：title**&#x200B;屬性提及的&#x200B;**客戶帳號**&#x200B;字串取代文字。
+在此自訂中繼模型中，轉換服務使用&#x200B;**title**&#x200B;屬性作為搜尋關鍵字。 擷取表單中的&#x200B;**銀行帳號**&#x200B;文字後，轉換服務會以&#x200B;**aem:afProperties**&#x200B;區段中&#x200B;**jcr:title**&#x200B;屬性提及的&#x200B;**客戶帳號**&#x200B;字串取代文字。
 
 ```
 {
@@ -314,7 +329,7 @@ http://&lt;server>：&lt;port>/aem/forms.html/content/dam/formsanddocuments/meta
 
 **範例**：先修改表單中文字型別的&#x200B;**銀行帳號**&#x200B;欄位，然後再轉換至最適化表單中的數字型別欄位。
 
-在此自訂中繼模型中，轉換服務使用&#x200B;**aem：affKeyword**&#x200B;中的文字作為搜尋關鍵字。 擷取表單中的&#x200B;**銀行帳號**&#x200B;文字後，轉換服務會使用&#x200B;**type**&#x200B;屬性將欄位轉換為數字型別。
+在此自訂中繼模型中，轉換服務使用&#x200B;**aem:affKeyword**&#x200B;中的文字作為搜尋關鍵字。 擷取表單中的&#x200B;**銀行帳號**&#x200B;文字後，轉換服務會使用&#x200B;**type**&#x200B;屬性將欄位轉換為數字型別。
 
 ```
 {
@@ -329,7 +344,7 @@ http://&lt;server>：&lt;port>/aem/forms.html/content/dam/formsanddocuments/meta
 
 **範例**：將說明文字新增至最適化表單的&#x200B;**銀行帳號**&#x200B;欄位。
 
-在此自訂中繼模型中，轉換服務使用&#x200B;**aem：affKeyword**&#x200B;中的文字作為搜尋關鍵字。 擷取表單中的&#x200B;**銀行帳號**&#x200B;文字後，轉換服務會使用&#x200B;**說明**&#x200B;屬性將說明文字新增至最適化表單欄位。
+在此自訂中繼模型中，轉換服務使用&#x200B;**aem:affKeyword**&#x200B;中的文字作為搜尋關鍵字。 擷取表單中的&#x200B;**銀行帳號**&#x200B;文字後，轉換服務會使用&#x200B;**說明**&#x200B;屬性將說明文字新增至最適化表單欄位。
 
 ```
 {
@@ -345,14 +360,14 @@ http://&lt;server>：&lt;port>/aem/forms.html/content/dam/formsanddocuments/meta
 
 **範例**：轉換前先將表單中字串型別的&#x200B;**國家**&#x200B;欄位轉換為轉換後最適化表單中的核取方塊。
 
-在此自訂中繼模型中，轉換服務使用&#x200B;**aem：affKeyword**&#x200B;中的文字作為搜尋關鍵字。 擷取表單中的&#x200B;**國家/地區**&#x200B;文字後，轉換服務會使用&#x200B;**列舉**&#x200B;屬性將欄位轉換為下列核取方塊：
+在此自訂中繼模型中，轉換服務使用&#x200B;**aem:affKeyword**&#x200B;中的文字作為搜尋關鍵字。 擷取表單中的&#x200B;**國家/地區**&#x200B;文字後，轉換服務會使用&#x200B;**列舉**&#x200B;屬性將欄位轉換為下列核取方塊：
 
 * 印度
 * 英國
 * 澳洲
 * 紐西蘭
 
-**sling：resourceType**&#x200B;和&#x200B;**guideNodeClass**&#x200B;屬性將表單欄位對應至核取方塊最適化表單元件。
+**sling:resourceType**&#x200B;和&#x200B;**guideNodeClass**&#x200B;屬性將表單欄位對應到核取方塊最適化表單元件。
 
 ```
 {
@@ -379,7 +394,7 @@ http://&lt;server>：&lt;port>/aem/forms.html/content/dam/formsanddocuments/meta
 
 **範例**：將&#x200B;**電子郵件地址**&#x200B;欄位的格式修改成電子郵件格式。
 
-在此自訂中繼模型中，轉換服務使用&#x200B;**aem：affKeyword**&#x200B;中的文字作為搜尋關鍵字。 擷取表單中的&#x200B;**電子郵件地址**&#x200B;文字後，轉換服務會使用&#x200B;**格式**&#x200B;屬性將欄位轉換為電子郵件格式。
+在此自訂中繼模型中，轉換服務使用&#x200B;**aem:affKeyword**&#x200B;中的文字作為搜尋關鍵字。 擷取表單中的&#x200B;**電子郵件地址**&#x200B;文字後，轉換服務會使用&#x200B;**格式**&#x200B;屬性將欄位轉換為電子郵件格式。
 
 ```
 {
@@ -395,7 +410,7 @@ http://&lt;server>：&lt;port>/aem/forms.html/content/dam/formsanddocuments/meta
 
 **範例1：**&#x200B;新增驗證至最適化表單的&#x200B;**郵遞區號**&#x200B;欄位。
 
-在此自訂中繼模型中，轉換服務使用&#x200B;**aem：affKeyword**&#x200B;中的文字作為搜尋關鍵字。 擷取表單中的&#x200B;**郵遞區號**&#x200B;文字後，轉換服務會使用&#x200B;**aem：afProperties**&#x200B;區段中定義的&#x200B;**validatePictureClause**&#x200B;屬性，將驗證新增至欄位。 根據驗證，您在轉換後為最適化表單中的&#x200B;**郵遞區號**&#x200B;欄位指定的輸入必須包含6個字元。
+在此自訂中繼模型中，轉換服務使用&#x200B;**aem:affKeyword**&#x200B;中的文字作為搜尋關鍵字。 擷取表單中的&#x200B;**郵遞區號**&#x200B;文字後，轉換服務會使用&#x200B;**aem:afProperties**&#x200B;區段中定義的&#x200B;**validatePictureClause**&#x200B;屬性，將驗證新增至欄位。 根據驗證，您在轉換後為最適化表單中的&#x200B;**郵遞區號**&#x200B;欄位指定的輸入必須包含6個字元。
 
 ```
 {
@@ -411,7 +426,7 @@ http://&lt;server>：&lt;port>/aem/forms.html/content/dam/formsanddocuments/meta
 
 **範例2：**&#x200B;新增驗證至最適化表單的&#x200B;**銀行帳號**&#x200B;欄位。
 
-在此自訂中繼模型中，轉換服務使用&#x200B;**aem：affKeyword**&#x200B;中的文字作為搜尋關鍵字。 擷取表單中的&#x200B;**銀行帳號**&#x200B;文字後，轉換服務會使用&#x200B;**aem：afProperties**&#x200B;區段中定義的&#x200B;**強制**&#x200B;屬性，將驗證新增至欄位。 根據驗證，您必須先指定&#x200B;**銀行帳號**&#x200B;欄位的值，才能在轉換後提交表單。
+在此自訂中繼模型中，轉換服務使用&#x200B;**aem:affKeyword**&#x200B;中的文字作為搜尋關鍵字。 擷取表單中的&#x200B;**銀行帳號**&#x200B;文字後，轉換服務會使用&#x200B;**aem:afProperties**&#x200B;區段中定義的&#x200B;**強制**&#x200B;屬性，將驗證新增至欄位。 根據驗證，您必須先指定&#x200B;**銀行帳號**&#x200B;欄位的值，才能在轉換後提交表單。
 
 ```
 {
@@ -429,14 +444,14 @@ http://&lt;server>：&lt;port>/aem/forms.html/content/dam/formsanddocuments/meta
 
 **範例**：轉換前先將表單中字串型別的&#x200B;**國家**&#x200B;欄位轉換為轉換後最適化表單中的下拉式選項。
 
-在此自訂中繼模型中，轉換服務使用&#x200B;**aem：affKeyword**&#x200B;中的文字作為搜尋關鍵字。 擷取表單中的&#x200B;**國家/地區**&#x200B;文字後，轉換服務會使用&#x200B;**列舉**&#x200B;屬性將欄位轉換為下列下拉式清單選項：
+在此自訂中繼模型中，轉換服務使用&#x200B;**aem:affKeyword**&#x200B;中的文字作為搜尋關鍵字。 擷取表單中的&#x200B;**國家/地區**&#x200B;文字後，轉換服務會使用&#x200B;**列舉**&#x200B;屬性將欄位轉換為下列下拉式清單選項：
 
 * 印度
 * 英國
 * 澳洲
 * 紐西蘭
 
-**sling：resourceType**&#x200B;和&#x200B;**guideNodeClass**&#x200B;屬性將表單欄位對應到下拉式最適化表單元件。
+**sling:resourceType**&#x200B;和&#x200B;**guideNodeClass**&#x200B;屬性將表單欄位對應到下拉式最適化表單元件。
 
 ```
 {
@@ -491,7 +506,7 @@ http://&lt;server>：&lt;port>/aem/forms.html/content/dam/formsanddocuments/meta
 
 **範例：**&#x200B;轉換後，將字串型別的&#x200B;**Address**&#x200B;欄位轉換為表單中的多行欄位。
 
-在此自訂中繼模型中，轉換服務使用&#x200B;**aem：affKeyword**&#x200B;中的文字作為搜尋關鍵字。 擷取表單中的&#x200B;**位址**&#x200B;文字後，服務會使用&#x200B;**aem：afProperties**&#x200B;區段中定義的&#x200B;**multiLine**&#x200B;屬性，將文字欄位轉換為多行欄位。
+在此自訂中繼模型中，轉換服務使用&#x200B;**aem:affKeyword**&#x200B;中的文字作為搜尋關鍵字。 擷取表單中的&#x200B;**位址**&#x200B;文字後，服務會使用&#x200B;**aem:afProperties**&#x200B;區段中定義的&#x200B;**multiLine**&#x200B;屬性，將文字欄位轉換為多行欄位。
 
 ```
 {

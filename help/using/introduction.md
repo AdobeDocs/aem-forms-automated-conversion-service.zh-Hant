@@ -8,10 +8,24 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: edabeac8-cd66-48ca-a99f-9643a1c184cf
-source-git-commit: 23d441d19dea63382f0a0024b4682d5bd0eaa63c
+TQID: https://experienceleague.adobe.com/stoZAgMJGYjT1IKCcXBAe2JxWAvPJfwq0znNs757b0U
+product_v2:
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
-source-wordcount: '739'
-ht-degree: 53%
+source-wordcount: 769
+ht-degree: 57%
 
 ---
 
@@ -47,11 +61,11 @@ Adobe 為您的組織啟用存取權限，並向您指定的組織管理員提�
 
 ![工作流程](assets/conversion-workflow.png)
 
-### 1.設定環境 {#set-up-the-environment}
+### &#x200B;1. 設定環境 {#set-up-the-environment}
 
-自動錶單轉換服務(AFCS)在Adobe Cloud上執行。 [設定您組織的Adobe I/O帳戶，並將您本端的AEM執行個體連線](configure-service.md)到Adobe Cloud上執行的轉換服務。 對於AEM 6.5和AEM 6.5 LTS，如果您使用以核心元件為基礎的範本和主題，則必須啟用調適型表單核心元件；請參閱[設定服務](configure-service.md#referencepackage)。
+自動錶單轉換服務(AFCS)在Adobe Cloud上執行。 [設定您組織的 Adobe I/O 帳戶，並將您本端的 AEM 執行個體連接](configure-service.md)至 Adobe Cloud 上運行的轉換服務。 對於AEM 6.5和AEM 6.5 LTS，如果您使用以核心元件為基礎的範本和主題，則必須啟用調適型表單核心元件；請參閱[設定服務](configure-service.md#referencepackage)。
 
-### 2.將PDF forms轉換為最適化表單 {#use-the-conversion-service}
+### &#x200B;2. 將PDF forms轉換為最適化表單 {#use-the-conversion-service}
 
 設定 AEM Forms 環境後，如欲將 PDF 表單轉換為最適化表單，請 [上傳 PDF 表單](convert-existing-forms-to-adaptive-forms.md)至 AEM 執行個體，然後[開始轉換](convert-existing-forms-to-adaptive-forms.md#run-the-conversion)。 在上傳表單前，請參閱以下提醒：
 
@@ -62,7 +76,7 @@ Adobe 為您的組織啟用存取權限，並向您指定的組織管理員提�
 * 完成[最佳實務和考量](styles-and-pattern-considerations-and-best-practices.md)文章中描述的 PDF 表單的建議更改。
 * 閱讀[已知問題](known-issues.md)文章以避免犯錯。
 
-### 3.檢閱轉換後的表單 {#review-converted-forms}
+### &#x200B;3. 檢閱轉換後的表單 {#review-converted-forms}
 
 現實世界的表單在欄位佈局、命名或內隱建議方面可能具有複雜的資料擷取要求，而基於AI/ML的檢測邏輯可能無法準確擷取這些表單。 自動轉換完成後，您可以使用[檢閱和修正編輯器](review-correct-ui-edited.md)來檢查轉換後的表格並進行必要的更新，使成果更佳並更能提供符合期望的體驗。 完成必要的修改後，再一次轉換表單。
 
