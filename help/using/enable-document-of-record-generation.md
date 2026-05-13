@@ -11,11 +11,19 @@ page-status-flag: never-activated
 contentOwner: khsingh
 exl-id: c24313cd-2b9b-4209-9505-a8e14d8dc530
 TQID: https://experienceleague.adobe.com/ImCKo49r-l9Iq0uOVa16bzA1ga9e-n-Q6Eo4MvB9SB4
-product_v2: id: e8f6de9b-cf88-4405-8d10-15efa08c230eid: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2: id: d49d6117-dd89-469c-a774-cc96b7eee433
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
-topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
 source-wordcount: 884
@@ -141,7 +149,7 @@ DoR會使用基礎範本來定義其版面。 您可以使用預設範本或將�
 
 1. [執行轉換](/help/using/convert-existing-forms-to-adaptive-forms.md)。 請確定您使用這些指示步驟1中編輯的雲端設定。
 轉換服務會自動將Acro表單或XFA型PDF表單與轉換後的適用性表單建立關聯，做為DoR範本。
-您可以開啟最適化表單屬性，以在**[!UICONTROL Form Model]**&#x200B;索引標籤的&#x200B;**[!UICONTROL Document of Record Template Configuration]**&#x200B;區段中檢視DoR範本。
+您可以開啟最適化表單屬性，以在&#x200B;**[!UICONTROL Form Model]**&#x200B;索引標籤的&#x200B;**[!UICONTROL Document of Record Template Configuration]**&#x200B;區段中檢視DoR範本。
 
    ![編輯最適化表單屬性以產生記錄檔案](assets/generate_dor_af_properties_xdp_acro.png)
 
@@ -153,7 +161,7 @@ DoR會使用基礎範本來定義其版面。 您可以使用預設範本或將�
 
 1. 在&#x200B;**[!UICONTROL output]**&#x200B;資料夾中選取最適化表單，然後點選&#x200B;**[!UICONTROL Properties]**。
 
-1. 在&#x200B;**[!UICONTROL Form Model]**&#x200B;標籤中，展開&#x200B;**[!UICONTROL Document of Record Template Configuration]**&#x200B;區段並選取&#x200B;**[!UICONTROL Generate Document of Record]**以啟用使用預設範本產生DoR。
-您也可以選取**[!UICONTROL Associate form template as the Document of Record template]**&#x200B;選項並選取範本，以啟用使用來源表單範本或任何其他表單範本產生DoR。
+1. 在&#x200B;**[!UICONTROL Form Model]**&#x200B;標籤中，展開&#x200B;**[!UICONTROL Document of Record Template Configuration]**&#x200B;區段並選取&#x200B;**[!UICONTROL Generate Document of Record]**&#x200B;以啟用使用預設範本產生DoR。
+您也可以選取&#x200B;**[!UICONTROL Associate form template as the Document of Record template]**&#x200B;選項並選取範本，以啟用使用來源表單範本或任何其他表單範本產生DoR。
 
 1. 點選&#x200B;**[!UICONTROL Save & Close]**&#x200B;以儲存設定。

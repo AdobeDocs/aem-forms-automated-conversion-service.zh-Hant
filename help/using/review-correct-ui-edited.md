@@ -9,11 +9,19 @@ role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 64330fa2-aa9d-4ba4-96df-b75deed3e693
 TQID: https://experienceleague.adobe.com/r--F0l84gNKh6jvpjo7cCV4NS-i3hM7zcK3kl0h3YX8
-product_v2: id: e8f6de9b-cf88-4405-8d10-15efa08c230eid: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2: id: d49d6117-dd89-469c-a774-cc96b7eee433
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
-topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2:
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
 source-wordcount: 2548
@@ -91,7 +99,7 @@ AEM Forms自動錶單轉換服務(AFCS)可識別輸入PDF檔案的欄位、內�
 
    * 若要刪除面板，請選取面板，然後點選工具列中的刪除![](assets/delete-icon.png)圖示。 在確認對話方塊中，點選&#x200B;**[!UICONTROL Confirm]**。 點選&#x200B;**[!UICONTROL Save]**&#x200B;以儲存變更。
 
-   * 若要取消面板群組，請選取面板，然後點選工具列中的「取消群組」圖示。 面板會取消分組，取消分組面板的子欄位會調整為父欄位。 點選**[!UICONTROL Save]**以儲存變更。
+   * 若要取消面板群組，請選取面板，然後點選工具列中的「取消群組」圖示。 面板會取消分組，取消分組面板的子欄位會調整為父欄位。 點選&#x200B;**[!UICONTROL Save]**&#x200B;以儲存變更。
 
 1. **建立文字的邏輯群組**：驗證所識別的文字的完整性和正確性。 也請核取，文字會邏輯地放置在正確的面板或群組中。 例如，在多欄版面配置中，一個邏輯群組的文字並放置在另一個群組中。
 

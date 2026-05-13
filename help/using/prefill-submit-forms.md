@@ -10,11 +10,20 @@ level: Beginner, Intermediate
 contentOwner: khsingh
 exl-id: 5deef8f5-5098-47c1-b696-b2db59e92931
 TQID: https://experienceleague.adobe.com/TmEZJSIKPj6f2X5E7X8JY9AL5EGHSPuLhAzQlPdvGGM
-product_v2: id: e8f6de9b-cf88-4405-8d10-15efa08c230eid: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2: id: d49d6117-dd89-469c-a774-cc96b7eee433
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
-topic_v2: id: df401a2a-327d-468c-a5e4-b7b7ccd071a0id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2:
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2:
+  - id: df401a2a-327d-468c-a5e4-b7b7ccd071a0
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
 source-wordcount: 2555
@@ -109,7 +118,7 @@ ht-degree: 1%
 ## 必要條件 {#pre-requisites}
 
 * 設定[AEM作者執行個體](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html)
-* 在AEM作者執行個體](configure-service.md)上設定[自動錶單轉換服務(AFCS)
+* 在AEM作者執行個體[&#128279;](configure-service.md)上設定自動錶單轉換服務(AFCS)
 
 ## 最適化表單範例 {#sample-adaptive-form}
 
@@ -370,7 +379,7 @@ CREATE TABLE `applicant` (
 1. 點選&#x200B;**[!UICONTROL Form Model]**&#x200B;標籤，從&#x200B;**[!UICONTROL Select From]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL Schema]**，然後點選&#x200B;**[!UICONTROL Select Schema]**&#x200B;以上傳儲在本機檔案系統上的&#x200B;**loanapplication** XSD結構描述。 選取XSD結構描述的根元素，然後點選&#x200B;**[!UICONTROL Save & Close]**&#x200B;以儲存表單。
 1. 選取&#x200B;**範例貸款申請表單**&#x200B;並點選&#x200B;**[!UICONTROL Edit]**。
 1. 點選「申請人名稱」文字方塊，然後選取![設定圖示](assets/configure_icon.svg) （設定）。
-在「繫結參考」欄位中，選取**應徵者** > **名稱**，然後點選![完成圖示](assets/save_icon.svg)以儲存屬性。 同樣地，為&#x200B;**地址**、**電話號碼**、**電子郵件**、**職業**、**年薪（美元）**&#x200B;和&#x200B;**否，建立資料繫結。 具有XSD結構描述實體的相依家族成員**&#x200B;欄位。
+在「繫結參考」欄位中，選取&#x200B;**應徵者** > **名稱**，然後點選![完成圖示](assets/save_icon.svg)以儲存屬性。 同樣地，為&#x200B;**地址**、**電話號碼**、**電子郵件**、**職業**、**年薪（美元）**&#x200B;和&#x200B;**否，建立資料繫結。 具有XSD結構描述實體的相依家族成員**&#x200B;欄位。
 
 1. 再次選取&#x200B;**輸出**&#x200B;資料夾中可用的已轉換的&#x200B;**範例貸款申請表單**，然後選取&#x200B;**[!UICONTROL Preview]** > **[!UICONTROL Preview with Data]**。</br>
 
