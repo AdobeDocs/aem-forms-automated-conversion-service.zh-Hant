@@ -38,7 +38,7 @@ DoR會使用基礎範本來定義其版面。 您可以使用預設範本或將�
 
 ![產生的記錄檔案](assets/document_of_record.gif)
 
-如需產生DoR的詳細資訊，請參閱[產生最適化表單的記錄檔案](https://helpx.adobe.com/experience-manager/6-5/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.html)。
+如需產生DoR的詳細資訊，請參閱[產生最適化表單的記錄檔案](https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.html)。
 
 [自動錶單轉換服務(AFCS)](/help/using/introduction.md)將下列來源表單轉換為最適化表單：
 

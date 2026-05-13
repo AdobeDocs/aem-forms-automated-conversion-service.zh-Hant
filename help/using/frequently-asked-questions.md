@@ -33,7 +33,7 @@ ht-degree: 3%
 # 常見問題{#frequently-asked-questions}
 
 1. **自動錶單轉換服務(AFCS)支援哪個AEM Forms版本？**
-   <p>自動錶單轉換服務(AFCS)支援AEM 6.5 Forms、AEM 6.5 LTS Forms和AEM Forms as a Cloud Service。 它適用於OSGi上的AEM Forms和JEE上的AEM表單。 針對AEM 6.5和AEM 6.5 LTS，您需要在AEM製作執行個體之上最新AEM Forms附加套件，並且如果您想要使用核心元件型範本和主題，必須<a href="https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html">啟用調適型表單核心元件</a>。 如需詳細指示，請參閱<a href="configure-service.md">設定自動錶單轉換</a>服務。</p> 
+   <p>自動錶單轉換服務(AFCS)支援AEM 6.5 Forms、AEM 6.5 LTS Forms和AEM Forms as a Cloud Service。 它適用於OSGi上的AEM Forms和JEE上的AEM表單。 針對AEM 6.5和AEM 6.5 LTS，您需要在AEM製作執行個體之上最新AEM Forms附加套件，並且如果您想要使用核心元件型範本和主題，必須<a href="https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=zh-Hant">啟用調適型表單核心元件</a>。 如需詳細指示，請參閱<a href="configure-service.md">設定自動錶單轉換</a>服務。</p> 
     <br>
 
 1. **是否可以在內部部署安裝服務？**
@@ -44,7 +44,7 @@ ht-degree: 3%
    <p>此服務可將非互動式PDF forms、XFA型XDP和PDF forms以及AcroForms轉換為最適化表單。 此服務不支援掃描或填寫的表單。 如需其他限制，請參閱<a href="known-issues.md">已知問題</a>文章。<br /> </p> 
     <p>我們定期新增對其他來源型別的支援。 將<a href="introduction.md">supportedPDF forms</a>區段保留在您的監看清單中，以定期更新新增的功能。</p>
 
-   此服務只能將英文、法文、德文、西班牙文、義大利文和葡萄牙文的表單轉換為最適化表單。 您可以使用[AEM翻譯工作流程將產生的自適應表單翻譯成其他語言。](https://helpx.adobe.com/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)</br> </br>
+   此服務只能將英文、法文、德文、西班牙文、義大利文和葡萄牙文的表單轉換為最適化表單。 您可以使用[AEM翻譯工作流程將產生的自適應表單翻譯成其他語言。](https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)</br> </br>
 
 1. **服務是否可產生XDP而非最適化表單？**
    <p>此服務未產生XDP輸出。 我們定期為服務新增功能與功能。 將<a href="introduction.md">支援的語言和PDF forms</a>區段保留在關注清單上，以定期更新新新增的功能。</p> <br>
@@ -58,8 +58,8 @@ ht-degree: 3%
 1. **此服務是否可將Microsoft Word表單轉換為最適化表單？**
    <p>否，此服務無法將Microsoft Word表單轉換為最適化表單。 您可以將Microsoft Word表單儲存至PDF表單，並將PDF表單轉換為最適化表單。 完整的程式為 </p> <br>
 
-   1. 使用Adobe Acrobat將Word檔案[轉換為非互動式PDF](https://helpx.adobe.com/acrobat/how-to/create-pdf-files-word-excel-website.html)。
-   1. 使用Adobe Acrobat將[產生的PDF forms轉換為可填寫的PDF表單](https://helpx.adobe.com/acrobat/how-to/convert-word-excel-paper-pdf-forms.html)。
+   1. 使用Adobe Acrobat將Word檔案[轉換為非互動式PDF](https://helpx.adobe.com/tw/acrobat/how-to/create-pdf-files-word-excel-website.html)。
+   1. 使用Adobe Acrobat將[產生的PDF forms轉換為可填寫的PDF表單](https://helpx.adobe.com/tw/acrobat/how-to/convert-word-excel-paper-pdf-forms.html)。
    1. 使用Adobe Acrobat手動更新和修正表單欄位。
    1. 儲存PDF表單。 現在，您可以將此表單與轉換服務搭配使用，以產生最適化表單。 您也可以使用表單作為記錄檔案範本。
 
@@ -92,10 +92,10 @@ ht-degree: 3%
     <p> </p> <br>
 
 1. **此服務是否會在輸出的最適化表單中識別並使用來源PDF的字型？**
-   <p>回應式HTML表單的樣式和版面配置通常與PDF或書面表單不同。 為了支援跨組織的一致版面配置和樣式，最適化表單使用<a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/themes.html">主題來設定表單</a>的樣式。 轉換服務會使用轉換期間套用之主題中指定的字型和字型樣式。 您可以變更佈景主題的字型和字型樣式，為最適化表單的元件提供獨特的外觀和風格。</p> <br>
+   <p>回應式HTML表單的樣式和版面配置通常與PDF或書面表單不同。 為了支援跨組織的一致版面配置和樣式，最適化表單使用<a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/themes.html">主題來設定表單</a>的樣式。 轉換服務會使用轉換期間套用之主題中指定的字型和字型樣式。 您可以變更佈景主題的字型和字型樣式，為最適化表單的元件提供獨特的外觀和風格。</p> <br>
 
 1. **此服務是否自動從XDP式表單中擷取JavaScript，並將其套用至對應的調適型表單？**
-   <p>此服務不會自動將XFA型表單或Acro Forms的指令碼轉換為對應的調適型表單規則。 您（表單作者）可以使用<a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/rule-editor.html">規則編輯器</a>將互動性新增至最適化表單。</p> <br>
+   <p>此服務不會自動將XFA型表單或Acro Forms的指令碼轉換為對應的調適型表單規則。 您（表單作者）可以使用<a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/rule-editor.html">規則編輯器</a>將互動性新增至最適化表單。</p> <br>
 
 1. **部分表單物件未正確轉換為最適化表單元件。 如何解決問題？**
    <p>自動化表單轉換服務(AFCS)已接受大量表單的訓練。 但AI/ML型應用程式受到訓練資料和模式的限制。 可能有多種欄位型別、版面配置、模式及上下文可供人類感知識別，但難以進行自動辨識。 服務可能無法識別這類物件，或可能無法正確識別它們。 您可以使用<a href="review-correct-ui-edited.md" target="_blank">檢閱並修正</a>編輯器，在熟悉的書面表單式輸入表單版面配置中進行必要的修改。</p> <br/>
@@ -135,5 +135,5 @@ ht-degree: 3%
 1. **如何建立啟用Adobe Sign的PDF表單？**
    </p>若要建立啟用Adobe Sign的PDF表單：</p>
 
-   新增[Adobe Sign文字標籤](https://helpx.adobe.com/sign/using/text-tag.html)至欄位名稱或使用[轉換成Adobe Sign表單](https://helpx.adobe.com/sign/using/create-forms-with-acrobat.html)選項。
+   新增[Adobe Sign文字標籤](https://helpx.adobe.com/tw/sign/using/text-tag.html)至欄位名稱或使用[轉換成Adobe Sign表單](https://helpx.adobe.com/tw/sign/using/create-forms-with-acrobat.html)選項。
 
