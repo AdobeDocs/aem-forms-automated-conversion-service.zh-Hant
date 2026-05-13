@@ -1,6 +1,6 @@
 ---
 title: 檢閱並修正轉換後的表單
-description: 檢閱並修正由Automated forms conversion服務(AFCS)轉換的最適化表單。
+description: 檢閱並修正自動錶單轉換服務(AFCS)轉換的最適化表單。
 solution: Experience Manager Forms
 feature: Adaptive Forms, Foundation Components
 topic: Administration
@@ -8,16 +8,22 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 64330fa2-aa9d-4ba4-96df-b75deed3e693
-source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
+TQID: https://experienceleague.adobe.com/r--F0l84gNKh6jvpjo7cCV4NS-i3hM7zcK3kl0h3YX8
+product_v2: id: e8f6de9b-cf88-4405-8d10-15efa08c230eid: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
-source-wordcount: '2512'
+source-wordcount: 2548
 ht-degree: 0%
 
 ---
 
 # 檢閱並修正轉換後的表單{#review-and-correct-converted-forms}
 
-AEM FormsAutomated forms conversion服務(AFCS)可識別輸入PDF檔案的欄位、內容和版面，並將PDF檔案轉換為最適化表單。 輸出調適型表單可能有一些欄位遺失或轉換不正確。 您可以使用檢閱和修正編輯器來改善已識別的欄位，並重新產生最適化表單，使輸出更接近所需的體驗。 第一次轉換後，您可以在編輯器中開啟輸入PDF檔案，以：
+AEM Forms自動錶單轉換服務(AFCS)可識別輸入PDF檔案的欄位、內容和版面，並將PDF檔案轉換為最適化表單。 輸出調適型表單可能有一些欄位遺失或轉換不正確。 您可以使用檢閱和修正編輯器來改善已識別的欄位，並重新產生最適化表單，使輸出更接近所需的體驗。 第一次轉換後，您可以在編輯器中開啟輸入PDF檔案，以：
 
 * 檢視轉換期間識別的所有欄位和內容
 * 識別轉換期間遺漏的欄位和內容
@@ -40,12 +46,12 @@ AEM FormsAutomated forms conversion服務(AFCS)可識別輸入PDF檔案的欄位
 * 篩選按鈕：篩選按鈕![](assets/toggle_eye.png)在編輯器上方。 它可讓您篩選欄位以僅顯示文字、欄位、選擇群組、面板或所有元件。
 * 儲存按鈕： **[!UICONTROL Save]**&#x200B;按鈕在編輯器的右上角。 您也可以使用儲存按鈕旁的箭頭，檢視傳送表單進行轉換的選項。
 
-* PDF表單：編輯器顯示來源PDF檔案，並將它覆蓋在已識別的欄位中。 您可以使用工具列中的工具來修改欄位。
+* PDF表單：編輯器顯示來源PDF檔案，並以識別的欄位覆蓋該檔案。 您可以使用工具列中的工具來修改欄位。
 * 頁面：來源表單可以有多個頁面。 編輯器在右上角提供一個按鈕，用於在頁面之間導覽。
 
 ![檢閱並修正UI](assets/reviewcorrectui.png)
 
-**A.**&#x200B;內容瀏覽器&#x200B;**B.**&#x200B;屬性瀏覽器&#x200B;**C.**&#x200B;工具列&#x200B;**D.**&#x200B;屬性按鈕&#x200B;**E.**&#x200B;篩選器按鈕&#x200B;**F.**&#x200B;儲存按鈕&#x200B;**G.** PDF表單已用已識別的欄位覆蓋
+**A.**&#x200B;內容瀏覽器&#x200B;**B.**&#x200B;屬性瀏覽器&#x200B;**C.**&#x200B;工具列&#x200B;**D.**&#x200B;屬性按鈕&#x200B;**E.**&#x200B;篩選器按鈕&#x200B;**F.**&#x200B;儲存按鈕&#x200B;**G.** PDF表單與已識別的欄位重疊
 
 首次成功轉換後，轉換服務會以識別的欄位和元件覆蓋來源PDF檔案。 這些欄位或元件的型別為：文字、欄位、面板、選擇群組和表格：
 
@@ -63,7 +69,7 @@ AEM FormsAutomated forms conversion服務(AFCS)可識別輸入PDF檔案的欄位
 
 ### 開始之前 {#before-you-start}
 
-* 檢閱和修正編輯器不支援片段。 請勿使用編輯器來檢閱在轉換期間啟用了&#x200B;**擷取片段**&#x200B;選項的轉換。 您可以針對這類轉換使用[最適化表單編輯器](https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/introduction-forms-authoring.html)。
+* 檢閱和修正編輯器不支援片段。 請勿使用編輯器來檢閱在轉換期間啟用了&#x200B;**擷取片段**&#x200B;選項的轉換。 您可以針對這類轉換使用[最適化表單編輯器](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html)。
 
 * 「稽核並修正」編輯器沒有復原動作。 僅使用「儲存」按鈕來永久儲存變更。
 
@@ -85,13 +91,13 @@ AEM FormsAutomated forms conversion服務(AFCS)可識別輸入PDF檔案的欄位
 
    * 若要刪除面板，請選取面板，然後點選工具列中的刪除![](assets/delete-icon.png)圖示。 在確認對話方塊中，點選&#x200B;**[!UICONTROL Confirm]**。 點選&#x200B;**[!UICONTROL Save]**&#x200B;以儲存變更。
 
-   * 若要取消面板群組，請選取面板，然後點選工具列中的「取消群組」圖示。 面板會取消分組，取消分組面板的子欄位會調整為父欄位。 點選&#x200B;**[!UICONTROL Save]**&#x200B;以儲存變更。
+   * 若要取消面板群組，請選取面板，然後點選工具列中的「取消群組」圖示。 面板會取消分組，取消分組面板的子欄位會調整為父欄位。 點選**[!UICONTROL Save]**以儲存變更。
 
 1. **建立文字的邏輯群組**：驗證所識別的文字的完整性和正確性。 也請核取，文字會邏輯地放置在正確的面板或群組中。 例如，在多欄版面配置中，一個邏輯群組的文字並放置在另一個群組中。
 
    * 若要檢視文字的完整性和正確性，請使用篩選![](assets/toggle_eye.png)按鈕來檢視文字、按一下每個文字，然後驗證。 修正拼字、拼字或文法問題（如有）。
 
-   * 若要新增文字至表單，請點選+按鈕，點選&#x200B;**[!UICONTROL Text]**。 在Draw方塊中，開啟屬性瀏覽器，然後輸入要新增至「內容」方塊的文字。
+   * 若要新增文字至表單，請點選+按鈕，點選&#x200B;**[!UICONTROL Text]**。 繪製方塊、開啟屬性瀏覽器，然後輸入要新增至「內容」方塊的文字。
 
 1. **檢閱資料表：**&#x200B;請確定資料表的所有邊界都已識別。 同時也請確定已正確識別儲存格的內容。
 
@@ -99,7 +105,7 @@ AEM FormsAutomated forms conversion服務(AFCS)可識別輸入PDF檔案的欄位
 
    * 若要移除額外邊框，請使用&#x200B;**[!UICONTROL Delete Column]**&#x200B;或&#x200B;**[!UICONTROL Delete Row]**&#x200B;選項。
 
-進行必要的變更後，點選&#x200B;**[!UICONTROL Save & Convert]**&#x200B;按鈕以將PDF forms重新傳送至轉換服務。 每個欄位都會轉換為對應的調適型欄位元件。 轉換後，更新的資產（包括最適化表單和結構描述）會下載至您的AEM Forms執行個體。 根據表單的複雜程度，服務可能需要一些時間才能完成轉換。
+完成必要的變更後，點選「**[!UICONTROL Save & Convert]**」按鈕，將PDF forms重新傳送至轉換服務。 每個欄位都會轉換為對應的調適型欄位元件。 轉換後，更新的資產（包括最適化表單和結構描述）會下載至您的AEM Forms執行個體。 根據表單的複雜程度，服務可能需要一些時間才能完成轉換。
 
 ![儲存並轉換](assets/save-and-convert.png)
 
@@ -126,7 +132,7 @@ AEM FormsAutomated forms conversion服務(AFCS)可識別輸入PDF檔案的欄位
 
 ![](assets/add-component.gif)
 
-若要將元件新增至表單，請點選&#x200B;**[!UICONTROL +]**&#x200B;並點選&#x200B;**[!UICONTROL Field]**。 Draw包含標籤和欄位輸入方塊的方塊。 例如，上述範例影像使用欄位元件將&#x200B;**出生日期**&#x200B;標籤及其下方的值方塊新增至表單。 當您繪製方塊時，轉換服務會識別欄位的型別。 如有需要，您可以從屬性瀏覽器變更欄位型別。 建立元件後，開啟屬性瀏覽器，並設定元件的屬性。
+若要將元件新增至表單，請點選&#x200B;**[!UICONTROL +]**&#x200B;並點選&#x200B;**[!UICONTROL Field]**。 繪製一個方塊，涵蓋欄位的標籤和輸入方塊。 例如，上述範例影像使用欄位元件將&#x200B;**出生日期**&#x200B;標籤及其下方的值方塊新增至表單。 當您繪製方塊時，轉換服務會識別欄位的型別。 如有需要，您可以從屬性瀏覽器變更欄位型別。 建立元件後，開啟屬性瀏覽器，並設定元件的屬性。
 
 點選「**[!UICONTROL Save]**」按鈕以儲存修改，或使用「**[!UICONTROL Save & Convert]**」按鈕將PDF forms重新傳送至轉換服務。
 
@@ -157,7 +163,7 @@ AEM FormsAutomated forms conversion服務(AFCS)可識別輸入PDF檔案的欄位
 | 欄位 | 文字或選擇群組 |
 | 選擇群組 | 文字或面板 |
 
-轉換之後，請開啟屬性瀏覽器，指定標籤，然後指定其他必要屬性。 點選「**[!UICONTROL Save]**」按鈕以儲存修改，或使用「儲存並轉換」按鈕將PDF forms重新傳送至轉換服務。
+轉換之後，請開啟屬性瀏覽器，指定標籤，然後指定其他必要屬性。 點選&#x200B;**[!UICONTROL Save]**&#x200B;按鈕以儲存修改，或使用「儲存並轉換」按鈕將PDF forms重新傳送至轉換服務。
 
 ### 建立或移除面板 {#create-or-remove-a-panel}
 
@@ -167,7 +173,7 @@ AEM FormsAutomated forms conversion服務(AFCS)可識別輸入PDF檔案的欄位
 
 * 若要移除面板，請選取面板，然後點選取消群組![取消群組](assets/ungroupX18.png)。 面板會移除，而面板的子元件會移至父元件。 您也可以使用[刪除元件](review-correct-ui-edited.md#delete-a-panel-or-component)選項來刪除面板及其子系。
 
-* 若要建立面板，請使用Ctrl鍵（在Windows或Linux上）或Control鍵(在Mac上)選取相關元件，然後點選![群組](assets/group.jpg)以建立面板。 開啟屬性瀏覽器以指定面板的屬性。
+* 若要建立面板，請使用Ctrl鍵（在Windows或Linux上）或Control鍵（在Mac上）選取相關元件，然後點選![群組](assets/group.jpg)以建立面板。 開啟屬性瀏覽器以指定面板的屬性。
 
 點選「**[!UICONTROL Save]**」按鈕以儲存修改，或使用「**[!UICONTROL Save & Convert]**」按鈕將PDF forms重新傳送至轉換服務。
 
@@ -175,7 +181,7 @@ AEM FormsAutomated forms conversion服務(AFCS)可識別輸入PDF檔案的欄位
 
 轉換服務可能會識別出某些不正確的面板或元件。 這些面板中的大部分元件都是不相關的。 您可以刪除此類面板或元件。
 
-若要刪除面板或元件，請選取面板或元件，然後點選「刪除![](assets/delete-icon.png)」圖示。 在確認對話方塊中，點選&#x200B;**[!UICONTROL Confirm]**。 所選的面板或元件即被刪除。 刪除面板時，也會刪除面板的所有子項。 您可以使用Ctrl鍵（在Windows或Linux上）或Control鍵(在Mac上)來選取多個元件或面板。
+若要刪除面板或元件，請選取面板或元件，然後點選「刪除![](assets/delete-icon.png)」圖示。 在確認對話方塊中，點選&#x200B;**[!UICONTROL Confirm]**。 所選的面板或元件即被刪除。 刪除面板時，也會刪除面板的所有子項。 您可以使用Ctrl鍵（在Windows或Linux上）或Control鍵（在Mac上）來選取多個元件或面板。
 
 ### 設定元件的屬性 {#set-properties-of-a-component}
 
@@ -187,7 +193,7 @@ AEM FormsAutomated forms conversion服務(AFCS)可識別輸入PDF檔案的欄位
 
 在「稽核並修正」編輯器中完成所有必要的變更後，您可以重新傳送表單以進行轉換。 若要傳送表單以進行轉換，請點選&#x200B;**[!UICONTROL Save & Convert]**。 **[!UICONTROL Sent for conversion label]**&#x200B;已套用至包含來原始檔的資料夾，且更新的來源表單已上傳至Adobe I/O上執行的轉換服務。
 
-根據表單的複雜性，轉換服務可能需要一些時間才能轉換表單。 轉換完成後，轉換後的自適應表單和相關資產會下載到您的電腦。 轉換完成後，您可以在編輯器中檢閱表單，並視需要在[最適化表單編輯器](https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/introduction-forms-authoring.html)中開啟最適化表單，以取得最終修正集。
+根據表單的複雜性，轉換服務可能需要一些時間才能轉換表單。 轉換完成後，轉換後的自適應表單和相關資產會下載到您的電腦。 轉換完成後，您可以在編輯器中檢閱表單，並視需要在[最適化表單編輯器](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html)中開啟最適化表單，以取得最終修正集。
 
 如果您在更新最適化表單編輯器中的表單後，重新傳送表單以供轉換，則最適化表單中所做的所有變更都會遺失。 只有在成功轉換之後，您才能在檢閱和修正編輯器中開啟表單。
 

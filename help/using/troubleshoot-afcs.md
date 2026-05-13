@@ -9,10 +9,16 @@ role: Admin, Developer
 level: Beginner, Intermediate
 contentOwner: khsingh
 exl-id: e8406ed9-37f5-4f26-be97-ad042f9ca57c
-source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
+TQID: https://experienceleague.adobe.com/CYDvLiZX-BqErF-cKQX1SieVDMxkoD1kfP4rLIT9ku0
+product_v2: id: e8f6de9b-cf88-4405-8d10-15efa08c230eid: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: ce44533e-8ec8-4e11-a9e9-78b0fe561832id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
-source-wordcount: '655'
-ht-degree: 85%
+source-wordcount: 689
+ht-degree: 79%
 
 ---
 
@@ -26,16 +32,16 @@ ht-degree: 85%
 
 | 錯誤 | 範例 |
 |--- |--- |
-| **錯誤訊息** <br> 沒有存取權杖標頭可用。<br><br> **原因** <br> 管理員已建立了多個 IMS 組態或 IMS 組態無法連接至 Adobe Cloud 上的 AFCS 服務。 <br><br>**解決方法** <br> 如果有多個組態，請刪除所有的組態並[建立一個新的組態](configure-service.md#obtainpubliccertificates)。 <br>如果只有一個組態，請使用「**健康情況檢查**」以[檢查連網狀態](configure-service.md#createintegrationoption)。 | ![沒有存取權杖標頭可用](assets/invalid-ims-configurations.png) |
-| **錯誤訊息** <br> 無法連接到服務。  <br><br>**原因** <br>服務URL不正確，或在Automated forms conversion服務(AFCS)雲端服務中沒有提及服務URL。 <br><br>**解決方法** <br>在Automated forms conversion服務(AFCS)雲端服務中修正[服務URL](configure-service.md#configure-the-cloud-service)。 | ![無法連接到服務。](assets/wrong-service-url-configured.png) |
-| **錯誤訊息** <br> 本服務未能轉換表單。  <br><br>**原因** <br> 您這端的連網問題、排程維護導致服務無法使用或 Adobe Cloud 運行中斷。 <br><br>**解決方法** <br> 解決您這端的連網問題，並在 https://status.adobe.com/zh-tw/ 上查看服務狀態，是否有排程維護或無預期的運行中斷。 | ![無法連接到服務。](assets/conversion-failure.png) |
+| **錯誤訊息** <br> 沒有存取權杖標頭可用。<br><br> **原因** <br> 管理員已建立了多個 IMS 組態或 IMS 組態無法連接至 Adobe Cloud 上的 AFCS 服務。 <br><br>**解決方法** <br>如果有多個組態，請刪除所有的組態並[建立新的組態](configure-service.md#obtainpubliccertificates)。<br> 如果只有一個組態，請使用&#x200B;**健康狀態檢查**&#x200B;來[檢查連線](configure-service.md#createintegrationoption)。 | ![沒有存取權杖標頭可用](assets/invalid-ims-configurations.png) |
+| **錯誤訊息** <br> 無法連接到服務。  <br><br>**原因** <br>服務URL不正確，或自動錶單轉換服務(AFCS)雲端服務中沒有提及服務URL。 <br><br>**解決方法** <br>在自動錶單轉換服務(AFCS)雲端服務中修正[服務URL](configure-service.md#configure-the-cloud-service)。 | ![無法連接到服務。](assets/wrong-service-url-configured.png) |
+| **錯誤訊息** <br> 本服務未能轉換表單。  <br><br>**原因** <br> 您這端的連網問題、排程維護導致服務無法使用或 Adobe Cloud 運行中斷。 <br><br>**解決方法** <br> 解決您這端的連網問題，並在 https://status.adobe.com/ 上查看服務狀態，是否有排程維護或無預期的運行中斷。 | ![無法連接到服務。](assets/conversion-failure.png) |
 | **錯誤訊息** <br> 頁數超過 15 頁。  <br><br>**原因** <br> 源表單長度超過 15 頁。  <br><br>**解決方法** <br> 使用 Adobe Acrobat 來分割超過 15 頁的表單。 將表單的頁數調整為 15 頁以下。 | ![無法連接到服務。](assets/number-of-pages.png) |
 | **錯誤訊息** <br> 文件數量超過 15 份。  <br><br>**原因** <br>  資料夾內含超過 15 份表單。 <br><br>**解決方法** <br> 將資料夾中的表單數量調整為 15 份以下。 將資料夾中的總頁數調整為 50 頁以下。 將資料夾的大小調整為 10 MB 以下。 不要將表單放在子資料夾中。 將源表單整理為每批次 8 到 15 份表單。 | ![無法連接到服務。](assets/number-of-pages.png) |
 | **錯誤訊息** <br> 不支援該源檔案格式。  <br><br>**原因** <br> 內含源表單的資料夾中有一些不支援的檔案。 <br><br>**解決方法** <br> 本服務只支援 .xdp 與 .pdf 檔案。 從資料夾移除所有具有其他附檔名的檔案後，再進行轉換。 | ![無法連接到服務。](assets/unsupported-file-formats.png) |
 | **錯誤訊息** <br> 不支援掃描的表單。  <br><br>**原因** <br> PDF 表單僅內含掃描後的表單影像，不具有內容結構。 <br><br>**解決方法** <br> 本服務無法直接將掃描後的表單或表單影像轉換至最適化表單。 但是，您可以使用 Adobe Acrobat 將表單影像轉換為 PDF 表單。 然後，使用本服務將 PDF 表單轉換為最適化表單。 請總是使用高品質的表單影像在 Acrobat 中進行轉換。 這可以提升轉換的品質。 | ![無法連接到服務。](assets/scanned-forms-error.png) |
 | **錯誤訊息** <br> 不支援加密的 PDF 表單。  <br><br>**原因** <br> 資料夾內含加密的 PDF 表單。 <br><br>**解決方法** <br> 本服務不支援將加密的 PDF 表單轉換為最適化表單。 請移除加密並上傳未加密的表單，然後進行轉換。 | ![無法連接到服務。](assets/secured-pdf-form.png) |
-| **錯誤訊息** <br>無法解析元模型 JSON 架構。  <br><br>**原因** <br> 提供給服務的 JSON 架構格式不正確、內含無效字元或使用無效的語法來匹配元件。  <br><br>**解決方法** <br> 檢查 JSON 檔案的格式。 您可以使用任何線上的 JSON 驗證程式來檢查架構的格式和結構。 請參閱[擴展預設元模型](extending-the-default-meta-model.md)文章以獲取有關元模型語法的資訊。 | ![無法連接到服務。](assets/invalid-meta-model-schema.png) |
-| **錯誤（僅限內部部署環境）** <br> **[!UICONTROL Source Language]**&#x200B;選項未列出最適化表單的正確語言。 <br><br>**原因** <br>未正確設定最適化表單的jcr：language屬性。  <br><br>**解決方法** <br>開啟CRX-DE LITE，瀏覽至`/content/forms/af/`，開啟`jcr:content`節點，並將節點的值設定為正確的語言。 如需支援的語言清單，請參閱[新增不支援地區設定的本地化支援](https://experienceleague.adobe.com/docs/experience-manager-65/forms/manage-administer-aem-forms/supporting-new-language-localization.html?lang=zh-Hant#add-localization-support-for-non-supported-locales)。 | ![無法連接到服務。](assets/aem-forms-translation-project-language-unavailable.png) |
+| **錯誤訊息** <br>無法解析元模型 JSON 結構。  <br><br>**原因** <br> 提供給服務的 JSON 結構格式不正確、內含無效字元或使用無效的語法來匹配元件。  <br><br>**解決方法** <br> 檢查 JSON 檔案的格式。 您可以使用任何線上的 JSON 驗證程式來檢查架構的格式和結構。 請參閱[擴展預設元模型](extending-the-default-meta-model.md)文章以獲取有關元模型語法的資訊。 | ![無法連接到服務。](assets/invalid-meta-model-schema.png) |
+| **錯誤（僅限內部部署環境）** <br> **[!UICONTROL Source Language]**&#x200B;選項未列出最適化表單的正確語言。 <br><br>**原因** <br>未正確設定最適化表單的jcr:language屬性。  <br><br>**解決方法** <br>開啟CRX-DE LITE，瀏覽至`/content/forms/af/`，開啟`jcr:content`節點，並將節點的值設定為正確的語言。 如需支援的語言清單，請參閱[新增不支援地區設定的本地化支援](https://experienceleague.adobe.com/docs/experience-manager-65/forms/manage-administer-aem-forms/supporting-new-language-localization.html#add-localization-support-for-non-supported-locales)。 | ![無法連接到服務。](assets/aem-forms-translation-project-language-unavailable.png) |
 
 <!--
 
@@ -56,7 +62,7 @@ ht-degree: 85%
 <td><img alt="Unable to connect to the service." src="assets/wrong-endpoint-configured.png" /></td>
 </tr>
 <tr>
-<td><strong>Error Message</strong> <br> The service failed to convert the form.  <br><br><strong>Reason</strong> <br> Network connectivity issues at your end, the service is down due to scheduled maintenance, or outage on Adobe Cloud. <br><br><strong>Resolution</strong> <br> Resolve network connectivity issues at your end and check the status of the service on <a href="https://status.adobe.com/zh-tw/">https://status.adobe.com/zh-tw/</a> for a planned or unplanned outage.</td>
+<td><strong>Error Message</strong> <br> The service failed to convert the form.  <br><br><strong>Reason</strong> <br> Network connectivity issues at your end, the service is down due to scheduled maintenance, or outage on Adobe Cloud. <br><br><strong>Resolution</strong> <br> Resolve network connectivity issues at your end and check the status of the service on <a href="https://status.adobe.com/">https://status.adobe.com/</a> for a planned or unplanned outage.</td>
 <td><img alt="The service failed to convert the form." src="assets/service-failure.png" /></td>
 </tr>
 <tr>

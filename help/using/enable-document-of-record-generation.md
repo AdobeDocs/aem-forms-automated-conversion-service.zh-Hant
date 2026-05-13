@@ -10,9 +10,15 @@ level: Beginner, Intermediate
 page-status-flag: never-activated
 contentOwner: khsingh
 exl-id: c24313cd-2b9b-4209-9505-a8e14d8dc530
-source-git-commit: c2392932d1e29876f7a11bd856e770b8f7ce3181
+TQID: https://experienceleague.adobe.com/ImCKo49r-l9Iq0uOVa16bzA1ga9e-n-Q6Eo4MvB9SB4
+product_v2: id: e8f6de9b-cf88-4405-8d10-15efa08c230eid: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: 884
 ht-degree: 0%
 
 ---
@@ -24,9 +30,9 @@ DoR會使用基礎範本來定義其版面。 您可以使用預設範本或將�
 
 ![產生的記錄檔案](assets/document_of_record.gif)
 
-如需產生DoR的詳細資訊，請參閱[產生最適化表單的記錄檔案](https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.html)。
+如需產生DoR的詳細資訊，請參閱[產生最適化表單的記錄檔案](https://helpx.adobe.com/experience-manager/6-5/forms/using/generate-document-of-record-for-non-xfa-based-adaptive-forms.html)。
 
-[Automated forms conversion服務(AFCS)](/help/using/introduction.md)將下列來源表單轉換為最適化表單：
+[自動錶單轉換服務(AFCS)](/help/using/introduction.md)將下列來源表單轉換為最適化表單：
 
 * 非互動式PDF forms
 * Acro Forms
@@ -87,7 +93,7 @@ DoR會使用基礎範本來定義其版面。 您可以使用預設範本或將�
 
 ## 為非互動式PDF forms產生記錄檔案 {#generate-document-of-record-non-interactive-pdf}
 
-如果您使用非互動式PDF表單做為Automated forms conversion服務(AFCS)的來源表單，您可以：
+如果您使用非互動式PDF表單作為自動錶單轉換服務(AFCS)的來源表單，您可以：
 
 * 啟用最適化表單轉換前的DoR產生，以使用預設範本產生DoR
 * 或編輯最適化表單轉換後的最適化表單屬性，以使用預設或任何其他表單範本產生DoR
@@ -121,7 +127,7 @@ DoR會使用基礎範本來定義其版面。 您可以使用預設範本或將�
 
 ## 為Acro Forms或XFA型PDF forms產生記錄檔案 {#generate-document-of-record-acroform-xfaform}
 
-如果您使用Acro表單或XFA型PDF表單做為Automated forms conversion服務(AFCS)的來源表單，您可以：
+如果您使用Acro表單或以XFA為基礎的PDF表單作為自動錶單轉換服務(AFCS)的來源表單，您可以：
 
 * 啟用最適化表單轉換前的DoR產生，以使用來源表單作為範本來產生DoR
 
@@ -134,8 +140,8 @@ DoR會使用基礎範本來定義其版面。 您可以使用預設範本或將�
 1. 點選&#x200B;**[!UICONTROL Save & Close]**&#x200B;以儲存設定。
 
 1. [執行轉換](/help/using/convert-existing-forms-to-adaptive-forms.md)。 請確定您使用這些指示步驟1中編輯的雲端設定。
-轉換服務會自動將Acro表單或XFA型PDF表單與已轉換的最適化表單建立關聯，做為DoR範本。
-您可以開啟最適化表單屬性，以在&#x200B;**[!UICONTROL Form Model]**&#x200B;索引標籤的&#x200B;**[!UICONTROL Document of Record Template Configuration]**&#x200B;區段中檢視DoR範本。
+轉換服務會自動將Acro表單或XFA型PDF表單與轉換後的適用性表單建立關聯，做為DoR範本。
+您可以開啟最適化表單屬性，以在**[!UICONTROL Form Model]**&#x200B;索引標籤的&#x200B;**[!UICONTROL Document of Record Template Configuration]**&#x200B;區段中檢視DoR範本。
 
    ![編輯最適化表單屬性以產生記錄檔案](assets/generate_dor_af_properties_xdp_acro.png)
 
@@ -147,7 +153,7 @@ DoR會使用基礎範本來定義其版面。 您可以使用預設範本或將�
 
 1. 在&#x200B;**[!UICONTROL output]**&#x200B;資料夾中選取最適化表單，然後點選&#x200B;**[!UICONTROL Properties]**。
 
-1. 在&#x200B;**[!UICONTROL Form Model]**&#x200B;標籤中，展開&#x200B;**[!UICONTROL Document of Record Template Configuration]**&#x200B;區段並選取&#x200B;**[!UICONTROL Generate Document of Record]**&#x200B;以啟用使用預設範本產生DoR。
-您也可以選取&#x200B;**[!UICONTROL Associate form template as the Document of Record template]**&#x200B;選項並選取範本，以啟用使用來源表單範本或任何其他表單範本產生DoR。
+1. 在&#x200B;**[!UICONTROL Form Model]**&#x200B;標籤中，展開&#x200B;**[!UICONTROL Document of Record Template Configuration]**&#x200B;區段並選取&#x200B;**[!UICONTROL Generate Document of Record]**以啟用使用預設範本產生DoR。
+您也可以選取**[!UICONTROL Associate form template as the Document of Record template]**&#x200B;選項並選取範本，以啟用使用來源表單範本或任何其他表單範本產生DoR。
 
 1. 點選&#x200B;**[!UICONTROL Save & Close]**&#x200B;以儲存設定。
