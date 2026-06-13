@@ -9,20 +9,11 @@ role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: f679059c-18aa-4cb5-8368-ed27e96c20de
 TQID: https://experienceleague.adobe.com/ehU-0CYTjc3aRDnkecBH7uiaO2QLvpDc9d7oxezCVaU
-product_v2:
-  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2:
-  - id: d49d6117-dd89-469c-a774-cc96b7eee433
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2:
-  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
-  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
-topic_v2:
-  - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e8f6de9b-cf88-4405-8d10-15efa08c230eid: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2: id: cc72dcf1-72e1-48cc-b434-e7c27d62d67cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
 source-wordcount: 2659
@@ -216,7 +207,7 @@ Meta-model是JSON結構描述。 開始使用中繼模型之前，請確定您�
   </tr>
   <td><p>jcr:title</p></td> 
    <td> 
-    <p>jcr：title屬性和title JSON結構描述屬性可讓您在轉換後修改最適化表單欄位的標籤。<br>如需詳細資訊，請參閱<a href="#custommetamodelexamples">自訂中繼模型範例中的<strong>修改表單欄位的標籤</strong>。</a><br>請參閱<a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/adaptive-form-json-schema-form-model.html" target="_blank">使用JSON結構描述建立調適型表單</a>，以取得更多您可以使用JSON結構描述套用至調適型表單欄位的屬性資訊。</p>
+    <p>jcr：title屬性和title JSON結構描述屬性可讓您在轉換後修改最適化表單欄位的標籤。<br>如需詳細資訊，請參閱<a href="#custommetamodelexamples">自訂中繼模型範例中的<strong>修改表單欄位的標籤</strong>。</a><br>請參閱<a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/adaptive-form-json-schema-form-model.html" target="_blank">使用JSON結構描述建立調適型表單</a>，以取得更多您可以使用JSON結構描述套用至調適型表單欄位的屬性資訊。</p>
     <p></p></td> 
   </tr>
   <td><p>sling：resourceType和guideNodeClass</p></td> 
@@ -277,7 +268,7 @@ Meta-model是JSON結構描述。 開始使用中繼模型之前，請確定您�
 
 自動錶單轉換服務(AFCS)會使用儲存在下列位置的預設中繼模型，在轉換期間將來源表單欄位對應到調適型表單欄位：
 
-http://&lt;server>：&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/global.schema.json
+http://<server>：<port>/aem/forms.html/content/dam/formsanddocuments/metamodel/global.schema.json
 
 不過，您可以將自訂中繼模型儲存在資料夾中，並修改轉換服務屬性以在轉換期間使用自訂中繼模型。
 
