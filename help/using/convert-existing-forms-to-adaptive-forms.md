@@ -19,7 +19,7 @@ level_v2:
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
 source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
-source-wordcount: 1905
+source-wordcount: 1790
 ht-degree: 5%
 
 ---
@@ -80,8 +80,8 @@ AEM Forms Automated Forms Conversion服務(AFCS)採用Adobe Sensei技術，可�
    * **[!UICONTROL Select a cloud configuration]**. 當您選取組態時，已指定預設範本和主題。 您可以視需要指定不同的範本或主題。
    * 指定儲存所產生的最適化表單和對應結構描述的位置。 您可以使用預設路徑或指定自訂路徑。
    * 使用&#x200B;**產生沒有資料模型繫結的最適化表單**&#x200B;選項，選取是否要產生具有或不具有資料模型繫結的最適化表單。
-如果您未選取此選項，轉換服務會自動將最適化表單與JSON結構描述相關聯，並在最適化表單和JSON結構描述中可用的欄位之間建立資料繫結。 **[!UICONTROL Save generated data model schema at]**&#x200B;欄位會顯示儲存產生的JSON結構描述的預設位置。 您也可以自訂位置以儲存產生的結構描述。
-如果您選取此選項，轉換服務會產生沒有資料模型繫結的調適型表單。 成功轉換後，您可以將最適化表單與表單資料模型、XML結構描述或JSON結構描述建立關聯。 如需詳細資訊，請參閱[建立最適化表單](https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/creating-adaptive-form.html)。
+如果您未選取此選項，轉換服務會自動將最適化表單與JSON結構描述相關聯，並在最適化表單和JSON結構描述中可用的欄位之間建立資料繫結。**[!UICONTROL Save generated data model schema at]**&#x200B;欄位會顯示儲存產生的JSON結構描述的預設位置。您也可以自訂位置以儲存產生的結構描述。
+如果您選取此選項，轉換服務會產生沒有資料模型繫結的調適型表單。成功轉換後，您可以將最適化表單與表單資料模型、XML結構描述或JSON結構描述建立關聯。如需詳細資訊，請參閱[建立最適化表單](https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/creating-adaptive-form.html)。
 
    <!--
 
@@ -138,7 +138,7 @@ AEM Forms Automated Forms Conversion服務(AFCS)採用Adobe Sensei技術，可�
 
   >[!NOTE]
   > 使用「自動將區段轉換為片段」選項時，請勿使用回應式版面範本。
-  > 使用檢閱和修正編輯器將小型面板合併為大型面板。 這有助於減少轉換後的最適化表單中的片段數量。
+  > 使用檢閱和修正編輯器將小型面板合併為大型面板。這有助於減少轉換後的最適化表單中的片段數量。
   > 如果您遇到「呼叫次數過多」的例外狀況，
   >
   > * 重新建構表單以建立簡化的階層
