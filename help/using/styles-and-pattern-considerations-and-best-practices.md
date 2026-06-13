@@ -9,21 +9,11 @@ role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 9ada091a-e7c6-40e9-8196-c568f598fc2a
 TQID: https://experienceleague.adobe.com/EixW6MGzAyHz-JcPYmnKQBLWqnEFOwUepUFOcG8DBUo
-product_v2:
-  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2:
-  - id: d49d6117-dd89-469c-a774-cc96b7eee433
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-level_v2:
-  - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
-  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
-topic_v2:
-  - id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8c
-  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e8f6de9b-cf88-4405-8d10-15efa08c230eid: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: d49d6117-dd89-469c-a774-cc96b7eee433
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2: id: b5a62a22-46f7-4f0d-b151-3fc640bef588id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+topic_v2: id: bbbea26f-9621-49eb-9ab8-e06fb3bbce8cid: eb30f47f-d87a-400f-8f78-63ce7979ff56id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
 workflow-type: tm+mt
 source-wordcount: 1356
@@ -48,7 +38,7 @@ ht-degree: 3%
 * 將表單的頁數保持在15頁以下。
 * 將來原始檔組織成批次8到15份檔案。 將具有常見最適化表單片段的來源表單保留在單一批次中。
 * 請勿上傳受保護的表單。 此服務無法轉換受密碼保護和安全的表單。
-* 請勿上傳[PDF產品組合](https://helpx.adobe.com/tw/acrobat/using/overview-pdf-portfolios.html)。 此服務無法將PDF Portfolio轉換為最適化表單。
+* 請勿上傳[PDF產品組合](https://helpx.adobe.com/acrobat/using/overview-pdf-portfolios.html)。 此服務無法將PDF Portfolio轉換為最適化表單。
 * 請勿上傳檔案名稱中帶有空格的來源表單。 上傳表單前，請先移除檔案名稱中的空格。
 * 請勿上傳任何非英文、法文、德文、西班牙文、義大利文和葡萄牙文語言的掃描、填寫和表單。 此服務不支援這些表單。
 
@@ -56,14 +46,14 @@ ht-degree: 3%
 
 * 分析XDP表單並修正視覺問題。 確保來原始檔使用預期的控制項和結構。 例如，來源表單可能有核取方塊，而不是單一選取範圍的選項按鈕。 將核取方塊變更為選項按鈕，以產生具有所需元件的調適型表單。
 * [在開始轉換之前，將繫結新增至XDP表單](http://www.adobe.com/go/learn_aemforms_designer_65_tw)。 當來源XDP表單中有繫結可用時，此服務會在轉換期間自動將繫結套用至對應的調適型表單欄位。 這可以節省您手動套用繫結所需的時間。
-* [將Adobe Sign標籤](https://helpx.adobe.com/tw/sign/using/text-tag.html)新增至XDP檔案。 此服務會自動將Adobe Sign標籤轉換為對應的最適化表單欄位。 最適化Forms支援有限數量的Adobe Sign欄位。 如需支援欄位的完整清單，請參閱[在最適化表單中使用Adobe Sign](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/working-with-adobe-sign.html?lang=zh-Hant)檔案。
+* [將Adobe Sign標籤](https://helpx.adobe.com/sign/using/text-tag.html)新增至XDP檔案。 此服務會自動將Adobe Sign標籤轉換為對應的最適化表單欄位。 最適化Forms支援有限數量的Adobe Sign欄位。 如需支援欄位的完整清單，請參閱[在最適化表單中使用Adobe Sign](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-advanced-authoring/working-with-adobe-sign.html?lang=en)檔案。
 * 可能的話，將XDP檔案中的複雜表格轉換為簡單表格。 表格若包含表格儲存格中的表單欄位、大小不一的儲存格、跨欄或列儲存格、合併的儲存格、部分框線或無可見框線，則會視為複雜表格。 含有上述任一專案的表格會視為複雜表格。
 <!-- * Use sub-forms in XDP documents to create panels in adaptive forms. Service converts each sub-form to one or more adaptive form panels during conversion. -->
 
 ### 開始轉換之前
 
 * **AEM Forms as a Cloud Service：**&#x200B;預設範本和主題可供使用；您可以使用它們或建立自訂範本和主題。
-* **AEM 6.5和AEM 6.5 LTS：**&#x200B;建立最適化表單範本和主題（或安裝參考資產，如[設定服務](configure-service.md#referencepackage)中所述）。 若要使用以核心元件為基礎的範本和主題，您必須啟用[最適化表單核心元件](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=zh-Hant)。
+* **AEM 6.5和AEM 6.5 LTS：**&#x200B;建立最適化表單範本和主題（或安裝參考資產，如[設定服務](configure-service.md#referencepackage)中所述）。 若要使用以核心元件為基礎的範本和主題，您必須啟用[最適化表單核心元件](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html)。
 * 建立自適應表單範本。 範本有助於為組織或部門的表單指定統一結構。
 * 指定最適化表單範本中的頁首和頁尾。 此服務會忽略來原始檔的頁首頁尾，並使用最適化表單範本中指定的頁首頁尾。
 * 建立最適化表單主題。 主題可讓您的組織或部門各式各樣的外觀和感覺保持一致。
@@ -79,7 +69,7 @@ AEM [!DNL Forms Automated Conversion service]使用人工智慧和機器學習�
 
 [!DNL Automated Forms Conversion service]已接受大量表單的訓練。 它可輕鬆識別來源表單中的欄位並產生調適型表單。 不過，PDF forms中有些欄位和樣式肉眼很容易看見，但服務上卻難以理解。 此服務可將與適用欄位型別或面板不同的欄位或樣式指派給某些欄位或樣式。 以下列出所有此類欄位和樣式模式。
 
-服務會持續從來源資料學習，開始識別並指派正確的欄位或面板給這些模式。 目前，您可以使用[檢閱並修正](review-correct-ui-edited.md)編輯器來修正此類問題。 在開始修正問題或進一步閱讀之前，請先熟悉[最適化表單元件](https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/introduction-forms-authoring.html)。
+服務會持續從來源資料學習，開始識別並指派正確的欄位或面板給這些模式。 目前，您可以使用[檢閱並修正](review-correct-ui-edited.md)編輯器來修正此類問題。 在開始修正問題或進一步閱讀之前，請先熟悉[最適化表單元件](https://helpx.adobe.com/experience-manager/6-5/forms/using/introduction-forms-authoring.html)。
 
 ### 一般模式 {#general}
 
