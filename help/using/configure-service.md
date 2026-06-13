@@ -30,7 +30,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: cb6b167400093c85e8929eb147e2a0be256772a6
 workflow-type: tm+mt
-source-wordcount: 2663
+source-wordcount: 2448
 ht-degree: 5%
 
 ---
@@ -132,8 +132,8 @@ The connector package provides early access to the [Auto-detect logical sections
 
 在Adobe為您的組織啟用存取權並提供所需的許可權給管理員後，管理員可以登入Admin Console （下面的詳細說明）、建立設定檔，並將開發人員新增到設定檔。 開發人員可以將AEM Forms的例項連線至Adobe Cloud上的自動錶單轉換服務(AFCS)。
 
-開發人員是您指定執行轉換服務的組織成員。 只有已新增至Adobe自動化表單轉換服務(AFCS)設定檔的開發人員，才有權使用自動化表單轉換服務(AFCS)。
-執行以下步驟來建立設定檔並新增開發人員。 至少需要一個設定檔，才能將必要的存取權授予組織的開發人員：
+開發人員是您指定執行轉換服務的組織成員。只有已新增至Adobe自動化表單轉換服務(AFCS)設定檔的開發人員，才有權使用自動化表單轉換服務(AFCS)。
+執行以下步驟來建立設定檔並新增開發人員。至少需要一個設定檔，才能將必要的存取權授予組織的開發人員：
 
 1. 登入[Admin Console](https://adminconsole.adobe.com/)。 使用布建管理員的&#x200B;**Adobe ID**&#x200B;以使用自動錶單轉換服務(AFCS)登入。
 1. 按一下&#x200B;**[!UICONTROL Automated Forms Conversion]**&#x200B;選項。
@@ -200,7 +200,7 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
 
 ### &#x200B;1. 在Adobe Developer Console上設定服務API
 
-若要使用自動錶單轉換服務(AFCS)，請建立專案，並將&#x200B;**自動Forms設定服務** API新增至Adobe Developer Console上的專案。 整合會產生API金鑰、使用者端密碼、技術帳戶ID、範圍與組織ID。
+若要使用自動錶單轉換服務(AFCS)，請建立專案，並將&#x200B;**自動Forms設定服務** API新增至Adobe Developer Console上的專案。整合會產生API金鑰、使用者端密碼、技術帳戶ID、範圍與組織ID。
 若要在Adobe Developer Console上設定自動錶單轉換服務API，請執行以下步驟：
 
 1. 登入https://developer.adobe.com/console 。 使用您的管理員已布建以登入Adobe I/O主控台的Adobe ID開發人員帳戶來登入。
@@ -209,10 +209,10 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
 
    ![建立新的API專案](/help/using/assets/create-new-api-project.png)
 
-1. 按一下 **[!UICONTROL Add API]**。 隨即顯示畫面，列出已為您的帳戶啟用的所有API。
+1. 按一下&#x200B;**[!UICONTROL Add API]**。隨即顯示畫面，列出已為您的帳戶啟用的所有API。
    ![新增API](/help/using/assets/add-api.png)
 
-1. 選取&#x200B;**[!UICONTROL Automated Forms Conversion service]**&#x200B;並按一下&#x200B;**[!UICONTROL Next]**。 隨即顯示設定API的畫面。
+1. 選取&#x200B;**[!UICONTROL Automated Forms Conversion service]**&#x200B;並按一下&#x200B;**[!UICONTROL Next]**。隨即顯示設定API的畫面。
    ![選取AFCS API](/help/using/assets/select-afcs-api.png)
 
 1. 選取&#x200B;**OAuth伺服器對伺服器**&#x200B;驗證方法。
@@ -265,7 +265,7 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
    >
    > 僅建立一個IMS設定。 請勿建立多個IMS設定。
 
-1. 選取&#x200B;**Adobe IMS設定**&#x200B;並按一下&#x200B;**[!UICONTROL Check Health]**。 對話方塊隨即顯示。
+1. 選取&#x200B;**Adobe IMS設定**&#x200B;並按一下&#x200B;**[!UICONTROL Check Health]**。對話方塊隨即顯示。
    ![檢查健康狀態](/help/using/assets/check-health.png)
 
    **檢查**&#x200B;對話方塊出現。
@@ -282,12 +282,12 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
 
 ### &#x200B;3. 建立自動表單轉換設定
 
-建立自動錶單轉換設定，將您的AEM執行個體連線到轉換服務。 它也可讓您指定轉換的範本、主題和表單片段。 您可以為每組表單分別建立多個雲端服務設定。
-例如，您可以針對銷售部門表單設定不同的組態，而針對客戶支援表單設定不同的組態。 執行以下步驟來建立雲端服務設定：
+建立自動錶單轉換設定，將您的AEM執行個體連線到轉換服務。它也可讓您指定轉換的範本、主題和表單片段。您可以為每組表單分別建立多個雲端服務設定。
+例如，您可以針對銷售部門表單設定不同的組態，而針對客戶支援表單設定不同的組態。執行以下步驟來建立雲端服務設定：
 
 1. 在您的AEM Forms執行個體上，按一下&#x200B;**[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]**> **[!UICONTROL Cloud Services]** > **[!UICONTROL Automate Forms Conversion Configuration]**。
 1. 選取&#x200B;**[!UICONTROL Global]**&#x200B;資料夾並按一下&#x200B;**[!UICONTROL Create]**。
-**建立自動錶單轉換組態**&#x200B;的頁面已顯示。 設定是在&#x200B;**全域**&#x200B;資料夾中建立。 您也可以在現有的不同資料夾中建立設定，或為您的設定建立資料夾。
+**建立自動錶單轉換組態**&#x200B;的頁面已顯示。設定是在&#x200B;**全域**&#x200B;資料夾中建立。您也可以在現有的不同資料夾中建立設定，或為您的設定建立資料夾。
    ![選取全域資料夾](/help/using/assets/create-afcs-cloud-conf.png)
 1. 在&#x200B;**[!UICONTROL Create Automated Forms Conversion Configuration]**&#x200B;頁面上，指定下列欄位的值並按一下&#x200B;**[!UICONTROL Next]**。
 
