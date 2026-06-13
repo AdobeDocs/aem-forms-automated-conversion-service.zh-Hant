@@ -6,8 +6,8 @@ topic-tags: forms
 discoiquuid: cad72699-4a4b-4c52-88a5-217298490a7c
 source-git-commit: 23d441d19dea63382f0a0024b4682d5bd0eaa63c
 workflow-type: tm+mt
-source-wordcount: '1159'
-ht-degree: 1%
+source-wordcount: '1188'
+ht-degree: 2%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 1%
 
 本文會說明如何成功執行所有這些整合階段的逐步指示。
 
-本文討論的範例是參考實作自訂資料和中繼資料服務，以整合Forms入口網站頁面與資料庫。 範例實作中使用的資料庫是MySQL 5.6.24。不過，您可以將Forms Portal頁面與您選擇的任何資料庫整合。
+本文討論的範例是參考實作自訂資料和中繼資料服務，以整合Forms入口網站頁面與資料庫。 範例實作中使用的資料庫是MySQL 5.6.24。 不過，您可以將Forms Portal頁面與您選擇的任何資料庫整合。
 
 ## 必要條件 {#pre-requisites}
 
@@ -32,7 +32,7 @@ ht-degree: 1%
 * 為您的AEM執行個體安裝[最新Service Pack](https://helpx.adobe.com/tw/experience-manager/aem-releases-updates.html)
 * 最新版本的AEM Forms附加元件套件
 * 設定[自動錶單轉換服務(AFCS)](configure-service.md)
-* 設定資料庫。 範例實作中使用的資料庫是MySQL 5.6.24。不過，您可以將轉換後的最適化表單與您選擇的任何資料庫整合。
+* 設定資料庫。 範例實作中使用的資料庫是MySQL 5.6.24。 不過，您可以將轉換後的最適化表單與您選擇的任何資料庫整合。
 
 ## 設定AEM執行個體與資料庫之間的連線 {#set-up-connection-aem-instance-database}
 
@@ -269,7 +269,7 @@ ht-degree: 1%
 
 1. 將下列&#x200B;**aem-fp-db-integration-sample-pkg-6.1.2.zip**&#x200B;封裝下載至您的檔案系統。
 
-[取得檔案](assets/aem-fp-db-integration-sample-pkg-6.1.2.zip)
+   [取得檔案](assets/aem-fp-db-integration-sample-pkg-6.1.2.zip)
 
 1. 移至&#x200B;*http://[主機]：[連線埠]/crx/packmgr/*&#x200B;的AEM封裝管理員。
 1. 按一下「**[!UICONTROL Upload Package]**」。
@@ -282,7 +282,7 @@ ht-degree: 1%
 1. [執行轉換](convert-existing-forms-to-adaptive-forms.md#start-the-conversion-process)，將來源表單轉換為最適化表單。
 1. 在編輯模式中開啟最適化表單。
 1. 點選「表單容器」，然後選取「設定![設定自適應表單](assets/configure-adaptive-form.png)」。
-1. 在&#x200B;**[!UICONTROL Submission]**&#x200B;區段中，從&#x200B;**[!UICONTROL Forms Portal Submit Action]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL Submit Action]**。
+1. 在&#x200B;**[!UICONTROL Submission]**&#x200B;區段中，從&#x200B;**[!UICONTROL Submit Action]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL Forms Portal Submit Action]**。
 1. 點選![儲存範本原則](assets/edit_template_done.png)以儲存設定。
 
 ## 建立及設定Forms入口網站頁面 {#create-configure-forms-portal-page}
