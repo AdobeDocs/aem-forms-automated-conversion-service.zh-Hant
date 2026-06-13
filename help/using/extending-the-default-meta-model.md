@@ -216,7 +216,7 @@ Meta-model是JSON結構描述。 開始使用中繼模型之前，請確定您�
   </tr>
   <td><p>jcr:title</p></td> 
    <td> 
-    <p>jcr：title屬性和title JSON結構描述屬性可讓您在轉換後修改最適化表單欄位的標籤。<br>如需詳細資訊，請參閱<a href="#custommetamodelexamples">自訂中繼模型範例中的<strong>修改表單欄位的標籤</strong>。</a><br>請參閱<a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/adaptive-form-json-schema-form-model.html" target="_blank">使用JSON結構描述建立調適型表單</a>，以取得更多您可以使用JSON結構描述套用至調適型表單欄位的屬性資訊。</p>
+    <p>jcr：title屬性和title JSON結構描述屬性可讓您在轉換後修改最適化表單欄位的標籤。<br>如需詳細資訊，請參閱<a href="#custommetamodelexamples">自訂中繼模型範例中的<strong>修改表單欄位的標籤</strong>。</a><br>請參閱<a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/adaptive-form-json-schema-form-model.html" target="_blank">使用JSON結構描述建立調適型表單</a>，以取得更多您可以使用JSON結構描述套用至調適型表單欄位的屬性資訊。</p>
     <p></p></td> 
   </tr>
   <td><p>sling：resourceType和guideNodeClass</p></td> 
