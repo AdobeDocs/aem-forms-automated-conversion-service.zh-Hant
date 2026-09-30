@@ -9,28 +9,40 @@ role: Admin, Developer
 level: Beginner, Intermediate
 contentOwner: khsingh
 exl-id: 5deef8f5-5098-47c1-b696-b2db59e92931
-TQID: https://experienceleague.adobe.com/TmEZJSIKPj6f2X5E7X8JY9AL5EGHSPuLhAzQlPdvGGM
+TQID: 'https://experienceleague.adobe.com/TmEZJSIKPj6f2X5E7X8JY9AL5EGHSPuLhAzQlPdvGGM'
 product_v2:
   - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
 feature_v2:
   - id: d49d6117-dd89-469c-a774-cc96b7eee433
+    internal-label: Administration
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
 topic_v2:
   - id: df401a2a-327d-468c-a5e4-b7b7ccd071a0
+    internal-label: Data integration
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
+    internal-label: Administration
+source-git-commit: e40aeabffdc79dbf5d42a89b8e37c298e016cb90
 workflow-type: tm+mt
-source-wordcount: 2555
+source-wordcount: '2560'
 ht-degree: 1%
-
 ---
-
 # 基於資料來源的建議預填及提交最適化表單的工作流程 {#recommended-data-source-btased-prefill-and-submit-workflows-for-adaptive-forms}
 
 下列資料來源可透過自動錶單轉換服務(AFCS)轉換的最適化表單使用：
@@ -73,7 +85,7 @@ ht-degree: 1%
   <tr>
   <td></td> 
    <td> 
-    <p><strong>選項1</strong>：您<a href="#generate-adaptive-forms-with-no-data-binding">使用自動錶單轉換服務(AFCS)產生無資料繫結的最適化表單</a>，並將JSON結構描述設定為資料來源。 您手動將最適化表單欄位繫結到JSON結構描述，然後<a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#Supportedprotocolsforprefillinguserdata" target="_blank">使用任何支援的通訊協定</a>來預先填入欄位值。 如有需要，請修改欄位值，並將資料提交至crx-repository。</p></td> 
+    <p><strong>選項1</strong>：您<a href="#generate-adaptive-forms-with-no-data-binding">使用自動錶單轉換服務(AFCS)產生無資料繫結的最適化表單</a>，並將JSON結構描述設定為資料來源。 您手動將最適化表單欄位繫結到JSON結構描述，然後<a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#Supportedprotocolsforprefillinguserdata" target="_blank">使用任何支援的通訊協定</a>來預先填入欄位值。 如有需要，請修改欄位值，並將資料提交至crx-repository。</p></td> 
   </tr>
   <tr>
   <td></td> 
@@ -93,7 +105,7 @@ ht-degree: 1%
   <tr>
   <td><p>XSD結構描述</p></td> 
    <td> 
-    <p>選取XSD結構描述作為資料來源。 根據選取的資料來源，您<a href="#generate-adaptive-forms-with-no-data-binding">使用自動錶單轉換服務(AFCS)產生無資料繫結的最適化表單</a>，並將XSD結構描述設定為資料來源。 您手動將最適化表單欄位繫結到XSD結構描述，然後<a href="https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#Supportedprotocolsforprefillinguserdata" target="_blank">使用任何支援的通訊協定</a>來預先填入欄位值。 如有需要，請修改欄位值，並將資料提交至crx-repository。</p>
+    <p>選取XSD結構描述作為資料來源。 根據選取的資料來源，您<a href="#generate-adaptive-forms-with-no-data-binding">使用自動錶單轉換服務(AFCS)產生無資料繫結的最適化表單</a>，並將XSD結構描述設定為資料來源。 您手動將最適化表單欄位繫結到XSD結構描述，然後<a href="https://helpx.adobe.com/experience-manager/6-5/forms/using/prepopulate-adaptive-form-fields.html#Supportedprotocolsforprefillinguserdata" target="_blank">使用任何支援的通訊協定</a>來預先填入欄位值。 如有需要，請修改欄位值，並將資料提交至crx-repository。</p>
     </td> 
   </tr>
   <tr>
@@ -117,8 +129,8 @@ ht-degree: 1%
 
 ## 必要條件 {#pre-requisites}
 
-* 設定[AEM作者執行個體](https://helpx.adobe.com/tw/experience-manager/6-5/sites/deploying/using/deploy.html)
-* 在AEM作者執行個體[&#128279;](configure-service.md)上設定自動錶單轉換服務(AFCS)
+* 設定[AEM作者執行個體](https://helpx.adobe.com/experience-manager/6-5/sites/deploying/using/deploy.html)
+* 在AEM作者執行個體](configure-service.md)上設定[自動錶單轉換服務(AFCS)
 
 ## 最適化表單範例 {#sample-adaptive-form}
 
@@ -186,7 +198,7 @@ CREATE TABLE `applicant` (
 
 [取得檔案](assets/loanapplication.xsd)
 
-如需有關使用XSD結構描述作為調適型表單中的表單模型的詳細資訊，請參閱[使用XML結構描述建立調適型表單](https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/adaptive-form-xml-schema-form-model.html)。
+如需有關使用XSD結構描述作為調適型表單中的表單模型的詳細資訊，請參閱[使用XML結構描述建立調適型表單](https://helpx.adobe.com/experience-manager/6-5/forms/using/adaptive-form-xml-schema-form-model.html)。
 
 如果您使用JSON結構描述作為表單模型來執行使用案例，請建立包含以下文字的JSON檔案：
 
@@ -236,7 +248,7 @@ CREATE TABLE `applicant` (
 
 [取得檔案](assets/demo_schema.json)
 
-如需有關使用JSON結構描述作為調適型表單中的表單模型的詳細資訊，請參閱[使用JSON結構描述建立調適型表單](https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/adaptive-form-json-schema-form-model.html)。
+如需有關使用JSON結構描述作為調適型表單中的表單模型的詳細資訊，請參閱[使用JSON結構描述建立調適型表單](https://helpx.adobe.com/experience-manager/6-5/forms/using/adaptive-form-json-schema-form-model.html)。
 
 ## 產生無資料繫結的最適化表單 {#generate-adaptive-forms-with-no-data-binding}
 
@@ -260,10 +272,10 @@ CREATE TABLE `applicant` (
 
 執行使用案例之前：
 
-* [將MySQL資料庫設定為資料來源](https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/configure-data-sources.html#configurerelationaldatabase)
-* [建立表單資料模型](https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/work-with-form-data-model.html)
+* [將MySQL資料庫設定為資料來源](https://helpx.adobe.com/experience-manager/6-5/forms/using/configure-data-sources.html#configurerelationaldatabase)
+* [建立表單資料模型](https://helpx.adobe.com/experience-manager/6-5/forms/using/work-with-form-data-model.html)
 
-根據使用案例，建立&#x200B;**載入應用程式**&#x200B;表單資料模型，並將讀取服務引數繫結至&#x200B;**[!UICONTROL Literal]**&#x200B;值。 電話號碼常值必須是MySQL資料庫的&#x200B;**應徵者**&#x200B;結構描述中設定的其中一個記錄。 服務會使用值作為引數，從資料來源擷取詳細資料。 您也可以從&#x200B;**[!UICONTROL Binding To]**&#x200B;下拉式清單中選取[使用者設定檔屬性或要求屬性](https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/work-with-form-data-model.html#bindargument)
+根據使用案例，建立&#x200B;**載入應用程式**&#x200B;表單資料模型，並將讀取服務引數繫結至&#x200B;**[!UICONTROL Literal]**&#x200B;值。 電話號碼常值必須是MySQL資料庫的&#x200B;**應徵者**&#x200B;結構描述中設定的其中一個記錄。 服務會使用值作為引數，從資料來源擷取詳細資料。 您也可以從&#x200B;**[!UICONTROL Binding To]**&#x200B;下拉式清單中選取[使用者設定檔屬性或要求屬性](https://helpx.adobe.com/experience-manager/6-5/forms/using/work-with-form-data-model.html#bindargument)
 
 ![設定表單資料模型](assets/configure_model_object.png)
 
@@ -298,7 +310,7 @@ CREATE TABLE `applicant` (
 
 **使用案例：**&#x200B;您使用自動錶單轉換服務(AFCS)產生無資料繫結的最適化表單，並將MYSQL資料庫設定為資料來源。 您可以使用規則編輯器繫結調適型表單欄位以預填欄位值。 如有需要，請修改欄位值，並將資料提交至crx-repository。
 
-執行以下步驟以使用[規則編輯器](https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/rule-editor.html)來叫用表單資料模型服務，以繫結最適化表單中的欄位和預填值：
+執行以下步驟以使用[規則編輯器](https://helpx.adobe.com/experience-manager/6-5/forms/using/rule-editor.html)來叫用表單資料模型服務，以繫結最適化表單中的欄位和預填值：
 
 1. 選取&#x200B;**[!UICONTROL output]**&#x200B;資料夾中的&#x200B;**範例貸款申請表**，然後點選&#x200B;**[!UICONTROL Edit]**。
 1. 在「**[!UICONTROL Content]**」標籤中，點選「設定」圖示：
@@ -379,7 +391,7 @@ CREATE TABLE `applicant` (
 1. 點選&#x200B;**[!UICONTROL Form Model]**&#x200B;標籤，從&#x200B;**[!UICONTROL Select From]**&#x200B;下拉式清單中選取&#x200B;**[!UICONTROL Schema]**，然後點選&#x200B;**[!UICONTROL Select Schema]**&#x200B;以上傳儲在本機檔案系統上的&#x200B;**loanapplication** XSD結構描述。 選取XSD結構描述的根元素，然後點選&#x200B;**[!UICONTROL Save & Close]**&#x200B;以儲存表單。
 1. 選取&#x200B;**範例貸款申請表單**&#x200B;並點選&#x200B;**[!UICONTROL Edit]**。
 1. 點選「申請人名稱」文字方塊，然後選取![設定圖示](assets/configure_icon.svg) （設定）。
-在「繫結參考」欄位中，選取&#x200B;**應徵者** > **名稱**，然後點選![完成圖示](assets/save_icon.svg)以儲存屬性。 同樣地，為&#x200B;**地址**、**電話號碼**、**電子郵件**、**職業**、**年薪（美元）**&#x200B;和&#x200B;**否，建立資料繫結。 具有XSD結構描述實體的相依家族成員**&#x200B;欄位。
+在「繫結參考」欄位中，選取**應徵者** > **名稱**，然後點選![完成圖示](assets/save_icon.svg)以儲存屬性。 同樣地，為&#x200B;**地址**、**電話號碼**、**電子郵件**、**職業**、**年薪（美元）**&#x200B;和&#x200B;**否，建立資料繫結。 具有XSD結構描述實體的相依家族成員**&#x200B;欄位。
 
 1. 再次選取&#x200B;**輸出**&#x200B;資料夾中可用的已轉換的&#x200B;**範例貸款申請表單**，然後選取&#x200B;**[!UICONTROL Preview]** > **[!UICONTROL Preview with Data]**。</br>
 
