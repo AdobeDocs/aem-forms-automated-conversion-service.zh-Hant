@@ -8,28 +8,40 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: f679059c-18aa-4cb5-8368-ed27e96c20de
-TQID: https://experienceleague.adobe.com/ehU-0CYTjc3aRDnkecBH7uiaO2QLvpDc9d7oxezCVaU
+TQID: 'https://experienceleague.adobe.com/ehU-0CYTjc3aRDnkecBH7uiaO2QLvpDc9d7oxezCVaU'
 product_v2:
   - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
 feature_v2:
   - id: d49d6117-dd89-469c-a774-cc96b7eee433
+    internal-label: Administration
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
 topic_v2:
   - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
+    internal-label: Accessibility
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
+    internal-label: Administration
+source-git-commit: e40aeabffdc79dbf5d42a89b8e37c298e016cb90
 workflow-type: tm+mt
-source-wordcount: 2659
+source-wordcount: '2659'
 ht-degree: 1%
-
 ---
-
 # 擴展預設元模型 {#extend-the-default-meta-model}
 
 自動錶單轉換服務(AFCS)可識別和擷取來源表單中的表單物件。 語意對應程式可協助服務決定如何以最適化表單呈現擷取的物件。 例如，來源表單可以有許多不同型別的日期表示。 語意對應程式有助於將來源表單的日期表單物件與調適型表單的日期元件對應到所有表示方式。 語意對應程式也允許服務在轉換期間預先設定並套用驗證、規則、資料模式、說明文字和協助工具屬性至調適型表單元件。
@@ -256,12 +268,12 @@ Meta-model是JSON結構描述。 開始使用中繼模型之前，請確定您�
 * 確定每個金鑰的名稱都是英文名稱。 例如，emailAddress。
 * 請確定所有實體參照和所有ID鍵的預定義值只包含ASCII字元。 例如&quot;id&quot;： &quot;ContactPoint&quot; / &quot;$ref&quot;： &quot;#ContactPoint&quot;。
 * 請確定與下列鍵值對應的所有值都使用指定的元模型語言：
-   * aem:affKeyword
-   * 標題
-   * 說明
-   * enumName
-   * shortDescription
-   * validatePictureClauseMessage
+  * aem:affKeyword
+  * 標題
+  * 說明
+  * enumName
+  * shortDescription
+  * validatePictureClauseMessage
 
   例如，當中繼模型的語言是法文(&quot;aem:Language&quot;： &quot;fr&quot;)時，請確定所有說明和訊息都是法文。
 
@@ -277,7 +289,7 @@ Meta-model是JSON結構描述。 開始使用中繼模型之前，請確定您�
 
 自動錶單轉換服務(AFCS)會使用儲存在下列位置的預設中繼模型，在轉換期間將來源表單欄位對應到調適型表單欄位：
 
-http://&lt;server>：&lt;port>/aem/forms.html/content/dam/formsanddocuments/metamodel/global.schema.json
+http://<server>：<port>/aem/forms.html/content/dam/formsanddocuments/metamodel/global.schema.json
 
 不過，您可以將自訂中繼模型儲存在資料夾中，並修改轉換服務屬性以在轉換期間使用自訂中繼模型。
 

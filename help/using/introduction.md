@@ -1,6 +1,6 @@
 ---
 title: 自動化表單轉換服務(AFCS)簡介
-description: 將列印表單加速轉換為最適化表單
+description: 加快將列印表單轉換為最適化表單的速度
 solution: Experience Manager Forms
 feature: Adaptive Forms, Foundation Components
 topic: Administration
@@ -8,32 +8,45 @@ topic-tags: forms
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: edabeac8-cd66-48ca-a99f-9643a1c184cf
-TQID: https://experienceleague.adobe.com/stoZAgMJGYjT1IKCcXBAe2JxWAvPJfwq0znNs757b0U
+TQID: 'https://experienceleague.adobe.com/stoZAgMJGYjT1IKCcXBAe2JxWAvPJfwq0znNs757b0U'
 product_v2:
   - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
 feature_v2:
   - id: d49d6117-dd89-469c-a774-cc96b7eee433
+    internal-label: Administration
+  - id: 7da902b6-fe94-5180-8e7c-f6d1e38d01d5
+    internal-label: Foundation Components
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
 topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
+    internal-label: Administration
+source-git-commit: e40aeabffdc79dbf5d42a89b8e37c298e016cb90
 workflow-type: tm+mt
-source-wordcount: 769
+source-wordcount: '769'
 ht-degree: 57%
-
 ---
-
 # 自動錶單轉換服務(AFCS) {#introduction-to-automated-forms-conversion-service}
 
-自動錶單轉換服務(AFCS)可將PDF forms自動轉換為調適型表單，有助於加速資料擷取體驗的數位化和現代化。 這項由 Adobe Sensei 支援的服務會將您的 PDF 表單自動轉換為適合裝置、回應式且基於 HTML5 的最適化表單。 妥善利用現有的 PDF Forms 和 XFA 功能，該服務還可以在轉換過程中將適當的驗證、樣式和佈局應用於最適化表單欄位。 此服務的好處：
+自動錶單轉換服務(AFCS)可將PDF forms自動轉換為調適型表單，有助於加速資料擷取體驗的數位化和現代化。 這項由 Adobe Sensei 支援的服務會將您的 PDF 表單自動轉換為適合裝置、回應式且基於 HTML5 的最適化表單。 妥善利用現有的 PDF Forms 和 XFA 功能，該服務還可以在轉換過程中將適當的驗證、樣式和佈局應用於自適應表單欄位。 此服務的好處：
 
-* 無須手動將列印表單轉換為最適化表單
+* 節省將列印表單轉換為最適化表單所需的手動作業
 * 在轉換過程中應用模式和適當的驗證
 * 在轉換過程中生成記錄文件
 * 將常見欄位分組為可重複使用的表單片段
@@ -49,9 +62,9 @@ Adobe 為您的組織啟用存取權限，並向您指定的組織管理員提�
 
 ## 支援的PDF forms和語言 {#supported-languages-and-pdf-forms}
 
-此服務支援非互動式 PDF 表單、使用 Adobe Acrobat 建立的名為 AcroForms 的表單，以及使用 AEM Forms 或 Adobe LiveCycle 建立的基於 XFA 的表單。
+此服務支援非互動式 PDF forms、使用 Adobe Acrobat 建立的名為 AcroForms 的表單，以及使用 AEM Forms 或 Adobe LiveCycle 建立的基於 XFA 的表單。
 
-此服務也支援啟用Adobe Sign的PDF forms。 如果源 PDF 表單有 Adobe Sign 文字標記，則此服務會保留轉換期間所有 Adobe Sign 的相關資訊，並將源 PDF 中顯示的簽署者資訊與對應的最適化表單欄位建立關聯。 此功能僅適用於 AcroForms。
+此服務也支援啟用Adobe Sign的PDF forms。 如果來源 PDF 表單有 Adobe Sign 文字標記，則此服務會保留轉換期間所有 Adobe Sign 的相關資訊，並將來源 PDF 中顯示的簽署者資訊與對應的自適應表單欄位建立關聯。 此功能僅適用於 AcroForms。
 
 此服務可將英文、法文、德文、西班牙文、義大利文和葡萄牙文的表單轉換為最適化表單。 您也可以使用[AEM翻譯工作流程](https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/using-aem-translation-workflow-to-localize-adaptive-forms.html)，將產生的適用性表單翻譯成其他語言。
 
@@ -67,7 +80,7 @@ Adobe 為您的組織啟用存取權限，並向您指定的組織管理員提�
 
 ### &#x200B;2. 將PDF forms轉換為最適化表單 {#use-the-conversion-service}
 
-設定 AEM Forms 環境後，如欲將 PDF 表單轉換為最適化表單，請 [上傳 PDF 表單](convert-existing-forms-to-adaptive-forms.md)至 AEM 執行個體，然後[開始轉換](convert-existing-forms-to-adaptive-forms.md#run-the-conversion)。 在上傳表單前，請參閱以下提醒：
+設定 AEM Forms 環境後，如欲將 PDF 表單轉換為最適化表單，請 [上傳 PDF 表單](convert-existing-forms-to-adaptive-forms.md)至 AEM 執行個體，然後[開始轉換](convert-existing-forms-to-adaptive-forms.md#run-the-conversion)。 在上傳表單前，請考慮以下事項：
 
 * 請勿上傳受保護的表單。 此服務無法轉換受密碼保護和加密的表單。
 * 請勿上傳英文、法文、德文、西班牙文、義大利文和葡萄牙文以外任何語言的掃描、彩色、已填寫表單和表單。 此服務不支援這些表單。
@@ -78,7 +91,7 @@ Adobe 為您的組織啟用存取權限，並向您指定的組織管理員提�
 
 ### &#x200B;3. 檢閱轉換後的表單 {#review-converted-forms}
 
-現實世界的表單在欄位佈局、命名或內隱建議方面可能具有複雜的資料擷取要求，而基於AI/ML的檢測邏輯可能無法準確擷取這些表單。 自動轉換完成後，您可以使用[檢閱和修正編輯器](review-correct-ui-edited.md)來檢查轉換後的表格並進行必要的更新，使成果更佳並更能提供符合期望的體驗。 完成必要的修改後，再一次轉換表單。
+現實世界的表單在欄位佈局、命名或內隱建議方面可能具有複雜的資料擷取要求，而基於AI/ML的檢測邏輯可能無法準確擷取這些表單。 自動轉換完成後，您可以使用[檢閱和修正編輯器](review-correct-ui-edited.md)來檢查轉換後的表格並進行必要的更新，使成果更佳並更能提供符合期望的體驗。 完成必要的修改後，再次傳送表單以進行轉換。
 
-自動轉換所需的時間取決於多種因素，例如輸入表單的大小、表單的複雜性，以及服務處理佇列上所缺的時間。 使用者可透過資料夾 / 檔案上的狀態顯示器時時瞭解進度。 轉換完成後，使用者設定的電子郵件地址也會收到電子郵件通知。
+自動轉換所需的時間取決於多種因素，例如輸入表單的大小、表單的複雜性，以及服務處理佇列上所缺的時間。 使用者可透過資料夾 / 檔案上的狀態顯示器時時瞭解進度。 轉換完成後，系統也會將電子郵件通知傳送至已設定的電子郵件地址。
 

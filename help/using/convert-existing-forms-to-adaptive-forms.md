@@ -7,23 +7,33 @@ role: Admin, Developer
 topic-tags: forms
 feature: Adaptive Forms
 exl-id: 415e05b5-5a90-490c-bf7c-d3365ce95e24
-TQID: https://experienceleague.adobe.com/t3Ng0VnihUMkisnaGzTBaw2QIR93l-fSHApCaOvz0r0
+TQID: 'https://experienceleague.adobe.com/t3Ng0VnihUMkisnaGzTBaw2QIR93l-fSHApCaOvz0r0'
 product_v2:
   - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+feature_v2:
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
-source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
+    internal-label: Beginner
+source-git-commit: e40aeabffdc79dbf5d42a89b8e37c298e016cb90
 workflow-type: tm+mt
-source-wordcount: 1790
+source-wordcount: '1937'
 ht-degree: 5%
-
 ---
-
 # 將PDF forms轉換為最適化表單 {#convert-print-forms-to-adaptive-forms}
 
 AEM Forms Automated Forms Conversion服務(AFCS)採用Adobe Sensei技術，可自動將您的PDF forms轉換為適合裝置的回應式調適型表單<!--foundation and [core components](https://experienceleague.adobe.com/zh-hant/docs/experience-manager-core-components/using/adaptive-forms/introduction)-->。 無論您使用非互動式PDF forms、Acro Forms或XFA型PDF forms，自動錶單轉換服務(AFCS)可輕鬆將這些表單轉換為最適化表單。 如需功能、轉換工作流程和上線資訊的相關資訊，請參閱[自動錶單轉換](introduction.md)服務。
@@ -33,8 +43,8 @@ AEM Forms Automated Forms Conversion服務(AFCS)採用Adobe Sensei技術，可�
 * [**設定轉換服務**](configure-service.md)
 
 * **已轉換表單的範本和主題：**
-   * **AEM Forms as a Cloud Service：**&#x200B;預設範本和主題可供使用；您可以使用它們進行轉換或準備自訂範本。
-   * **AEM 6.5和AEM 6.5 LTS：**&#x200B;準備要套用至轉換表單的[範本](https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/template-editor.html)和[主題](https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/themes.html)。 若要使用以核心元件為基礎的範本和主題，您必須[啟用最適化表單核心元件](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=zh-Hant) （請參閱[設定服務](configure-service.md#referencepackage)）。 使用範本可讓您套用一致的品牌；AFCS不會從來源PDF擷取頁首和頁尾，請在最適化表單範本中指定它們。 使用佈景主題會在表單中套用一致的樣式。 當您建立範本的資料夾時，請為每個人選取&#x200B;**[!UICONTROL Browse configurations]**&#x200B;選項。
+  * **AEM Forms as a Cloud Service：**&#x200B;預設範本和主題可供使用；您可以使用它們進行轉換或準備自訂範本。
+  * **AEM 6.5和AEM 6.5 LTS：**&#x200B;準備要套用至轉換表單的[範本](https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/template-editor.html)和[主題](https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/themes.html)。 若要使用以核心元件為基礎的範本和主題，您必須[啟用最適化表單核心元件](https://experienceleague.adobe.com/docs/experience-manager-65/forms/adaptive-forms-core-components/enable-adaptive-forms-core-components.html?lang=zh-Hant) （請參閱[設定服務](configure-service.md#referencepackage)）。 使用範本可讓您套用一致的品牌；AFCS不會從來源PDF擷取頁首和頁尾，請在最適化表單範本中指定它們。 使用佈景主題會在表單中套用一致的樣式。 當您建立範本的資料夾時，請為每個人選取&#x200B;**[!UICONTROL Browse configurations]**&#x200B;選項。
 
 * **（選擇性）** [**將您的來源PDF forms轉換為Adobe Sign表單**](frequently-asked-questions.md)
 
@@ -80,8 +90,8 @@ AEM Forms Automated Forms Conversion服務(AFCS)採用Adobe Sensei技術，可�
    * **[!UICONTROL Select a cloud configuration]**. 當您選取組態時，已指定預設範本和主題。 您可以視需要指定不同的範本或主題。
    * 指定儲存所產生的最適化表單和對應結構描述的位置。 您可以使用預設路徑或指定自訂路徑。
    * 使用&#x200B;**產生沒有資料模型繫結的最適化表單**&#x200B;選項，選取是否要產生具有或不具有資料模型繫結的最適化表單。
-如果您未選取此選項，轉換服務會自動將最適化表單與JSON結構描述相關聯，並在最適化表單和JSON結構描述中可用的欄位之間建立資料繫結。**[!UICONTROL Save generated data model schema at]**&#x200B;欄位會顯示儲存產生的JSON結構描述的預設位置。您也可以自訂位置以儲存產生的結構描述。
-如果您選取此選項，轉換服務會產生沒有資料模型繫結的調適型表單。成功轉換後，您可以將最適化表單與表單資料模型、XML結構描述或JSON結構描述建立關聯。如需詳細資訊，請參閱[建立最適化表單](https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/creating-adaptive-form.html)。
+     如果您未選取此選項，轉換服務會自動將最適化表單與JSON結構描述相關聯，並在最適化表單和JSON結構描述中可用的欄位之間建立資料繫結。 **[!UICONTROL Save generated data model schema at]**&#x200B;欄位會顯示儲存產生的JSON結構描述的預設位置。 您也可以自訂位置以儲存產生的結構描述。
+     如果您選取此選項，轉換服務會產生沒有資料模型繫結的調適型表單。 成功轉換後，您可以將最適化表單與表單資料模型、XML結構描述或JSON結構描述建立關聯。 如需詳細資訊，請參閱[建立最適化表單](https://helpx.adobe.com/tw/experience-manager/6-5/forms/using/creating-adaptive-form.html)。
 
    <!--
 
@@ -138,7 +148,7 @@ AEM Forms Automated Forms Conversion服務(AFCS)採用Adobe Sensei技術，可�
 
   >[!NOTE]
   > 使用「自動將區段轉換為片段」選項時，請勿使用回應式版面範本。
-  > 使用檢閱和修正編輯器將小型面板合併為大型面板。這有助於減少轉換後的最適化表單中的片段數量。
+  > 使用檢閱和修正編輯器將小型面板合併為大型面板。 這有助於減少轉換後的最適化表單中的片段數量。
   > 如果您遇到「呼叫次數過多」的例外狀況，
   >
   > * 重新建構表單以建立簡化的階層

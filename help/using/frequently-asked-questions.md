@@ -8,28 +8,40 @@ topic-tags: introduction
 role: Admin, Developer
 level: Beginner, Intermediate
 exl-id: 3a29f8d4-8ea0-49eb-bfe0-0eab5f0c52c7
-TQID: https://experienceleague.adobe.com/yp0Kt5IApys-pqUHzqYJlzY9zhMg7z26v-bB0Fp9fjI
+TQID: 'https://experienceleague.adobe.com/yp0Kt5IApys-pqUHzqYJlzY9zhMg7z26v-bB0Fp9fjI'
 product_v2:
   - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
 feature_v2:
   - id: d49d6117-dd89-469c-a774-cc96b7eee433
+    internal-label: Administration
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
 topic_v2:
   - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
+    internal-label: Accessibility
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 0be767cc3d09331ea7a61c114a11bb0354b5f4ad
+    internal-label: Administration
+source-git-commit: e40aeabffdc79dbf5d42a89b8e37c298e016cb90
 workflow-type: tm+mt
-source-wordcount: 1830
-ht-degree: 4%
-
+source-wordcount: '1917'
+ht-degree: 3%
 ---
-
 # 常見問題{#frequently-asked-questions}
 
 1. **自動錶單轉換服務(AFCS)支援哪個AEM Forms版本？**
@@ -68,7 +80,7 @@ ht-degree: 4%
    <p>此服務可將色彩PDF forms轉換為最適化表單。 此服務不支援掃描或填寫的表單。 如需其他限制，請參閱<a href="known-issues.md">已知問題</a>文章。</p> <br>
 
 1. **此服務是否可以將掃描的表單或僅表單影像轉換為最適化表單？**
-   <p>此服務無法直接將掃描後的表單或表單影像轉換為最適化表單。 但是，您可以使用 Adobe Acrobat 將表單影像轉換為 PDF 表單。 然後，使用本服務將 PDF 表單轉換為最適化表單。 請總是使用高品質的表單影像在 Acrobat 中進行轉換。 這可以提升轉換的品質。</p> <br>
+   <p>此服務無法直接將掃描後的表單或表單影像轉換為最適化表單。 但是，您可以使用 Adobe Acrobat 將表單影像轉換為 PDF 表單。 然後，使用本服務將 PDF 表單轉換為自適應表單。 請總是使用高品質的表單影像在 Acrobat 中進行轉換。 這可以提升轉換的品質。</p> <br>
 
 1. **某些以XDP為基礎的表單會使用表單片段，這些表單片段應該上傳到哪裡？**
    <p class="MsoNormal">將表單片段上傳到轉換資料夾並保留原始資料夾結構。 它有助於保留在XDP型表單和表單片段中使用的相對路徑。</p> <br>
@@ -76,15 +88,15 @@ ht-degree: 4%
 1. **服務是否支援結構描述繫結的XDP表單？ 如果我有XDP繫結至結構描述，是否需要將結構描述內嵌至XDP？**
    <p>是，此服務支援結構描述繫結的XDP表單，並要求將結構描述內嵌到來源XDP表單中。 當您轉換結構描述繫結的XDP表單時，服務會產生JSON結構描述。 JSON結構描述在結構上與來源XDP表單的XSD結構描述類似。</p> <br>
 
-1. **服務無法轉換表單。問題的原因及解決方式？**
+1. **服務無法轉換表單。 原因是什麼？如何解決問題？**
 轉換失敗的最常見原因是：</p>
    * 轉換時提供安全的PDF forms。 請勿使用受密碼保護或安全的PDF forms進行轉換。
    * 網際網路連線已中斷。 請確認您在轉換期間已連線至網際網路。
    * Source PDF有表單的影像，而非實際表單。
    * 服務設定不正確、未提供服務URL，或提供的服務URL不正確。 在&#x200B;**[!UICONTROL AEM]** > **[!UICONTROL Tools]** > **[!UICONTROL Cloud Services]** > **[!UICONTROL Automated Forms Conversion configuration]**&#x200B;檢查[服務組態](configure-service.md#configure-the-cloud-service)。
    * IMS設定未正確設定。 對IMS設定執行健康狀態檢查以確保其正常運作。 若要檢查IMS設定是否正確：
-      1. 前往`http://[servername]:[port]/libs/cq/adobeims-configuration/content/configurations.html`
-      2. 選取設定。 按一下標題中的&#x200B;**[!UICONTROL Check Health]**，然後按一下&#x200B;**[!UICONTROL Check]**。 如果成功，您會收到&#x200B;**[!UICONTROL Token retrieved successfully!]**&#x200B;訊息。<br> <br>
+     1. 前往`http://[servername]:[port]/libs/cq/adobeims-configuration/content/configurations.html`
+     2. 選取設定。 按一下標題中的&#x200B;**[!UICONTROL Check Health]**，然後按一下&#x200B;**[!UICONTROL Check]**。 如果成功，您會收到&#x200B;**[!UICONTROL Token retrieved successfully!]**&#x200B;訊息。<br> <br>
 
 1. **使用自訂字型是否會影響轉換？**
    <p>當非互動式PDF表單轉換為最適化表單時，為了改善轉換品質，字型會嵌入到PDF表單中。 僅限非互動式PDF forms支援內嵌字型。 為了最佳化AcroForm和XFA型PDF forms的轉換，使用遞補字型。</p> 
@@ -107,7 +119,7 @@ ht-degree: 4%
    您可以使用中繼模型將表單物件對應至您選擇的最適化表單元件，並預先設定元件的驗證、規則、資料模式、說明文字和協助工具屬性。 所有指定的屬性都會在轉換期間套用。 您可以使用中繼模型來套用一般屬性至欄位。 它可以協助您減少表單間的一些重複問題。<br/><br/>
 
 1. **具有敏感資料(例如個人識別資訊(PII)資訊)的表單有哪些選項？**
-此服務僅支援空白或未填寫的表單。請勿上傳含有個人識別資訊(PII)的已填表格或表單。此外，請移除來源表單中預先填入的資料、個人識別資訊(PII)、機密與專屬資訊。<br/>
+此服務僅支援空白或未填寫的表單。 請勿上傳含有個人識別資訊(PII)的已填表格或表單。 此外，請移除來源表單中預先填入的資料、個人識別資訊(PII)、機密與專屬資訊。<br/>
 
 1. **頁首和頁尾應該放在哪裡？**
    <p>在最適化表單範本中放置頁首和頁尾。 如果來源PDF表單有頁首和頁尾，服務會在轉換期間以適用性表單範本中可用的頁首和頁尾偵測並取代偵測到的頁首和頁尾。 如果最適化表單中包含任何額外的頁首或頁尾，您可以使用<a href="review-correct-ui-edited.md">檢閱和修正</a>編輯器來修正或移除此類頁首或頁尾。</p> <br />
@@ -115,9 +127,9 @@ ht-degree: 4%
 1. **與手動規劃、建立資產（主題、範本）、建立及發佈最適化表單的流程相比，此服務可節省多少時間？**
    <p>時間長短取決於輸入表單的大小和複雜性，以及請求數量。 此服務旨在透過以快得多的速度將PDF forms轉換為最適化表單，大幅縮短實現價值的時間，而不是以手動方式轉換表單。 </p> <br />
 
-1. **如果我遇到與RSA資料庫相關的錯誤，該怎麼辦？錯誤訊息類似於以下提及的訊息：** <br/>
+1. **如果我遇到與RSA資料庫相關的錯誤，該怎麼辦？ 錯誤訊息類似於以下提及的訊息：** <br/>
    `*ERROR* [0:0:0:0:0:0:0:1 [1565757652491] POST /content/dam/formsanddocuments/demo004.affBatchProcessor.html HTTP/1.1] org.apache.sling.engine.impl.SlingRequestProcessorImpl service: Uncaught Throwable java.lang.NoClassDefFoundError: Could not initialize class com.rsa.cryptoj.o.dl at com.rsa.jsafe.JSAFE_SecureRandom.getInstance(Unknown Source) at com.adobe.internal.pdfm.util.Util.appendRandomNumberToPrefix(Util.java: 169) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34] at com.adobe.internal.pdfm.logging.JobLog.&amp;lt;init&amp;gt;(JobLog.java:126) [com.adobe.aemfd.adobe-aemfd-assembler:6.0.34]` <br>
-未針對RSA/BouncyCastle程式庫設定開機委派時，會發生上述錯誤。執行以下步驟以解決問題：
+   未針對RSA/BouncyCastle程式庫設定開機委派時，會發生上述錯誤。 執行以下步驟以解決問題：
    <p> </p>
 
    1. 停止AEM執行個體。 導覽至 `[AEM installation directory]\crx-quickstart\conf\` 檔案夾。 開啟sling.properties檔案進行編輯。 如果您使用`[AEM installation directory]\crx-quickstart\bin\start.bat`啟動AEM執行個體，請編輯位於`[AEM_root]\crx-quickstart\`的sling.properties。

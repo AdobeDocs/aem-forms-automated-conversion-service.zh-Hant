@@ -8,33 +8,50 @@ topic-tags: forms
 role: Admin, Developer, User
 level: Beginner, Intermediate
 exl-id: 8f21560f-157f-41cb-ba6f-12a4d6e18555
-TQID: https://experienceleague.adobe.com/xxFiHKgzZsDqk1rjtsBOEa-gaEi5S7iRY-Ela1T6eL8
+TQID: 'https://experienceleague.adobe.com/xxFiHKgzZsDqk1rjtsBOEa-gaEi5S7iRY-Ela1T6eL8'
 product_v2:
   - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
 feature_v2:
   - id: a01bfd36-4ab8-4bf8-9dc0-5b45b890552e
+    internal-label: APIs
   - id: a1df6763-63b5-45b4-8c8a-155a692a2b3e
+    internal-label: Integrations
   - id: ae478996-b206-4712-9b0c-dc78a2644453
+    internal-label: Integrations
   - id: d49d6117-dd89-469c-a774-cc96b7eee433
+    internal-label: Administration
   - id: f013e6ab-27b8-4645-b5a7-31ffa474d04f
+    internal-label: APIs
+  - id: e72c079d-d036-46d5-b43d-29b276a174c2
+    internal-label: Authoring and publishing content
+subfeature_v2:
+  - id: a26f372d-6d7c-452b-81df-594dd4365ae1
+    internal-label: Adaptive Forms
 role_v2:
   - id: b69b2659-1057-424e-8fc5-ed9e016dc554
+    internal-label: User
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: b5a62a22-46f7-4f0d-b151-3fc640bef588
+    internal-label: Intermediate
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+    internal-label: Beginner
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: cb6b167400093c85e8929eb147e2a0be256772a6
+    internal-label: Administration
+source-git-commit: e40aeabffdc79dbf5d42a89b8e37c298e016cb90
 workflow-type: tm+mt
-source-wordcount: 2448
+source-wordcount: '2660'
 ht-degree: 5%
-
 ---
-
 # 設定自動錶單轉換服務(AFCS) {#about-this-help}
 
 本文說明AEM管理員如何設定自動錶單轉換服務(AFCS)，以自動將其PDF forms轉換為最適化Forms。 本文適用於貴組織的IT和AEM管理員。 所提供的資訊假設任何閱讀本文的人都熟悉以下技術：
@@ -84,9 +101,9 @@ Adobe 為您的組織啟用存取權限，並向您指定的組織管理員提�
 
 * 如果您尚未啟動並執行AEM 6.5或AEM 6.5 LTS，請從以下位置下載。 下載AEM之後，如需設定AEM作者執行個體的指示，請參閱[部署和維護](https://helpx.adobe.com/tw/experience-manager/6-5/sites/deploying/using/deploy.html#defaultlocalinstall)：
 
-   * 如果您是AEM現有客戶，請從[AEM授權網站](http://licensing.adobe.com)下載Adobe 6.5或AEM 6.5 LTS。
+  * 如果您是AEM現有客戶，請從[AEM授權網站](http://licensing.adobe.com)下載Adobe 6.5或AEM 6.5 LTS。
 
-   * 如果您是Adobe合作夥伴，請使用[Adobe合作夥伴訓練計畫](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q)要求AEM 6.5或AEM 6.5 LTS。
+  * 如果您是Adobe合作夥伴，請使用[Adobe合作夥伴訓練計畫](https://adobe.allegiancetech.com/cgi-bin/qwebcorporate.dll?idx=82357Q)要求AEM 6.5或AEM 6.5 LTS。
 
 * 如果您使用AEM Forms as a Cloud Service，請參閱上線[AEM Forms as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-forms-cloud-service.html?lang=zh-Hant#setup-environment)和[設定本機開發環境](https://experienceleague.adobe.com/docs/experience-manager-forms-cloud-service/forms/setup-environment/setup-local-development-environment.html?lang=zh-Hant#setup-environment)。
 
@@ -132,8 +149,8 @@ The connector package provides early access to the [Auto-detect logical sections
 
 在Adobe為您的組織啟用存取權並提供所需的許可權給管理員後，管理員可以登入Admin Console （下面的詳細說明）、建立設定檔，並將開發人員新增到設定檔。 開發人員可以將AEM Forms的例項連線至Adobe Cloud上的自動錶單轉換服務(AFCS)。
 
-開發人員是您指定執行轉換服務的組織成員。只有已新增至Adobe自動化表單轉換服務(AFCS)設定檔的開發人員，才有權使用自動化表單轉換服務(AFCS)。
-執行以下步驟來建立設定檔並新增開發人員。至少需要一個設定檔，才能將必要的存取權授予組織的開發人員：
+開發人員是您指定執行轉換服務的組織成員。 只有已新增至Adobe自動化表單轉換服務(AFCS)設定檔的開發人員，才有權使用自動化表單轉換服務(AFCS)。
+執行以下步驟來建立設定檔並新增開發人員。 至少需要一個設定檔，才能將必要的存取權授予組織的開發人員：
 
 1. 登入[Admin Console](https://adminconsole.adobe.com/)。 使用布建管理員的&#x200B;**Adobe ID**&#x200B;以使用自動錶單轉換服務(AFCS)登入。
 1. 按一下&#x200B;**[!UICONTROL Automated Forms Conversion]**&#x200B;選項。
@@ -200,7 +217,7 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
 
 ### &#x200B;1. 在Adobe Developer Console上設定服務API
 
-若要使用自動錶單轉換服務(AFCS)，請建立專案，並將&#x200B;**自動Forms設定服務** API新增至Adobe Developer Console上的專案。整合會產生API金鑰、使用者端密碼、技術帳戶ID、範圍與組織ID。
+若要使用自動錶單轉換服務(AFCS)，請建立專案，並將&#x200B;**自動Forms設定服務** API新增至Adobe Developer Console上的專案。 整合會產生API金鑰、使用者端密碼、技術帳戶ID、範圍與組織ID。
 若要在Adobe Developer Console上設定自動錶單轉換服務API，請執行以下步驟：
 
 1. 登入https://developer.adobe.com/console 。 使用您的管理員已布建以登入Adobe I/O主控台的Adobe ID開發人員帳戶來登入。
@@ -209,10 +226,10 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
 
    ![建立新的API專案](/help/using/assets/create-new-api-project.png)
 
-1. 按一下&#x200B;**[!UICONTROL Add API]**。隨即顯示畫面，列出已為您的帳戶啟用的所有API。
+1. 按一下 **[!UICONTROL Add API]**。 隨即顯示畫面，列出已為您的帳戶啟用的所有API。
    ![新增API](/help/using/assets/add-api.png)
 
-1. 選取&#x200B;**[!UICONTROL Automated Forms Conversion service]**&#x200B;並按一下&#x200B;**[!UICONTROL Next]**。隨即顯示設定API的畫面。
+1. 選取&#x200B;**[!UICONTROL Automated Forms Conversion service]**&#x200B;並按一下&#x200B;**[!UICONTROL Next]**。 隨即顯示設定API的畫面。
    ![選取AFCS API](/help/using/assets/select-afcs-api.png)
 
 1. 選取&#x200B;**OAuth伺服器對伺服器**&#x200B;驗證方法。
@@ -252,10 +269,10 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
    * **標題**：指定標題。
    * **授權伺服器**： [https://ims-na1.adobelogin.com](https://ims-na1.adobelogin.com)
    * 從[在Adobe Developer Console](#1-configure-the-service-apis-on-adobe-developer-console)上設定服務API區段擷取下列專案：
-      * **使用者端識別碼**：複製並貼上&#x200B;**API金鑰（使用者端識別碼）**。
-      * **使用者端密碼**：複製並貼上&#x200B;**使用者端密碼**。
-      * **領域**：複製並貼上&#x200B;**領域**。
-      * **組織ID**：複製並貼上&#x200B;**組織ID**。
+     * **使用者端識別碼**：複製並貼上&#x200B;**API金鑰（使用者端識別碼）**。
+     * **使用者端密碼**：複製並貼上&#x200B;**使用者端密碼**。
+     * **領域**：複製並貼上&#x200B;**領域**。
+     * **組織ID**：複製並貼上&#x200B;**組織ID**。
 
      ![建立IMS Adobe設定](/help/using/assets/save-ims-configuration.png)
 
@@ -265,7 +282,7 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
    >
    > 僅建立一個IMS設定。 請勿建立多個IMS設定。
 
-1. 選取&#x200B;**Adobe IMS設定**&#x200B;並按一下&#x200B;**[!UICONTROL Check Health]**。對話方塊隨即顯示。
+1. 選取&#x200B;**Adobe IMS設定**&#x200B;並按一下&#x200B;**[!UICONTROL Check Health]**。 對話框隨即顯示。
    ![檢查健康狀態](/help/using/assets/check-health.png)
 
    **檢查**&#x200B;對話方塊出現。
@@ -282,12 +299,12 @@ Automated Forms Conversion service (AFCS) uses the Day CQ mail service to send e
 
 ### &#x200B;3. 建立自動表單轉換設定
 
-建立自動錶單轉換設定，將您的AEM執行個體連線到轉換服務。它也可讓您指定轉換的範本、主題和表單片段。您可以為每組表單分別建立多個雲端服務設定。
-例如，您可以針對銷售部門表單設定不同的組態，而針對客戶支援表單設定不同的組態。執行以下步驟來建立雲端服務設定：
+建立自動錶單轉換設定，將您的AEM執行個體連線到轉換服務。 它也可讓您指定轉換的範本、主題和表單片段。 您可以為每組表單分別建立多個雲端服務設定。
+例如，您可以針對銷售部門表單設定不同的組態，而針對客戶支援表單設定不同的組態。 執行以下步驟來建立雲端服務設定：
 
 1. 在您的AEM Forms執行個體上，按一下&#x200B;**[!UICONTROL Adobe Experience Manager]** > **[!UICONTROL Tools]**> **[!UICONTROL Cloud Services]** > **[!UICONTROL Automate Forms Conversion Configuration]**。
 1. 選取&#x200B;**[!UICONTROL Global]**&#x200B;資料夾並按一下&#x200B;**[!UICONTROL Create]**。
-**建立自動錶單轉換組態**&#x200B;的頁面已顯示。設定是在&#x200B;**全域**&#x200B;資料夾中建立。您也可以在現有的不同資料夾中建立設定，或為您的設定建立資料夾。
+**建立自動錶單轉換組態**&#x200B;的頁面已顯示。 設定是在&#x200B;**全域**&#x200B;資料夾中建立。 您也可以在現有的不同資料夾中建立設定，或為您的設定建立資料夾。
    ![選取全域資料夾](/help/using/assets/create-afcs-cloud-conf.png)
 1. 在&#x200B;**[!UICONTROL Create Automated Forms Conversion Configuration]**&#x200B;頁面上，指定下列欄位的值並按一下&#x200B;**[!UICONTROL Next]**。
 

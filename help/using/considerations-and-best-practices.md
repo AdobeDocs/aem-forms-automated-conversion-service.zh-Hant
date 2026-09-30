@@ -8,13 +8,16 @@ topic-tags: introduction
 discoiquuid: b786e40a-202e-4e17-a2f5-1f77c46538c2
 privatebeta: true
 index: false
-source-git-commit: ba5457fc64a6525c3dc02a00484030760c373c98
+product_v2:
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
+  - id: e8f6de9b-cf88-4405-8d10-15efa08c230e
+    internal-label: Experience Manager Forms
+source-git-commit: e40aeabffdc79dbf5d42a89b8e37c298e016cb90
 workflow-type: tm+mt
 source-wordcount: '550'
 ht-degree: 6%
-
 ---
-
 
 # 最佳實務和考量事項 {#do-not-publish-best-practices-and-considerations}
 
@@ -48,7 +51,7 @@ AEM Forms Automated Conversion服務會將PDF表單轉換為最適化表單。 �
    <td><img src="assets/scanned-form.jpg" /></td> 
   </tr>
   <tr>
-   <td><p><strong>圖樣</strong></p> <p>服務不會擷取影像中的影像和文字。 </p> <p> </p> <p><strong>解決方法</strong></p> <p>手動將影像或文字新增至轉換後的表單。</p> </td> 
+   <td><p><strong>模式</strong></p> <p>服務不會擷取影像中的影像和文字。 </p> <p> </p> <p><strong>解決方法</strong></p> <p>手動將影像或文字新增至轉換後的表單。</p> </td> 
    <td><img src="assets/image-in-adaptive-form.png" /></td> 
   </tr>
   <tr>
@@ -67,7 +70,7 @@ AEM Forms Automated Conversion服務會將PDF表單轉換為最適化表單。 �
    <td width="70%">範例</td> 
   </tr>
   <tr>
-   <td><p><strong>圖樣</strong></p> <p>具有方塊或圓圈以外形狀的選擇群組選項不會轉換為對應的最適化表單元件。 </p> <p> </p> <p><strong>解決方法</strong></p> <p>將選擇選項形狀變更為方塊或圓形，或使用「稽核並修正」編輯器來識別形狀。</p> </td> 
+   <td><p><strong>模式</strong></p> <p>具有方塊或圓圈以外形狀的選擇群組選項不會轉換為對應的最適化表單元件。 </p> <p> </p> <p><strong>解決方法</strong></p> <p>將選擇選項形狀變更為方塊或圓形，或使用「稽核並修正」編輯器來識別形狀。</p> </td> 
    <td><img src="assets/shaded-box-patterns.png" /> </td> 
   </tr>
  </tbody>
@@ -90,7 +93,7 @@ AEM Forms Automated Conversion服務會將PDF表單轉換為最適化表單。 �
    <td><br /> <img src="assets/forms-with-clear-borders-scale.png" /><br /> </td> 
   </tr>
   <tr>
-   <td><p><strong>圖樣</strong></p> <p>服務會合併或指派錯誤型別給一些彼此非常接近或沒有明確框線的表單欄位。 </p> <p> </p> <p><strong>解決方法</strong></p> <p>使用檢閱和修正編輯器來識別這些欄位。</p> </td> 
+   <td><p><strong>模式</strong></p> <p>服務會合併或指派錯誤型別給一些彼此非常接近或沒有明確框線的表單欄位。 </p> <p> </p> <p><strong>解決方法</strong></p> <p>使用檢閱和修正編輯器來識別這些欄位。</p> </td> 
    <td><img src="assets/forms-with-fields-placed-nearby.png" /></td> 
   </tr>
   <tr>
